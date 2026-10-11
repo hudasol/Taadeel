@@ -62,15 +62,26 @@ def _expr(eid: str, items: list[tuple[int, int, str]], valid_from: date) -> Expr
     return e
 
 
+def _templated(rng: random.Random, template: list[str], slots: int = 3) -> str:
+    """Near-duplicate article: a shared template with a few words swapped."""
+    words = list(template)
+    for k in rng.sample(range(len(words)), slots):
+        words[k] = rng.choice(_POOL)
+    return " ".join(words) + "."
+
+
 def make_pair(seed: int, n: int = 40, n_replace: int = 5, n_repeal: int = 3, n_insert: int = 3,
-              n_clarify: int = 2, bis_inserts: int = 1) -> SyntheticPair:
+              n_clarify: int = 2, bis_inserts: int = 1, templated: bool = False,
+              edit_frac: float | None = None) -> SyntheticPair:
     """Build version A, apply operations, return version B and gold labels.
 
     Inserted plain articles shift later numbers (renumbering); ``bis_inserts``
     of the insertions are «مكرر» articles that do not shift numbering.
     """
     rng = random.Random(seed)
-    base = [(i, 0, _sentence(rng)) for i in range(1, n + 1)]
+    template = [rng.choice(_POOL) for _ in range(20)]
+    gen = (lambda: _templated(rng, template)) if templated else (lambda: _sentence(rng))
+    base = [(i, 0, gen()) for i in range(1, n + 1)]
     a = _expr("a", base, date(2020, 1, 1))
 
     idx = list(range(n))
@@ -89,7 +100,7 @@ def make_pair(seed: int, n: int = 40, n_replace: int = 5, n_repeal: int = 3, n_i
         if i in plain_inserts:
             shift += 1
             new_no = num + shift - 1
-            b_items.append((new_no, 0, _sentence(rng)))
+            b_items.append((new_no, 0, gen()))
             gold.append(GoldChange("inserted", None, f"art_{new_no}"))
         if i in repeal_idx:
             gold.append(GoldChange("repealed", f"art_{num}", None))
@@ -98,8 +109,12 @@ def make_pair(seed: int, n: int = 40, n_replace: int = 5, n_repeal: int = 3, n_i
         kind = None
         if i in replace_idx:
             words = text.rstrip(".").split()
-            k = rng.randrange(len(words))
-            words[k : k + 3] = [rng.choice(_POOL) for _ in range(rng.randint(2, 4))]
+            if edit_frac is not None:
+                for k in rng.sample(range(len(words)), max(1, int(len(words) * edit_frac))):
+                    words[k] = rng.choice(_POOL)
+            else:
+                k = rng.randrange(len(words))
+                words[k : k + 3] = [rng.choice(_POOL) for _ in range(rng.randint(2, 4))]
             new_text, kind = " ".join(words) + ".", "replaced"
         elif i in clarify_idx:
             # orthographic-only change: add diacritics to the first word
@@ -113,7 +128,7 @@ def make_pair(seed: int, n: int = 40, n_replace: int = 5, n_repeal: int = 3, n_i
         if kind:
             gold.append(GoldChange(kind, f"art_{num}", f"art_{new_no}"))
         if i in bis_after:
-            b_items.append((new_no, 1, _sentence(rng)))
+            b_items.append((new_no, 1, gen()))
             gold.append(GoldChange("inserted", None, f"art_{new_no}_bis1"))
     b = _expr("b", b_items, date(2024, 1, 1))
     return SyntheticPair(a, b, gold_pairs, gold)
