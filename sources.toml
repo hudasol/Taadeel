@@ -20,3 +20,14 @@ mode = "link_only"
 min_delay_seconds = 10
 license = "none stated"
 permission_evidence = ""
+
+# Real English UK legislation used ONLY to validate the engine (not UAE law).
+# Evidence: docs/DATA_SOURCES.md section "legislation.gov.uk" (pages retrieved 2026-10-12).
+[sources."www.legislation.gov.uk"]
+mode = "permitted"
+min_delay_seconds = 6          # robots.txt Crawl-delay is 5; stay above it
+deny_suffixes = [".pdf", ".docx"]   # robots.txt disallows */data.pdf and */data.docx
+license = "Open Government Licence v3.0 (except where otherwise stated)"
+attribution = "Contains public sector information licensed under the Open Government Licence v3.0."
+permission_evidence = "OGL v3.0 stated on https://www.legislation.gov.uk/developer/licensing (retrieved 2026-10-12); fair-use policy https://www.legislation.gov.uk/fair-use-policy (retrieved 2026-10-12): identify the client, <=1,500 requests per 5 minutes, follow robots.txt"
+scope = "UK Public General Acts (ukpga) only; small, cached, resumable pulls; no bulk crawl"
