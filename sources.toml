@@ -1,0 +1,22 @@
+# Source registry. The fetcher refuses any host whose mode is not "permitted".
+# Modes: "link_only" (never fetch bodies), "metadata_only" (polite probing of
+# metadata, no text storage), "permitted" (written permission or open licence on file).
+# See docs/DATA_SOURCES.md for the evidence behind each entry.
+
+[sources."uaelegislation.gov.ae"]
+mode = "link_only"
+min_delay_seconds = 10
+license = "none stated; all rights reserved (Ministry of Cabinet Affairs)"
+permission_evidence = ""   # fill with reference to written permission, then set mode = "permitted"
+
+[sources."www.moj.gov.ae"]
+mode = "link_only"
+min_delay_seconds = 10
+license = "none stated"
+permission_evidence = ""
+
+[sources."tax.gov.ae"]
+mode = "link_only"
+min_delay_seconds = 10
+license = "none stated"
+permission_evidence = ""
