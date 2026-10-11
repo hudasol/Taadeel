@@ -34,3 +34,8 @@ def test_article_labels():
     assert parse_article_label("المادة (5) مكرر (2)") == (5, 2)
     assert parse_article_label("المادة 5 مكررًا ثانيًا") == (5, 2)
     assert parse_article_label("الفصل الأول") is None
+
+
+def test_hamza_on_yaa_is_opt_in():
+    assert normalize("شاطئ") != normalize("شاطي")
+    assert normalize("شاطئ", fold_hamza_on_yaa=True) == normalize("شاطي")

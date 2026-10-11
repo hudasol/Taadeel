@@ -3,11 +3,13 @@
 > **Research and navigation tool. Not legal advice.**
 > Taadeel does not state the law. For interpretation and application, the official Arabic text published by the competent UAE authority prevails. Every provision shown links to its official source with a retrieval date. Verify against the official source before relying on anything here.
 
-Taadeel tracks amendments across UAE federal legislation and produces structured, article-level diffs with effective-date timelines, so you can ask: *what did this law say on date X, and what changed since?* Arabic is the primary language; English is secondary where official translations exist.
+**Goal:** track amendments across UAE federal legislation and produce structured, article-level diffs with effective-date timelines, answering *what did this law say on date X, and what changed since?* Arabic is the primary language; English is secondary where official translations exist.
+
+**Current state (honest):** the parsing, alignment, diffing and point-in-time engine exists and is tested on clearly labeled **synthetic** data only. **No real UAE legislation is loaded**, because no source currently permits text collection. Real-world accuracy is unmeasured. See [`docs/VALIDATION.md`](docs/VALIDATION.md).
 
 ## Status
 
-Phase 1 (plan and repo). The engine milestones M1–M9 are tracked in [`plan.md`](plan.md). Research and design: [`docs/RESEARCH.md`](docs/RESEARCH.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
+Engine and validation harness built; real data, HTML/PDF extraction, amendment-by-reference parsing, search, and deployment are open. Milestones: [`plan.md`](plan.md). Research and design: [`docs/RESEARCH.md`](docs/RESEARCH.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
 
 ## Data-source stance
 

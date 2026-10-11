@@ -10,7 +10,8 @@ import unicodedata
 _DIACRITICS = re.compile(r"[ؐ-ًؚ-ٰٟۖ-ۭ]")
 _TATWEEL = "ـ"
 _ALEF_VARIANTS = str.maketrans({"أ": "ا", "إ": "ا", "آ": "ا", "ٱ": "ا"})
-_YAA = str.maketrans({"ى": "ي", "ئ": "ي"})
+_YAA = str.maketrans({"ى": "ي"})          # alef maqsura -> yaa
+_HAMZA_YAA = str.maketrans({"ئ": "ي"})   # opt-in: merges distinct words (e.g. شاطئ / شاطي)
 _DIGITS = str.maketrans(
     "٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789"
 )
@@ -18,19 +19,23 @@ _PUNCT = str.maketrans({"،": ",", "؛": ";", "؟": "?", "«": '"', "»": '"'})
 _WS = re.compile(r"\s+")
 
 
-def normalize(text: str, *, fold_taa_marbuta: bool = False, fold_hamza_on_waw: bool = False) -> str:
+def normalize(text: str, *, fold_taa_marbuta: bool = False, fold_hamza_on_waw: bool = False,
+              fold_hamza_on_yaa: bool = False) -> str:
     """Return a normalized copy for matching.
 
     Steps: NFKC (folds Arabic presentation forms), drop diacritics and tatweel,
     unify alef and yaa variants, map Arabic-Indic/Persian digits to ASCII,
     unify punctuation, collapse whitespace. Optional folds (off by default
-    because they merge distinct words): taa marbuta -> haa, hamza-on-waw -> waw.
+    because they merge distinct words): taa marbuta -> haa, hamza-on-waw -> waw,
+    hamza-on-yaa -> yaa.
     """
     t = unicodedata.normalize("NFKC", text)
     t = _DIACRITICS.sub("", t).replace(_TATWEEL, "")
     t = t.translate(_ALEF_VARIANTS).translate(_YAA).translate(_DIGITS).translate(_PUNCT)
     if fold_taa_marbuta:
         t = t.replace("ة", "ه")
+    if fold_hamza_on_yaa:
+        t = t.translate(_HAMZA_YAA)
     if fold_hamza_on_waw:
         t = t.replace("ؤ", "و")
     return _WS.sub(" ", t).strip()
