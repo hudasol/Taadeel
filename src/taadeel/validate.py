@@ -11,28 +11,29 @@ import json
 import sys
 from collections import Counter
 
-from .align import align
+from .align import T_LOW, T_MATCH, align
 from .diff import diff
 from .synthetic import make_pair
 
 KINDS = ["inserted", "replaced", "repealed", "renumbered", "clarified"]
 
 
-def run(seeds: range, **kw) -> dict:
+def run(seeds: range, t_low: float = T_LOW, t_match: float = T_MATCH, **kw) -> dict:
     tp, fp, fn = Counter(), Counter(), Counter()
     align_correct = align_total = 0
-    forced_repealed = repealed_total = 0
+    forced_repealed = forced_any = repealed_total = 0
     low_conf = pairs_total = 0
     for s in seeds:
         p = make_pair(s, **kw)
-        res = align(p.a, p.b)
+        res = align(p.a, p.b, t_match=t_match, t_low=t_low)
         got = {x.a_eid: x.b_eid for x in res.pairs}
         for a_eid, b_eid in p.gold_pairs.items():
             align_total += 1
             align_correct += got.get(a_eid) == b_eid
         repealed = {g.a_eid for g in p.gold_changes if g.kind == "repealed"}
         repealed_total += len(repealed)
-        forced_repealed += len(repealed & set(got))
+        forced_repealed += len(repealed & {x.a_eid for x in res.pairs if x.confidence == "high"})
+        forced_any += len(repealed & set(got))
         pairs_total += len(res.pairs)
         low_conf += sum(1 for x in res.pairs if x.confidence == "low")
         pred = {(c.kind, c.a_eid, c.b_eid) for c in diff(p.a, p.b, res)}
@@ -52,13 +53,40 @@ def run(seeds: range, **kw) -> dict:
         "data": "SYNTHETIC (engine correctness only, not real-world accuracy)",
         "documents": len(seeds),
         "alignment_accuracy": align_correct / align_total,
-        "forced_matches_on_repealed": forced_repealed,
+        "forced_matches_on_repealed": forced_repealed,          # high-confidence only
+        "forced_matches_on_repealed_incl_low": forced_any,
         "repealed_total": repealed_total,
         "low_confidence_pair_share": low_conf / pairs_total if pairs_total else None,
         "per_class": per_class,
     }
 
 
+SCENARIOS = {
+    "easy (random text, small edits)": {},
+    "templated near-duplicates, small edits": {"templated": True},
+    "templated, 40% of words edited": {"templated": True, "edit_frac": 0.4},
+    "templated, 70% of words edited": {"templated": True, "edit_frac": 0.7},
+    "templated, many inserts/repeals": {"templated": True, "n_insert": 8, "n_repeal": 8, "n_replace": 8},
+}
+
+
+def summary_table(n_docs: int = 100) -> str:
+    rows = ["| scenario | align acc. | forced on repealed (high-conf / any) | replaced P / R | repealed P / R | inserted P / R |",
+            "|---|---|---|---|---|---|"]
+    f = lambda x: "n/a" if x is None else f"{x:.3f}"
+    for name, kw in SCENARIOS.items():
+        r = run(range(n_docs), **kw)
+        pc = r["per_class"]
+        rows.append(
+            f"| {name} | {r['alignment_accuracy']:.3f} | {r['forced_matches_on_repealed']} / {r['forced_matches_on_repealed_incl_low']} of {r['repealed_total']} | "
+            + " | ".join(f"{f(pc[k]['precision'])} / {f(pc[k]['recall'])}" for k in ("replaced", "repealed", "inserted"))
+            + " |"
+        )
+    return "\n".join(rows)
+
+
 if __name__ == "__main__":
-    out = run(range(int(sys.argv[1]) if len(sys.argv) > 1 else 100))
-    print(json.dumps(out, ensure_ascii=False, indent=2))
+    if len(sys.argv) > 1 and sys.argv[1] == "table":
+        print(summary_table(int(sys.argv[2]) if len(sys.argv) > 2 else 100))
+    else:
+        print(json.dumps(run(range(int(sys.argv[1]) if len(sys.argv) > 1 else 100)), ensure_ascii=False, indent=2))

@@ -15,6 +15,7 @@ from .model import Expression, Provision
 
 T_MATCH = 0.60
 T_LOW = 0.35
+AMBIGUITY_MARGIN = 0.05   # rival candidate within this score => low confidence
 
 
 @dataclass(frozen=True)
@@ -62,9 +63,11 @@ def align(a: Expression, b: Expression, t_match: float = T_MATCH, t_low: float =
     n, m = len(A), len(B)
     NEG = float("-inf")
     w = [[NEG] * m for _ in range(n)]
+    S = [[0.0] * m for _ in range(n)]
     for i in range(n):
         for j in range(m):
             s = pair_score(A[i], B[j], i, n, j, m)
+            S[i][j] = s
             if s >= t_low:
                 w[i][j] = s
     dp = [[0.0] * (m + 1) for _ in range(n + 1)]
@@ -79,7 +82,11 @@ def align(a: Expression, b: Expression, t_match: float = T_MATCH, t_low: float =
     while i > 0 and j > 0:
         if w[i - 1][j - 1] != NEG and abs(dp[i][j] - (dp[i - 1][j - 1] + w[i - 1][j - 1])) < 1e-12:
             s = w[i - 1][j - 1]
-            pairs.append(Alignment(A[i - 1].eid, B[j - 1].eid, round(s, 4), "high" if s >= t_match else "low"))
+            rival_a = max((S[i - 1][k] for k in range(m) if k != j - 1), default=0.0)
+            rival_b = max((S[k][j - 1] for k in range(n) if k != i - 1), default=0.0)
+            ambiguous = s - max(rival_a, rival_b) < AMBIGUITY_MARGIN
+            pairs.append(Alignment(A[i - 1].eid, B[j - 1].eid, round(s, 4),
+                                   "high" if s >= t_match and not ambiguous else "low"))
             i, j = i - 1, j - 1
         elif abs(dp[i][j] - dp[i - 1][j]) < 1e-12:
             i -= 1
