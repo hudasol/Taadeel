@@ -18,6 +18,6 @@ Milestones, each tagged `m1`…`m9` with tests. Reversible decisions are noted h
 
 ## Decisions (reversible)
 
-* Python 3.13, stdlib-first core, SQLite for storage (single file, trivial deploy), Parquet export for the dataset, FastAPI, static front end (no build step), pytest, GitHub Actions.
+* Python 3.13, stdlib-first core, FastAPI, static front end (no build step), pytest, GitHub Actions. Storage is in-memory and the dataset is JSONL for now; SQLite and Parquet are planned (NEXT_STEPS #9), not built.
 * Real-data work gated by `sources.toml`; default is link-only.
-* Synthetic fixtures are labeled and live under `data/synthetic/`.
+* Synthetic fixtures are generated in code (`src/taadeel/synthetic.py`), labeled, and schema-enforced out of real-data views. `data/synthetic/` is an empty placeholder.
