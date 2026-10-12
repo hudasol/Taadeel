@@ -977,6 +977,12 @@
   "point_in_time": {
    "accuracy": 0.8938,
    "correct": 143,
+   "on_date_accuracy": 1.0,
+   "on_date_correct": 80,
+   "on_date_queries": 80,
+   "prior_day_accuracy": 0.7875,
+   "prior_day_correct": 63,
+   "prior_day_queries": 80,
    "queries": 160,
    "wrong": 17
   },
@@ -1019,6 +1025,11 @@
      "served_version": "2004-01-01"
     }
    ],
+   "on_date_correct": 7,
+   "on_date_queries": 7,
+   "prior_day_correct": 4,
+   "prior_day_queries": 7,
+   "prior_day_wrong": 3,
    "queries": 14,
    "wrong": 3
   },
@@ -1033,6 +1044,11 @@
      "served_version": "2016-12-17"
     }
    ],
+   "on_date_correct": 9,
+   "on_date_queries": 9,
+   "prior_day_correct": 8,
+   "prior_day_queries": 9,
+   "prior_day_wrong": 1,
    "queries": 18,
    "wrong": 1
   },
@@ -1057,6 +1073,11 @@
      "served_version": "2001-10-01"
     }
    ],
+   "on_date_correct": 13,
+   "on_date_queries": 13,
+   "prior_day_correct": 10,
+   "prior_day_queries": 13,
+   "prior_day_wrong": 3,
    "queries": 26,
    "wrong": 3
   },
@@ -1091,6 +1112,11 @@
      "served_version": "2009-10-01"
     }
    ],
+   "on_date_correct": 10,
+   "on_date_queries": 10,
+   "prior_day_correct": 5,
+   "prior_day_queries": 10,
+   "prior_day_wrong": 5,
    "queries": 20,
    "wrong": 5
   },
@@ -1110,6 +1136,11 @@
      "served_version": "2006-04-01"
     }
    ],
+   "on_date_correct": 13,
+   "on_date_queries": 13,
+   "prior_day_correct": 11,
+   "prior_day_queries": 13,
+   "prior_day_wrong": 2,
    "queries": 26,
    "wrong": 2
   },
@@ -1124,6 +1155,11 @@
      "served_version": "2014-04-22"
     }
    ],
+   "on_date_correct": 13,
+   "on_date_queries": 13,
+   "prior_day_correct": 12,
+   "prior_day_queries": 13,
+   "prior_day_wrong": 1,
    "queries": 26,
    "wrong": 1
   },
@@ -1143,6 +1179,11 @@
      "served_version": "2012-10-31"
     }
    ],
+   "on_date_correct": 15,
+   "on_date_queries": 15,
+   "prior_day_correct": 13,
+   "prior_day_queries": 15,
+   "prior_day_wrong": 2,
    "queries": 30,
    "wrong": 2
   }

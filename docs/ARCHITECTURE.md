@@ -2,12 +2,12 @@
 
 ## Data model (Akoma Ntoso-inspired, simplified)
 
-* **Work** — an instrument as an abstract thing: `work_id` (e.g. `ae/fdl/2021/33`), `instrument_type` (law, decree-law, executive regulation, cabinet resolution), `title_ar`, `title_en?`.
-* **Expression** — the text of a work valid over a period: `expression_id`, `work_id`, `valid_from`, `valid_to?`, `effective_date_status` (`known` | `uncertain` | `unknown`), `language`, `source_url`, `retrieved_at`, `content_sha256`, `synthetic` flag.
-* **Provision** — structural node: `eid` (stable id like `art_5_bis`), `kind` (part, chapter, article, clause), `number`, `suffix`, `parent_eid`, `text_original`, `text_norm`.
-* **Amendment event** — `amending_work_id`, `target_work_id`, `operations[]` (`replace`, `insert_after`, `repeal`, `renumber`, `unresolved`), `issue_date`, `gazette_date?`, `effective_date?`, `effective_date_status`.
-* **Alignment** — pair `(provision_a, provision_b, score, method, confidence)` or an entry in the `unaligned` bucket.
-* **Change** — classified diff: `inserted`, `replaced`, `repealed`, `renumbered`, `clarified`, with word-level spans and a link to the amendment event.
+* **Work**: an instrument as an abstract thing: `work_id` (e.g. `ae/fdl/2021/33`), `instrument_type` (law, decree-law, executive regulation, cabinet resolution), `title_ar`, `title_en?`.
+* **Expression**: the text of a work valid over a period: `expression_id`, `work_id`, `valid_from`, `valid_to?`, `effective_date_status` (`known` | `uncertain` | `unknown`), `language`, `source_url`, `retrieved_at`, `content_sha256`, `synthetic` flag.
+* **Provision**: structural node: `eid` (stable id like `art_5_bis`), `kind` (part, chapter, article, clause), `number`, `suffix`, `parent_eid`, `text_original`, `text_norm`.
+* **Amendment event**: `amending_work_id`, `target_work_id`, `operations[]` (`replace`, `insert_after`, `repeal`, `renumber`, `unresolved`), `issue_date`, `gazette_date?`, `effective_date?`, `effective_date_status`.
+* **Alignment**: pair `(provision_a, provision_b, score, method, confidence)` or an entry in the `unaligned` bucket.
+* **Change**: classified diff: `inserted`, `replaced`, `repealed`, `renumbered`, `clarified`, with word-level spans and a link to the amendment event.
 
 Every provision row carries `source_url` and `retrieved_at` (non-null; enforced by schema validation).
 
