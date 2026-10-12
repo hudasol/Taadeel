@@ -25,6 +25,7 @@ from . import clml
 from .align import align
 from .diff import diff
 from .ingest import Ingestor
+from .labels import suffix_value
 from .model import Expression, Provision
 from .temporal import Version, as_of
 from .uk_fetch import BASE_DATE, ROOT, STORE, make_ingestor, plan_snapshots, snapshot_dates, url_at, url_current
@@ -33,13 +34,6 @@ ACTS = ["ukpga/1990/18", "ukpga/2015/30", "ukpga/1968/60", "ukpga/1998/42",
         "ukpga/1989/6", "ukpga/1997/40", "ukpga/1971/38"]
 OUT = ROOT / "results" / "uk_validation.json"
 ADV_SEED = 424242
-
-
-def suffix_value(s: str) -> int:
-    v = 0
-    for ch in s:
-        v = v * 26 + (ord(ch) - 64)
-    return v
 
 
 def to_expression(act: str, d: str, secs: list[clml.Section], url: str, retrieved: str) -> Expression:
@@ -89,7 +83,7 @@ def _texts(e: Expression) -> dict[str, str]:
 def truth_changes(a: Expression, b: Expression) -> dict[tuple, str]:
     ta, tb = _texts(a), _texts(b)
     out: dict[tuple, str] = {}
-    for eid in ta.keys() | tb.keys():
+    for eid in sorted(ta.keys() | tb.keys()):
         if eid in ta and eid in tb:
             if ta[eid] != tb[eid]:
                 out[(eid, eid)] = "replaced"
@@ -357,5 +351,5 @@ if __name__ == "__main__":
     r = run()
     r["aggregate"] = aggregate(r)
     OUT.parent.mkdir(exist_ok=True)
-    OUT.write_text(json.dumps(r, indent=1, ensure_ascii=False, default=str), encoding="utf-8")
+    OUT.write_text(json.dumps(r, indent=1, ensure_ascii=False, default=str, sort_keys=True), encoding="utf-8")
     print(json.dumps(r["aggregate"], indent=1))

@@ -10,12 +10,13 @@ Raw XML stays in ``snapshots/uk`` (gitignored); data/uk/manifest.jsonl records e
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
 from .ingest import Blocked, Ingestor, load_sources
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(os.environ.get("TAADEEL_ROOT") or Path(__file__).resolve().parents[2])
 BASE = "https://www.legislation.gov.uk"
 STORE = ROOT / "snapshots" / "uk"
 MANIFEST = ROOT / "data" / "uk" / "manifest.jsonl"

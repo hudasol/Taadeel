@@ -342,6 +342,15 @@ class Store:
                 (work_id, *cs)).fetchall()
         return [dict(r) for r in rows]
 
+    def list_changes(self, work_id: str, from_expression: str, to_expression: str, corpus: str) -> list[dict]:
+        cs = resolve_corpora(corpus)
+        q = ",".join("?" * len(cs))
+        with self._lock:
+            rows = self._db.execute(
+                f"SELECT * FROM changes WHERE work_id=? AND from_expression=? AND to_expression=? AND corpus IN ({q})"
+                f" ORDER BY change_id", (work_id, from_expression, to_expression, *cs)).fetchall()
+        return [{**dict(r), "words": json.loads(r["words_json"] or "[]")} for r in rows]
+
     def as_of(self, work_id: str, on: date, corpus: str = "uae") -> PointInTime:
         """Point-in-time lookup via taadeel.temporal. Raises LookupError if the work is not in that corpus view."""
         exprs = self.list_expressions(work_id, corpus)
