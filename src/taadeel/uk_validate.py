@@ -60,6 +60,10 @@ class Corpus:
         if k not in self.cache:
             u = url_at(act, d)
             s = self.ing.latest(u)
+            if s is not None:
+                ids = [x.eid for x in clml.parse_sections(clml.load(s.path)) if not x.placeholder]
+                if len(ids) != len(set(ids)):
+                    raise ValueError(f"duplicate section ids in {u}")
             self.cache[k] = None if s is None else to_expression(
                 act, d, clml.parse_sections(clml.load(s.path)), u, s.retrieved_at)
         return self.cache[k]
