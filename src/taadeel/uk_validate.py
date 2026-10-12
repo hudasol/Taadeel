@@ -239,11 +239,15 @@ def eval_point_in_time(corp: Corpus, act: str) -> dict:
             p = as_of(vers, qd)
             vid = (p.version_id or "").split("@")[-1]
             rep = corp.snap(act, vid) if vid else None
+            kind = "prior_day" if qd < dd else "on_date"
             res["queries"] += 1
+            res[f"{kind}_queries"] += 1
             if rep is not None and same_text(rep, truth):
                 res["correct"] += 1
+                res[f"{kind}_correct"] += 1
             else:
                 res["wrong"] += 1
+                res[f"{kind}_wrong"] += 1
                 fails.append({"query": qd.isoformat(), "served_version": vid, "reason":
                               "text of the version served differs from the independently fetched snapshot"})
         res["boundary_pairs"] += 1
@@ -328,10 +332,12 @@ def aggregate(res: dict) -> dict:
                                      "recall": round(tp / (tp + fn), 4) if tp + fn else None}
     pq = Counter()
     for p in res["point_in_time"]:
-        for k in ("queries", "correct", "wrong"):
+        for k in ("queries", "correct", "wrong", "prior_day_queries", "prior_day_correct", "on_date_queries", "on_date_correct"):
             pq[k] += p.get(k, 0)
     out["point_in_time"] = dict(pq)
     out["point_in_time"]["accuracy"] = round(pq["correct"] / pq["queries"], 4) if pq["queries"] else None
+    out["point_in_time"]["prior_day_accuracy"] = round(pq["prior_day_correct"] / pq["prior_day_queries"], 4) if pq["prior_day_queries"] else None
+    out["point_in_time"]["on_date_accuracy"] = round(pq["on_date_correct"] / pq["on_date_queries"], 4) if pq["on_date_queries"] else None
     rec, ev = Counter(), Counter()
     for a in res["acts"]:
         rec.update(a["recorded_effects"])

@@ -7,11 +7,11 @@ Contains public sector information licensed under the Open Government Licence v3
 
 ## Headline
 
-**Held-out synthetic (clean, run once): 55 of 60 point predictions hit.** **Real UK data (English, England and Wales view only): alignment 100.0% (2425 of 2425 sections), point in time 89.4% (143 of 160 queries).** UAE law: unvalidated.
+**Held-out synthetic (clean, run once): 55 of 60 point predictions hit.** **Real UK data (English, England and Wales view only): alignment 100.0% (2425 of 2425 sections); point in time on the day before a change 78.8% (63 of 80), on the change date 100.0% (this half is easy by construction).** UAE law: unvalidated.
 
 ## Alignment and diff classification (one day windows)
 
-Pairs: the snapshot on the day before each recorded effect date against the snapshot on that date. Truth: same section id means same section; text differs means replaced. The engine never sees section ids.
+Pairs: the snapshot on the day before each recorded effect date against the snapshot on that date. Truth: same section id means same section; text differs means replaced. The engine does not use section ids for matching (it does see the section number and suffix, worth 5% of the pair score).
 
 Alignment: 2425 correct of 2425 shared sections (100.0%); wrong 0; unmatched 0; false matches 0; low confidence pairs 6.
 
@@ -39,11 +39,11 @@ One day windows change little text, so these are easy cases. Long gap pairs (fir
 
 Effects checked (dated, usable, England and Wales): 206. Snapshot shows a change at the named section on that date: 195 (94.7%); class agrees in 195.
 Snapshot changes in the windows: 220; with a recorded dated effect: 195 (88.6%). The rest are changes the usable dated effects do not explain (undated, ambiguous, prospective or lagging effects).
-Engine against recorded effects (section level, class must agree): TP 195, FN 11, FP 25. These disagreements mostly reflect the effects data, not the engine, because the engine matched the snapshots exactly.
+Engine against recorded effects (section level, class must agree): TP 195, FN 11, FP 25. The engine matched the snapshots exactly, so these disagreements come from the recorded effects data (or from my reading of it), not from alignment.
 
 ## Point in time
 
-A timeline is built from the base snapshot plus one version per recorded effect date; for each date D the engine is asked for D minus one day and D, and the text served is compared with an independently fetched snapshot. Correct 143 of 160 (89.4%); wrong 17. Every failure is a case where the site's snapshot on D minus one day differs from the previous recorded effect version, so a change took effect on a date the recorded effects did not give. This is a real limit of building a timeline from effects alone.
+A timeline is built from the base snapshot plus one version per recorded effect date; for each date D the engine is asked for D minus one day and D, and the text served is compared with an independently fetched snapshot. Day before D: 63 of 80 correct (78.8%). This is the real test. On D: 80 of 80 (100.0%); the version served on D is the snapshot used as truth, so this half cannot fail and is not evidence. Pooled 89.4%, reported for completeness only. Every failure is a case where the site's snapshot on D minus one day differs from the previous recorded effect version, so a change took effect on a date the recorded effects did not give. This is a real limit of building a timeline from effects alone.
 
 | Act | queries | correct | wrong |
 |---|---|---|---|
@@ -61,7 +61,7 @@ UK drafting rarely renumbers, so a labelled variant inserts a section and shifts
 
 ## English amendment by reference patterns
 
-Sample: 48 amending Act sections fetched, 20 contain amendment keywords. Split by SHA-1 parity of the URL into dev and test. Patterns were extended after reading the dev half only; the test half was measured once per pattern set. Truth: recorded effects naming the amending section. Very small sample, effects from the same section are correlated, treat as indicative.
+Sample: 48 amending Act sections fetched, 20 contain amendment keywords. Split by SHA-1 parity of the URL into dev and test. Patterns were extended after reading the dev half only and frozen in the commit titled "Freeze English amendment patterns before the test half is measured"; `results/uk_amending.json` was generated after that commit and the test half was measured once per pattern set. Truth: recorded effects naming the amending section. Very small sample, effects from the same section are correlated, treat as indicative.
 
 | split | patterns | sections | effects | found | recall | parsed instructions | matching a recorded effect (precision lower bound) |
 |---|---|---|---|---|---|---|---|
@@ -81,6 +81,6 @@ The first full run and a hand check of a sample of recorded effects exposed thre
 
 ## Known limits
 
-* Some recorded effects show no snapshot change on their date (for example Theft Act 1968 s. 12A and s. 24A insertions, and Misuse of Drugs Act 1971 insertions dated 1 July 1991). The cause was not established; one possibility, not tested, is that the site does not create a version at every effect date.
+* Some recorded effects show no snapshot change on their date (examples are in `results/uk_handcheck.json`, including Theft Act 1968 s. 12A and s. 24A insertions and Misuse of Drugs Act 1971 insertions dated 1 July 1991). The cause was not established; one possibility, not tested, is that the site does not create a version at every effect date.
 * Schedules are out of scope. Devolved material is out of scope. Prospective changes are excluded.
-* Hand check by the AI agent, not a lawyer: a seeded sample (seed 20261012) of 20 disagreeing and 10 agreeing effects, then every remaining disagreement after the fixes, was read against the section text and the effect wording. All 10 sampled agreeing effects matched their wording. The unexplained cases above remain.
+* Hand check by the AI agent, not a lawyer (files: `results/uk_handcheck.json`, `results/uk_handcheck_run1_sample.json`, script `uk_handcheck.py`, seed 20261012). A seeded draw of 20 disagreeing effects from the first run exposed defects 1 and 2 above. After the fixes, 10 seeded agreeing effects were read against their wording and all 10 matched, and the remaining disagreements (listed with the dates at which the section does change) were read; they are the unexplained cases in the previous bullet plus effects whose snapshot change falls on another date.

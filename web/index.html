@@ -78,7 +78,7 @@ async function j(u){const r=await fetch(u);return r.json()}
 async function load(){
   const real=$("#mode").value==="real";
   const w=await j("/api/works?real="+real);
-  $("#badge").className="b "+(w.synthetic?"b-syn":"b-uae");$("#badge").textContent=w.synthetic?"اصطناعي · SYNTHETIC — ليس قانونًا":"بيانات حقيقية · REAL";
+  $("#badge").className="b "+(w.synthetic?"b-syn":"b-uae");$("#badge").textContent=w.synthetic?"اصطناعي · SYNTHETIC | ليس قانونًا":"بيانات حقيقية · REAL";
   if(!w.works.length){work=null;$("#asof").innerHTML=esc(w.note||"No data");$("#diff").innerHTML="";return}
   work=w.works[0].work_id; asof(); diffs();
 }
@@ -86,7 +86,7 @@ async function asof(){
   if(!work)return; const real=$("#mode").value==="real";
   const r=await j(`/api/as-of?work=${work}&date=${$("#date").value}&real=${real}`);
   const cert={certain:"مؤكد · certain",uncertain:"غير مؤكد · UNCERTAIN",not_in_force:"غير نافذ · not in force"}[r.certainty];
-  $("#asof").innerHTML=`<p><b>${cert}</b> — ${esc(r.version_id||"—")} ${esc(r.note)}</p>`+
+  $("#asof").innerHTML=`<p><b>${cert}</b>: ${esc(r.version_id||"n/a")} ${esc(r.note)}</p>`+
    r.articles.slice(0,6).map(a=>`<p><b>المادة ${a.number}${a.bis?" مكرر":""}</b> ${esc(a.text)}<br><span class="src" dir="ltr">source: ${esc(a.source_url)} · retrieved ${esc(a.retrieved_at)}</span></p>`).join("");
 }
 async function diffs(){
@@ -96,13 +96,13 @@ async function diffs(){
   $("#diff").innerHTML=d.changes.map(c=>{
     const words=(c.words||[]).map(w=>w.op==="equal"?esc(w.a):w.op==="replace"?`<del>${esc(w.a)}</del> <ins>${esc(w.b)}</ins>`:w.op==="delete"?`<del>${esc(w.a)}</del>`:`<ins>${esc(w.b)}</ins>`).join(" ");
     return `<article class="card"><div class="kind">${kindAr[c.kind]} · ${c.kind}${c.confidence==="low"?" · ثقة منخفضة / low confidence":""}</div>`+
-     `<div class="cols"><div>${esc(c.a_text)||"—"}</div><div>${esc(c.b_text)||"—"}</div></div>`+
+     `<div class="cols"><div>${esc(c.a_text)||"n/a"}</div><div>${esc(c.b_text)||"n/a"}</div></div>`+
      (words?`<p>${words}</p>`:"")+`<div class="src" dir="ltr">source: ${esc(c.source_url)} · retrieved ${esc(c.retrieved_at)}</div></article>`}).join("");
 }
 $("#mode").onchange=load;
 $("#date").onchange=()=>{const y=new Date($("#date").value);$("#slider").value=y.getFullYear()+y.getMonth()/12;asof()};
 $("#slider").oninput=e=>{const v=+e.target.value,y=Math.floor(v),m=Math.round((v-y)*12)+1;$("#date").value=`${y}-${String(Math.min(m,12)).padStart(2,"0")}-01`;asof()};
-const BADGE={synthetic:['b-syn','اصطناعي · SYNTHETIC — ليس تشريعًا / not legislation'],
+const BADGE={synthetic:['b-syn','اصطناعي · SYNTHETIC | ليس تشريعًا / not legislation'],
  'uk-validation':['b-uk','UK validation corpus (English, not UAE law)'],uae:['b-uae','UAE · الإمارات']};
 function badge(c){const b=BADGE[c]||['b-uae',c];return `<span class="b ${b[0]}">${b[1]}</span>`}
 function mark(text,hl){let o="",p=0;(hl||[]).slice().sort((a,b)=>a[0]-b[0]).forEach(([a,b])=>{if(a<p)return;o+=esc(text.slice(p,a))+"<mark>"+esc(text.slice(a,b))+"</mark>";p=b});return o+esc(text.slice(p))}
