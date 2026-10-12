@@ -24,6 +24,10 @@ _SUB = re.compile(rf"(?<!\w)for\s+section\s+(?P<n>{_N})\s*,?\s*substitute\b{_SEP
 _OMIT = re.compile(rf"(?<!\w)omit\s+sections?\s+(?P<list>{_LIST})", _FLAGS)
 _AFTER = re.compile(rf"(?<!\w)after\s+section\s+(?P<n>{_N})\s*,?\s*insert\b{_SEP}", _FLAGS)
 _REPEALED = re.compile(rf"(?<!\w)sections?\s+(?P<list>{_LIST})\s+(?:is|are)\s+repealed", _FLAGS)
+# Extended patterns (added after reading the DEV half of the amending sample only, see uk_amending_eval.py)
+_SUB_OF = re.compile(rf"(?<!\w)for\s+section\s+(?P<n>{_N})\s+of\s+[^\u2014\u2013:]{{0,200}}?,?\s*substitute\b{_SEP}", _FLAGS)
+_AFTER_OF = re.compile(rf"(?<!\w)after\s+section\s+(?P<n>{_N})\s+of\s+[^\u2014\u2013:]{{0,200}}?\s*,?\s*insert\b{_SEP}", _FLAGS)
+_IN_SECTION = re.compile(rf"(?<!\w)in\s+section\s+(?P<n>{_N})\b(?P<ctx>[^.;]{{0,320}}?)\b(?P<v>substitute|omit|insert)\b", _FLAGS)
 _NUMS = re.compile(_N)
 _LEAD_NUM = re.compile(r"^[\"'\u201c‘\s]*(?P<n>\d+[A-Z]{1,3})\b")
 
@@ -33,10 +37,16 @@ def _clean(s: str) -> str | None:
     return s or None
 
 
-def parse(text: str) -> list[Amendment]:
-    """Parse English amendment instructions in ``text`` into Amendment records."""
+def parse(text: str, extended: bool = True) -> list[Amendment]:
+    """Parse English amendment instructions in ``text`` into Amendment records.
+
+    ``extended=False`` uses only the four original whole section shapes (kept for the baseline measurement).
+    """
     found = []  # (start, end, kind, match)
-    for kind, rx in (("sub", _SUB), ("omit", _OMIT), ("after", _AFTER), ("rep", _REPEALED)):
+    rules = [("sub", _SUB), ("omit", _OMIT), ("after", _AFTER), ("rep", _REPEALED)]
+    if extended:
+        rules += [("sub", _SUB_OF), ("after", _AFTER_OF), ("insec", _IN_SECTION)]
+    for kind, rx in rules:
         for m in rx.finditer(text):
             found.append((m.start(), m.end(), kind, m))
     found.sort(key=lambda f: (f[0], -(f[1] - f[0])))
@@ -49,7 +59,11 @@ def parse(text: str) -> list[Amendment]:
     for i, (s, e, kind, m) in enumerate(kept):
         nxt = kept[i + 1][0] if i + 1 < len(kept) else len(text)
         span = (s, e)
-        if kind in ("omit", "rep"):
+        if kind == "insec":
+            op = {"substitute": "substitute", "omit": "repeal", "insert": "insert"}[m.group("v").lower()]
+            out.append(Amendment(op, m.group("n"), 0, None, span, "en.in_section.text", 0.6,
+                                 paragraph="text", anchor=m.group("n"), lang="en"))
+        elif kind in ("omit", "rep"):
             pid = "en.omit.section" if kind == "omit" else "en.repealed.section"
             for n in _NUMS.finditer(m.group("list")):
                 out.append(Amendment("repeal", n.group(0), 0, None, span, pid, 0.9, lang="en"))
