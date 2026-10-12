@@ -82,3 +82,21 @@ def test_dependency_override():
     app.dependency_overrides[search_api.store_dependency] = lambda: s
     j = TestClient(app).get("/api/corpora").json()
     assert all(c["counts"]["provisions"] == 0 for c in j["corpora"])
+
+
+def test_api_mounts_search_and_uk_corpus_endpoints():
+    from fastapi.testclient import TestClient
+
+    from taadeel import search_api
+    from taadeel.api import app
+    from taadeel.store import Store, build_demo_store
+
+    search_api.set_store(build_demo_store())
+    try:
+        c = TestClient(app)
+        r = c.get("/api/search", params={"q": "section", "corpus": "synthetic"})
+        assert r.status_code == 200 and r.json()["synthetic"] is True
+        assert c.get("/api/store/works", params={"corpus": "uae"}).json()["works"] == []
+        assert c.get("/api/store/versions", params={"work": "nope", "corpus": "uae"}).status_code == 404
+    finally:
+        search_api.set_store(None)

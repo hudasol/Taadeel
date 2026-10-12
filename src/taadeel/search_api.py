@@ -44,6 +44,11 @@ def get_store() -> Store:
     global _STORE
     if _STORE is None:
         _STORE = build_demo_store()
+        try:                                   # labelled UK validation corpus, if the derived file is present
+            from .uk_corpus import load_into
+            load_into(_STORE)
+        except Exception:                      # never let the optional corpus stop the app
+            pass
     return _STORE
 
 
@@ -86,3 +91,28 @@ def search(q: str = Query("", max_length=300), corpus: str = "uae", limit: int =
         note = CORPUS_INFO["uae"]["note"]
     return _payload({"query": q, "corpus": corpus, "count": len(results), "results": results, "note": note},
                     synthetic=is_syn)
+
+
+@router.get("/api/store/works")
+def store_works(corpus: str = "uk-validation", store: Store = Depends(store_dependency)) -> JSONResponse:
+    try:
+        items = store.list_works(corpus)
+    except Exception as exc:
+        return JSONResponse({"error": str(exc), "disclaimer": DISCLAIMER}, status_code=400)
+    return JSONResponse(_payload({"corpus": corpus, "works": items}, synthetic=corpus == "synthetic"))
+
+
+@router.get("/api/store/versions")
+def store_versions(work: str, corpus: str = "uk-validation", store: Store = Depends(store_dependency)) -> JSONResponse:
+    ex = store.list_expressions(work, corpus)
+    if not ex:
+        return JSONResponse({"error": "work not found in this corpus view", "disclaimer": DISCLAIMER}, status_code=404)
+    return JSONResponse(_payload({"work_id": work, "corpus": corpus, "versions": ex}, synthetic=corpus == "synthetic"))
+
+
+@router.get("/api/store/changes")
+def store_changes(work: str, frm: str = Query(..., alias="from"), to: str = Query(...),
+                  corpus: str = "uk-validation", store: Store = Depends(store_dependency)) -> JSONResponse:
+    ch = store.list_changes(work, frm, to, corpus)
+    return JSONResponse(_payload({"work_id": work, "from": frm, "to": to, "corpus": corpus, "changes": ch},
+                                 synthetic=corpus == "synthetic"))

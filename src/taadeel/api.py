@@ -22,7 +22,10 @@ from .temporal import Version, as_of
 DISCLAIMER = ("Research and navigation tool, not legal advice. The official Arabic text published by the "
               "competent UAE authority prevails.")
 
-app = FastAPI(title="Taadeel API", version="0.1.0", description=DISCLAIMER)
+app = FastAPI(title="Taadeel API", version="0.2.0", description=DISCLAIMER)
+from . import search_api  # noqa: E402
+
+app.include_router(search_api.router)
 
 
 def _demo() -> dict[str, list[Expression]]:
