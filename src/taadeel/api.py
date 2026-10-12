@@ -5,6 +5,7 @@ Real-data collection is empty until a source with permitted use exists
 """
 from __future__ import annotations
 
+import os
 from dataclasses import asdict
 from datetime import date
 from pathlib import Path
@@ -102,7 +103,7 @@ async def _http(_, exc: HTTPException):
     return JSONResponse({"error": exc.detail, "disclaimer": DISCLAIMER}, status_code=exc.status_code)
 
 
-_WEB = Path(__file__).resolve().parents[2] / "web"
+_WEB = Path(os.environ.get("TAADEEL_ROOT") or Path(__file__).resolve().parents[2]) / "web"
 if _WEB.exists():
     app.mount("/static", StaticFiles(directory=_WEB), name="static")
 
