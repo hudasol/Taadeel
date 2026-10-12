@@ -90,6 +90,9 @@ def parse_sections(root) -> list[Section]:
         pid = p1.get("id") or ""
         if not pid.startswith("section-"):
             continue
+        grp0 = p1.getparent()
+        if not _in_view(p1) or (grp0 is not None and not _in_view(grp0)):
+            continue                                       # e.g. a Northern Ireland only version of the same id
         label = pid[len("section-"):]
         m = _LABEL.match(label)
         if not m:
@@ -180,7 +183,9 @@ def parse_effect_text(raw: str) -> tuple[str, str, date | None, str | None, int 
     text = _WS.sub(" ", raw).strip()
     head = text.split(" by ", 1)[0]
     head_for_kind = _DATE.split(head)[0]
-    kind = classify_kind(re.sub(r"\([^)]*\)", " ", head_for_kind).strip())
+    # Parenthesised extent or date groups set off by a space are dropped; a group attached to the
+    # section number (e.g. "S. 14(2)") marks a subdivision, so the effect is text_modified, not whole section.
+    kind = classify_kind(re.sub(r"(?<!\S)\([^)]*\)", " ", head_for_kind).strip())
     am = _AFFECTING.search(text)
     title = year = chapter = None
     asecs: list[str] = []
@@ -212,8 +217,8 @@ def parse_effect_text(raw: str) -> tuple[str, str, date | None, str | None, int 
                 return kind, "ambiguous_date", None, title, year, chapter, asecs
             if " for " in pc and re.search(r"\b[EW]\.", pc.split(" for ", 1)[1]):
                 chosen = _d(dm)
-            elif "otherwise" in pc and chosen is None:
-                chosen = _d(dm)
+            # An "otherwise" clause is NOT assumed to mean England and Wales: the meaning of the
+            # qualifier (for example "S.") is not stated in the retrieved terms, so it stays ambiguous.
         if chosen is None:
             return kind, "ambiguous_date", None, title, year, chapter, asecs
         return kind, "ok", chosen, title, year, chapter, asecs
