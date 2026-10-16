@@ -32,10 +32,22 @@ The official portal (uaelegislation.gov.ae) publishes no open licence and no doc
 
 ## Quick start
 
+Python 3.12 or newer.
+
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
+pip install -e ".[api,dev,extract,store]"
 pytest
+uvicorn taadeel.api:app --port 8000      # web page at http://localhost:8000, API under /api
+```
+
+The synthetic PDF tests need the DejaVu Sans font; they are skipped with a reason when it is absent (set `TAADEEL_PDF_FONT` to its path). Offline container: `docker build -t taadeel . && docker run -p 8000:8000 taadeel` (no external calls at run time).
+
+Regenerate the evidence (each command writes only its own result files; held out runs refuse to run twice):
+
+```bash
+python -m taadeel.report                 # README results block and docs/VALIDATION_UK.md from results/
+python -m taadeel.validate table 10      # synthetic harness, quick look
 ```
 
 ## License
