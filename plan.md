@@ -12,7 +12,7 @@ Milestones, each tagged `m1` to `m9` with tests. Reversible decisions are noted 
 | M4 | Diffing | article and word level diffs; classification; amending instrument linked | done; English amendment pattern module built (measured on a small UK sample); Arabic amendment lexicon built but unvalidated (invented samples only) |
 | M5 | Temporal | point in time reconstruction; uncertain effective dates flagged | done (unit tested) |
 | M6 | Validation | gold set, accuracy/P/R, adversarial tests, honest report | partial: synthetic and UK English validation only; no real Arabic validation and no gold set of real UAE laws |
-| M7 | API + dataset | read only FastAPI; versioned release + data card | done: SQLite storage with FTS5, Parquet export, search API, FastAPI API; no real UAE data loaded; no Akoma Ntoso export |
+| M7 | API + dataset | read only FastAPI; versioned release + data card | done: SQLite storage with FTS5, Parquet export, search API, FastAPI API; no real UAE data loaded; Akoma Ntoso compatible export added in phase 3 (`docs/AKN_EXPORT.md`) |
 | M8 | Interface | RTL first bilingual UI with timeline slider, redline, as of view | done as an RTL bilingual web page; search is provided by the search API |
 | M9 | Deploy | live URL, CI badge, reproducible build | partial: Dockerfile and render.yaml written; a live demo runs on the Render free tier from the branch `feat/validation-and-amendments` |
 
@@ -26,7 +26,7 @@ Milestones, each tagged `m1` to `m9` with tests. Reversible decisions are noted 
 
 * Any real UAE law (no permission; portal returns HTTP 403 on robots.txt, recorded and not worked around).
 * Any real Arabic validation, and a gold set of real UAE laws.
-* Akoma Ntoso export.
+* Akoma Ntoso lifecycle and modification metadata (the compatible export exists).
 
 ## History
 
