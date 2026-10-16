@@ -11,7 +11,7 @@ Research and navigation tool, not legal advice. The official Arabic text publish
 | `uae` | real UAE legislation | empty until a source permits collection; a stated licence/permission is mandatory |
 
 `synthetic` is allowed only with the `synthetic/` prefix and the prefix only with `synthetic`. These rules are checked in Python (`Store.add_expression`) and again by SQL `CHECK` and composite foreign keys, so a raw insert cannot bypass them.
-The `real` view means `uae` plus `uk-validation`. It never contains synthetic rows. The HTTP default view is `uae`; synthetic data needs `corpus=synthetic`.
+The `real` view means `uae` plus `uk-validation`. It never contains synthetic rows. For the current HTTP default corpus and view, see `src/taadeel/api.py` and `src/taadeel/search_api.py`.
 
 ## Schema (SQLite, `taadeel.store`)
 
@@ -42,6 +42,6 @@ The `real` view means `uae` plus `uk-validation`. It never contains synthetic ro
 * Matching is by whole token. Arabic attached clitics (و، ب، ل، ك، ف and the article ال) are not stripped, so «بإصدار» does not match a query «إصدار». Prefix fallback only helps trailing material. No stemming or root search.
 * Taa marbuta, hamza on waw/yaa are not folded (they merge distinct words).
 * English search has no stemming ("licences" does not match "licence").
-* One SQLite connection guarded by a lock; fine for a read-mostly demo, not for concurrent heavy writes.
+* One SQLite connection guarded by a lock; fine for a read mostly demo, not for concurrent heavy writes.
 * Dates are stored as ISO text. Parquet keeps them as strings.
-* The default demo store is in memory and rebuilt at start.
+* The default demo store is in memory and rebuilt at start; see `src/taadeel/api.py` and `src/taadeel/search_api.py` for the current defaults.

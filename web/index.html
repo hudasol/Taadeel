@@ -5,130 +5,362 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>تعديل · Taadeel</title>
 <style>
-:root{--bg:#faf8f5;--fg:#1d1b19;--mut:#6b655e;--line:#ddd6cc;--ins:#d7f0dc;--del:#f6d5d5;--warn:#fff3cd;--acc:#1f5f5b}
-@media (prefers-color-scheme:dark){:root{--bg:#141312;--fg:#efebe5;--mut:#a39d94;--line:#35312c;--ins:#1d3a26;--del:#4a2323;--warn:#4a3d12;--acc:#6fc2bb}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 "Noto Naskh Arabic","Segoe UI",system-ui,sans-serif}
+/*
+ Theme: sakura / pearl / pastel pink. System fonts only, no external requests.
+ Contrast ratios (WCAG, text on background), computed from the hex values below. All pairs are at least 4.5:1.
+
+ LIGHT
+  body text   #3a1f2b on page #fdf8f9 = 14.16 | on card #ffffff = 14.89 | on banner #fde7ed = 12.64 | on sakura #f4c2cf = 9.54
+  muted text  #6a4857 on #fdf8f9 = 7.46 | on #ffffff = 7.84 | on #fde7ed = 6.66
+  accent/link #8a2d4f on #fdf8f9 = 7.77 | on #ffffff = 8.17 | on #fde7ed = 6.94
+  button      #ffffff on #8a2d4f = 8.17
+  inserted    #3a1f2b on #d8efdf = 12.29 | deleted #3a1f2b on #f8d2da = 10.79
+  highlight   #3a1f2b on #ffe08a = 11.54
+  synthetic   #4a2f00 on #fff1d6 = 11.08
+  UK          #232f6b on #eef0fb = 10.94
+  UAE real    #14502a on #e1f3e7 = 8.22
+  error       #6b1020 on #fde2e4 = 9.98
+  control border (non text) #a14b69 on #fdf8f9 = 5.36
+
+ DARK
+  body text   #f8e8ee on page #1d1117 = 15.52 | on card #2a1821 = 14.20 | on banner #3a2030 = 12.43
+  muted text  #d6b8c4 on #1d1117 = 10.06 | on #2a1821 = 9.20 | on #3a2030 = 8.06
+  accent/link #f4a7bd on #1d1117 = 9.70 | on #2a1821 = 8.88 | on #3a2030 = 7.77
+  button      #3a1f2b on #f4c2cf = 9.54
+  inserted    #f8e8ee on #1f3d2a = 10.10 | deleted #f8e8ee on #5a2434 = 10.23
+  highlight   #2a1a00 on #ffd966 = 12.33
+  synthetic   #ffe9b8 on #3d2e0c = 11.04
+  UK          #d6dcff on #1c2547 = 11.06
+  UAE real    #c4ecd0 on #17321f = 10.75
+  error       #ffd9e0 on #4a1b27 = 11.00
+  control border (non text) #c98aa0 on #1d1117 = 6.66
+*/
+:root{
+  --bg:#fdf8f9;--surface:#ffffff;--soft:#fde7ed;--sakura:#f4c2cf;--line:#e8a0b4;--ctl:#a14b69;
+  --fg:#3a1f2b;--mut:#6a4857;--acc:#8a2d4f;--btn-bg:#8a2d4f;--btn-fg:#ffffff;
+  --ins:#d8efdf;--del:#f8d2da;--mark-bg:#ffe08a;--mark-fg:#3a1f2b;
+  --syn-bg:#fff1d6;--syn-fg:#4a2f00;--syn-bd:#8a5a00;
+  --uk-bg:#eef0fb;--uk-fg:#232f6b;--uk-bd:#3b4fb8;
+  --uae-bg:#e1f3e7;--uae-fg:#14502a;--uae-bd:#2c8a52;
+  --err-bg:#fde2e4;--err-fg:#6b1020;--err-bd:#a3243a;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#1d1117;--surface:#2a1821;--soft:#3a2030;--sakura:#f4c2cf;--line:#6b3a4d;--ctl:#c98aa0;
+    --fg:#f8e8ee;--mut:#d6b8c4;--acc:#f4a7bd;--btn-bg:#f4c2cf;--btn-fg:#3a1f2b;
+    --ins:#1f3d2a;--del:#5a2434;--mark-bg:#ffd966;--mark-fg:#2a1a00;
+    --syn-bg:#3d2e0c;--syn-fg:#ffe9b8;--syn-bd:#e0a030;
+    --uk-bg:#1c2547;--uk-fg:#d6dcff;--uk-bd:#7d90ee;
+    --uae-bg:#17321f;--uae-fg:#c4ecd0;--uae-bd:#4fb27a;
+    --err-bg:#4a1b27;--err-fg:#ffd9e0;--err-bd:#ff8fa6;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 "Segoe UI","Noto Naskh Arabic","Geeza Pro",Tahoma,system-ui,sans-serif}
 header,main{max-width:1000px;margin:0 auto;padding:0 16px}
-.banner{background:var(--warn);border:1px solid var(--line);padding:10px 14px;margin:12px 0;border-radius:8px}
-.badge{display:inline-block;padding:2px 10px;border-radius:99px;border:1px solid var(--acc);color:var(--acc);font-size:.85rem}
-h1{margin:.4em 0}button,select,input{font:inherit;color:inherit;background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 10px}
-button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+h1{margin:.4em 0}
+h2{margin:1.2em 0 .4em;color:var(--acc)}
+a{color:var(--acc);text-decoration:underline;overflow-wrap:anywhere}
+.skip{position:absolute;top:-80px;inset-inline-start:8px;z-index:10;background:var(--btn-bg);color:var(--btn-fg);padding:8px 14px;border-radius:6px;text-decoration:underline}
+.skip:focus,.skip:focus-visible{top:8px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.banner{background:var(--soft);color:var(--fg);border:3px solid var(--acc);padding:12px 16px;margin:12px 0;border-radius:10px;font-weight:700;font-size:1.05rem}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:10px 0}
-.card{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:700px){.cols{grid-template-columns:1fr}}
-ins{background:var(--ins);text-decoration:none}del{background:var(--del)}
-.kind{font-size:.8rem;color:var(--mut)}.src{font-size:.8rem;color:var(--mut)}
-input[type=range]{width:min(420px,90%)}
-.banner{font-weight:600;border-width:2px}
-.b{display:inline-block;padding:2px 10px;border-radius:6px;font-size:.8rem;font-weight:800;letter-spacing:.03em;border:2px solid}
-.b-syn{background:repeating-linear-gradient(45deg,#fff3cd,#fff3cd 8px,#ffd980 8px,#ffd980 16px);color:#5a3b00;border-color:#b26b00}
-.b-uk{background:#e3e9ff;color:#1b2a6b;border-color:#3b4fb8}
-.b-uae{background:#dff3e4;color:#14502a;border-color:#2c8a52}
-@media (prefers-color-scheme:dark){.b-syn{background:repeating-linear-gradient(45deg,#4a3d12,#4a3d12 8px,#6b5516 8px,#6b5516 16px);color:#ffe9a8;border-color:#e0a030}.b-uk{background:#1c2547;color:#cdd7ff;border-color:#7d90ee}.b-uae{background:#17321f;color:#bfe9cb;border-color:#4fb27a}}
-mark{background:#ffe066;color:#000;padding:0 2px;border-radius:3px}
-.syn-warn{border:2px dashed #b26b00;background:var(--warn);padding:8px 12px;border-radius:8px;margin:8px 0;font-weight:600}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+button,select,input{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--ctl);border-radius:6px;padding:6px 10px}
+button{background:var(--btn-bg);color:var(--btn-fg);border-color:var(--btn-bg);cursor:pointer;font-weight:600}
+input::placeholder{color:var(--mut);opacity:1}
 input[type=search]{min-width:min(360px,100%);flex:1}
+input[type=range]{width:min(420px,90%);accent-color:var(--acc);padding:0}
+.card{background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.cols{grid-template-columns:1fr}}
+.colh{font-size:.8rem;color:var(--mut);font-weight:700}
+ins{background:var(--ins);text-decoration:underline}
+del{background:var(--del);text-decoration:line-through}
+mark{background:var(--mark-bg);color:var(--mark-fg);padding:0 2px;border-radius:3px}
+.kind,.src,.hint{font-size:.85rem;color:var(--mut)}
 details summary{cursor:pointer;color:var(--acc)}
+/* Badges: distinguishable by text and by border shape (dashed square, double pill, solid rounded, dotted). */
+.b{display:inline-block;max-width:100%;padding:3px 12px;font-size:.85rem;font-weight:800;line-height:1.5;border:2px solid}
+.b-syn{background:var(--syn-bg);color:var(--syn-fg);border-color:var(--syn-bd);border-style:dashed;border-radius:2px}
+.b-uk{background:var(--uk-bg);color:var(--uk-fg);border-color:var(--uk-bd);border-style:double;border-width:4px;border-radius:99px;padding:1px 14px}
+.b-uae{background:var(--uae-bg);color:var(--uae-fg);border-color:var(--uae-bd);border-style:solid;border-radius:8px}
+.b-none{background:var(--surface);color:var(--fg);border-color:var(--ctl);border-style:dotted;border-radius:8px}
+.b-err{background:var(--err-bg);color:var(--err-fg);border-color:var(--err-bd);border-style:solid;border-radius:8px}
+.b-load{background:var(--surface);color:var(--mut);border-color:var(--line);border-radius:8px}
+.syn-warn,.uk-warn,.err,.empty{padding:8px 12px;border-radius:8px;margin:8px 0}
+.syn-warn{border:3px dashed var(--syn-bd);background:var(--syn-bg);color:var(--syn-fg);font-weight:600}
+.uk-warn{border:4px double var(--uk-bd);background:var(--uk-bg);color:var(--uk-fg);font-weight:600}
+.err{border:2px solid var(--err-bd);background:var(--err-bg);color:var(--err-fg);font-weight:600}
+.empty{border:2px dotted var(--ctl);background:var(--surface);color:var(--fg)}
+.loading{color:var(--mut);padding:8px 0}
+/* phone widths: long bilingual option labels must not widen the page */
+select,input,label{max-width:100%;box-sizing:border-box}
+select{text-overflow:ellipsis}
+main,header,section{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
+<a class="skip" href="#main"><span lang="ar">انتقل إلى المحتوى الرئيسي</span> / <span lang="en" dir="ltr">Skip to main content</span></a>
 <header>
-  <h1><span lang="ar">تعديل</span> · Taadeel</h1>
   <div class="banner" role="note">
     <span lang="ar">أداة بحث وتصفّح وليست استشارة قانونية. النص العربي الرسمي الصادر عن الجهة المختصة هو المرجع.</span><br>
     <span lang="en" dir="ltr">Research and navigation tool, not legal advice. The official Arabic text published by the competent UAE authority prevails.</span>
   </div>
+  <h1><span lang="ar">تعديل</span> · <span lang="en" dir="ltr">Taadeel</span></h1>
   <div class="row">
-    <span class="badge" id="badge">…</span>
+    <span id="badge" role="status" aria-live="polite"><span class="b b-load"><span lang="ar">جارٍ التحميل</span> / <span lang="en" dir="ltr">Loading</span></span></span>
     <label>العرض / View
-      <select id="mode"><option value="syn">بيانات اصطناعية · Synthetic demo</option><option value="real">بيانات حقيقية · Real</option></select>
+      <select id="mode">
+        <option value="syn">بيانات اصطناعية، ليس تشريعاً / Synthetic demo, not legislation</option>
+        <option value="real">بيانات حقيقية / Real data</option>
+      </select>
     </label>
   </div>
 </header>
-<main>
-  <section aria-labelledby="h-search"><h2 id="h-search">بحث في النصوص · Search</h2>
+<main id="main" tabindex="-1">
+  <section aria-labelledby="h-search"><h2 id="h-search"><span lang="ar">بحث في النصوص</span> / <span lang="en" dir="ltr">Search</span></h2>
     <form id="sform" role="search" class="row">
       <label for="q">كلمات البحث / Query</label>
-      <input id="q" type="search" dir="auto" autocomplete="off" placeholder="مثال: الترخيص  ·  e.g. licence">
+      <input id="q" type="search" dir="auto" autocomplete="off" placeholder="مثال: الترخيص / e.g. licence">
       <label for="corpus">المجموعة / Corpus</label>
       <select id="corpus" aria-describedby="corpus-note">
-        <option value="uae">التشريعات الإماراتية · UAE legislation</option>
-        <option value="uk-validation">مجموعة التحقق البريطانية · UK validation corpus (English, not UAE law)</option>
-        <option value="synthetic">اصطناعي · SYNTHETIC test data (not legislation)</option>
+        <option value="uae">التشريعات الإماراتية / UAE legislation</option>
+        <option value="uk-validation">مجموعة التحقق البريطانية / UK validation corpus (English, not UAE law)</option>
+        <option value="synthetic">اصطناعي، ليس تشريعاً / SYNTHETIC, not legislation</option>
       </select>
       <button type="submit">بحث / Search</button>
     </form>
-    <p id="corpus-note" class="src"></p>
+    <div id="corpus-note" class="src"></div>
     <div id="sstatus" role="status" aria-live="polite"></div>
     <div id="sresults" aria-live="polite" aria-busy="false"></div>
   </section>
-  <section aria-labelledby="h-asof"><h2 id="h-asof">ماذا كان النص بتاريخ؟ · As-of view</h2>
+  <section aria-labelledby="h-asof"><h2 id="h-asof"><span lang="ar">ماذا كان النص بتاريخ؟</span> / <span lang="en" dir="ltr">As-of view</span></h2>
+    <div id="asof-label"></div>
     <div class="row"><label for="date">التاريخ / Date</label>
-      <input id="date" type="date" value="2021-01-01"><input id="slider" type="range" min="2019" max="2026" step="0.0833" value="2021" aria-label="timeline"></div>
-    <div id="asof" class="card" aria-live="polite"></div></section>
-  <section aria-labelledby="h-diff"><h2 id="h-diff">التغييرات · Changes (side-by-side redline)</h2>
-    <div id="diff"></div></section>
+      <input id="date" type="date" value="2021-01-01">
+      <input id="slider" type="range" min="2019" max="2026" step="0.0833" value="2021" aria-label="الخط الزمني للتاريخ / Date timeline">
+    </div>
+    <div id="asof" class="card" aria-live="polite" aria-busy="false"></div></section>
+  <section aria-labelledby="h-diff"><h2 id="h-diff"><span lang="ar">التغييرات (مقارنة جنبًا إلى جنب)</span> / <span lang="en" dir="ltr">Changes (side-by-side redline)</span></h2>
+    <div id="diff-label"></div>
+    <div id="diff" aria-live="polite" aria-busy="false"></div></section>
 </main>
 <script>
-const $=s=>document.querySelector(s); let work=null;
-const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+"use strict";
+const $=s=>document.querySelector(s);
+/* The one escape helper: every dynamic value inserted into HTML goes through esc(). */
+const esc=t=>String(t==null?"":t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+/* bi() takes TRUSTED constant strings only (Arabic first, English second). */
+const bi=(ar,en)=>`<span lang="ar">${ar}</span> / <span lang="en" dir="ltr">${en}</span>`;
+const LOADING=bi("جارٍ التحميل","Loading");
+const NA=bi("غير متوفر","n/a");
+const OGL=bi("تحتوي على معلومات من القطاع العام مرخّصة بموجب رخصة الحكومة المفتوحة الإصدار 3.0.","Contains public sector information licensed under the Open Government Licence v3.0.");
 const kindAr={inserted:"مضافة",replaced:"مستبدلة",repealed:"ملغاة",renumbered:"أعيد ترقيمها",clarified:"تصحيح إملائي"};
-async function j(u){const r=await fetch(u);return r.json()}
+const certMap={certain:bi("مؤكد","certain"),uncertain:bi("غير مؤكد","UNCERTAIN"),not_in_force:bi("غير نافذ","not in force")};
+let work=null,tokL=0,tokA=0,tokD=0,tokS=0,CI={},UKERR=null;
+
+/* fetch helper: checks r.ok, throws a short message on HTTP or network failure */
+async function j(u){
+  let r;
+  try{r=await fetch(u,{headers:{Accept:"application/json"}})}catch(e){throw new Error("network error")}
+  let body=null;try{body=await r.json()}catch(e){}
+  if(!r.ok){const d=body&&(body.error||body.detail);throw new Error((typeof d==="string"&&d)?d:"HTTP "+r.status)}
+  if(body===null||typeof body!=="object")throw new Error("invalid response");
+  return body;
+}
+function errHtml(e){
+  return `<div class="err" role="alert">${bi("تعذر تحميل البيانات. حاول مرة أخرى.","Could not load the data. Please try again.")}<br><span class="src" lang="en" dir="ltr">${esc(e&&e.message)}</span></div>`;
+}
+const emptyHtml=(ar,en)=>`<div class="empty" role="status">${bi(ar,en)}</div>`;
+
+/* badges: text AND shape differ (dashed square / double pill / solid rounded / dotted) */
+function badge(k){
+  switch(k){
+    case "synthetic":return `<span class="b b-syn">${bi("اصطناعي، ليس تشريعاً","SYNTHETIC, not legislation")}</span>`;
+    case "uk-validation":return `<span class="b b-uk">${bi("تشريعات بريطانية (بالإنجليزية)، للتحقق فقط، وليست قانونًا إماراتيًا","UK legislation (English), validation only, not UAE law")}</span>`;
+    case "uae-real":return `<span class="b b-uae">${bi("بيانات حقيقية","REAL")}</span>`;
+    case "nodata":return `<span class="b b-none">${bi("لا توجد بيانات حقيقية محمّلة","No real UAE data loaded")}</span>`;
+    default:return `<span class="b b-uae">${bi("تشريعات الإمارات","UAE legislation")}</span>`;
+  }
+}
+function badgeFor(c){return badge(c==="synthetic"?"synthetic":c==="uk-validation"?"uk-validation":"uae")}
+function labelBlock(syn,uk){
+  let h="";
+  if(syn)h+=`<div class="syn-warn" role="note">${badge("synthetic")}<br>${bi("بيانات اصطناعية للاختبار فقط، وليست تشريعًا.","SYNTHETIC test data only, not legislation.")}</div>`;
+  if(uk)h+=`<div class="uk-warn" role="note">${badge("uk-validation")}<br>${OGL}</div>`;
+  return h;
+}
+
+function safeUrl(u){return /^https?:\/\//i.test(u||"")}
+/* every provision keeps its source link and retrieval date */
+function srcLine(url,ret){
+  const link=url?(safeUrl(url)?`<a href="${esc(url)}" rel="noopener noreferrer" target="_blank" dir="ltr">${esc(url)}</a>`:`<bdi dir="ltr">${esc(url)}</bdi>`):NA;
+  return `<div class="src">${bi("المصدر","Source")}: ${link} · ${bi("تاريخ الجلب","Retrieved")}: ${ret?`<bdi dir="ltr">${esc(ret)}</bdi>`:NA}</div>`;
+}
+function enNote(t){return t?`<span class="src" lang="en" dir="ltr">${esc(t)}</span>`:""}
+const debounce=(f,ms)=>{let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>f(...a),ms)}};
+const busy=(el,b)=>el.setAttribute("aria-busy",b?"true":"false");
+
 async function load(){
-  const real=$("#mode").value==="real";
-  const w=await j("/api/works?real="+real);
-  $("#badge").className="b "+(w.synthetic?"b-syn":"b-uae");$("#badge").textContent=w.synthetic?"اصطناعي · SYNTHETIC | ليس قانونًا":"بيانات حقيقية · REAL";
-  if(!w.works.length){work=null;$("#asof").innerHTML=esc(w.note||"No data");$("#diff").innerHTML="";return}
-  work=w.works[0].work_id; asof(); diffs();
+  const real=$("#mode").value==="real",my=++tokL;++tokA;++tokD;work=null;
+  $("#badge").innerHTML=`<span class="b b-load">${LOADING}</span>`;
+  $("#asof-label").innerHTML="";$("#diff-label").innerHTML="";
+  $("#asof").innerHTML=`<div class="loading">${LOADING}</div>`;$("#diff").innerHTML=`<div class="loading">${LOADING}</div>`;
+  let w;
+  try{
+    w=await j("/api/works?real="+real);
+    if(my!==tokL)return;
+    const syn=!!w.synthetic,list=Array.isArray(w.works)?w.works:[];
+    const lab=labelBlock(syn,false);
+    $("#asof-label").innerHTML=lab;$("#diff-label").innerHTML=lab;
+    if(!list.length){
+      $("#badge").innerHTML=badge(syn?"synthetic":"nodata");
+      const msg=syn?emptyHtml("لا توجد أعمال تشريعية","No works available"):badge("nodata")+"<br>"+enNote(w.note);
+      $("#asof").innerHTML=`<div class="empty" role="status">${msg}</div>`;
+      $("#diff").innerHTML=`<div class="empty" role="status">${bi("لا توجد تغييرات","No changes")}</div>`;
+      return;
+    }
+    $("#badge").innerHTML=badge(syn?"synthetic":"uae-real");
+    work=list[0].work_id;
+  }catch(e){
+    if(my!==tokL)return;
+    $("#badge").innerHTML=`<span class="b b-err">${bi("تعذر التحميل","Load failed")}</span>`;
+    $("#asof").innerHTML=errHtml(e);$("#diff").innerHTML=errHtml(e);return;
+  }
+  asof();diffs();
 }
+
 async function asof(){
-  if(!work)return; const real=$("#mode").value==="real";
-  const r=await j(`/api/as-of?work=${work}&date=${$("#date").value}&real=${real}`);
-  const cert={certain:"مؤكد · certain",uncertain:"غير مؤكد · UNCERTAIN",not_in_force:"غير نافذ · not in force"}[r.certainty];
-  $("#asof").innerHTML=`<p><b>${cert}</b>: ${esc(r.version_id||"n/a")} ${esc(r.note)}</p>`+
-   r.articles.slice(0,6).map(a=>`<p><b>المادة ${a.number}${a.bis?" مكرر":""}</b> ${esc(a.text)}<br><span class="src" dir="ltr">source: ${esc(a.source_url)} · retrieved ${esc(a.retrieved_at)}</span></p>`).join("");
+  if(!work)return;
+  const my=++tokA,real=$("#mode").value==="real",d=$("#date").value,box=$("#asof");
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(d)){box.innerHTML=emptyHtml("اختر تاريخًا صالحًا","Choose a valid date");return}
+  busy(box,true);box.innerHTML=`<div class="loading">${LOADING}</div>`;
+  try{
+    const r=await j(`/api/as-of?work=${encodeURIComponent(work)}&date=${encodeURIComponent(d)}&real=${real}`);
+    if(my!==tokA)return;
+    $("#asof-label").innerHTML=labelBlock(!!r.synthetic,false);
+    const arts=Array.isArray(r.articles)?r.articles:[];
+    const cert=certMap[r.certainty]||esc(r.certainty);
+    let h=`<p><b>${cert}</b>: <bdi dir="ltr">${r.version_id?esc(r.version_id):""}</bdi>${r.version_id?"":NA} ${enNote(r.note)}</p>`;
+    if(!arts.length)h+=emptyHtml("لا توجد مواد لهذا التاريخ","No provisions for this date");
+    h+=arts.slice(0,6).map(a=>`<p><b>${bi("المادة","Art.")} ${esc(a.number)}${a.bis?" "+bi("مكرر","bis"):""}</b> <span dir="auto">${esc(a.text)}</span>${srcLine(a.source_url,a.retrieved_at)}</p>`).join("");
+    if(arts.length>6)h+=`<p class="hint">${bi("عرض 6 من","Showing 6 of")} ${esc(arts.length)}</p>`;
+    box.innerHTML=h;
+  }catch(e){
+    if(my!==tokA)return;
+    box.innerHTML=errHtml(e);
+  }finally{if(my===tokA)busy(box,false)}
 }
+
 async function diffs(){
-  const real=$("#mode").value==="real";
-  const v=(await j(`/api/works/${work}/versions?real=${real}`)).versions; if(v.length<2)return;
-  const d=await j(`/api/diff?work=${work}&a=${v[0].expression_id}&b=${v[1].expression_id}&real=${real}`);
-  $("#diff").innerHTML=d.changes.map(c=>{
-    const words=(c.words||[]).map(w=>w.op==="equal"?esc(w.a):w.op==="replace"?`<del>${esc(w.a)}</del> <ins>${esc(w.b)}</ins>`:w.op==="delete"?`<del>${esc(w.a)}</del>`:`<ins>${esc(w.b)}</ins>`).join(" ");
-    return `<article class="card"><div class="kind">${kindAr[c.kind]} · ${c.kind}${c.confidence==="low"?" · ثقة منخفضة / low confidence":""}</div>`+
-     `<div class="cols"><div>${esc(c.a_text)||"n/a"}</div><div>${esc(c.b_text)||"n/a"}</div></div>`+
-     (words?`<p>${words}</p>`:"")+`<div class="src" dir="ltr">source: ${esc(c.source_url)} · retrieved ${esc(c.retrieved_at)}</div></article>`}).join("");
+  if(!work)return;
+  const my=++tokD,real=$("#mode").value==="real",box=$("#diff");
+  busy(box,true);box.innerHTML=`<div class="loading">${LOADING}</div>`;
+  try{
+    const path=work.split("/").map(encodeURIComponent).join("/");
+    const vr=await j(`/api/works/${path}/versions?real=${real}`);
+    if(my!==tokD)return;
+    const v=Array.isArray(vr.versions)?vr.versions:[];
+    if(v.length<2){box.innerHTML=emptyHtml("لا توجد تغييرات: يلزم إصداران على الأقل","No changes: at least two versions are needed");return}
+    const d=await j(`/api/diff?work=${encodeURIComponent(work)}&a=${encodeURIComponent(v[0].expression_id)}&b=${encodeURIComponent(v[1].expression_id)}&real=${real}`);
+    if(my!==tokD)return;
+    $("#diff-label").innerHTML=labelBlock(!!d.synthetic,false);
+    const ch=Array.isArray(d.changes)?d.changes:[];
+    if(!ch.length){box.innerHTML=emptyHtml("لا توجد تغييرات","No changes");return}
+    box.innerHTML=`<p class="hint">${bi("من","From")} <bdi dir="ltr">${esc(d.from)}</bdi> ${bi("إلى","to")} <bdi dir="ltr">${esc(d.to)}</bdi></p>`+ch.map(c=>{
+      const words=(c.words||[]).map(w=>w.op==="equal"?esc(w.a):w.op==="replace"?`<del>${esc(w.a)}</del> <ins>${esc(w.b)}</ins>`:w.op==="delete"?`<del>${esc(w.a)}</del>`:`<ins>${esc(w.b)}</ins>`).join(" ");
+      return `<article class="card"><div class="kind"><span lang="ar">${esc(kindAr[c.kind]||"")}</span> · <span lang="en" dir="ltr">${esc(c.kind)}</span>${c.confidence==="low"?" · "+bi("ثقة منخفضة","low confidence"):""}</div>`+
+       `<div class="cols"><div><div class="colh">${bi("قبل","Before")}</div><div dir="auto">${c.a_text?esc(c.a_text):NA}</div></div>`+
+       `<div><div class="colh">${bi("بعد","After")}</div><div dir="auto">${c.b_text?esc(c.b_text):NA}</div></div></div>`+
+       (words?`<p dir="auto">${words}</p>`:"")+srcLine(c.source_url,c.retrieved_at)+`</article>`}).join("");
+  }catch(e){
+    if(my!==tokD)return;
+    box.innerHTML=errHtml(e);
+  }finally{if(my===tokD)busy(box,false)}
 }
-$("#mode").onchange=load;
-$("#date").onchange=()=>{const y=new Date($("#date").value);$("#slider").value=y.getFullYear()+y.getMonth()/12;asof()};
-$("#slider").oninput=e=>{const v=+e.target.value,y=Math.floor(v),m=Math.round((v-y)*12)+1;$("#date").value=`${y}-${String(Math.min(m,12)).padStart(2,"0")}-01`;asof()};
-const BADGE={synthetic:['b-syn','اصطناعي · SYNTHETIC | ليس تشريعًا / not legislation'],
- 'uk-validation':['b-uk','UK validation corpus (English, not UAE law)'],uae:['b-uae','UAE · الإمارات']};
-function badge(c){const b=BADGE[c]||['b-uae',c];return `<span class="b ${b[0]}">${b[1]}</span>`}
-function mark(text,hl){let o="",p=0;(hl||[]).slice().sort((a,b)=>a[0]-b[0]).forEach(([a,b])=>{if(a<p)return;o+=esc(text.slice(p,a))+"<mark>"+esc(text.slice(a,b))+"</mark>";p=b});return o+esc(text.slice(p))}
-function safeUrl(u){return /^https?:\/\//.test(u||"")}
+
+$("#mode").addEventListener("change",load);
+$("#date").addEventListener("change",()=>{
+  const m=/^(\d{4})-(\d{2})-\d{2}$/.exec($("#date").value);
+  if(m){$("#slider").value=(+m[1])+(+m[2]-1)/12;$("#slider").setAttribute("aria-valuetext",$("#date").value)}
+  asof();
+});
+const asofDebounced=debounce(asof,250);
+$("#slider").addEventListener("input",e=>{
+  const v=+e.target.value,y=Math.floor(v),m=Math.min(12,Math.round((v-y)*12)+1);
+  const ds=`${y}-${String(m).padStart(2,"0")}-01`;
+  $("#date").value=ds;e.target.setAttribute("aria-valuetext",ds);
+  asofDebounced();
+});
+
+function mark(text,hl){
+  text=String(text==null?"":text);let o="",p=0;
+  (hl||[]).slice().sort((a,b)=>a[0]-b[0]).forEach(([a,b])=>{if(a<p||b>text.length)return;o+=esc(text.slice(p,a))+"<mark>"+esc(text.slice(a,b))+"</mark>";p=b});
+  return o+esc(text.slice(p));
+}
+const uaeEmpty=()=>CI.uae&&Object.values(CI.uae.counts||{}).reduce((s,n)=>s+(+n||0),0)===0;
+
 async function corpora(){
-  try{const c=await j("/api/corpora");const sel=$("#corpus");
-   c.corpora.forEach(x=>{const o=[...sel.options].find(o=>o.value===x.corpus);if(o)o.textContent=`${x.label_ar} · ${x.label_en} (${x.counts.provisions})`});
-   window._ci=Object.fromEntries(c.corpora.map(x=>[x.corpus,x]));noteFor()}catch(e){}
+  try{
+    const c=await j("/api/corpora"),sel=$("#corpus");
+    (c.corpora||[]).forEach(x=>{
+      const o=[...sel.options].find(o=>o.value===x.corpus);
+      const n=x.counts&&x.counts.provisions!=null?` (${x.counts.provisions})`:"";
+      if(o)o.textContent=`${x.label_ar} / ${x.label_en}${n}`;
+    });
+    CI=Object.fromEntries((c.corpora||[]).map(x=>[x.corpus,x]));
+  }catch(e){
+    $("#corpus-note").innerHTML=errHtml(e);
+  }
+  try{const h=await j("/api/health");UKERR=h.uk_load_error||null}catch(e){}
+  noteFor();
 }
-function noteFor(){const x=(window._ci||{})[$("#corpus").value];$("#corpus-note").textContent=x?(x.note+(x.licence?` Licence: ${x.licence}.`:"")):""}
+function noteFor(){
+  const c=$("#corpus").value,x=CI[c],box=$("#corpus-note");
+  let h=badgeFor(c);
+  if(c==="uk-validation"){h+=`<br>${OGL}`;if(UKERR)h+=`<div class="err" role="alert">${bi("تعذر تحميل مجموعة المملكة المتحدة.","The UK validation corpus failed to load.")} ${enNote(UKERR)}</div>`}
+  else if(c==="uae"&&uaeEmpty())h=badge("nodata");
+  else if(c==="synthetic")h+=`<br>${bi("بيانات اصطناعية للاختبار فقط.","Synthetic test data only.")}`;
+  if(x&&x.note)h+=`<br>${enNote(x.note)}`;
+  if(!x&&!box.querySelector(".err"))box.innerHTML=h;else if(x)box.innerHTML=h;
+}
+
 async function search(ev){
-  ev&&ev.preventDefault();const q=$("#q").value.trim(),c=$("#corpus").value;const box=$("#sresults");
-  if(!q){$("#sstatus").textContent="اكتب كلمة للبحث · Enter a query";box.innerHTML="";return}
-  box.setAttribute("aria-busy","true");
-  let r;try{r=await j(`/api/search?q=${encodeURIComponent(q)}&corpus=${encodeURIComponent(c)}&limit=20`)}catch(e){$("#sstatus").textContent="تعذر الاتصال · Request failed";box.setAttribute("aria-busy","false");return}
-  box.setAttribute("aria-busy","false");
-  $("#sstatus").textContent=r.error?r.error:`${r.count} نتيجة · ${r.count} result(s). ${r.note||""}`;
-  const warn=r.synthetic?`<div class="syn-warn" role="note">بيانات اصطناعية للاختبار فقط، وليست تشريعًا · SYNTHETIC test data only, not legislation.</div>`:
-    c==="uk-validation"?`<div class="syn-warn" role="note">تشريع بريطاني (إنجليزي) للتحقق من الأداة فقط، وليس قانونًا إماراتيًا · English UK law used for validation only, not UAE law.</div>`:"";
-  box.innerHTML=warn+(r.results||[]).map(x=>`<article class="card" lang="${esc(x.language)}"><div>${badge(x.corpus)} <span class="kind">${esc(x.work_id)} · ${esc(x.expression_id)} · ${x.kind==="article"?"المادة / Art. "+x.number+(x.bis?" مكرر":""):esc(x.kind)}</span></div>`+
-   `<p dir="auto">${mark(x.snippet,x.highlights)}</p>`+
-   (x.snippet!==x.text?`<details><summary>النص الكامل / Full text</summary><p dir="auto">${mark(x.text,[])}</p></details>`:"")+
-   `<div class="src" dir="ltr">source: ${safeUrl(x.source_url)?`<a href="${esc(x.source_url)}" rel="noopener noreferrer" target="_blank">${esc(x.source_url)}</a>`:esc(x.source_url)} · retrieved ${esc(x.retrieved_at)}</div></article>`).join("");
+  if(ev)ev.preventDefault();
+  const q=$("#q").value.trim(),c=$("#corpus").value,box=$("#sresults"),st=$("#sstatus"),my=++tokS;
+  if(!q){st.innerHTML=bi("اكتب كلمة للبحث","Enter a query");box.innerHTML="";return}
+  busy(box,true);st.innerHTML=LOADING;box.innerHTML=`<div class="loading">${LOADING}</div>`;
+  try{
+    const r=await j(`/api/search?q=${encodeURIComponent(q)}&corpus=${encodeURIComponent(c)}&limit=20`);
+    if(my!==tokS)return;
+    const res=Array.isArray(r.results)?r.results:[];
+    const syn=!!r.synthetic||c==="synthetic";
+    const uk=c==="uk-validation"||res.some(x=>x.corpus==="uk-validation");
+    st.innerHTML=`${esc(res.length)} ${bi("نتيجة","result(s)")} ${enNote(r.note)}`;
+    let h=labelBlock(syn,uk);
+    if(!res.length){
+      h+=emptyHtml("لا توجد نتائج","No results");
+      if(c==="uae"&&uaeEmpty())h+=`<div class="empty" role="status">${badge("nodata")}</div>`;
+      box.innerHTML=h;return;
+    }
+    h+=res.map(x=>{
+      const lang=/^[a-z]{2,3}$/i.test(x.language||"")?` lang="${esc(x.language)}"`:"";
+      const art=x.kind==="article"?`${bi("المادة","Art.")} ${esc(x.number)}${x.bis?" "+bi("مكرر","bis"):""}`:esc(x.kind);
+      return `<article class="card"${lang}><div>${badgeFor(x.corpus)} <span class="kind"><bdi dir="ltr">${esc(x.work_id)} · ${esc(x.expression_id)}</bdi> · ${art}</span></div>`+
+       `<p dir="auto">${mark(x.snippet,x.highlights)}</p>`+
+       (x.snippet!==x.text?`<details><summary>${bi("النص الكامل","Full text")}</summary><p dir="auto">${mark(x.text,[])}</p></details>`:"")+
+       srcLine(x.source_url,x.retrieved_at)+`</article>`}).join("");
+    box.innerHTML=h;
+  }catch(e){
+    if(my!==tokS)return;
+    st.innerHTML=bi("تعذر إكمال البحث","Search failed");
+    box.innerHTML=errHtml(e);
+  }finally{if(my===tokS)busy(box,false)}
 }
 $("#sform").addEventListener("submit",search);
 $("#corpus").addEventListener("change",()=>{noteFor();if($("#q").value.trim())search()});
+noteFor();
 corpora();
 load();
 </script>

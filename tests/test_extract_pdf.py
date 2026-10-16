@@ -18,8 +18,12 @@ from pypdf import PdfReader
 from taadeel import extract_pdf as ep
 from taadeel.extract_pdf import extract_expression_ex, extract_text
 from taadeel.normalize import normalize
-from taadeel.synthetic_pdf import LABEL, LAYOUTS, make_image_only_pdf
+from taadeel.synthetic_pdf import LABEL, LAYOUTS, find_font, make_image_only_pdf
 from taadeel.synthetic_pdf import make_pdf as _make_pdf
+
+if find_font() is None:
+    pytest.skip("DejaVu Sans not found (set TAADEEL_PDF_FONT); synthetic PDF scores are calibrated on it",
+                allow_module_level=True)
 
 make_pdf = functools.cache(_make_pdf)  # generation is slow; PDFs are deterministic
 
