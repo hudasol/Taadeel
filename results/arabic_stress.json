@@ -1,0 +1,429 @@
+{
+ "data": "SYNTHETIC test strings, not legislation",
+ "normalise": [
+  {
+   "id": "diacritics",
+   "group": "diacritics",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "shadda_tanween",
+   "group": "diacritics",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "superscript_alef",
+   "group": "diacritics",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "tatweel",
+   "group": "tatweel",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "alef_hamza",
+   "group": "alef",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "alef_wasla",
+   "group": "alef",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "alef_maqsura",
+   "group": "yaa",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "farsi_yeh",
+   "group": "yaa",
+   "v1_ok": false,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "keheh",
+   "group": "letters",
+   "v1_ok": false,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "indic_digits",
+   "group": "digits",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "persian_digits",
+   "group": "digits",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "presentation_forms",
+   "group": "nfkc",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "lam_alef_ligature",
+   "group": "nfkc",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "arabic_punct",
+   "group": "punctuation",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "mixed_ar_en",
+   "group": "mixed",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "rlm_inside",
+   "group": "format",
+   "v1_ok": false,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "zwnj_inside_word",
+   "group": "format",
+   "v1_ok": false,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "bom_start",
+   "group": "format",
+   "v1_ok": false,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "alm_mark",
+   "group": "format",
+   "v1_ok": false,
+   "v2_ok": true,
+   "v1_idempotent": true
+  },
+  {
+   "id": "nbsp",
+   "group": "format",
+   "v1_ok": true,
+   "v2_ok": true,
+   "v1_idempotent": true
+  }
+ ],
+ "labels": [
+  {
+   "id": "plain",
+   "group": "label",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": [
+    5,
+    0
+   ],
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "no_al",
+   "group": "label",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": [
+    5,
+    0
+   ],
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "indic_bis_n",
+   "group": "label",
+   "expected": [
+    12,
+    2
+   ],
+   "v1": [
+    12,
+    2
+   ],
+   "v2": [
+    12,
+    2
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "ordinal_bis",
+   "group": "label",
+   "expected": [
+    5,
+    3
+   ],
+   "v1": [
+    5,
+    3
+   ],
+   "v2": [
+    5,
+    3
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "tatweel_label",
+   "group": "label",
+   "expected": [
+    7,
+    0
+   ],
+   "v1": [
+    7,
+    0
+   ],
+   "v2": [
+    7,
+    0
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "diacritic_label",
+   "group": "label",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": [
+    5,
+    0
+   ],
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "persian_digit_label",
+   "group": "label",
+   "expected": [
+    7,
+    0
+   ],
+   "v1": [
+    7,
+    0
+   ],
+   "v2": [
+    7,
+    0
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "spaces_in_paren",
+   "group": "label",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": [
+    5,
+    0
+   ],
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "fullwidth_paren",
+   "group": "label",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": [
+    5,
+    0
+   ],
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "rlm_label",
+   "group": "format",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": null,
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": false,
+   "v2_ok": true
+  },
+  {
+   "id": "lrm_digits",
+   "group": "format",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": null,
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": false,
+   "v2_ok": true
+  },
+  {
+   "id": "bom_label",
+   "group": "format",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": null,
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": false,
+   "v2_ok": true
+  },
+  {
+   "id": "alm_label",
+   "group": "format",
+   "expected": [
+    9,
+    0
+   ],
+   "v1": null,
+   "v2": [
+    9,
+    0
+   ],
+   "v1_ok": false,
+   "v2_ok": true
+  },
+  {
+   "id": "ornate_paren",
+   "group": "label",
+   "expected": [
+    5,
+    0
+   ],
+   "v1": null,
+   "v2": [
+    5,
+    0
+   ],
+   "v1_ok": false,
+   "v2_ok": true
+  },
+  {
+   "id": "dash_bis",
+   "group": "label",
+   "expected": [
+    5,
+    1
+   ],
+   "v1": null,
+   "v2": [
+    5,
+    1
+   ],
+   "v1_ok": false,
+   "v2_ok": true
+  },
+  {
+   "id": "english_label",
+   "group": "mixed",
+   "expected": null,
+   "v1": null,
+   "v2": null,
+   "v1_ok": true,
+   "v2_ok": true
+  },
+  {
+   "id": "chapter_not_article",
+   "group": "label",
+   "expected": null,
+   "v1": null,
+   "v2": null,
+   "v1_ok": true,
+   "v2_ok": true
+  }
+ ],
+ "summary": {
+  "normalise": {
+   "cases": 20,
+   "v1_ok": 14,
+   "v2_ok": 20
+  },
+  "labels": {
+   "cases": 17,
+   "v1_ok": 11,
+   "v2_ok": 17
+  }
+ }
+}
