@@ -12,7 +12,7 @@ jobs:
         with:
           python-version: "3.13"
           cache: pip
-      - run: pip install -e ".[api,dev]"
+      - run: pip install -e ".[api,dev,extract,store]"
       - run: pytest -q
       - name: Validation harness (synthetic only)
         run: python -m taadeel.validate table 10
