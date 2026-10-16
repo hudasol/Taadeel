@@ -11,12 +11,12 @@ A tool that tracks changes to legislation may be read as authoritative whether o
 ## What exists
 
 * **Container.** A Docker image (Python slim base) holds the code, the web page and a small UK validation corpus. It makes no external calls at run time and starts with one command. `/api/health` is the health check.
-* **Demo host.** A live demo runs on the Render free tier in Frankfurt. This is not sovereign hosting. It exists to show behaviour, not to hold data that matters.
+* **Demo host.** A live demo runs on the Render free tier (region chosen in the hosting dashboard, not in `render.yaml`). This is not sovereign hosting. It exists to show behaviour, not to hold data that matters.
 * **Residency.** A sovereign deployment would run the same image on UAE hosted infrastructure. The choice of host is to be decided by the owner of the data. Nothing in the project assumes a particular provider.
 * **Provenance and integrity.** Every stored expression carries its source URL, retrieval time and a sha256 content hash. UK fetches are logged in a manifest with hashes. The ingestion adapter refuses any host not marked as permitted, reads robots.txt first, treats an unreadable robots.txt as a refusal, and stops on a block.
 * **Labels and schema checks.** The store enforces, with database constraints, that a record is synthetic if and only if it sits in the synthetic corpus and carries the synthetic prefix. Real views never include synthetic records. The web page shows a distinct badge for synthetic, UK validation and real data.
 * **Hash locked evidence.** Engine files are recorded by sha256 in the result files. Evaluations are pre registered, run once, and refuse a second run.
-* **Akoma Ntoso export.** An export in an Akoma Ntoso 3.0 compatible form, checked against the OASIS schema. The claim is compatible, not compliant: no lifecycle events, no modification elements, and URIs that are the project's own.
+* **Akoma Ntoso export.** An Akoma Ntoso compatible export, checked against the OASIS Akoma Ntoso 1.0 schema (`akomantoso30.xsd`). The claim is compatible, not compliant: no lifecycle events, no modification elements, and URIs that are the project's own.
 
 ## Measured evidence
 

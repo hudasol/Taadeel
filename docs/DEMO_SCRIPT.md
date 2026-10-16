@@ -16,8 +16,8 @@ Live site: https://taadeel.onrender.com. The free tier may take up to a minute t
 
 **2:20 to 2:50, evidence slide.**
 
-* Held out synthetic, v1: 55 of 60 point predictions within tolerance, a calibration count. Alignment v2 on new seeds: v2 did not meet the pre registered bar (claims not held: V1, V6): it raised repealed and inserted recall in every templated scenario and matched v1 on the UK pairs, but was slightly worse than v1 on the easy scenario (lowest v2 metric there 0.987). v1 stays the default engine.
+* Held out synthetic, v1: 55 of 60 point predictions within tolerance, a calibration count. Alignment v2 on new seeds: v2 did not meet the pre registered bar (claims not held: V1, V6): it raised repealed and inserted recall in every templated scenario and aligned the UK pairs as correctly as v1, but was slightly worse than v1 on the easy scenario (lowest v2 metric there 0.987). It also marks more UK pairs as low confidence (52 against 6 on one day windows) and has lower inserted precision in the many inserts scenario (0.954 against 0.983). v1 stays the default engine.
 * UK English: 2425 of 2425 sections aligned in one day windows (easy cases). Point in time on the day before a change: 63 of 80 with effects only. With snapshot evidence (measured offline, not yet in the page): 56 certain and correct, 3 certain and wrong, 21 uncertain of 80, and the true text was among the candidates in 18 of those.
 * Synthetic Arabic stress set: v1 passes 25 of 37, v2 passes 37, by construction.
 
-**2:50 to 3:00, limits.** "Nothing is validated on UAE law or on real Arabic legal text. UK numbers say nothing about UAE law. Schedules are excluded. Hand checks were done by the author, not a lawyer. Evaluations were pre registered and run once. Next: permission, a real Arabic gold set, and a reviewer."
+**2:50 to 3:00, limits.** "Nothing is validated on UAE law or on real Arabic legal text. UK numbers say nothing about UAE law. Schedules are excluded. Hand checks were done by the author, not a lawyer. The held out and timeline evaluations were pre registered and run once. Next: permission, a real Arabic gold set, and a reviewer."

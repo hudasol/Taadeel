@@ -24,7 +24,7 @@ Scope is stated on every line. None of it concerns UAE law.
 
 **Synthetic, v1 against v2, new held out seeds 920000 to 920099, same documents, run once.**
 
-v2 did not meet the pre registered bar (claims not held: V1, V6): it raised repealed and inserted recall in every templated scenario and matched v1 on the UK pairs, but was slightly worse than v1 on the easy scenario (lowest v2 metric there 0.987). v1 stays the default engine.
+v2 did not meet the pre registered bar (claims not held: V1, V6): it raised repealed and inserted recall in every templated scenario and aligned the UK pairs as correctly as v1, but was slightly worse than v1 on the easy scenario (lowest v2 metric there 0.987). It also marks more UK pairs as low confidence (52 against 6 on one day windows) and has lower inserted precision in the many inserts scenario (0.954 against 0.983). v1 stays the default engine.
 
 Point predictions for v2: 57 of 60. Directional claims for v2: 8 of 10; claims missed: V1, V6.
 

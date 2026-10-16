@@ -89,7 +89,7 @@ def build() -> tuple[str, str]:
     F = facts()
     more = []
     if "v2_verdict" in F:
-        more.append(f"* Alignment v2 (pre registered, new held out seeds and UK pairs): {F['v2_hits']} of {F['v2_total']} point predictions within tolerance, "
+        more.append(f"* Alignment v2 (pre registered, new held out seeds and UK pairs): {F['v2_hits']} of {F['v2_total']} point predictions within tolerance (a calibration count, not an accuracy), "
                     f"{F['v2_dir_hits']} of {F['v2_dir_total']} directional claims held. {F['v2_verdict']} [`docs/HELDOUT_V2_RESULTS.md`](docs/HELDOUT_V2_RESULTS.md)")
     if "tl_queries" in F:
         more.append(f"* Point in time with snapshot evidence (UK, pre registered): certain and wrong answers on the day before a change fall from {F['tl_old_wrong']} to {F['tl_certain_wrong']} of {F['tl_queries']}; "

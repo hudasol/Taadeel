@@ -12,7 +12,7 @@ A policy analyst who asks what changed in a law since a given date has to find e
 
 * A web page and an API that answer "what did this law say on date X" and "what changed between two versions", with article level diffs shown as a side by side redline.
 * Provenance on every provision: a link to the official source and a retrieval date.
-* Three visible states for a point in time answer: certain, uncertain with candidate texts, and not in force.
+* Three states for a point in time answer: certain, uncertain with candidate texts, and not in force. The synthetic demo law has known dates only, so the demo shows certain and not in force; the uncertain state is implemented but not shown by the demo data.
 * Distinct badges for synthetic data, UK validation data and real data, so that test material cannot be mistaken for law.
 * A UK validation corpus (legislation.gov.uk, Open Government Licence v3.0) that policy users can search to try the workflow on real English text, with the licence attribution shown.
 * A live demo at https://taadeel.onrender.com. It uses synthetic data for the UAE view and may take up to a minute to wake up.
@@ -21,7 +21,7 @@ A policy analyst who asks what changed in a law since a given date has to find e
 
 1. Choose the view. Synthetic is the default for the demonstration; the real view states plainly that no real UAE data is loaded.
 2. Choose the work and set the as of date with the date field or the slider.
-3. Read the state shown for that date: certain, uncertain, or not in force. An uncertain answer lists the candidate texts instead of picking one.
+3. Read the state shown for that date: certain, uncertain, or not in force (the demo data shows the first and the last). An uncertain answer lists the candidate texts instead of picking one.
 4. Open the changes view to see the redline between versions. Each change is classed as inserted, replaced, repealed, renumbered or clarified, and a low confidence match is flagged, not forced.
 5. Follow the source link on any provision to the official publication, and check the retrieval date.
 6. Record the finding with its source and date. The official Arabic text remains the reference.
