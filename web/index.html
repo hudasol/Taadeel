@@ -94,6 +94,10 @@ details summary{cursor:pointer;color:var(--acc)}
 .err{border:2px solid var(--err-bd);background:var(--err-bg);color:var(--err-fg);font-weight:600}
 .empty{border:2px dotted var(--ctl);background:var(--surface);color:var(--fg)}
 .loading{color:var(--mut);padding:8px 0}
+/* phone widths: long bilingual option labels must not widen the page */
+select,input,label{max-width:100%;box-sizing:border-box}
+select{text-overflow:ellipsis}
+main,header,section{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
