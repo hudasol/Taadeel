@@ -135,22 +135,29 @@ def fetch_sample() -> None:
                               indent=1, ensure_ascii=False), encoding="utf-8")
 
 
-def run() -> dict:
-    if RESULT.exists():
-        raise SystemExit(f"{RESULT.name} exists: the second sample is measured once. Not re-running.")
-    data = json.loads(OUT.read_text(encoding="utf-8"))
-    rows = data["rows"]
+def _measure(rows: list[dict]) -> dict:
     ok = [r for r in rows if r["status"] == "ok" and r["text"]]
     bearing = [r for r in ok if KW.search(r["text"])]
     direct = lambda rs: [dict(r, effects=[e for e in r["effects"] if not e["via_schedule"]]) for r in rs]
-    out = {"scope": "English UK Acts, OGL v3.0; not UAE law",
-           "amend_en_sha256": hashlib.sha256((ROOT / "src" / "taadeel" / "amend_en.py").read_bytes()).hexdigest(),
-           "candidates_total": data["candidates_total"], "fetched": len(rows), "readable": len(ok),
-           "instruction_bearing": len(bearing), "split_rule": "sha1(url) parity: even=dev, odd=test"}
+    out = {"fetched": len(rows), "readable": len(ok), "instruction_bearing": len(bearing)}
     for part in ("dev", "test", "all"):
         rs = bearing if part == "all" else [r for r in bearing if split(r) == part]
         out[part] = {"extended_patterns": evaluate(rs, True), "original_patterns": evaluate(rs, False),
                      "extended_patterns_direct_effects_only": evaluate(direct(rs), True)}
+    return out
+
+
+def run() -> dict:
+    if RESULT.exists():
+        raise SystemExit(f"{RESULT.name} exists: the second sample is measured once. Not re-running.")
+    sec = json.loads(OUT.read_text(encoding="utf-8"))
+    sch = json.loads(OUT_SCH.read_text(encoding="utf-8"))
+    out = {"scope": "English UK Acts, OGL v3.0; not UAE law",
+           "amend_en_sha256": hashlib.sha256((ROOT / "src" / "taadeel" / "amend_en.py").read_bytes()).hexdigest(),
+           "split_rule": "sha1(url) parity: even=dev, odd=test",
+           "sections": {"candidates_total": sec["candidates_total"], **_measure(sec["rows"])},
+           "schedule_paragraphs": {"candidates_total": sch["candidates_total"], **_measure(sch["rows"])},
+           "combined": _measure(sec["rows"] + sch["rows"])}
     RESULT.write_text(json.dumps(out, indent=1), encoding="utf-8")
     return out
 
