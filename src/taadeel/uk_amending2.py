@@ -36,6 +36,10 @@ OUT_SCH = ROOT / "data" / "uk" / "amending_sample_2_schedules.json"
 RESULT = ROOT / "results" / "uk_amending_2.json"
 N_NEW = 150
 _SCH = re.compile(r"\bSch(?:s)?\.\s*\d")
+# Rule 6b (docs/DECISIONS.md), declared after rule 6 yielded only 11 new sections and before any
+# schedule paragraph was fetched: the first "Sch. N para. M" in the citation of an effect made by a UK
+# Public General Act; enacted schedule paragraph fetched; ordered by sha1(url); cap N_NEW.
+_SCH_PARA = re.compile(r"\(c\. (\d+)\),[^;]*?\bSch\.\s*(\d+[A-Z]?)\s*para\.\s*(\d+[A-Z]?)")
 
 
 def candidates() -> list[dict]:
