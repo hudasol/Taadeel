@@ -6,7 +6,7 @@
 [sources."uaelegislation.gov.ae"]
 mode = "link_only"
 min_delay_seconds = 10
-license = "none stated; all rights reserved (Ministry of Cabinet Affairs)"
+license = "none stated; all rights reserved (portal footer, uaelegislation.gov.ae)"
 permission_evidence = ""   # fill with reference to written permission, then set mode = "permitted"
 
 [sources."www.moj.gov.ae"]
