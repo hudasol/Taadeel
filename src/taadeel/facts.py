@@ -99,8 +99,12 @@ def facts() -> dict[str, str]:
             "v1 stays the default engine because the v2 gain relies on number offsets that real UAE amendments may not follow and v2 is not checked on real Arabic text; v2 is available as a separate module."
             if better else
             f"v2 did not meet the pre registered bar (claims not held: {F['v2_dir_misses']})"
-            + (f": it raised repealed and inserted recall in every templated scenario and matched v1 on the UK pairs, but was slightly worse than v1 on the easy scenario (lowest v2 metric there {d['V6']['detail'].split('=')[-1]}). "
+            + (f": it raised repealed and inserted recall in every templated scenario and aligned the UK pairs as correctly as v1, but was slightly worse than v1 on the easy scenario (lowest v2 metric there {d['V6']['detail'].split('=')[-1]}). "
                if d["V2"]["ok"] and d["V3"]["ok"] and not d["V6"]["ok"] else ". ")
+            + (f"It also marks more UK pairs as low confidence ({v2['uk_v2']['one_day']['alignment']['low_confidence_pairs']} against "
+               f"{v2['uk_v1']['one_day']['alignment']['low_confidence_pairs']} on one day windows) and has lower inserted precision in the many inserts scenario "
+               f"({f3(v2['heldout_v2']['templated, many inserts/repeals']['per_class']['inserted']['precision'])} against "
+               f"{f3(v2['heldout_v1']['templated, many inserts/repeals']['per_class']['inserted']['precision'])}). ")
             + "v1 stays the default engine.")
         for key, name in (("templated", "templated near-duplicates, small edits"), ("e40", "templated, 40% of words edited"),
                           ("e70", "templated, 70% of words edited"), ("many", "templated, many inserts/repeals"),

@@ -22,7 +22,7 @@ Taadeel tracks amendments to UAE federal legislation and produces article level 
 |---|---|---|
 | synthetic, v1, first held out run | point predictions within tolerance | {v1_heldout_hits} of {v1_heldout_total} (a calibration count, not an accuracy) |
 | synthetic, v1, first held out run | directional claims that held | {v1_heldout_directional_hits} of {v1_heldout_directional_total} |
-| synthetic, v1 against v2, new seeds | point predictions for v2 | {v2_hits} of {v2_total} |
+| synthetic, v1 against v2, new seeds | point predictions for v2 within tolerance (a calibration count, not an accuracy) | {v2_hits} of {v2_total} |
 | synthetic, v1 against v2, new seeds | directional claims for v2 | {v2_dir_hits} of {v2_dir_total}; missed: {v2_dir_misses} |
 | synthetic, templated small edits | alignment accuracy, v1 and v2 | {h2_v1_templated_acc} and {h2_v2_templated_acc} |
 | synthetic, templated small edits | repealed recall, v1 and v2 | {h2_v1_templated_repealed_R} and {h2_v2_templated_repealed_R} |
@@ -45,7 +45,7 @@ Verdict on alignment v2 under the pre registered rule: {v2_verdict}
 * Synthetic results measure code on generated text. The Arabic stress set and normalisation v2 were written after the cases were seen, so that score is by construction.
 * UK one day windows are easy cases. UK ground truth is editorial, not a legal original. Hand checks were done by the author, not by a lawyer.
 * Schedules, devolved material and prospective changes are excluded. Amendment pattern recall is low and the Arabic lexicon is unvalidated.
-* Engine v1 files are hash locked; evaluations were pre registered and run once, and misses are reported with hits.
+* Engine v1 files are hash locked; the held out synthetic runs, the v2 comparison, the snapshot timeline and the second amendment sample were pre registered and run once; the UK validation was re run after effects reader fixes (earlier result files kept), and the first amendment sample's patterns were extended on its dev half; misses are reported with hits.
 
 ## How to reproduce
 

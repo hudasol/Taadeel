@@ -22,7 +22,7 @@ Taadeel tracks amendments to UAE federal legislation and produces article level 
 |---|---|---|
 | synthetic, v1, first held out run | point predictions within tolerance | 55 of 60 (a calibration count, not an accuracy) |
 | synthetic, v1, first held out run | directional claims that held | 5 of 6 |
-| synthetic, v1 against v2, new seeds | point predictions for v2 | 57 of 60 |
+| synthetic, v1 against v2, new seeds | point predictions for v2 within tolerance (a calibration count, not an accuracy) | 57 of 60 |
 | synthetic, v1 against v2, new seeds | directional claims for v2 | 8 of 10; missed: V1, V6 |
 | synthetic, templated small edits | alignment accuracy, v1 and v2 | 0.969 and 0.998 |
 | synthetic, templated small edits | repealed recall, v1 and v2 | 0.643 and 0.873 |
@@ -37,7 +37,7 @@ Taadeel tracks amendments to UAE federal legislation and produces article level 
 | Arabic Wikisource page, counts only | articles parsed; missing numbers | 50; 0 |
 | Akoma Ntoso compatible export | documents valid; controls rejected | 10 of 10; 3 of 3 |
 
-Verdict on alignment v2 under the pre registered rule: v2 did not meet the pre registered bar (claims not held: V1, V6): it raised repealed and inserted recall in every templated scenario and matched v1 on the UK pairs, but was slightly worse than v1 on the easy scenario (lowest v2 metric there 0.987). v1 stays the default engine.
+Verdict on alignment v2 under the pre registered rule: v2 did not meet the pre registered bar (claims not held: V1, V6): it raised repealed and inserted recall in every templated scenario and aligned the UK pairs as correctly as v1, but was slightly worse than v1 on the easy scenario (lowest v2 metric there 0.987). It also marks more UK pairs as low confidence (52 against 6 on one day windows) and has lower inserted precision in the many inserts scenario (0.954 against 0.983). v1 stays the default engine.
 
 ## Limits
 
@@ -45,7 +45,7 @@ Verdict on alignment v2 under the pre registered rule: v2 did not meet the pre r
 * Synthetic results measure code on generated text. The Arabic stress set and normalisation v2 were written after the cases were seen, so that score is by construction.
 * UK one day windows are easy cases. UK ground truth is editorial, not a legal original. Hand checks were done by the author, not by a lawyer.
 * Schedules, devolved material and prospective changes are excluded. Amendment pattern recall is low and the Arabic lexicon is unvalidated.
-* Engine v1 files are hash locked; evaluations were pre registered and run once, and misses are reported with hits.
+* Engine v1 files are hash locked; the held out synthetic runs, the v2 comparison, the snapshot timeline and the second amendment sample were pre registered and run once; the UK validation was re run after effects reader fixes (earlier result files kept), and the first amendment sample's patterns were extended on its dev half; misses are reported with hits.
 
 ## How to reproduce
 
