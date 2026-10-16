@@ -64,3 +64,10 @@ Committed derived data: `data/uk/corpus.jsonl.gz` holds section text of dated sn
 | uaelegislation.gov.ae | robots.txt returned HTTP 403 to `curl` on 2026-10-12. | Blocked, recorded. See the permission request. |
 
 The Arabic amendment pattern lexicon (`src/taadeel/amend_ar.py`) uses phrasings seen in the retrieved sources (listed with URLs in its comments). It is tested on invented samples only and is **unvalidated on real UAE text**.
+
+## Akoma Ntoso schema (export check only, 2026-10-16)
+
+| Item | Finding | Decision |
+|---|---|---|
+| Source | https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/schemas/akomantoso30.xsd and `xml.xsd` in the same folder; robots.txt allows all (all lines commented). Two requests, 6 s apart, identifying user agent. | Fetched once for validation. |
+| Licence | The schema header states it is provided by OASIS under CC BY 4.0 (Copyright OASIS Open 2018). | Not committed (the file header also names individual contributors and their institution, which this repository does not reproduce). sha256 recorded in `src/taadeel/akn_export.py`: akomantoso30.xsd `6f61fe84cbb6f8cb0e8418cd67b74a63da9990e6573b5a3491f623184f45c4fd`, xml.xsd `61960fb3131e38022caad5360e2f33a3382578ab3c80cd58bd74320ede61b20c`. |
