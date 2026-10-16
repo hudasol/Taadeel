@@ -26,7 +26,7 @@ Reproduce the development table with `python -m taadeel.validate table 30` (seed
 * Synthetic text is random Arabic word sequences; it does not model legal drafting, cross references, or amendment by reference language.
 * The Arabic amendment lexicon is unvalidated (invented samples only). The English amendment pattern module was measured on a small UK sample only.
 * The PDF extractor was tested on synthetic PDFs only.
-* Point in time correctness is covered only by unit tests on hand built timelines (`tests/test_engine.py`), not by an evaluation set.
+* Point in time correctness is covered only by unit tests on hand built timelines (`tests/test_engine.py`), not by a synthetic evaluation set. It is evaluated on real English UK data in `docs/VALIDATION_UK.md`.
 * Moves of an article to a distant position are not supported (monotonic alignment); they surface as repeal plus insert. No test of this limitation has been scored.
 
 ## Adversarial cases covered by unit tests

@@ -10,7 +10,7 @@ Superseded for numbers by `docs/VALIDATION_UK.md` and `docs/HELDOUT_RESULTS.md` 
 
 **What exists (as of 2026-10-16).** A tested engine: Arabic normalisation, structure parser (part/chapter/article/clause, «مكرر» handling), confidence scored alignment with an unaligned bucket (v1, hash locked), article and word level diffs with five change classes, a point in time model that flags uncertain effective dates, a PDF extractor (tested on synthetic PDFs only), SQLite storage with FTS5 and Parquet export, a search API, a FastAPI API, an RTL bilingual web page, a Dockerfile and `render.yaml` (a live demo runs on the Render free tier from the branch `feat/validation-and-amendments`), an English amendment pattern module (measured on a small UK sample), an Arabic amendment lexicon (unvalidated, invented samples only), a UK legislation.gov.uk adapter with validation, permission gated ingestion and a validation harness.
 
-**What does not exist yet.** Any real UAE law (no permission was obtained; the portal returned HTTP 403 on robots.txt, which was recorded and not worked around), any real Arabic validation, Akoma Ntoso export, and a gold set of real UAE laws.
+**What does not exist yet.** Any real UAE law (no permission was obtained; the portal returned HTTP 403 on robots.txt, which was recorded and not worked around), any real Arabic validation, Akoma Ntoso lifecycle and modification metadata (a compatible export was added later, `docs/AKN_EXPORT.md`), and a gold set of real UAE laws.
 
 **Numbers.** This report holds no hand typed result figures. Generated results are in `docs/HELDOUT_RESULTS.md`, `docs/VALIDATION_UK.md` and `results/dev_synthetic.json`. Synthetic results do not predict accuracy on real statutes.
 
@@ -40,7 +40,7 @@ The earlier hand typed table in this section (2026-10-11) was removed because it
 4. Monotonic alignment cannot represent long distance moves.
 5. Alignment is O(n·m) and untested at real law sizes.
 6. Synthetic text has no cross references or legal drafting structure.
-7. Point in time logic is unit tested, not evaluated.
+7. Point in time logic was unit tested only at the time of this report; it was later evaluated on UK data (`docs/VALIDATION_UK.md`).
 8. The live demo is a free tier deployment of a feature branch, with synthetic and UK validation data only.
 
 ## History
