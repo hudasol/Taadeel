@@ -87,8 +87,9 @@ def api_diff(work: str, a: str, b: str, real: bool = False) -> dict:
     if a not in v or b not in v:
         raise HTTPException(404, "unknown version")
     res = align(v[a], v[b])
-    texts = {p.eid: p.text for e in (v[a], v[b]) for p in e.articles()}
-    changes = [{**asdict(c), "a_text": texts.get(c.a_eid or ""), "b_text": texts.get(c.b_eid or ""),
+    ta = {p.eid: p.text for p in v[a].articles()}    # separate maps: the same eid exists in both versions
+    tb = {p.eid: p.text for p in v[b].articles()}
+    changes = [{**asdict(c), "a_text": ta.get(c.a_eid or ""), "b_text": tb.get(c.b_eid or ""),
                 "source_url": v[b].source_url, "retrieved_at": v[b].retrieved_at} for c in diff(v[a], v[b], res)]
     return _wrap({"work_id": work, "from": a, "to": b, "changes": changes,
                   "unaligned_a": res.unaligned_a, "unaligned_b": res.unaligned_b}, synthetic=v[a].synthetic)
