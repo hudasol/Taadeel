@@ -15,6 +15,7 @@ it would display wrongly) as the opposite case: extraction needs no reversal.
 from __future__ import annotations
 
 import io
+import os
 import random
 from dataclasses import dataclass, field
 
@@ -23,7 +24,25 @@ from fpdf import FPDF
 from .synthetic import _POOL, _sentence
 
 LABEL = "SYNTHETIC TEST DOCUMENT - NOT LEGISLATION"
-FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+# DejaVu Sans is the font the extractor tests were calibrated on. TAADEEL_PDF_FONT
+# overrides the path; no other font is substituted silently, because a different
+# font can change the stored glyphs and therefore the measured extraction scores.
+_FONT_CANDIDATES = [
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    "/usr/share/fonts/TTF/DejaVuSans.ttf",
+    "/opt/homebrew/share/fonts/DejaVuSans.ttf",
+    "/Library/Fonts/DejaVuSans.ttf",
+]
+
+
+def find_font() -> str | None:
+    env = os.environ.get("TAADEEL_PDF_FONT")
+    if env:
+        return env if os.path.exists(env) else None
+    return next((c for c in _FONT_CANDIDATES if os.path.exists(c)), None)
+
+
+FONT = find_font() or _FONT_CANDIDATES[0]
 _AR_INDIC = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
 _DIAC = ["َ", "ُ", "ِ", "ّ", "ْ"]
 
