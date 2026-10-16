@@ -1,8 +1,8 @@
+*.db
+*.egg-info/
+.env
+.pytest_cache/
 .venv/
 __pycache__/
-*.egg-info/
-.pytest_cache/
-*.db
-snapshots/
 dist/
-.env
+snapshots/

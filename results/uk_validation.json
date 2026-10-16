@@ -1,0 +1,1257 @@
+{
+ "acts": [
+  {
+   "act": "ukpga/1990/18",
+   "engine_vs_recorded_effects": {
+    "fn": 4,
+    "fp": 8,
+    "tp": 31
+   },
+   "long_gap": {
+    "classes": {
+     "inserted": {
+      "tp": 1
+     },
+     "repealed": {
+      "tp": 4
+     },
+     "replaced": {
+      "tp": 13
+     }
+    },
+    "correct": 14,
+    "false_match": 0,
+    "from": "uk/ukpga/1990/18@1991-02-01",
+    "low_conf_pairs": 5,
+    "n_a": 18,
+    "n_b": 15,
+    "pred_classes": {
+     "inserted": 1,
+     "repealed": 4,
+     "replaced": 13
+    },
+    "shared": 14,
+    "to": "uk/ukpga/1990/18@2023-02-07",
+    "truth_classes": {
+     "inserted": 1,
+     "repealed": 4,
+     "replaced": 13
+    },
+    "unmatched_shared": 0,
+    "wrong": 0
+   },
+   "one_day": {
+    "alignment": {
+     "accuracy": 1.0,
+     "correct": 113,
+     "false_matches": 0,
+     "low_confidence_pairs": 2,
+     "shared_sections": 113,
+     "unmatched": 0,
+     "wrong": 0
+    },
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 34
+     }
+    }
+   },
+   "recorded_effects": {
+    "effects_checked": 35,
+    "effects_class_agrees": 31,
+    "effects_with_snapshot_change": 31,
+    "snapshot_changes": 39,
+    "snapshot_changes_with_effect": 31
+   },
+   "window_detail": [
+    [
+     "1995-02-03",
+     2,
+     2
+    ],
+    [
+     "1998-09-04",
+     4,
+     4
+    ],
+    [
+     "2004-01-01",
+     1,
+     1
+    ],
+    [
+     "2007-10-01",
+     1,
+     7
+    ],
+    [
+     "2008-10-01",
+     10,
+     8
+    ],
+    [
+     "2015-05-03",
+     12,
+     12
+    ],
+    [
+     "2023-02-07",
+     5,
+     5
+    ]
+   ],
+   "windows": 7
+  },
+  {
+   "act": "ukpga/2015/30",
+   "engine_vs_recorded_effects": {
+    "fn": 2,
+    "fp": 8,
+    "tp": 36
+   },
+   "long_gap": {
+    "classes": {
+     "inserted": {
+      "tp": 1
+     },
+     "repealed": {
+      "tp": 1
+     },
+     "replaced": {
+      "tp": 19
+     }
+    },
+    "correct": 59,
+    "false_match": 0,
+    "from": "uk/ukpga/2015/30@2016-03-16",
+    "low_conf_pairs": 0,
+    "n_a": 60,
+    "n_b": 60,
+    "pred_classes": {
+     "inserted": 1,
+     "repealed": 1,
+     "replaced": 19
+    },
+    "shared": 59,
+    "to": "uk/ukpga/2015/30@2026-06-29",
+    "truth_classes": {
+     "inserted": 1,
+     "repealed": 1,
+     "replaced": 19
+    },
+    "unmatched_shared": 0,
+    "wrong": 0
+   },
+   "one_day": {
+    "alignment": {
+     "accuracy": 1.0,
+     "correct": 550,
+     "false_matches": 0,
+     "low_confidence_pairs": 0,
+     "shared_sections": 550,
+     "unmatched": 0,
+     "wrong": 0
+    },
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 4
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 36
+     }
+    }
+   },
+   "recorded_effects": {
+    "effects_checked": 38,
+    "effects_class_agrees": 36,
+    "effects_with_snapshot_change": 36,
+    "snapshot_changes": 44,
+    "snapshot_changes_with_effect": 36
+   },
+   "window_detail": [
+    [
+     "2016-03-17",
+     1,
+     1
+    ],
+    [
+     "2016-07-12",
+     7,
+     14
+    ],
+    [
+     "2016-12-17",
+     4,
+     3
+    ],
+    [
+     "2020-12-01",
+     3,
+     4
+    ],
+    [
+     "2022-04-28",
+     1,
+     1
+    ],
+    [
+     "2023-01-30",
+     5,
+     4
+    ],
+    [
+     "2023-02-07",
+     1,
+     1
+    ],
+    [
+     "2026-04-07",
+     14,
+     14
+    ],
+    [
+     "2026-06-29",
+     2,
+     2
+    ]
+   ],
+   "windows": 9
+  },
+  {
+   "act": "ukpga/1968/60",
+   "engine_vs_recorded_effects": {
+    "fn": 2,
+    "tp": 23
+   },
+   "long_gap": {
+    "classes": {
+     "repealed": {
+      "tp": 5
+     },
+     "replaced": {
+      "tp": 16
+     }
+    },
+    "correct": 35,
+    "false_match": 0,
+    "from": "uk/ukpga/1968/60@1991-02-01",
+    "low_conf_pairs": 0,
+    "n_a": 40,
+    "n_b": 35,
+    "pred_classes": {
+     "repealed": 5,
+     "replaced": 16
+    },
+    "shared": 35,
+    "to": "uk/ukpga/1968/60@2013-04-01",
+    "truth_classes": {
+     "repealed": 5,
+     "replaced": 16
+    },
+    "unmatched_shared": 0,
+    "wrong": 0
+   },
+   "one_day": {
+    "alignment": {
+     "accuracy": 1.0,
+     "correct": 502,
+     "false_matches": 0,
+     "low_confidence_pairs": 0,
+     "shared_sections": 502,
+     "unmatched": 0,
+     "wrong": 0
+    },
+    "classes": {
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 18
+     }
+    }
+   },
+   "recorded_effects": {
+    "effects_checked": 25,
+    "effects_class_agrees": 23,
+    "effects_with_snapshot_change": 23,
+    "snapshot_changes": 23,
+    "snapshot_changes_with_effect": 23
+   },
+   "window_detail": [
+    [
+     "1992-04-01",
+     1,
+     0
+    ],
+    [
+     "1992-10-01",
+     2,
+     2
+    ],
+    [
+     "1996-12-18",
+     1,
+     0
+    ],
+    [
+     "2000-08-25",
+     2,
+     2
+    ],
+    [
+     "2001-03-26",
+     1,
+     1
+    ],
+    [
+     "2001-10-01",
+     1,
+     1
+    ],
+    [
+     "2003-11-12",
+     2,
+     2
+    ],
+    [
+     "2004-02-27",
+     1,
+     1
+    ],
+    [
+     "2004-05-01",
+     1,
+     1
+    ],
+    [
+     "2005-12-05",
+     2,
+     2
+    ],
+    [
+     "2006-01-01",
+     1,
+     1
+    ],
+    [
+     "2007-01-15",
+     9,
+     9
+    ],
+    [
+     "2013-04-01",
+     1,
+     1
+    ]
+   ],
+   "windows": 13
+  },
+  {
+   "act": "ukpga/1998/42",
+   "engine_vs_recorded_effects": {
+    "tp": 24
+   },
+   "long_gap": {
+    "classes": {
+     "inserted": {
+      "tp": 1
+     },
+     "replaced": {
+      "tp": 14
+     }
+    },
+    "correct": 22,
+    "false_match": 0,
+    "from": "uk/ukpga/1998/42@2001-03-31",
+    "low_conf_pairs": 0,
+    "n_a": 22,
+    "n_b": 23,
+    "pred_classes": {
+     "inserted": 1,
+     "replaced": 14
+    },
+    "shared": 22,
+    "to": "uk/ukpga/1998/42@2026-10-01",
+    "truth_classes": {
+     "inserted": 1,
+     "replaced": 14
+    },
+    "unmatched_shared": 0,
+    "wrong": 0
+   },
+   "one_day": {
+    "alignment": {
+     "accuracy": 1.0,
+     "correct": 221,
+     "false_matches": 0,
+     "low_confidence_pairs": 0,
+     "shared_sections": 221,
+     "unmatched": 0,
+     "wrong": 0
+    },
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 23
+     }
+    }
+   },
+   "recorded_effects": {
+    "effects_checked": 24,
+    "effects_class_agrees": 24,
+    "effects_with_snapshot_change": 24,
+    "snapshot_changes": 24,
+    "snapshot_changes_with_effect": 24
+   },
+   "window_detail": [
+    [
+     "2001-04-01",
+     2,
+     2
+    ],
+    [
+     "2003-08-19",
+     7,
+     7
+    ],
+    [
+     "2004-06-22",
+     2,
+     2
+    ],
+    [
+     "2006-01-12",
+     3,
+     3
+    ],
+    [
+     "2006-04-03",
+     1,
+     1
+    ],
+    [
+     "2007-10-01",
+     1,
+     1
+    ],
+    [
+     "2009-10-01",
+     4,
+     4
+    ],
+    [
+     "2020-10-21",
+     1,
+     1
+    ],
+    [
+     "2021-06-30",
+     2,
+     2
+    ],
+    [
+     "2026-10-01",
+     1,
+     1
+    ]
+   ],
+   "windows": 10
+  },
+  {
+   "act": "ukpga/1989/6",
+   "engine_vs_recorded_effects": {
+    "tp": 14
+   },
+   "long_gap": {
+    "classes": {
+     "replaced": {
+      "tp": 5
+     }
+    },
+    "correct": 16,
+    "false_match": 0,
+    "from": "uk/ukpga/1989/6@1991-02-01",
+    "low_conf_pairs": 1,
+    "n_a": 16,
+    "n_b": 16,
+    "pred_classes": {
+     "replaced": 5
+    },
+    "shared": 16,
+    "to": "uk/ukpga/1989/6@2023-12-20",
+    "truth_classes": {
+     "replaced": 5
+    },
+    "unmatched_shared": 0,
+    "wrong": 0
+   },
+   "one_day": {
+    "alignment": {
+     "accuracy": 1.0,
+     "correct": 208,
+     "false_matches": 0,
+     "low_confidence_pairs": 1,
+     "shared_sections": 208,
+     "unmatched": 0,
+     "wrong": 0
+    },
+    "classes": {
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 14
+     }
+    }
+   },
+   "recorded_effects": {
+    "effects_checked": 14,
+    "effects_class_agrees": 14,
+    "effects_with_snapshot_change": 14,
+    "snapshot_changes": 14,
+    "snapshot_changes_with_effect": 14
+   },
+   "window_detail": [
+    [
+     "1994-12-15",
+     1,
+     1
+    ],
+    [
+     "1997-04-01",
+     1,
+     1
+    ],
+    [
+     "1999-05-06",
+     1,
+     1
+    ],
+    [
+     "1999-12-02",
+     1,
+     1
+    ],
+    [
+     "2000-10-02",
+     1,
+     1
+    ],
+    [
+     "2001-11-04",
+     1,
+     1
+    ],
+    [
+     "2002-10-01",
+     1,
+     1
+    ],
+    [
+     "2005-03-01",
+     1,
+     1
+    ],
+    [
+     "2006-04-01",
+     1,
+     1
+    ],
+    [
+     "2010-04-12",
+     1,
+     1
+    ],
+    [
+     "2013-10-07",
+     1,
+     1
+    ],
+    [
+     "2018-06-27",
+     1,
+     1
+    ],
+    [
+     "2023-12-20",
+     2,
+     2
+    ]
+   ],
+   "windows": 13
+  },
+  {
+   "act": "ukpga/1997/40",
+   "engine_vs_recorded_effects": {
+    "fp": 7,
+    "tp": 25
+   },
+   "long_gap": {
+    "classes": {
+     "inserted": {
+      "fn": 1,
+      "tp": 6
+     },
+     "repealed": {
+      "fn": 1
+     },
+     "replaced": {
+      "fp": 1,
+      "tp": 7
+     }
+    },
+    "correct": 15,
+    "false_match": 1,
+    "from": "uk/ukpga/1997/40@2001-07-31",
+    "low_conf_pairs": 2,
+    "n_a": 16,
+    "n_b": 22,
+    "pred_classes": {
+     "inserted": 6,
+     "replaced": 8
+    },
+    "shared": 15,
+    "to": "uk/ukpga/1997/40@2023-02-07",
+    "truth_classes": {
+     "inserted": 7,
+     "repealed": 1,
+     "replaced": 7
+    },
+    "unmatched_shared": 0,
+    "wrong": 0
+   },
+   "one_day": {
+    "alignment": {
+     "accuracy": 1.0,
+     "correct": 244,
+     "false_matches": 0,
+     "low_confidence_pairs": 2,
+     "shared_sections": 244,
+     "unmatched": 0,
+     "wrong": 0
+    },
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 7
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 24
+     }
+    }
+   },
+   "recorded_effects": {
+    "effects_checked": 25,
+    "effects_class_agrees": 25,
+    "effects_with_snapshot_change": 25,
+    "snapshot_changes": 32,
+    "snapshot_changes_with_effect": 25
+   },
+   "window_detail": [
+    [
+     "2001-08-01",
+     1,
+     1
+    ],
+    [
+     "2002-10-01",
+     1,
+     1
+    ],
+    [
+     "2003-06-27",
+     1,
+     1
+    ],
+    [
+     "2005-07-01",
+     5,
+     6
+    ],
+    [
+     "2009-09-30",
+     2,
+     4
+    ],
+    [
+     "2011-07-07",
+     1,
+     1
+    ],
+    [
+     "2011-07-21",
+     2,
+     4
+    ],
+    [
+     "2012-11-25",
+     5,
+     6
+    ],
+    [
+     "2014-04-22",
+     2,
+     2
+    ],
+    [
+     "2020-12-01",
+     2,
+     3
+    ],
+    [
+     "2021-06-29",
+     1,
+     1
+    ],
+    [
+     "2022-04-28",
+     1,
+     1
+    ],
+    [
+     "2023-02-07",
+     1,
+     1
+    ]
+   ],
+   "windows": 13
+  },
+  {
+   "act": "ukpga/1971/38",
+   "engine_vs_recorded_effects": {
+    "fn": 3,
+    "fp": 2,
+    "tp": 42
+   },
+   "long_gap": {
+    "classes": {
+     "inserted": {
+      "tp": 5
+     },
+     "repealed": {
+      "tp": 1
+     },
+     "replaced": {
+      "tp": 24
+     }
+    },
+    "correct": 37,
+    "false_match": 0,
+    "from": "uk/ukpga/1971/38@1991-02-01",
+    "low_conf_pairs": 1,
+    "n_a": 38,
+    "n_b": 42,
+    "pred_classes": {
+     "inserted": 5,
+     "repealed": 1,
+     "replaced": 24
+    },
+    "shared": 37,
+    "to": "uk/ukpga/1971/38@2022-06-28",
+    "truth_classes": {
+     "inserted": 5,
+     "repealed": 1,
+     "replaced": 24
+    },
+    "unmatched_shared": 0,
+    "wrong": 0
+   },
+   "one_day": {
+    "alignment": {
+     "accuracy": 1.0,
+     "correct": 587,
+     "false_matches": 0,
+     "low_confidence_pairs": 1,
+     "shared_sections": 587,
+     "unmatched": 0,
+     "wrong": 0
+    },
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 5
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 39
+     }
+    }
+   },
+   "recorded_effects": {
+    "effects_checked": 45,
+    "effects_class_agrees": 42,
+    "effects_with_snapshot_change": 42,
+    "snapshot_changes": 44,
+    "snapshot_changes_with_effect": 42
+   },
+   "window_detail": [
+    [
+     "1991-07-01",
+     4,
+     1
+    ],
+    [
+     "1995-01-09",
+     1,
+     1
+    ],
+    [
+     "1995-02-03",
+     1,
+     3
+    ],
+    [
+     "1996-08-25",
+     3,
+     3
+    ],
+    [
+     "2003-02-24",
+     2,
+     2
+    ],
+    [
+     "2003-03-24",
+     1,
+     1
+    ],
+    [
+     "2004-07-22",
+     2,
+     2
+    ],
+    [
+     "2006-01-01",
+     1,
+     1
+    ],
+    [
+     "2007-12-03",
+     1,
+     1
+    ],
+    [
+     "2008-10-01",
+     1,
+     1
+    ],
+    [
+     "2009-11-12",
+     1,
+     1
+    ],
+    [
+     "2011-11-15",
+     20,
+     20
+    ],
+    [
+     "2012-10-31",
+     5,
+     5
+    ],
+    [
+     "2020-12-01",
+     1,
+     1
+    ],
+    [
+     "2022-06-28",
+     1,
+     1
+    ]
+   ],
+   "windows": 15
+  }
+ ],
+ "aggregate": {
+  "alignment_one_day": {
+   "accuracy": 1.0,
+   "correct": 2425,
+   "false_matches": 0,
+   "low_confidence_pairs": 6,
+   "shared_sections": 2425,
+   "unmatched": 0,
+   "wrong": 0
+  },
+  "classes_one_day": {
+   "inserted": {
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "tp": 18
+   },
+   "repealed": {
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "tp": 14
+   },
+   "replaced": {
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "tp": 188
+   }
+  },
+  "engine_vs_recorded_effects": {
+   "fn": 11,
+   "fp": 25,
+   "tp": 195
+  },
+  "point_in_time": {
+   "accuracy": 0.8938,
+   "correct": 143,
+   "on_date_accuracy": 1.0,
+   "on_date_correct": 80,
+   "on_date_queries": 80,
+   "prior_day_accuracy": 0.7875,
+   "prior_day_correct": 63,
+   "prior_day_queries": 80,
+   "queries": 160,
+   "wrong": 17
+  },
+  "recorded_effects": {
+   "effects_checked": 206,
+   "effects_class_agrees": 195,
+   "effects_with_snapshot_change": 195,
+   "snapshot_changes": 220,
+   "snapshot_changes_with_effect": 195
+  },
+  "renumbering_variant": {
+   "accuracy": 1.0,
+   "correct": 1065,
+   "inserted_detected": 35,
+   "renumbered_labelled": 427,
+   "runs": 35,
+   "sections": 1065
+  }
+ },
+ "engine_modified_or_tuned": false,
+ "point_in_time": [
+  {
+   "act": "ukpga/1990/18",
+   "boundary_pairs": 7,
+   "correct": 11,
+   "failures": [
+    {
+     "query": "1998-09-03",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "1995-02-03"
+    },
+    {
+     "query": "2003-12-31",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "1998-09-04"
+    },
+    {
+     "query": "2007-09-30",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2004-01-01"
+    }
+   ],
+   "on_date_correct": 7,
+   "on_date_queries": 7,
+   "prior_day_correct": 4,
+   "prior_day_queries": 7,
+   "prior_day_wrong": 3,
+   "queries": 14,
+   "wrong": 3
+  },
+  {
+   "act": "ukpga/2015/30",
+   "boundary_pairs": 9,
+   "correct": 17,
+   "failures": [
+    {
+     "query": "2020-11-30",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2016-12-17"
+    }
+   ],
+   "on_date_correct": 9,
+   "on_date_queries": 9,
+   "prior_day_correct": 8,
+   "prior_day_queries": 9,
+   "prior_day_wrong": 1,
+   "queries": 18,
+   "wrong": 1
+  },
+  {
+   "act": "ukpga/1968/60",
+   "boundary_pairs": 13,
+   "correct": 23,
+   "failures": [
+    {
+     "query": "1992-03-31",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "1991-02-01"
+    },
+    {
+     "query": "1996-12-17",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "1992-10-01"
+    },
+    {
+     "query": "2003-11-11",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2001-10-01"
+    }
+   ],
+   "on_date_correct": 13,
+   "on_date_queries": 13,
+   "prior_day_correct": 10,
+   "prior_day_queries": 13,
+   "prior_day_wrong": 3,
+   "queries": 26,
+   "wrong": 3
+  },
+  {
+   "act": "ukpga/1998/42",
+   "boundary_pairs": 10,
+   "correct": 15,
+   "failures": [
+    {
+     "query": "2003-08-18",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2001-04-01"
+    },
+    {
+     "query": "2006-01-11",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2004-06-22"
+    },
+    {
+     "query": "2007-09-30",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2006-04-03"
+    },
+    {
+     "query": "2009-09-30",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2007-10-01"
+    },
+    {
+     "query": "2020-10-20",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2009-10-01"
+    }
+   ],
+   "on_date_correct": 10,
+   "on_date_queries": 10,
+   "prior_day_correct": 5,
+   "prior_day_queries": 10,
+   "prior_day_wrong": 5,
+   "queries": 20,
+   "wrong": 5
+  },
+  {
+   "act": "ukpga/1989/6",
+   "boundary_pairs": 13,
+   "correct": 24,
+   "failures": [
+    {
+     "query": "1999-05-05",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "1997-04-01"
+    },
+    {
+     "query": "2010-04-11",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2006-04-01"
+    }
+   ],
+   "on_date_correct": 13,
+   "on_date_queries": 13,
+   "prior_day_correct": 11,
+   "prior_day_queries": 13,
+   "prior_day_wrong": 2,
+   "queries": 26,
+   "wrong": 2
+  },
+  {
+   "act": "ukpga/1997/40",
+   "boundary_pairs": 13,
+   "correct": 25,
+   "failures": [
+    {
+     "query": "2020-11-30",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2014-04-22"
+    }
+   ],
+   "on_date_correct": 13,
+   "on_date_queries": 13,
+   "prior_day_correct": 12,
+   "prior_day_queries": 13,
+   "prior_day_wrong": 1,
+   "queries": 26,
+   "wrong": 1
+  },
+  {
+   "act": "ukpga/1971/38",
+   "boundary_pairs": 15,
+   "correct": 28,
+   "failures": [
+    {
+     "query": "1996-08-24",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "1995-02-03"
+    },
+    {
+     "query": "2020-11-30",
+     "reason": "text of the version served differs from the independently fetched snapshot",
+     "served_version": "2012-10-31"
+    }
+   ],
+   "on_date_correct": 15,
+   "on_date_queries": 15,
+   "prior_day_correct": 13,
+   "prior_day_queries": 15,
+   "prior_day_wrong": 2,
+   "queries": 30,
+   "wrong": 2
+  }
+ ],
+ "renumbering_variant": [
+  {
+   "accuracy": 1.0,
+   "act": "ukpga/1990/18",
+   "correct": 75,
+   "inserted_detected": 5,
+   "renumbered_labelled": 53,
+   "runs": 5,
+   "sections": 75
+  },
+  {
+   "accuracy": 1.0,
+   "act": "ukpga/2015/30",
+   "correct": 300,
+   "inserted_detected": 5,
+   "renumbered_labelled": 90,
+   "runs": 5,
+   "sections": 300
+  },
+  {
+   "accuracy": 1.0,
+   "act": "ukpga/1968/60",
+   "correct": 175,
+   "inserted_detected": 5,
+   "renumbered_labelled": 78,
+   "runs": 5,
+   "sections": 175
+  },
+  {
+   "accuracy": 1.0,
+   "act": "ukpga/1998/42",
+   "correct": 115,
+   "inserted_detected": 5,
+   "renumbered_labelled": 54,
+   "runs": 5,
+   "sections": 115
+  },
+  {
+   "accuracy": 1.0,
+   "act": "ukpga/1989/6",
+   "correct": 80,
+   "inserted_detected": 5,
+   "renumbered_labelled": 38,
+   "runs": 5,
+   "sections": 80
+  },
+  {
+   "accuracy": 1.0,
+   "act": "ukpga/1997/40",
+   "correct": 110,
+   "inserted_detected": 5,
+   "renumbered_labelled": 44,
+   "runs": 5,
+   "sections": 110
+  },
+  {
+   "accuracy": 1.0,
+   "act": "ukpga/1971/38",
+   "correct": 210,
+   "inserted_detected": 5,
+   "renumbered_labelled": 70,
+   "runs": 5,
+   "sections": 210
+  }
+ ],
+ "scope": "England and Wales view of English UK Acts, legislation.gov.uk, OGL v3.0. Says nothing about UAE law."
+}

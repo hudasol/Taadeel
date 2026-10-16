@@ -13,7 +13,7 @@ from .synthetic import make_pair
 
 VERSION = "0.1.0-synthetic"
 
-CARD = """# Taadeel dataset card — {version}
+CARD = """# Taadeel dataset card: {version}
 
 **Synthetic data only. Not legislation. Not legal advice.**
 

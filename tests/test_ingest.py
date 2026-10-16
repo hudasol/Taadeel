@@ -33,7 +33,7 @@ def mk(tmp_path, pages):
 
 def test_real_registry_defaults_to_link_only(tmp_path):
     reg = load_sources("sources.toml")
-    assert all(s["mode"] != "permitted" for s in reg.values())
+    assert all(s["mode"] != "permitted" for h, s in reg.items() if h != "www.legislation.gov.uk")
     ing = Ingestor(reg, tmp_path, FakeNet({}))
     with pytest.raises(NotPermitted):
         ing.fetch("https://uaelegislation.gov.ae/en/legislations/1541")
@@ -85,3 +85,30 @@ def test_block_is_recorded_not_bypassed(tmp_path):
         ing.fetch("https://ok.example/a")
     assert net.calls.count("https://ok.example/a") == 1
     assert ing.latest("https://ok.example/a") is None
+
+
+def test_crawl_delay_from_robots_is_enforced(tmp_path):
+    pages = {"https://ok.example/robots.txt": Response(200, b"User-agent: *\nCrawl-delay: 20\n", {}),
+             "https://ok.example/a": Response(200, b"a", {}), "https://ok.example/b": Response(200, b"b", {})}
+    ing, _, sleeps = mk(tmp_path, pages)
+    ing.fetch("https://ok.example/a")
+    ing.fetch("https://ok.example/b")
+    assert sleeps and sleeps[0] == pytest.approx(20)          # robots delay (20) beats configured 10
+
+
+def test_deny_suffixes_never_fetched(tmp_path):
+    src = {"ok.example": {"mode": "permitted", "min_delay_seconds": 1, "permission_evidence": "x", "deny_suffixes": [".pdf"]}}
+    net = FakeNet({})
+    ing = Ingestor(src, tmp_path, net, sleep=lambda s: None)
+    with pytest.raises(NotPermitted):
+        ing.fetch("https://ok.example/x/data.pdf")
+    assert net.calls == []
+
+
+def test_real_registry_uk_entry_has_evidence_and_attribution():
+    reg = load_sources("sources.toml")
+    uk = reg["www.legislation.gov.uk"]
+    assert uk["mode"] == "permitted" and "Open Government Licence" in uk["license"]
+    assert "Open Government Licence v3.0" in uk["attribution"] and uk["permission_evidence"]
+    assert uk["min_delay_seconds"] >= 5
+    assert reg["uaelegislation.gov.ae"]["mode"] == "link_only"

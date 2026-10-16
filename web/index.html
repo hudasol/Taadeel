@@ -19,6 +19,17 @@ button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{ou
 ins{background:var(--ins);text-decoration:none}del{background:var(--del)}
 .kind{font-size:.8rem;color:var(--mut)}.src{font-size:.8rem;color:var(--mut)}
 input[type=range]{width:min(420px,90%)}
+.banner{font-weight:600;border-width:2px}
+.b{display:inline-block;padding:2px 10px;border-radius:6px;font-size:.8rem;font-weight:800;letter-spacing:.03em;border:2px solid}
+.b-syn{background:repeating-linear-gradient(45deg,#fff3cd,#fff3cd 8px,#ffd980 8px,#ffd980 16px);color:#5a3b00;border-color:#b26b00}
+.b-uk{background:#e3e9ff;color:#1b2a6b;border-color:#3b4fb8}
+.b-uae{background:#dff3e4;color:#14502a;border-color:#2c8a52}
+@media (prefers-color-scheme:dark){.b-syn{background:repeating-linear-gradient(45deg,#4a3d12,#4a3d12 8px,#6b5516 8px,#6b5516 16px);color:#ffe9a8;border-color:#e0a030}.b-uk{background:#1c2547;color:#cdd7ff;border-color:#7d90ee}.b-uae{background:#17321f;color:#bfe9cb;border-color:#4fb27a}}
+mark{background:#ffe066;color:#000;padding:0 2px;border-radius:3px}
+.syn-warn{border:2px dashed #b26b00;background:var(--warn);padding:8px 12px;border-radius:8px;margin:8px 0;font-weight:600}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+input[type=search]{min-width:min(360px,100%);flex:1}
+details summary{cursor:pointer;color:var(--acc)}
 </style>
 </head>
 <body>
@@ -36,6 +47,22 @@ input[type=range]{width:min(420px,90%)}
   </div>
 </header>
 <main>
+  <section aria-labelledby="h-search"><h2 id="h-search">بحث في النصوص · Search</h2>
+    <form id="sform" role="search" class="row">
+      <label for="q">كلمات البحث / Query</label>
+      <input id="q" type="search" dir="auto" autocomplete="off" placeholder="مثال: الترخيص  ·  e.g. licence">
+      <label for="corpus">المجموعة / Corpus</label>
+      <select id="corpus" aria-describedby="corpus-note">
+        <option value="uae">التشريعات الإماراتية · UAE legislation</option>
+        <option value="uk-validation">مجموعة التحقق البريطانية · UK validation corpus (English, not UAE law)</option>
+        <option value="synthetic">اصطناعي · SYNTHETIC test data (not legislation)</option>
+      </select>
+      <button type="submit">بحث / Search</button>
+    </form>
+    <p id="corpus-note" class="src"></p>
+    <div id="sstatus" role="status" aria-live="polite"></div>
+    <div id="sresults" aria-live="polite" aria-busy="false"></div>
+  </section>
   <section aria-labelledby="h-asof"><h2 id="h-asof">ماذا كان النص بتاريخ؟ · As-of view</h2>
     <div class="row"><label for="date">التاريخ / Date</label>
       <input id="date" type="date" value="2021-01-01"><input id="slider" type="range" min="2019" max="2026" step="0.0833" value="2021" aria-label="timeline"></div>
@@ -45,13 +72,13 @@ input[type=range]{width:min(420px,90%)}
 </main>
 <script>
 const $=s=>document.querySelector(s); let work=null;
-const esc=t=>(t||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const kindAr={inserted:"مضافة",replaced:"مستبدلة",repealed:"ملغاة",renumbered:"أعيد ترقيمها",clarified:"تصحيح إملائي"};
 async function j(u){const r=await fetch(u);return r.json()}
 async function load(){
   const real=$("#mode").value==="real";
   const w=await j("/api/works?real="+real);
-  $("#badge").textContent=w.synthetic?"اصطناعي · SYNTHETIC — ليس قانونًا":"بيانات حقيقية · REAL";
+  $("#badge").className="b "+(w.synthetic?"b-syn":"b-uae");$("#badge").textContent=w.synthetic?"اصطناعي · SYNTHETIC | ليس قانونًا":"بيانات حقيقية · REAL";
   if(!w.works.length){work=null;$("#asof").innerHTML=esc(w.note||"No data");$("#diff").innerHTML="";return}
   work=w.works[0].work_id; asof(); diffs();
 }
@@ -59,7 +86,7 @@ async function asof(){
   if(!work)return; const real=$("#mode").value==="real";
   const r=await j(`/api/as-of?work=${work}&date=${$("#date").value}&real=${real}`);
   const cert={certain:"مؤكد · certain",uncertain:"غير مؤكد · UNCERTAIN",not_in_force:"غير نافذ · not in force"}[r.certainty];
-  $("#asof").innerHTML=`<p><b>${cert}</b> — ${esc(r.version_id||"—")} ${esc(r.note)}</p>`+
+  $("#asof").innerHTML=`<p><b>${cert}</b>: ${esc(r.version_id||"n/a")} ${esc(r.note)}</p>`+
    r.articles.slice(0,6).map(a=>`<p><b>المادة ${a.number}${a.bis?" مكرر":""}</b> ${esc(a.text)}<br><span class="src" dir="ltr">source: ${esc(a.source_url)} · retrieved ${esc(a.retrieved_at)}</span></p>`).join("");
 }
 async function diffs(){
@@ -69,12 +96,40 @@ async function diffs(){
   $("#diff").innerHTML=d.changes.map(c=>{
     const words=(c.words||[]).map(w=>w.op==="equal"?esc(w.a):w.op==="replace"?`<del>${esc(w.a)}</del> <ins>${esc(w.b)}</ins>`:w.op==="delete"?`<del>${esc(w.a)}</del>`:`<ins>${esc(w.b)}</ins>`).join(" ");
     return `<article class="card"><div class="kind">${kindAr[c.kind]} · ${c.kind}${c.confidence==="low"?" · ثقة منخفضة / low confidence":""}</div>`+
-     `<div class="cols"><div>${esc(c.a_text)||"—"}</div><div>${esc(c.b_text)||"—"}</div></div>`+
+     `<div class="cols"><div>${esc(c.a_text)||"n/a"}</div><div>${esc(c.b_text)||"n/a"}</div></div>`+
      (words?`<p>${words}</p>`:"")+`<div class="src" dir="ltr">source: ${esc(c.source_url)} · retrieved ${esc(c.retrieved_at)}</div></article>`}).join("");
 }
 $("#mode").onchange=load;
 $("#date").onchange=()=>{const y=new Date($("#date").value);$("#slider").value=y.getFullYear()+y.getMonth()/12;asof()};
 $("#slider").oninput=e=>{const v=+e.target.value,y=Math.floor(v),m=Math.round((v-y)*12)+1;$("#date").value=`${y}-${String(Math.min(m,12)).padStart(2,"0")}-01`;asof()};
+const BADGE={synthetic:['b-syn','اصطناعي · SYNTHETIC | ليس تشريعًا / not legislation'],
+ 'uk-validation':['b-uk','UK validation corpus (English, not UAE law)'],uae:['b-uae','UAE · الإمارات']};
+function badge(c){const b=BADGE[c]||['b-uae',c];return `<span class="b ${b[0]}">${b[1]}</span>`}
+function mark(text,hl){let o="",p=0;(hl||[]).slice().sort((a,b)=>a[0]-b[0]).forEach(([a,b])=>{if(a<p)return;o+=esc(text.slice(p,a))+"<mark>"+esc(text.slice(a,b))+"</mark>";p=b});return o+esc(text.slice(p))}
+function safeUrl(u){return /^https?:\/\//.test(u||"")}
+async function corpora(){
+  try{const c=await j("/api/corpora");const sel=$("#corpus");
+   c.corpora.forEach(x=>{const o=[...sel.options].find(o=>o.value===x.corpus);if(o)o.textContent=`${x.label_ar} · ${x.label_en} (${x.counts.provisions})`});
+   window._ci=Object.fromEntries(c.corpora.map(x=>[x.corpus,x]));noteFor()}catch(e){}
+}
+function noteFor(){const x=(window._ci||{})[$("#corpus").value];$("#corpus-note").textContent=x?(x.note+(x.licence?` Licence: ${x.licence}.`:"")):""}
+async function search(ev){
+  ev&&ev.preventDefault();const q=$("#q").value.trim(),c=$("#corpus").value;const box=$("#sresults");
+  if(!q){$("#sstatus").textContent="اكتب كلمة للبحث · Enter a query";box.innerHTML="";return}
+  box.setAttribute("aria-busy","true");
+  let r;try{r=await j(`/api/search?q=${encodeURIComponent(q)}&corpus=${encodeURIComponent(c)}&limit=20`)}catch(e){$("#sstatus").textContent="تعذر الاتصال · Request failed";box.setAttribute("aria-busy","false");return}
+  box.setAttribute("aria-busy","false");
+  $("#sstatus").textContent=r.error?r.error:`${r.count} نتيجة · ${r.count} result(s). ${r.note||""}`;
+  const warn=r.synthetic?`<div class="syn-warn" role="note">بيانات اصطناعية للاختبار فقط، وليست تشريعًا · SYNTHETIC test data only, not legislation.</div>`:
+    c==="uk-validation"?`<div class="syn-warn" role="note">تشريع بريطاني (إنجليزي) للتحقق من الأداة فقط، وليس قانونًا إماراتيًا · English UK law used for validation only, not UAE law.</div>`:"";
+  box.innerHTML=warn+(r.results||[]).map(x=>`<article class="card" lang="${esc(x.language)}"><div>${badge(x.corpus)} <span class="kind">${esc(x.work_id)} · ${esc(x.expression_id)} · ${x.kind==="article"?"المادة / Art. "+x.number+(x.bis?" مكرر":""):esc(x.kind)}</span></div>`+
+   `<p dir="auto">${mark(x.snippet,x.highlights)}</p>`+
+   (x.snippet!==x.text?`<details><summary>النص الكامل / Full text</summary><p dir="auto">${mark(x.text,[])}</p></details>`:"")+
+   `<div class="src" dir="ltr">source: ${safeUrl(x.source_url)?`<a href="${esc(x.source_url)}" rel="noopener noreferrer" target="_blank">${esc(x.source_url)}</a>`:esc(x.source_url)} · retrieved ${esc(x.retrieved_at)}</div></article>`).join("");
+}
+$("#sform").addEventListener("submit",search);
+$("#corpus").addEventListener("change",()=>{noteFor();if($("#q").value.trim())search()});
+corpora();
 load();
 </script>
 </body>
