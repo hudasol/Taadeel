@@ -32,6 +32,7 @@ from .uk_validate import ACTS, effects_for
 
 OLD = ROOT / "data" / "uk" / "amending_sample.json"
 OUT = ROOT / "data" / "uk" / "amending_sample_2.json"
+OUT_SCH = ROOT / "data" / "uk" / "amending_sample_2_schedules.json"
 RESULT = ROOT / "results" / "uk_amending_2.json"
 N_NEW = 150
 _SCH = re.compile(r"\bSch(?:s)?\.\s*\d")
@@ -62,6 +63,50 @@ def candidates() -> list[dict]:
                                    "raw": e.raw[:240]})
     allc = sorted(seen.values(), key=lambda r: hashlib.sha1(r["url"].encode()).hexdigest())
     return allc
+
+
+def schedule_candidates() -> list[dict]:
+    ing = make_ingestor()
+    seen: dict[str, dict] = {}
+    for act in ACTS:
+        if ing.latest(url_current(act)) is None:
+            continue
+        for e in effects_for(ing, act):
+            if e.status != "ok" or e.kind == "other" or not e.affecting_year:
+                continue
+            if not (e.affecting_title or "").endswith(f"Act {e.affecting_year}"):
+                continue
+            cite = e.raw.split(" by ", 1)[-1].split(";")[0]
+            m = _SCH_PARA.search(cite)
+            if not m:
+                continue
+            ch, sch, para = m.groups()
+            url = f"{BASE}/ukpga/{e.affecting_year}/{ch}/schedule/{sch}/paragraph/{para}/enacted/data.xml"
+            rec = seen.setdefault(url, {"url": url, "affecting": e.affecting_title, "schedule": sch,
+                                        "paragraph": para, "effects": []})
+            rec["effects"].append({"act": act, "sections": [s.replace("section-", "") for s in e.sections],
+                                   "kind": e.kind, "date": str(e.date), "via_schedule": False, "raw": e.raw[:240]})
+    return sorted(seen.values(), key=lambda r: hashlib.sha1(r["url"].encode()).hexdigest())
+
+
+def fetch_schedules() -> None:
+    ing = make_ingestor()
+    allc = schedule_candidates()
+    print(f"schedule paragraph candidates: {len(allc)}; fetching {min(N_NEW, len(allc))}", flush=True)
+    out = []
+    for c in allc[:N_NEW]:
+        p = fetch(ing, c["url"])
+        if p is None:
+            c["text"], c["status"] = None, "not_available"
+        else:
+            root = clml.load(p)
+            ps = [x for x in root.iter(clml.L + "P1") if (x.get("id") or "").startswith("schedule-")]
+            c["text"] = clml.element_text(ps[0]) if ps else None
+            c["status"] = "ok" if ps else "no_paragraph_element"
+        out.append(c)
+        print(c["status"], c["url"], flush=True)
+    OUT_SCH.write_text(json.dumps({"candidates_total": len(allc), "n_new": N_NEW, "rows": out},
+                                  indent=1, ensure_ascii=False), encoding="utf-8")
 
 
 def fetch_sample() -> None:
@@ -110,6 +155,8 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "fetch":
         fetch_sample()
+    elif cmd == "fetch-schedules":
+        fetch_schedules()
     elif cmd == "run":
         print(json.dumps(run(), indent=1))
     else:
