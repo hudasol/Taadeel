@@ -51,3 +51,9 @@ def test_validation_error_keeps_the_disclaimer():
 def test_index_page_served_with_notice():
     r = c.get("/")
     assert r.status_code == 200 and "legal advice" in r.text.lower()
+
+
+def test_diff_before_and_after_texts_come_from_their_own_versions():
+    j = c.get("/api/diff?work=synthetic/law/1&a=a&b=b").json()
+    rep = [x for x in j["changes"] if x["kind"] in ("replaced", "clarified")]
+    assert rep and all(x["a_text"] != x["b_text"] for x in rep)
