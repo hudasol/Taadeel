@@ -1,0 +1,52 @@
+{
+ "source": "https://ar.wikisource.org/w/index.php?oldid=137670",
+ "revision_in_file": 137670,
+ "html_sha256": "4ec90fc17491de28b929bcc8543e596df52a8808c7385440dcbb80ac49529207",
+ "note": "Counts only; no wording committed. One wiki transcription, not the official Gazette text.",
+ "profile": {
+  "lines": 256,
+  "chars": 28935,
+  "diacritic_marks": 117,
+  "tatweel": 2,
+  "format_chars": 2,
+  "arabic_indic_digits": 0,
+  "ascii_digits": 171,
+  "latin_letters": 60,
+  "lines_starting_with_article_word": 50
+ },
+ "v1_parser": {
+  "articles": 50,
+  "max_number": 50,
+  "missing_numbers": 0,
+  "duplicate_numbers": 0,
+  "in_order": true,
+  "kinds": {
+   "article": 50,
+   "chapter": 8
+  },
+  "empty_article_bodies": 0
+ },
+ "v1_parser_after_v2_preclean": {
+  "articles": 50,
+  "max_number": 50,
+  "missing_numbers": 0,
+  "duplicate_numbers": 0,
+  "in_order": true,
+  "kinds": {
+   "article": 50,
+   "chapter": 8
+  },
+  "empty_article_bodies": 0
+ },
+ "renumbering_variant": {
+  "note": "real text, synthetic renumbering (one inserted article, later numbers +1), 5 runs",
+  "v1": {
+   "articles": 250,
+   "correct": 250
+  },
+  "v2": {
+   "articles": 250,
+   "correct": 250
+  }
+ }
+}
