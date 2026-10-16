@@ -1,0 +1,2901 @@
+{
+ "candidates_total": 99,
+ "n_new": 150,
+ "rows": [
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/17/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "17",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "25"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 25(3A) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 17(3); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "25"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 25(2A)(2B) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 17(2); S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "Section 25 (prosecution and punishment of offences) is amended as follows. After subsection (2) insert— Subsection (2B) applies if an offence specified in the first column of Schedule 4 is committed in relation to a temporary class drug. The punishments which may be imposed on a person convicted of the offence summarily or (as the case may be) on indictment in relation to the temporary class drug are the same as those which could be imposed had the person been convicted of the offence in that way in relation to a Class B drug (see the fifth column of Schedule 4). . After subsection (3) insert— The punishments which may be imposed on a person convicted of an offence under section 23A(6) are the same as those which, under Schedule 4, may be imposed on a person convicted of an offence under section 23(4). .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2004/33/schedule/27/paragraph/27/enacted/data.xml",
+   "affecting": "Civil Partnership Act 2004",
+   "schedule": "27",
+   "paragraph": "27",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2005-12-05",
+     "via_schedule": false,
+     "raw": "S. 30 heading substituted (5.12.2005) by Civil Partnership Act 2004 (c. 33), ss. 261(1), 263, Sch. 27 para. 27(4); S.I. 2005/3175, art. 2(2)"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "30"
+     ],
+     "kind": "text_modified",
+     "date": "2005-12-05",
+     "via_schedule": false,
+     "raw": "Words in s. 30(4)(5) inserted (5.12.2005) by Civil Partnership Act 2004 (c. 33), ss. 261(1), 263, Sch. 27 para. 27(2); S.I. 2005/3175, art. 2(2)"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "30"
+     ],
+     "kind": "text_modified",
+     "date": "2005-12-05",
+     "via_schedule": false,
+     "raw": "S. 30: word at end of para. (a)(ii) of proviso repealed (5.12.2005) by Civil Partnership Act 2004 (c. 33), ss. 261(1)(4), 263, Sch. 27 para. 27(3), Sch. 30; S.I. 2005/3175, art. 2(2)(6)"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "30"
+     ],
+     "kind": "text_modified",
+     "date": "2005-12-05",
+     "via_schedule": false,
+     "raw": "S. 30: para. (a)(iii) and preceding word in proviso inserted (5.12.2005) by Civil Partnership Act 2004 (c. 33), ss. 261(1), 262, Sch. 27 para. 27(3); S.I. 2005/3175, art. 2(2)"
+    }
+   ],
+   "text": "Amend section 30 (husband and wife) as follows. In subsections (4) and (5), after “wife or husband” in each place except paragraph (a)(ii) to the proviso to subsection (4) insert “or civil partner”. At the end of paragraph (a)(ii) to the proviso insert or an order (wherever made) is in force providing for the separation of that person and his or her civil partner. , and omit “or” at the end of paragraph (a)(i) to the proviso. For the heading to section 30 substitute “Spouses and civil partners”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2016/19/schedule/2/paragraph/10/enacted/data.xml",
+   "affecting": "Immigration Act 2016",
+   "schedule": "2",
+   "paragraph": "10",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 15(8)(b) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(4)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 15(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(3)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 15(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(3)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 15(8)(b) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(4)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "S. 15(1)(d) and word inserted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(2)(b); S.I. 2016/603, reg. 3(t)"
+    }
+   ],
+   "text": "Section 15 (slavery and trafficking prevention orders on application) is amended as follows. In subsection (1)— omit the “or” after paragraph (b); after paragraph (c) insert , or the Gangmasters and Labour Abuse Authority. In subsection (7)— for “or the Director General”, in the first place it occurs, substitute “, the Director General or the Gangmasters and Labour Abuse Authority”; for “or the Director General”, in the second place it occurs, substitute “, the Director General or the Authority”. In subsection (8)(b)— for “or the Director General”, in the first place it occurs, substitute “, the Director General or the Gangmasters and Labour Abuse Authority”; for “or the Director General”, in the second place it occurs, substitute “, the Director General or the Authority”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2025/36/schedule/10/paragraph/49/enacted/data.xml",
+   "affecting": "Employment Rights Act 2025",
+   "schedule": "10",
+   "paragraph": "49",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "19"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 19(7) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 49(a) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "19"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 19(7) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 49(b) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    }
+   ],
+   "text": "In section 19 (requirement to provide name and address), in subsection (7)— for “Gangmasters and Labour Abuse Authority” substitute “Secretary of State”; for “the Authority” substitute “the Secretary of State”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/26/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "26",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "14"
+     ],
+     "kind": "section_repealed",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 14 repealed (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 26, Sch. 15 Pt. 4 (with s. 38(2)); S.I. 2008/2503, art. 2"
+    }
+   ],
+   "text": "Section 14 of that Act (search warrants for offences under section 1) is repealed.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/13/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "13",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "18"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 18(5)(6) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 13; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 18 (miscellaneous offences), after subsection (4) insert— In this section (and in references in Schedule 4 that refer to this section), any reference to regulations made under this Act is to be taken as including a reference to provision made in a temporary class drug order by virtue of section 7A. For this purpose, a reference in subsection (1) or (2) to regulations made in pursuance of section 10(2)(h) or (i) is a reference to any provision of a temporary class drug order which— is made by virtue of section 7A(2)(d), and is of a corresponding description to regulations made in pursuance of section 10(2)(h) or (as the case may be) (i). .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2004/33/schedule/27/paragraph/28/enacted/data.xml",
+   "affecting": "Civil Partnership Act 2004",
+   "schedule": "27",
+   "paragraph": "28",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "31"
+     ],
+     "kind": "text_modified",
+     "date": "2005-12-05",
+     "via_schedule": false,
+     "raw": "Words in s. 31 substituted (5.12.2005) by Civil Partnership Act 2004 (c. 33), ss. 261(1), 263, Sch. 27 para. 28(a); S.I. 2005/3175, art. 2(2)"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "31"
+     ],
+     "kind": "text_modified",
+     "date": "2005-12-05",
+     "via_schedule": false,
+     "raw": "Words in s. 31 substituted (5.12.2005) by Civil Partnership Act 2004 (c. 33), ss. 261(1), 263, Sch. 27 para. 28(b); S.I. 2005/3175, art. 2(2)"
+    }
+   ],
+   "text": "In section 31 (effect on civil proceedings and rights), in subsection (1)— for “wife or husband” substitute “spouse or civil partner”, and for “married after the making of the statement or admission) against the wife or husband” substitute “married or became civil partners after the making of the statement or admission) against the spouse or civil partner”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/23/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "23",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "11"
+     ],
+     "kind": "section_repealed",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 11 repealed (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 23, Sch. 15 Pt. 4 (with s. 38(2)); S.I. 2008/2503, art. 2"
+    }
+   ],
+   "text": "Section 11 of that Act (proceedings for offences under section 1) is repealed.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/11/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "11",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "11"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 11(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 11; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 11 (power to direct special precautions for safe custody of controlled drugs to be taken at certain premises), in subsection (1) after “of this Act” insert “or by provision made in a temporary class drug order by virtue of section 7A that is of a corresponding description to such regulations”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/5/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "5",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 4(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 5; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 4(1) (restriction of production and supply of controlled drugs), after “this Act” insert “, or any provision made in a temporary class drug order by virtue of section 7A,”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2020/17/schedule/24/paragraph/144/enacted/data.xml",
+   "affecting": "Sentencing Act 2020",
+   "schedule": "24",
+   "paragraph": "144",
+   "effects": [
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "5A"
+     ],
+     "kind": "text_modified",
+     "date": "2020-12-01",
+     "via_schedule": false,
+     "raw": "S. 5A(2)-(2F) substituted for s. 5A(2) (1.12.2020) by Sentencing Act 2020 (c. 17), s. 416(1), Sch. 24 para. 144 (with Sch. 24 para. 447, Sch. 27); S.I. 2020/1236, reg. 2"
+    }
+   ],
+   "text": "In section 5A of the Protection from Harassment Act 1997, for subsection (2) substitute— The order may have effect for a specified period or until further order. In proceedings under this section both the prosecution and the defence may lead, as further evidence, any evidence that would be admissible in proceedings for an injunction under section 3. The prosecutor, the defendant or any other person mentioned in the order may apply to the court that made the order for it to be varied or discharged by a further order. Any person mentioned in the order is entitled to be heard on the hearing of an application under subsection (2B). It is an offence for the defendant, without reasonable excuse, to do anything that the defendant is prohibited from doing by an order under this section. A person guilty of an offence under this section is liable— on conviction on indictment, to imprisonment for a term not exceeding five years, or a fine, or both, or on summary conviction, to imprisonment for a term not exceeding six months, or a fine, or both. A court dealing with a person for an offence under this section may vary or discharge the order in question by a further order.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/2/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "2",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "2"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 2(1)(c) and preceding word inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 2(b); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "2"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 2(1)(a) substituted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 2(a); S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 2 (controlled drugs and their classification for purposes of Act), in subsection (1)— in paragraph (a), for the words after “specified” substitute “— in Part I, II or III of Schedule 2, or in a temporary class drug order as a drug subject to temporary control (but this is subject to section 2A(6));”, and at the end of paragraph (b) insert , and the expression “temporary class drug” means any substance or product which is for the time being a controlled drug by virtue of a temporary class drug order; .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2003/42/schedule/6/paragraph/17/enacted/data.xml",
+   "affecting": "Sexual Offences Act 2003",
+   "schedule": "6",
+   "paragraph": "17",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "9"
+     ],
+     "kind": "text_modified",
+     "date": "2004-05-01",
+     "via_schedule": false,
+     "raw": "Words in s. 9(2) repealed (1.5.2004) by Sexual Offences Act 2003 (c. 42), ss. 139, 140, 141, Sch. 6 para. 17,{Sch. 7}; S.I. 2004/874, art. 2"
+    }
+   ],
+   "text": "In section 9 of the Theft Act 1968 (burglary), in subsection (2) omit “or raping any person”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/20/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "20",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 6 heading: words substituted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 20(a); S.I. 2008/2503, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "6"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 6(1) substituted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 20(b); S.I. 2008/2503, art. 2"
+    }
+   ],
+   "text": "In section 6 of that Act (territorial scope of inchoate offences)— in the heading, for “offences under this Act” there is substituted “offences under sections 1 to 3”; in subsections (1) and (3), for “offence under this Act” there is substituted “offence under section 1, 2 or 3 above”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/9/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "9",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "9A"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 9A(4)(b) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 9(b); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "9A"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 9A(4)(c) and words inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 9(c); S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 9A (prohibition of supply etc of articles for administering or preparing controlled drugs), in subsection (4)— at the end of paragraph (a) omit “or”, in paragraph (b) after “of a controlled drug” insert “, other than a temporary class drug,”, and at the end of that paragraph insert , or the administration by any person of a temporary class drug to himself in circumstances where having the drug in his possession is to be treated as excepted possession for the purposes of this Act (see section 7A(2)(c)). .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2007/27/schedule/6/paragraph/59/enacted/data.xml",
+   "affecting": "Serious Crime Act 2007",
+   "schedule": "6",
+   "paragraph": "59",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "6"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 6(3) repealed (1.10.2008) by Serious Crime Act 2007 (c. 27), ss. 63(1)(2), 92, 94, Sch. 6 para. 59(2), Sch. 14 (with Sch. 13 para. 5); S.I. 2008/2504, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "7"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 7(4) repealed (1.10.2008) by Serious Crime Act 2007 (c. 27), ss. 63(1)(2), 92, 94, Sch. 6 para. 59(3), Sch. 14 (with Sch. 13 para. 5); S.I. 2008/2504, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "8"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 8(3) repealed (1.10.2008) by Serious Crime Act 2007 (c. 27), ss. 63(1)(2), 92, 94, Sch. 6 para. 59(4), Sch. 14 (with Sch. 13 para. 5); S.I. 2008/2504, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "9"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 9(2)(d) repealed (1.10.2008) by Serious Crime Act 2007 (c. 27), ss. 63(1)(2), 92, 94, Sch. 6 para. 59(5), Sch. 14 (with Sch. 13 para. 5); S.I. 2008/2504, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 16(4) repealed (1.10.2008) by Serious Crime Act 2007 (c. 27), ss. 63(1)(2), 92, 94, Sch. 6 para. 59(6), Sch. 14 (with Sch. 13 para. 5); S.I. 2008/2504, art. 2"
+    }
+   ],
+   "text": "The Computer Misuse Act 1990 is amended as follows. In section 6 (incitement) omit subsection (3). In section 7 (territorial scope of inchoate offences related to offences under external law corresponding to offences under the Act) omit subsection (4). In section 8(3) (relevance of external law) omit “or by virtue of section 7(4) above”. In section 9(2) (offences in relation to which British citizenship is immaterial) omit paragraph (d). In section 16(4) (application to Northern Ireland) omit the words from “and any reference” to the end.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2013/25/schedule/8/paragraph/26/enacted/data.xml",
+   "affecting": "Public Service Pensions Act 2013",
+   "schedule": "8",
+   "paragraph": "26",
+   "effects": [
+    {
+     "act": "ukpga/1998/42",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2014-04-01",
+     "via_schedule": false,
+     "raw": "Words in Sch. 4 para. 4 inserted (1.4.2014) by Public Service Pensions Act 2013 (c. 25), s. 41(2), Sch. 8 para. 26 (with Sch. 11 para. 8); S.I. 2014/839, art. 4(2)(k)"
+    }
+   ],
+   "text": "In Schedule 4 to the Human Rights Act 1998 (judicial pensions), in the definition of “pensions Act” in paragraph 4, after paragraph (d) (but before the final “and”) there is inserted— the Public Service Pensions Act 2013; .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2025/36/schedule/10/paragraph/55/enacted/data.xml",
+   "affecting": "Employment Rights Act 2025",
+   "schedule": "10",
+   "paragraph": "55",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "33"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 33(1) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 55 (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    }
+   ],
+   "text": "In section 33 (guidance), in subsection (1), for “, the Director General of the National Crime Agency and the Gangmasters and Labour Abuse Authority” substitute “and the Director General of the National Crime Agency”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2004/28/schedule/10/paragraph/44/enacted/data.xml",
+   "affecting": "Domestic Violence, Crime and Victims Act 2004",
+   "schedule": "10",
+   "paragraph": "44",
+   "effects": [
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "7"
+     ],
+     "kind": "text_modified",
+     "date": "2009-09-30",
+     "via_schedule": false,
+     "raw": "Words in s. 7(1) substituted (30.9.2009) by Domestic Violence, Crime and Victims Act 2004 (c. 28), s. 60, Sch. 10 para. 44 (with Sch. 12 para. 5(3)); S.I. 2009/2501, art. 2(d)"
+    }
+   ],
+   "text": "In section 7 of that Act (interpretation), in subsection (1), for “sections 1 to 5” substitute “sections 1 to 5A”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/12/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "12",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 13(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 12(2)(a); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 13(1A) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 12(3); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 13(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 12(2)(b); S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "Section 13 (directions prohibiting prescribing, supply etc of controlled drugs by practitioners in other cases) is amended as follows. In subsection (1)— after “section 10(2) of this Act” insert “or of corresponding provision made in a temporary class drug order”, and after “said paragraph (i)” insert “or of any such corresponding provision”. After subsection (1) insert— For the purposes of subsection (1), provision made in a temporary class drug order is “corresponding provision” if it— is made by virtue of section 7A(2)(d), and is of a corresponding description to regulations made in pursuance of section 10(2)(h) or (as the case may be) 10(2)(i). .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/8/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "8",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "7A"
+     ],
+     "kind": "section_inserted",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 7A inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 8; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "After section 7 insert— Temporary class drug orders: power to make further provision This section applies if a temporary class drug order specifies a substance or product as a drug subject to temporary control. The order may— include provision for the exception of the drug from the application of section 3(1)(a) or (b) or 4(1)(a) or (b), make such other provision as the Secretary of State thinks fit for the purpose of making it lawful for persons to do things in respect of the drug which under section 4(1) it would otherwise be unlawful for them to do, provide for circumstances in which a person’s possession of the drug is to be treated as excepted possession for the purposes of this Act, and include any provision in relation to the drug of a kind that could be made in regulations under section 10 or 22 if the drug were a Class A drug, a Class B drug or a Class C drug (but ignoring section 31(3)). Provision under subsection (2) may take the form of applying (with or without modifications) any provision made in regulations under section 7(1), 10 or 22. Provision under subsection (2)(b) may (in particular) provide for the doing of something to be lawful if it is done— in circumstances mentioned in section 7(2)(a), or in compliance with such conditions as may be prescribed by virtue of section 7(2)(b). Section 7(8) applies for the purposes of this section. Section 31(1) (general provision as to regulations) applies in relation to a temporary class drug order that contains provision made by virtue of this section as it applies to regulations under this Act. .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/schedule/11/paragraph/1/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "schedule": "11",
+   "paragraph": "1",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "Words in Sch. 3 para. 5(2) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 11 para. 1(2); S.I. 2009/1604, art. 2(d)"
+    }
+   ],
+   "text": "The Supreme Court Act 1981 (c. 54) may be cited as the Senior Courts Act 1981. For the words “Supreme Court Act 1981” wherever they occur in any enactment substitute “Senior Courts Act 1981”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2003/44/schedule/28/paragraph/1/enacted/data.xml",
+   "affecting": "Criminal Justice Act 2003",
+   "schedule": "28",
+   "paragraph": "1",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2004-01-29",
+     "via_schedule": false,
+     "raw": "Words in Sch. 4 substituted (29.1.2004) by Criminal Justice Act 2003 (c. 44), s. 336(3)(4), Sch. 28 para. 1(1)-(3)(e); S.I. 2004/81, art. 4(1)(2)(k)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2004-01-29",
+     "via_schedule": false,
+     "raw": "Words in Sch. 4 substituted (29.1.2004) by Criminal Justice Act 2003 (c. 44), s. 336(3)(4), Sch. 28 para. 1(1)-(3)(d); S.I. 2004/81, art. 4(1)(2)(k)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2004-01-29",
+     "via_schedule": false,
+     "raw": "Words in Sch. 4 substituted (29.1.2004) by Criminal Justice Act 2003 (c. 44), s. 336(3)(4), Sch. 28 para. 1(1)-(3)(c); S.I. 2004/81, art. 4(1)(2)(k)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2004-01-29",
+     "via_schedule": false,
+     "raw": "Words in Sch. 4 substituted (29.1.2004) by Criminal Justice Act 2003 (c. 44), s. 336(3), (4), Sch. 28 para. 1(1)-(3)(a); S.I. 2004/81, art. 4(1)(2)(k)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2004-01-29",
+     "via_schedule": false,
+     "raw": "Words in Sch. 4 substituted (29.1.2004) by Criminal Justice Act 2003 (c. 44), s. 336(3)(4), Sch. 28 para. 1(1)-(3)(f); S.I. 2004/81, art. 4(1)(2)(k)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2004-01-29",
+     "via_schedule": false,
+     "raw": "Words in Sch. 4 substituted (29.1.2004) by Criminal Justice Act 2003 (c. 44), s. 336(3), (4), Sch. 28 para. 1(1)-(3)(b); S.I. 2004/81, art. 4(1)(2)(k)"
+    }
+   ],
+   "text": "Schedule 4 to the Misuse of Drugs Act 1971 (prosecution and punishment of offences) is amended as follows. In column 6 of that Schedule (punishments for offences under that Act committed in relation to Class C drugs), in each of the following entries, for “5 years” there is substituted “14 years”. Those entries are the entries relating to the punishment, on conviction on indictment, of offences under the following provisions of that Act— section 4(2) (production, or being concerned in the production, of a controlled drug), section 4(3) (supplying or offering to supply a controlled drug or being concerned in the doing of either activity by another), section 5(3) (having possession of a controlled drug with intent to supply it to another), section 8 (being the occupier, or concerned in the management, of premises and permitting or suffering certain activities to take place there), section 12(6) (contravention of direction prohibiting practitioner etc from possessing, supplying etc controlled drugs), and section 13(3) (contravention of direction prohibiting practitioner etc from prescribing, supplying etc controlled drugs).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/4/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "4",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "3"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 3(2)(a) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 4; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 3 (restriction of importation and exportation of controlled drugs), in subsection (2)(a) after “this Act” insert “or by provision made in a temporary class drug order by virtue of section 7A”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2012/9/schedule/9/paragraph/143/enacted/data.xml",
+   "affecting": "Protection of Freedoms Act 2012",
+   "schedule": "9",
+   "paragraph": "143",
+   "effects": [
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "1"
+     ],
+     "kind": "text_modified",
+     "date": "2012-11-25",
+     "via_schedule": false,
+     "raw": "Words in s. 1(2) inserted (25.11.2012) by Protection of Freedoms Act 2012 (c. 9), s. 120, Sch. 9 para. 143(2) (with s. 97); S.I. 2012/2075, art. 5(d)"
+    },
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2012-11-25",
+     "via_schedule": false,
+     "raw": "Words in s. 4(5) inserted (25.11.2012) by Protection of Freedoms Act 2012 (c. 9), s. 120, Sch. 9 para. 143(3)(a) (with s. 97); S.I. 2012/2075, art. 5(d)"
+    },
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2012-11-25",
+     "via_schedule": false,
+     "raw": "Words in s. 4(6) inserted (25.11.2012) by Protection of Freedoms Act 2012 (c. 9), s. 120, Sch. 9 para. 143(3)(b) (with s. 97); S.I. 2012/2075, art. 5(d)"
+    }
+   ],
+   "text": "The Protection from Harassment Act 1997 is amended as follows. In section 1(2) (circumstances in which a person ought to know that a course of conduct amounts to harassment) after “this section” insert “or section 2A(2)(c)”. In section 4 (putting people in fear of violence)— in subsection (5) after “section 2” insert “or 2A”, and in subsection (6) after “section 2” insert “or 2A”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/schedule/11/paragraph/6/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "schedule": "11",
+   "paragraph": "6",
+   "effects": [
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "18"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 18(4)(c) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 59, 148, Sch. 11 para. 6; S.I. 2009/1604, art. 2(d)"
+    }
+   ],
+   "text": "In each of the enactments listed in sub-paragraph (3) for “Supreme Court” or “Supreme Court of Judicature” in each place substitute “Court of Judicature”. This paragraph does not apply to those words— in the short title or title of any enactment or group of enactments, where they are amended by paragraph 3 or 5 of this Schedule, or (unless otherwise provided) as inserted by any other provision of this Act. The enactments amended are— the Railway Act (Ireland) 1851 (c. 70) the Railways Act (Ireland) 1860 (c. 97) the Tramways (Ireland) Act 1860 (c. 152) the Settled Estates Act 1877 (c. 18) the Bills of Sale (Ireland) Act 1879 (c. 50) the Parliamentary Deposits and Bonds Act 1892 (c. 27) the Land Law (Ireland) Act 1896 (c. 47) the Colonial Solicitors Act 1900 (c. 14) the Northern Ireland Land Act 1925 (c. 34) the Local Government Act (Northern Ireland) 1934 (c. 22 (N.I.)) the Northern Ireland Land Purchase (Winding Up) Act 1935 (c. 21) the Evidence and Powers of Attorney Act 1940 (c. 28) the Lands Tribunal Act 1949 (c. 42) the Interpretation Act (Northern Ireland) 1954 (c. 33 (N.I.)) the Trustee Act (Northern Ireland) 1958 (c. 23 (N.I.)) the Coroners Act (Northern Ireland) 1959 (c. 15 (N.I.)) the County Courts Act (Northern Ireland) 1959 (c. 25 (N.I.)) the Electoral Law Act (Northern Ireland) 1962 (c. 14 (N.I.)) the Magistrates' Courts Act (Northern Ireland) 1964 (c. 21 (N.I.)) the Courts-Martial (Appeals) Act 1968 (c. 20) the Medicines Act 1968 (c. 67) the Land Registration Act (Northern Ireland) 1970 (c. 18 (N.I.)) the Leasehold (Enlargement and Extension) Act (Northern Ireland) 1971 (c. 7 (N.I.)) the Powers of Attorney Act (Northern Ireland) 1971 (c. 33 (N.I.)) the Prosecution of Offences (Northern Ireland) Order 1972 (S.I. 1972/ 538 (N.I. 1)) the Administration of Justice Act 1973 (c. 15) the Northern Ireland Constitution Act 1973 (c. 36) the Hearing Aid Council (Extension) Act 1975 (c. 39) the Restrictive Practices Court Act 1976 (c. 33) the Solicitors (Northern Ireland) Order 1976 (S.I. 1976/582 (N.I. 12)) the Judicature (Northern Ireland) Act 1978 (c. 23), including section 68A(1)(a) inserted by section 10 of this Act, and any amendment to— the Lands Clauses Consolidation Act 1845 (c. 18), except section 3 the Consolidated Fund (Permanent Charges Redemption) Act 1873 (c. 57) the Life Insurance Companies (Payment into Court) Act 1896 (c. 8) the Inheritance (Provision for Family and Dependants) (Northern Ireland) Order 1979 (S.I. 1979/924 (N.I. 8)) the Administration of Estates (Northern Ireland) Order 1979 (S.I. 1979/1575 (N.I. 14)) the County Courts (Northern Ireland) Order 1980 (S.I. 1980/397 (N.I. 3)) the Rules of the Supreme Court (Northern Ireland) (Revision) 1980 (S.R. 1980/346) the Judgments Enforcement (Northern Ireland) Order 1981 (S.I. 1981/226 (N.I. 6)) the Legal Aid, Advice and Assistance (Northern Ireland) Order 1981 (S.I. 1981/228 (N.I. 8)) the Medical Act 1983 (c. 54) the Mental Health (Northern Ireland) Order 1986 (S.I. 1986/ 595 (N.I. 4)) the Companies (Northern Ireland) Order 1986 (S.I. 1986/ 1032 (N.I. 6)) the Solicitors (Amendment) (Northern Ireland) Order 1989 (S.I. 1989/1343 (N.I. 14)) the Family Law (Northern Ireland) Order 1993 (S.I. 1993/ 1576 (N.I. 6)) the Merchant Shipping Act 1995 (c. 21) the Juries (Northern Ireland) Order 1996 (S.I. 1996/1141 (N.I. 6)) the Human Rights Act 1998 (c. 42), section 18(4)(c) the Health and Personal Social Services Act (Northern Ireland) 2001 (c. 3 (N.I.)) the Justice (Northern Ireland) Act 2002 (c. 26) the Courts Act 2003 (c. 39), sections 102(1)(a) and 103(8) the Access to Justice (Northern Ireland) Order 2003 (S.I. 2003/ 435 (N.I. 10))",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/7/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "7",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "7"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 7(10) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 7; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 7 (authorisation of activities otherwise unlawful under foregoing provisions of Act), after subsection (9) insert— In this section a reference to “controlled drugs” does not include a reference to temporary class drugs (see instead section 7A). .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2015/9/schedule/4/paragraph/12/enacted/data.xml",
+   "affecting": "Serious Crime Act 2015",
+   "schedule": "4",
+   "paragraph": "12",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "S. 10 heading substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 12; S.I. 2015/820, reg. 2(r)(iii)"
+    }
+   ],
+   "text": "In section 10 of that Act, for the heading substitute “Savings”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2025/36/schedule/10/paragraph/56/enacted/data.xml",
+   "affecting": "Employment Rights Act 2025",
+   "schedule": "10",
+   "paragraph": "56",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "34"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 34(1) inserted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 56 (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    }
+   ],
+   "text": "In section 34 (interpretation of Part 2), in subsection (1), after the definition of “interim slavery and trafficking risk order” insert— “labour market offence” has the same meaning as in Part 5 of the Employment Rights Act 2025; .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2016/25/schedule/10/paragraph/37/enacted/data.xml",
+   "affecting": "Investigatory Powers Act 2016",
+   "schedule": "10",
+   "paragraph": "37",
+   "effects": [
+    {
+     "act": "ukpga/1989/6",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2018-06-27",
+     "via_schedule": false,
+     "raw": "S. 4(3)(c) and word inserted (27.6.2018) by Investigatory Powers Act 2016 (c. 25), s. 272(1), Sch. 10 para. 37 (with Sch. 9 paras. 7, 8, 10); S.I. 2018/652, reg. 12(g)(iii)"
+    }
+   ],
+   "text": "In section 4(3) of the Official Secrets Act 1989 (crime and special investigation powers) omit the “and” after paragraph (a) and after paragraph (b) insert and any information obtained under a warrant under Chapter 1 of Part 2 or Chapter 1 of Part 6 of the Investigatory Powers Act 2016, any information relating to the obtaining of information under such a warrant and any document or other article which is or has been used or held for use in, or has been obtained by reason of, the obtaining of information under such a warrant.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/35/schedule/1/paragraph/5/enacted/data.xml",
+   "affecting": "Fraud Act 2006",
+   "schedule": "1",
+   "paragraph": "5",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "Words in s. 20(3) repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(3), 15(1), Sch. 1 para. 5, Sch. 3; S.I. 2006/3200, art. 2"
+    }
+   ],
+   "text": "In section 20(3) (suppression etc. of documents—interpretation), omit ““deception” has the same meaning as in section 15 of this Act, and”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2015/9/schedule/4/paragraph/9/enacted/data.xml",
+   "affecting": "Serious Crime Act 2015",
+   "schedule": "4",
+   "paragraph": "9",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 4 heading substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 9; S.I. 2015/820, reg. 2(r)(iii)"
+    }
+   ],
+   "text": "In section 4 of that Act (territorial scope of offences), in the heading, for “sections 1 to 3” substitute “this Act”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/schedule/9/paragraph/66/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "schedule": "9",
+   "paragraph": "66",
+   "effects": [
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "S. 4(5)(a) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 40, 148, Sch. 9 para. 66(2); S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "5"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 5(4) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 40, 148, Sch. 9 para. 66(3); S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "5"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 5(5) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 40, 148, Sch. 9 para. 66(3); S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "6"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "S. 6(4) repealed (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 40, 146, 148, Sch. 9 para. 66(4), Sch. 18 Pt. 5; S.I. 2009/1604, art. 2(d)(f)"
+    }
+   ],
+   "text": "The Human Rights Act 1998 is amended as follows. In section 4 (declaration of incompatibility) in subsection (5) for paragraph (a) substitute— the Supreme Court; . In section 5 (right of Crown to intervene) in subsections (4) and (5) for “House of Lords” in each case substitute “Supreme Court”. In section 6 (acts of public authorities) omit subsection (4).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/14/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "14",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "22"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 22(2) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 14(b); S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 22 (further power to make regulations)— renumber the existing provision as subsection (1), and after that subsection insert— The power to make regulations under this section does not apply in relation to temporary class drugs (see instead section 7A). .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/18/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "18",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "30"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 30 inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 18; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 30 (licenses and authorities) after “of regulations” insert “or orders”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/19/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "19",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "37"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 37(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 19; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 37(1) (interpretation), after the definition of “supplying” insert— “temporary class drug order” means an order made under section 2A(1); .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/6/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "6",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "5"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 5(2A) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 6; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 5 (restriction of possession of controlled drugs), after subsection (2) insert— Subsections (1) and (2) do not apply in relation to a temporary class drug. .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2015/9/schedule/4/paragraph/10/enacted/data.xml",
+   "affecting": "Serious Crime Act 2015",
+   "schedule": "4",
+   "paragraph": "10",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 6 heading substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 10(2) (with s. 86(6)); S.I. 2015/820, reg. 2(r)(iii)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "6"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 6(1) substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 10(3) (with s. 86(6)); S.I. 2015/820, reg. 2(r)(iii)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "6"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 6(2) substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 10(4) (with s. 86(6)); S.I. 2015/820, reg. 2(r)(iii)"
+    }
+   ],
+   "text": "Section 6 of that Act (territorial scope of inchoate offences) is amended as follows. In the heading, for “sections 1 to 3” substitute “this Act”. In subsection (1), for “section 1, 2 or 3 above” substitute “this Act”. In subsection (2), for “section 3 above” substitute “this Act”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2013/22/schedule/9/paragraph/52/enacted/data.xml",
+   "affecting": "Crime and Courts Act 2013",
+   "schedule": "9",
+   "paragraph": "52",
+   "effects": [
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "3A"
+     ],
+     "kind": "text_modified",
+     "date": "2014-04-22",
+     "via_schedule": false,
+     "raw": "Words in s. 3A(2) substituted (22.4.2014) by Crime and Courts Act 2013 (c. 22), s. 61(3), Sch. 9 para. 52; S.I. 2014/954, art. 2(c) (with art. 3) (with transitional provisions and savings in S.I. 2014/956, arts. 3-11)"
+    }
+   ],
+   "text": "In the provisions listed in sub-paragraph (2) (but subject to any specific amendments made by or under this Act)— for “A county court”, in each place, substitute “The county court”, and for “a county court”, in each place, substitute “the county court”. The provisions are— Access to Health Records Act 1990: section 8(5), Access to Justice Act 1999: sections 17, 17A, 21 and 54 to 57, Access to Medical Records Act 1988: section 8(2), Access to Neighbouring Land Act 1992: section 8(3), Administration of Justice (Miscellaneous Provisions) Act 1933: section 7(2), Administration of Justice Act 1960: sections 12 and 13, Administration of Justice Act 1970: section 11(b) in the words before sub-paragraph (i), and section 41(3), Administration of Justice Act 1977: section 23(4)(a), Administration of Justice Act 1982: section 38, Administration of Justice Act 1985: section 53(2)(c), Anti-social Behaviour Act 2003: sections 13 and 26A to 28, Charging Orders Act 1979: sections 1(1), (2)(c) and (d) and (6), 3(4A)(a) and 6(2), Charities Act 1992: section 58(1), Civil Jurisdiction and Judgments Act 1982: section 18(4A)(a), Commonhold and Leasehold Reform Act 2002: sections 66(1) and 107(1), Commons Act 2006: sections 34(5) and 46(7)(a), Companies Act 2006: section 1183, Communications Act 2003: section 124Q(7)(a), Compensation Act 2006: section 8(2), Contempt of Court Act 1981: section 14 (but not in its application to Northern Ireland as set out in Schedule 4 to that Act), Crime and Disorder Act 1998: sections 1B(1) and 10, Criminal Justice Act 2003: section 329(8)(c), Data Protection Act 1998: section 55D(2)(a), Education Act 1996: section 336(2)(g), Education and Skills Act 2008: sections 56(5), 57(2), 58(4)(b), 59(4) and 65(3), Electricity Act 1989: sections 39B(4)(a) and 44A(6)(b)(i), Employment Rights Act 1996: sections 110(6)(a), 194(4) and 195(4), Employment Tribunals Act 1996: sections 7(3)(e)(i), 13(1C), 15(1) and 19A, Environmental Protection Act 1990: section 78P(8), Equality Act 2006: sections 21(7)(b), 22(6), 24 and 32(9)(b), and paragraphs 11 and 12(2) of Schedule 2, Equality Act 2010: sections 114(1), 119(1), 120(6), 124(6), 127(9), 138(8), 140(6) and 143(1), paragraph 12(5) of Schedule 20 and paragraphs 4(2) and 5(7) of Schedule 21, Finance Act 2003: paragraph 5(1)(a) of Schedule 12, and the first “a county court” in paragraph 5(3)(a) of that Schedule, Financial Services and Markets Act 2000: paragraphs 16(a) and 16D(a) of Schedule 17, Gas Act 1986: sections 15A(6)(b), 27A(9)(b) and 33AB(4)(a), Health and Social Care (Community Health and Standards) Act 2003: section 155(7), Highways Act 1980: sections 79(8) and (13) and 308, Horserace Betting and Olympic Lottery Act 2004: section 9(6), Housing Act 1980: section 86(1), Housing Act 1985: sections 82A(2), 110(1), 181(1) and 272(5), and paragraph 6(5) of Schedule 18, Housing Act 1988: sections 6A(2) and 40(1) and (3), and section 40(4) until its repeal by the Courts and Legal Services Act 1990 is fully in force, Housing Act 1996: sections 95, 138(1), 153E(6), 154(1), 155(6), 157(1) and 203(5), Housing Act 2004: sections 214(1) and 215(2A), and paragraphs 5(3)(a) and 13 of Schedule 13, Immigration and Asylum Act 1999: section 43(2)(a), Immigration, Asylum and Nationality Act 2006: section 17(6)(a), Industrial and Provident Societies Act 1965: section 60(8)(a), Insolvency Act 1986: sections 196(a), 373(2), 375 and 429(1), Land Registration Act 2002: sections 75(4), 76(5) and 132(3)(a), Landlord and Tenant (Covenants) Act 1995: sections 8(4) and 10(4), Landlord and Tenant (War Damage) Act 1939: section 23(1), Landlord and Tenant Act 1954: section 63(2) and (9), Landlord and Tenant Act 1985: section 20C(2), and paragraph 8(2) of the Schedule, Landlord and Tenant Act 1987: sections 52(1) and (3) and 60(1), and paragraphs 4(3) and 9(3) of Schedule 1, and section 52(4) until its repeal by the Courts and Legal Services Act 1990 is fully in force, Learning and Skills Act 2000: section 145(5), Leasehold Reform, Housing and Urban Development Act 1993: sections 90, 93(3) and 101(1), paragraph 4(3) of Schedule 8 and paragraph 4 of Schedule 14, Legal Aid, Sentencing and Punishment of Offenders Act 2012: sections 24(3)(b) and 36(5), paragraph 5 of Part 3 of Schedule 1 and paragraph 2(3) of Schedule 2, Legal Services Act 2007: section 141(7), Local Government Act 1972: section 146(3), Local Government Act 2000: section 77(6)(e), Local Government Finance Act 1992: paragraph 11(4) of Schedule 4, Local Land Charges Act 1975: section 10(8), Localism Act 2011: section 159(5), London Building Acts (Amendment) Act 1939 (c. xcvii): sections 103 and 143, and entry (xxxiv) in the table in section 148(2), London County Council (General Powers) Act 1955 (c. xxix): section 7(4), Magistrates’ Courts Act 1980: sections 87(1) and 111A(3)(a), Mental Health Act 1983: section 31, Mines and Quarries (Tips) Act 1969: section 28, National Health Service Act 2006: sections 90(5), 94(3)(h), 105(5), 109(3)(h), 122(5) and 139(8), and paragraph 3(3)(j) of Schedule 12, National Health Service (Wales) Act 2006: sections 48(5), 52(3)(h), 62(5), 66(3)(h) and 97(8), and paragraph 3(3)(j) of Schedule 7, National Minimum Wage Act 1998: sections 19E(a), 38(2) and 39(2), Patents Act 1977: sections 41(9), 61(7)(a), 93(a) and 107(2), Pension Schemes Act 1993: sections 53(1B)(a), 115(6)(a), 150(8)(a) and 151(5)(a), Pensions Act 1995: section 10(8A)(a), Pensions Act 2004: sections 103(9)(a), 217(2)(a) and 218(5)(a), Pensions Act 2008: section 42(2), Planning Act 2008: section 171(4), and paragraph 24 of Schedule 12, Protection from Harassment Act 1997: section 3A(2), Rent (Agriculture) Act 1976: section 26, Rent Act 1977: sections 96(3), 132(6) and 141, Representation of the People Act 1983: sections 78(4), 86(1)(c) and 167(1), and rule 56(1), (4) and (5)(a) of Schedule 1, with a view to the inserted references to the county court including (as in other places in that Act) a county court in Northern Ireland, Representation of the People Act 1983: section 167(3), and paragraph 9 of Schedule 4, Reserve and Auxiliary Forces (Protection of Civil Interests) Act 1951: section 2(1), Senior Courts Act 1981: section 29(4), Social Security (Recovery of Benefits) Act 1997: section 7(4), Social Security Act 1989: paragraph 9 of Schedule 5, Social Security Administration Act 1992: sections 71ZE(1) and 126(3)(a), Social Security Contributions and Benefits Act 1992: section 12(7), Solicitors Act 1974: sections 61(6), 68(2), 69(3) and 74(3), Trade Union and Labour Relations (Consolidation) Act 1992: section 277(3), and paragraphs 19E(5), 28(6) and 120(6) of Schedule A1, Tribunals, Courts and Enforcement Act 2007: sections 27(1)(a) and 78(3), section 92(1) (in the inserted section 15D(3)), section 93(2) (in the inserted section 1(6)), section 93(3) (in the inserted section 3(4A)(a)), sections 93(6), 95(1), 104(2), 115 to 118, 119(1)(b), 122(2) and 123(1), paragraph 12(2)(b) of Schedule 5, paragraphs 3(1), 60(8) and 66(4) of Schedule 12, paragraphs 77 and 79(2)(a) of Schedule 13 (in the quoted or inserted text), paragraphs 2(2), 5, 7, 10, 18 and 21 of Schedule 15 (in the inserted text) and paragraph 3(2) of Schedule 16 (in the inserted section 429(1)), Trusts of Land and Appointment of Trustees Act 1996: section 23(3), Violent Crime Reduction Act 2006: section 4(1), Water Industry Act 1991: sections 30A(5), 51B(5) and 150A(6), and Welfare Reform Act 2012: section 105(1) (in the inserted section 71ZE(1)).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2021/17/schedule/3/paragraph/1/enacted/data.xml",
+   "affecting": "Domestic Abuse Act 2021",
+   "schedule": "3",
+   "paragraph": "1",
+   "effects": [
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "4B"
+     ],
+     "kind": "section_inserted",
+     "date": "2021-06-29",
+     "via_schedule": false,
+     "raw": "S. 4B inserted (29.6.2021) by Domestic Abuse Act 2021 (c. 17), s. 90(2), Sch. 3 para. 1"
+    }
+   ],
+   "text": "In the Protection from Harassment Act 1997, after section 4A insert— Offences under sections 4 and 4A committed outside the United Kingdom If— a person’s course of conduct consists of or includes conduct in a country outside the United Kingdom, the course of conduct would constitute an offence under section 4 or 4A if it occurred in England and Wales, and the person is a United Kingdom national or is habitually resident in England and Wales, the person is guilty in England and Wales of that offence. In this section— “country” includes territory; “United Kingdom national” means an individual who is— a British citizen, a British overseas territories citizen, a British National (Overseas) or a British Overseas citizen, a person who under the British Nationality Act 1981 is a British subject, or a British protected person within the meaning of that Act.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/10/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "10",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 10(3) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 10; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 10 (power to make regulations for preventing misuse of controlled drugs), after subsection (2) insert— In this section a reference to “controlled drugs” does not include a reference to temporary class drugs (see instead section 7A). .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2025/36/schedule/10/paragraph/48/enacted/data.xml",
+   "affecting": "Employment Rights Act 2025",
+   "schedule": "10",
+   "paragraph": "48",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 15(7) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 48(3)(a) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 15(7) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 48(3)(b) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 15(8)(b) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 48(4)(a) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 15(8)(b) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 48(4)(b) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "S. 15(1)(ca) substituted for s. 15(1)(d) (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 48(2) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    }
+   ],
+   "text": "Section 15 (slavery and trafficking prevention orders on application) is amended as follows. In subsection (1), for paragraph (d) substitute— if it appears that an offence under this Part which is a labour market offence has been, is being or may be committed, the Secretary of State. In subsection (7)— for “Gangmasters and Labour Abuse Authority” substitute “Secretary of State”; for “the Authority” substitute “the Secretary of State”. In subsection (8)(b)— for “Gangmasters and Labour Abuse Authority” substitute “Secretary of State”; for “the Authority” substitute “the Secretary of State”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/20/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "20",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "38"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 38(1) substituted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 20; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "In section 38(1) (special provisions as to Northern Ireland) for “2, 7,” substitute “2, 2A, 2B, 7, 7A,”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2025/36/schedule/10/paragraph/50/enacted/data.xml",
+   "affecting": "Employment Rights Act 2025",
+   "schedule": "10",
+   "paragraph": "50",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 20(2)(g) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 50(2) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 20(9) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 50(3)(a) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 20(9) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 50(3)(b) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    }
+   ],
+   "text": "Section 20 (variation, renewal and discharge) is amended as follows. In subsection (2)(g), for “the Gangmasters and Labour Abuse Authority, the Authority” substitute “the Secretary of State, the Secretary of State”. In subsection (9)— for “Gangmasters and Labour Abuse Authority” substitute “Secretary of State”; for “the Authority”, in both places it occurs, substitute “the Secretary of State”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/15/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "15",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 23(3)(a) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 15(3); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Words in s. 23(2) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 15(2); S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "Section 23 (powers to search and obtain evidence) is amended as follows. In subsection (2) after “any regulations” insert “or orders”. In subsection (3)(a) after “any regulations” insert “or orders”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/3/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "3",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "2A",
+      "2B"
+     ],
+     "kind": "section_inserted",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "Ss. 2A, 2B inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 3; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "After section 2 insert— Temporary class drug orders The Secretary of State may make an order (referred to in this Act as a “temporary class drug order”) specifying any substance or product as a drug subject to temporary control if the following two conditions are met. The first condition is that the substance or product is not a Class A drug, a Class B drug or a Class C drug. The second condition is that— the Secretary of State has consulted in accordance with section 2B and has determined that the order should be made, or the Secretary of State has received a recommendation under that section that the order should be made. The Secretary of State may make the determination mentioned in subsection (3)(a) only if it appears to the Secretary of State that— the substance or product is a drug that is being, or is likely to be, misused, and that misuse is having, or is capable of having, harmful effects. A substance or product may be specified in a temporary class drug order by reference to— the name of the substance or product, or a description of the substance or product (which may take such form as the Secretary of State thinks appropriate for the purposes of the specification). A substance or product specified in a temporary class drug order as a drug subject to temporary control ceases to be a controlled drug by virtue of the order— at the end of one year beginning with the day on which the order comes into force, or if earlier, upon the coming into force of an Order in Council under section 2(2) by virtue of which the substance or product is specified in Part 1, 2 or 3 of Schedule 2. Subsection (6)— is subject to subsection (10) , and is without prejudice to the power of the Secretary of State to vary or revoke a temporary class drug order by a further order. The power of the Secretary of State to make an order under this section is subject to section 2B. An order under this section is to be made by statutory instrument. An order under this section— must be laid before Parliament after being made, and ceases to have effect at the end of the period of 40 days beginning with the day on which the order is made unless before the end of that period the order is approved by a resolution of each House of Parliament. In calculating that period of 40 days no account is to be taken of any time during which Parliament is dissolved or prorogued or during which both Houses are adjourned for more than 4 days. Subsection (10)(b)— is without prejudice to anything previously done or to the power of the Secretary of State to make a new order under this section; does not apply to an order that only revokes a previous order under this section. Orders under section 2A: role of Advisory Council etc Before making an order under section 2A the Secretary of State— must consult as mentioned in subsection (2), or must have received a recommendation from the Advisory Council to make the order. The Secretary of State must consult— the Advisory Council, or if the order is to be made under section 2A(1) and the urgency condition applies, the person mentioned in subsection (3). The person referred to in subsection (2)(b) is— the person who is for the time being the chairman of the Advisory Council appointed under paragraph 1(3) of Schedule 1, or if that person has delegated the function of responding to consultation under subsection (1)(a) to another member of the Advisory Council, that other member. The “urgency condition” applies if it appears to the Secretary of State that the misuse of the substance or product to be specified in the order as a drug subject to temporary control, or the likelihood of its misuse, poses an urgent and significant threat to public safety or health. The duty of the Advisory Council or any other person consulted under subsection (1)(a) is limited to giving to the Secretary of State that person’s opinion as to whether the order in question should be made. A recommendation under subsection (1)(b) that a temporary class drug order should be made may be given by the Advisory Council only if it appears to the Council that— the substance or product is a drug that is being, or is likely to be, misused, and that misuse is having, or is capable of having, harmful effects. .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2009/3/schedule/4/paragraph/8/enacted/data.xml",
+   "affecting": "Northern Ireland Act 2009",
+   "schedule": "4",
+   "paragraph": "8",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2010-04-12",
+     "via_schedule": false,
+     "raw": "Words in Sch. 3 para. 21 inserted (12.4.2010) by Northern Ireland Act 2009 (c. 3), s. 5(7), Sch. 4 para. 8 (with Sch. 5 para. 16); S.I. 2010/812, art. 2"
+    }
+   ],
+   "text": "In the Table in paragraph 21 of Schedule 3 at the end of the modification for paragraph 1 insert “and for any reference to the Lord Chancellor there shall be substituted a reference to the Northern Ireland Judicial Appointments Commission”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/schedule/4/paragraph/74/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "schedule": "4",
+   "paragraph": "74",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": false,
+     "raw": "Words in Sch. 3 para. 21 inserted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(3)(c); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": false,
+     "raw": "Words in Sch. 3 para. 21 substituted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(2)(a); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": false,
+     "raw": "Words in Sch. 3 para. 21 substituted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(3)(b); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": false,
+     "raw": "Words in Sch. 3 para. 21 substituted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(2)(b); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": false,
+     "raw": "Words in Sch. 3 para. 21 substituted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(3)(a); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    }
+   ],
+   "text": "Schedule 3 to the Misuse of Drugs Act 1971 (tribunal, advisory bodies and professional panels) is amended as follows. In the table in paragraph 21 (application of Parts 1 to 3 to Northern Ireland), in the entry for paragraph 1— for “the references to the Lord Chancellor and” substitute “any reference to”; for “respectively references to the Lord Chief Justice of Northern Ireland and” substitute “a reference to”. In that table, in the entry for paragraph 13— for “the references to the Lord Chancellor and” substitute “any reference to the”; for “respectively references to the Lord Chief Justice of Northern Ireland and” substitute “a reference to”; at the end of that entry insert— After sub-paragraph (2) there shall be inserted— The Lord Chancellor must obtain the concurrence of the Lord Chief Justice of Northern Ireland before exercising his functions under sub-paragraph (1)(a). The Lord Chief Justice of Northern Ireland may nominate any of the following to exercise his functions under sub-paragraph (3) the holder of one of the offices listed in Schedule 1 to the Justice (Northern Ireland) Act 2002; a Lord Justice of Appeal (as defined in section 88 of that Act).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2012/21/schedule/18/paragraph/32/enacted/data.xml",
+   "affecting": "Financial Services Act 2012",
+   "schedule": "18",
+   "paragraph": "32",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "24A"
+     ],
+     "kind": "text_modified",
+     "date": "2013-04-01",
+     "via_schedule": false,
+     "raw": "S. 24A(9)(c) substituted (1.4.2013) by Financial Services Act 2012 (c. 21), s. 122(3), Sch. 18 para. 32 (with Sch. 20); S.I. 2013/423, art. 3, Sch."
+    }
+   ],
+   "text": "In section 24A of the Theft Act 1968 (dishonestly retaining a wrongful credit), in subsection (9), for paragraph (c) substitute— a person falling within any of paragraphs (a) to (j) of the definition of “electronic money issuer” in regulation 2(1) of the Electronic Money Regulations 2011.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/schedule/4/paragraph/278/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "schedule": "4",
+   "paragraph": "278",
+   "effects": [
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "18"
+     ],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": false,
+     "raw": "S. 18(7A)-(7D) inserted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), ss. 15, 148, Sch. 4 para. 278; S.I. 2006/1014, art. 2, Sch. 1 para. 11(v)"
+    }
+   ],
+   "text": "In section 18 of the Human Rights Act 1998 (appointment to ECHR), after subsection (7) insert— The following paragraphs apply to the making of an order under subsection (7) in relation to any holder of a judicial office listed in subsection (1)(a)— before deciding what transitional provision it is appropriate to make, the person making the order must consult the Lord Chief Justice of England and Wales; before making the order, that person must consult the Lord Chief Justice of England and Wales. The following paragraphs apply to the making of an order under subsection (7) in relation to any holder of a judicial office listed in subsection (1)(c)— before deciding what transitional provision it is appropriate to make, the person making the order must consult the Lord Chief Justice of Northern Ireland; before making the order, that person must consult the Lord Chief Justice of Northern Ireland. The Lord Chief Justice of England and Wales may nominate a judicial office holder (within the meaning of section 109(4) of the Constitutional Reform Act 2005) to exercise his functions under this section. The Lord Chief Justice of Northern Ireland may nominate any of the following to exercise his functions under this section— the holder of one of the offices listed in Schedule 1 to the Justice (Northern Ireland) Act 2002; a Lord Justice of Appeal (as defined in section 88 of that Act).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/35/schedule/1/paragraph/7/enacted/data.xml",
+   "affecting": "Fraud Act 2006",
+   "schedule": "1",
+   "paragraph": "7",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "24A"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 24A(2A) inserted (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1), 15(1), Sch. 1 para. 7(1) (with Sch. 2 para. 5); S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "24A"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 24A(3)(4) repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(2), 15(1), Sch. 1 para. 7(1), Sch. 3 (with Sch. 2 para. 5; S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "24A"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "Words in s. 24A(7) substituted (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1), 15(1), Sch. 1 para. 7(2) (with Sch. 2 para. 5); S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "24A"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 24A(9)-(12) substituted (15.1.2007) for s. 24(9) by Fraud Act 2006 (c. 35), ss. 14(1), 15(1), Sch. 1 para. 7(3) (with Sch. 2 para. 5); S.I. 2006/3200, art. 2"
+    }
+   ],
+   "text": "In section 24A (dishonestly retaining a wrongful credit), omit subsections (3) and (4) and after subsection (2) insert— A credit to an account is wrongful to the extent that it derives from— theft; blackmail; fraud (contrary to section 1 of the Fraud Act 2006); or stolen goods. In subsection (7), for “subsection (4)” substitute “subsection (2A)”. For subsection (9) substitute— “Account” means an account kept with— a bank; a person carrying on a business which falls within subsection (10) below; or an issuer of electronic money (as defined for the purposes of Part 2 of the Financial Services and Markets Act 2000). A business falls within this subsection if— in the course of the business money received by way of deposit is lent to others; or any other activity of the business is financed, wholly or to any material extent, out of the capital of or the interest on money received by way of deposit. References in subsection (10) above to a deposit must be read with— section 22 of the Financial Services and Markets Act 2000; any relevant order under that section; and Schedule 2 to that Act; but any restriction on the meaning of deposit which arises from the identity of the person making it is to be disregarded. For the purposes of subsection (10) above— all the activities which a person carries on by way of business shall be regarded as a single business carried on by him; and “money” includes money expressed in a currency other than sterling.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/35/schedule/1/paragraph/8/enacted/data.xml",
+   "affecting": "Fraud Act 2006",
+   "schedule": "1",
+   "paragraph": "8",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "25"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "Words in s. 25(1)(3) substituted (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1), 15(1), Sch. 1 para. 8(a); S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "25"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "Words in s. 25(1) substituted (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(2), 15(1), Sch. 1 para. 8(a) (with Sch. 2 para. 3); S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "25"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "Words in s. 25(5) repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(3), 15(1), Sch. 1 para. 8(b), Sch. 3; S.I. 2006/3200, art. 2"
+    }
+   ],
+   "text": "In section 25 (going equipped for burglary, theft or cheat)— in subsections (1) and (3) for “burglary, theft or cheat” substitute “burglary or theft”, and in subsection (5) omit “, and “cheat” means an offence under section 15 of this Act”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2007/15/schedule/10/paragraph/10/enacted/data.xml",
+   "affecting": "Tribunals, Courts and Enforcement Act 2007",
+   "schedule": "10",
+   "paragraph": "10",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2008-07-21",
+     "via_schedule": false,
+     "raw": "Word in Sch. 3 para. 1(1)(a)(ii) substituted (21.7.2008) by Tribunals, Courts and Enforcement Act 2007 (c. 15), s. 148, Sch. 10 para. 10(3); S.I. 2008/1653, art. 2(d) (with arts. 3, 4)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2008-07-21",
+     "via_schedule": false,
+     "raw": "Sch. 3 para. 1(1)(a)(i) substituted (21.7.2008) by Tribunals, Courts and Enforcement Act 2007 (c. 15), s. 148, Sch. 10 para. 10(2); S.I. 2008/1653, art. 2(d) (with arts. 3 4)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2008-07-21",
+     "via_schedule": false,
+     "raw": "Word in Sch. 3 para. 1(1)(a)(iii) substituted (21.7.2008) by Tribunals, Courts and Enforcement Act 2007 (c. 15), s. 148, Sch. 10 para. 10(3); S.I. 2008/1653, art. 2(d) (with arts. 3, 4)"
+    }
+   ],
+   "text": "Paragraph 1(1)(a) of Schedule 3 to the Misuse of Drugs Act 1971 (c. 38) (tribunal chairmen) is amended as follows. For sub-paragraph (i) substitute— a person who satisfies the judicial-appointment eligibility condition on a 5-year basis; . In sub-paragraphs (ii) and (iii), for “7” substitute “5”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/24/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "24",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "12"
+     ],
+     "kind": "section_repealed",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 12 repealed (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 24, Sch. 15 Pt. 4 (with s. 38(2)); S.I. 2008/2503, art. 2"
+    }
+   ],
+   "text": "Section 12 of that Act (conviction of an offence under section 1 in proceedings for an offence under section 2 or 3) is repealed.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2023/50/schedule/14/paragraph/19/enacted/data.xml",
+   "affecting": "Online Safety Act 2023",
+   "schedule": "14",
+   "paragraph": "19",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2024-01-31",
+     "via_schedule": false,
+     "raw": "Words in Sch. 4 para. 33 inserted (31.1.2024) by Online Safety Act 2023 (c. 50), s. 240(1), Sch. 14 para. 19; S.I. 2024/31, reg. 2"
+    }
+   ],
+   "text": "In Schedule 4 to the Modern Slavery Act 2015 (offences to which defence in section 45 does not apply), in paragraph 33 (offences under Sexual Offences Act 2003), after the entry for section 66 insert— section 66A (sending etc photograph or film of genitals) section 66B (2) (sharing intimate photograph or film with intent to cause alarm, distress or humiliation) section 66B (3) (sharing intimate photograph or film for purpose of obtaining sexual gratification) .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/35/schedule/1/paragraph/1/enacted/data.xml",
+   "affecting": "Fraud Act 2006",
+   "schedule": "1",
+   "paragraph": "1",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "15"
+     ],
+     "kind": "section_repealed",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 15 repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(3), 15(1), Sch. 1 para. 1(a)(i), Sch. 3 (with Sch. 2 para. 3); S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "15A"
+     ],
+     "kind": "section_repealed",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 15A repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(3), 15(1), Sch. 1 para. 1(ii), Sch. 3 (with Sch. 2 para. 3); S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "16"
+     ],
+     "kind": "section_repealed",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 16 repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(3), 15(1), Sch. 1 para. 1(a)(iii), Sch. 3 (with Sch. 2 para. 3); S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 20(2) repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(3), 15(1), Sch. 1 para. 1(a)(iv), Sch. 3 (with Sch. 2 para. 3); S.I. 2006/3200, art. 2"
+    }
+   ],
+   "text": "Omit the following provisions— in the Theft Act 1968 (c. 60)— section 15 (obtaining property by deception); section 15A (obtaining a money transfer by deception); section 16 (obtaining pecuniary advantage by deception); section 20(2) (procuring the execution of a valuable security by deception); in the Theft Act 1978 (c. 31)— section 1 (obtaining services by deception); section 2 (evasion of liability by deception); in the Theft Act (Northern Ireland) 1969 (c. 16 (N.I.))— section 15 (obtaining property by deception); section 15A (obtaining a money transfer by deception); section 16 (obtaining pecuniary advantage by deception); section 19(2) (procuring the execution of a valuable security by deception); in the Theft (Northern Ireland) Order 1978 (S.I. 1978/1407 (N.I. 23))— Article 3 (obtaining services by deception); Article 4 (evasion of liability by deception).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/21/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "21",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 7 heading: words substituted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 21(a); S.I. 2008/2503, art. 2"
+    }
+   ],
+   "text": "In section 7 of that Act (territorial scope of inchoate offences related to offences under external law)— in the heading, for “offences under this Act” there is substituted “offences under sections 1 to 3”; in subsection (4), for “offence under this Act” there is substituted, in each place, “offence under section 1, 2 or 3 above”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/25/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "25",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2007-10-01",
+     "via_schedule": false,
+     "raw": "S. 13(1)(b) substituted (1.10.2007) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 25(2) (with s. 38(1)); S.S.I. 2007/434, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2007-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 13(2)(a) substituted (1.10.2007) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 25(3)(a) (with s. 38(4)); S.S.I. 2007/434, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2007-10-01",
+     "via_schedule": false,
+     "raw": "S. 13(2)(b) substituted (1.10.2007) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 25(3)(b) (with s. 38(4)); S.S.I. 2007/434, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2007-10-01",
+     "via_schedule": false,
+     "raw": "S. 13(3)-(7) repealed (1.10.2007) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 25(4), Sch. 15 Pt. 4 (with s. 38(2)(4)); S.S.I. 2007/434, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2007-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 13(8) repealed (1.10.2007) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 25(5), Sch. 15 Pt. 4 (with s. 38(2)(4)); S.S.I. 2007/434, art. 2"
+    }
+   ],
+   "text": "Section 13 of that Act (proceedings in Scotland) is amended as follows. In subsection (1), for paragraph (b) there is substituted— any computer containing any program or data to which the accused by doing that act secured or intended to secure unauthorised access, or enabled or intended to enable unauthorised access to be secured, was in the sheriffdom at that time. In subsection (2)— in paragraph (a), for “he did the act which caused the unauthorised modification” there is substituted “he did the unauthorised act (or caused it to be done)”; for paragraph (b) there is substituted— the unauthorised act was done in relation to a computer in the sheriffdom. Subsections (3) to (7) are omitted. In subsection (8), the words from “commenced” to the end are omitted.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2020/17/schedule/24/paragraph/27/enacted/data.xml",
+   "affecting": "Sentencing Act 2020",
+   "schedule": "24",
+   "paragraph": "27",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "4A"
+     ],
+     "kind": "text_modified",
+     "date": "2020-12-01",
+     "via_schedule": false,
+     "raw": "Words in s. 4A(1) substituted (1.12.2020) by Sentencing Act 2020 (c. 17), s. 416(1), Sch. 24 para. 27(2)(a) (with Sch. 24 para. 447, Sch. 27); S.I. 2020/1236, reg. 2"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "4A"
+     ],
+     "kind": "text_modified",
+     "date": "2020-12-01",
+     "via_schedule": false,
+     "raw": "Words in s. 4A(1)(a) inserted (1.12.2020) by Sentencing Act 2020 (c. 17), s. 416(1), Sch. 24 para. 27(2)(b) (with Sch. 24 para. 447, Sch. 27); S.I. 2020/1236, reg. 2"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "4A"
+     ],
+     "kind": "text_modified",
+     "date": "2020-12-01",
+     "via_schedule": false,
+     "raw": "S. 4A(9) inserted (1.12.2020) by Sentencing Act 2020 (c. 17), s. 416(1), Sch. 24 para. 27(3) (with Sch. 24 para. 447, Sch. 27); S.I. 2020/1236, reg. 2"
+    }
+   ],
+   "text": "Section 4A of the Misuse of Drugs Act 1971 is amended as follows. In subsection (1)— for “This section applies” substitute “Subsections (2) to (8) apply”; in paragraph (a), after “court” insert “in Scotland or Northern Ireland”. After subsection (8) insert— For the requirement for a court in England and Wales considering the seriousness of an offence under section 4(3) of this Act to treat certain matters as aggravating factors, see section 71 of the Sentencing Code.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/15/schedule/4/paragraph/58/enacted/data.xml",
+   "affecting": "Serious Organised Crime and Police Act 2005",
+   "schedule": "4",
+   "paragraph": "58",
+   "effects": [
+    {
+     "act": "ukpga/1989/6",
+     "sections": [
+      "12"
+     ],
+     "kind": "text_modified",
+     "date": "2006-04-01",
+     "via_schedule": false,
+     "raw": "Words in s. 12(1)(e) substituted (1.4.2006) by Serious Organised Crime and Police Act 2005 (c. 15), s. 178(8), Sch. 4 para. 58; S.I. 2006/378, art. 4(1), Sch. para. 10"
+    }
+   ],
+   "text": "In section 12(1)(e) of the Official Secrets Act 1989 (meaning of “Crown servant” in that Act) for “or of the National Criminal Intelligence Service or the National Crime Squad” substitute “or of the Serious Organised Crime Agency”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2013/22/schedule/8/paragraph/36/enacted/data.xml",
+   "affecting": "Crime and Courts Act 2013",
+   "schedule": "8",
+   "paragraph": "36",
+   "effects": [
+    {
+     "act": "ukpga/1989/6",
+     "sections": [
+      "12"
+     ],
+     "kind": "text_modified",
+     "date": "2013-10-07",
+     "via_schedule": false,
+     "raw": "Words in s. 12(1)(e) substituted (7.10.2013) by Crime and Courts Act 2013 (c. 22), s. 61(2), Sch. 8 para. 36; S.I. 2013/1682, art. 3(v)"
+    }
+   ],
+   "text": "In the Official Secrets Act 1989, in section 12 (meanings of “crown servant” and “government contractor”), in subsection (1)(e), for “of the Serious Organised Crime Agency” substitute “an NCA special (within the meaning of Part 1 of the Crime and Courts Act 2013)”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2016/19/schedule/2/paragraph/12/enacted/data.xml",
+   "affecting": "Immigration Act 2016",
+   "schedule": "2",
+   "paragraph": "12",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 20(9) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 12(3)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "S. 20(2)(g) inserted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 12(2); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 20(9) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 12(3)(a); S.I. 2016/603, reg. 3(t)"
+    }
+   ],
+   "text": "Section 20 (variation, renewal and discharge) is amended as follows. In subsection (2), after paragraph (f) insert— where the order was made on an application under section 15 by the Gangmasters and Labour Abuse Authority, the Authority. In subsection (9)— for “or the Director General”, in the first place it occurs, substitute “, the Director General or the Gangmasters and Labour Abuse Authority”; for “or the Director General”, in the second and third places it occurs, substitute “, the Director General or the Authority”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2025/36/schedule/10/paragraph/53/enacted/data.xml",
+   "affecting": "Employment Rights Act 2025",
+   "schedule": "10",
+   "paragraph": "53",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 27(2)(g) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 53(2) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 27(7) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 53(3)(a) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 27(7) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 53(3)(b) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    }
+   ],
+   "text": "Section 27 (variation, renewal and discharge) is amended as follows. In subsection (2)(g), for “the Gangmasters and Labour Abuse Authority, the Authority” substitute “the Secretary of State, the Secretary of State”. In subsection (7)— for “Gangmasters and Labour Abuse Authority” substitute “Secretary of State”; for “the Authority”, in both places it occurs, substitute “the Secretary of State”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2022/31/schedule/16/paragraph/9/enacted/data.xml",
+   "affecting": "Health and Care Act 2022",
+   "schedule": "16",
+   "paragraph": "9",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2022-07-01",
+     "via_schedule": false,
+     "raw": "Sch. 4 para. 36B and cross-heading inserted (1.7.2022) by Health and Care Act 2022 (c. 31), s. 186(6), Sch. 16 para. 9; S.I. 2022/734, reg. 2(a), Sch. (with regs. 13, 29, 30)"
+    }
+   ],
+   "text": "In Schedule 4 to the Modern Slavery Act 2015 (offences to which defence in section 45 does not apply), after paragraph 36A insert— Health and Care Act 2022 An offence under any of the following provisions of the Health and Care Act 2022— section 136 (virginity testing); section 137 (offering to carry out virginity testing); section 138 (aiding or abetting etc a person to carry out virginity testing); section 148 (carrying out hymenoplasty); section 149 (offering to carry out hymenoplasty); section 150 (aiding or abetting etc a person to carry out hymenoplasty).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2016/19/schedule/2/paragraph/15/enacted/data.xml",
+   "affecting": "Immigration Act 2016",
+   "schedule": "2",
+   "paragraph": "15",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "S. 27(2)(g) inserted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 15(2); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 27(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 15(3)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 27(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 15(3)(b); S.I. 2016/603, reg. 3(t)"
+    }
+   ],
+   "text": "Section 27 (variation, renewal and discharge) is amended as follows. In subsection (2), after paragraph (f) insert— where the order was made on an application by the Gangmasters and Labour Abuse Authority, the Authority. In subsection (7)— for “or the Director General” in the first place it occurs, substitute “, the Director General or the Gangmasters and Labour Abuse Authority”; for “or the Director General” in the second and third places it occurs, substitute “, the Director General or the Authority”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/35/schedule/1/paragraph/6/enacted/data.xml",
+   "affecting": "Fraud Act 2006",
+   "schedule": "1",
+   "paragraph": "6",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "24"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "Words in s. 24(4) substituted (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1), 15(1), Sch. 1 para. 6(1) (with Sch. 2 para. 3); S.I. 2006/3200, art. 2"
+    },
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "24"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 24(5) inserted (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1), 15(1), Sch. 1 para. 6(2) (with Sch. 2 para. 4); S.I. 2006/3200, art. 2"
+    }
+   ],
+   "text": "In section 24(4) (meaning of “stolen goods”) for “in the circumstances described in section 15(1) of this Act” substitute “, subject to subsection (5) below, by fraud (within the meaning of the Fraud Act 2006)”. After section 24(4) insert— Subsection (1) above applies in relation to goods obtained by fraud as if— the reference to the commencement of this Act were a reference to the commencement of the Fraud Act 2006, and the reference to an offence under this Act were a reference to an offence under section 1 of that Act.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2022/35/schedule/1/paragraph/2/enacted/data.xml",
+   "affecting": "Judicial Review and Courts Act 2022",
+   "schedule": "1",
+   "paragraph": "2",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "29"
+     ],
+     "kind": "text_modified",
+     "date": "2022-06-28",
+     "via_schedule": false,
+     "raw": "S. 29(A1)(A2) inserted (28.6.2022) by Judicial Review and Courts Act 2022 (c. 35), s. 51(3), Sch. 1 para. 2"
+    }
+   ],
+   "text": "In section 29 of the Misuse of Drugs Act 1971 (service of documents), before subsection (1) insert— In the application of this Act to criminal proceedings in England and Wales, any notice or other document required or authorised by any provision of this Act to be served on any person may be served on the person in accordance with Criminal Procedure Rules. In any other application of this Act, subsections (1) to (4) apply.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/35/schedule/1/paragraph/3/enacted/data.xml",
+   "affecting": "Fraud Act 2006",
+   "schedule": "1",
+   "paragraph": "3",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "15B"
+     ],
+     "kind": "section_repealed",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "S. 15B repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(3), 15(1), Sch. 1 para. 3, Sch. 3; S.I. 2006/3200, art. 2"
+    }
+   ],
+   "text": "Omit section 15B (section 15A: supplementary).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2023/32/schedule/18/paragraph/6/enacted/data.xml",
+   "affecting": "National Security Act 2023",
+   "schedule": "18",
+   "paragraph": "6",
+   "effects": [
+    {
+     "act": "ukpga/1989/6",
+     "sections": [
+      "5"
+     ],
+     "kind": "text_modified",
+     "date": "2023-12-20",
+     "via_schedule": false,
+     "raw": "Words in s. 5(6) substituted (20.12.2023) by National Security Act 2023 (c. 32), s. 100(1), Sch. 18 para. 6(2) (with s. 97); S.I. 2023/1272, reg. 2(f)"
+    },
+    {
+     "act": "ukpga/1989/6",
+     "sections": [
+      "11"
+     ],
+     "kind": "text_modified",
+     "date": "2023-12-20",
+     "via_schedule": false,
+     "raw": "S. 11(3) substituted for s. 11(3)(3A) (20.12.2023) by National Security Act 2023 (c. 32), s. 100(1), Sch. 18 para. 6(3)(a) (with s. 97); S.I. 2023/1272, reg. 2(f)"
+    },
+    {
+     "act": "ukpga/1989/6",
+     "sections": [
+      "11"
+     ],
+     "kind": "text_modified",
+     "date": "2023-12-20",
+     "via_schedule": false,
+     "raw": "S. 11(4) substituted (20.12.2023) by National Security Act 2023 (c. 32), s. 100(1), Sch. 18 para. 6(3)(b) (with s. 97); S.I. 2023/1272, reg. 2(f)"
+    },
+    {
+     "act": "ukpga/1989/6",
+     "sections": [
+      "11"
+     ],
+     "kind": "text_modified",
+     "date": "2023-12-20",
+     "via_schedule": false,
+     "raw": "S. 11(4A) inserted (20.12.2023) by National Security Act 2023 (c. 32), s. 100(1), Sch. 18 para. 6(3)(c) (with s. 97); S.I. 2023/1272, reg. 2(f)"
+    }
+   ],
+   "text": "The Official Secrets Act 1989 is amended as follows. In section 5(6) (offence of disclosing information obtained by espionage) for “section 1 of the Official Secrets Act 1911” substitute “any of sections 1 to 4 of the National Security Act 2023”. In section 11 (arrest, search and trial)— for subsections (3) and (3A) substitute— Schedule 2 to the National Security Act 2023 (powers of entry, search and seizure) applies in relation to a relevant offence as it applies in relation to a relevant act (within the meaning given by paragraphs 1 and 18 of that Schedule). ; for subsection (4) substitute— If it is necessary in the interests of national security, a court may exclude the public from any part of proceedings for a relevant offence, except the passing of sentence. ; after subsection (4) insert— In this section a “relevant offence” means an offence under any provision of this Act other than section 8(1), (4) or (5).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/schedule/17/paragraph/16/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "schedule": "17",
+   "paragraph": "16",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "23A"
+     ],
+     "kind": "section_inserted",
+     "date": "2011-11-15",
+     "via_schedule": false,
+     "raw": "S. 23A inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 16; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "After section 23 insert— Temporary class drugs: further power to search, seize and detain Subsection (3) applies in any case where— a constable has reasonable grounds to suspect that a person (“P”) is in possession of a temporary class drug, and it does not appear to the constable that a power under section 23(2) applies to the case. But if any provision has been made by virtue of section 7A(2)(c) (excepted possession) that applies to the temporary class drug in question, subsection (3) applies only if the constable has no reason to believe that P’s possession of the drug is to be treated as excepted possession for the purposes of this Act. The constable may— search P, and detain P for the purposes of searching P; search any vehicle or vessel in which the constable suspects that the drug may be found, and for that purpose require the person in control of the vehicle or vessel to stop it; seize and detain anything found in the course of the search which appears to the constable to be a temporary class drug or to be evidence of an offence under this Act. In this subsection, “vessel” has the same meaning as in section 23(2). Subsection (5) applies if a constable reasonably believes that anything detained under subsection (3)(c) is a temporary class drug but is not evidence of any offence under this Act. The constable may dispose of the drug in such manner as the constable thinks appropriate. A person who intentionally obstructs a constable in the exercise of the constable’s powers under subsection (3) commits an offence. .",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2021/17/schedule/2/paragraph/11/enacted/data.xml",
+   "affecting": "Domestic Abuse Act 2021",
+   "schedule": "2",
+   "paragraph": "11",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2022-06-07",
+     "via_schedule": false,
+     "raw": "Sch. 4 para. 35A and cross-heading inserted (7.6.2022) by Domestic Abuse Act 2021 (c. 17), s. 90(6), Sch. 2 para. 11; S.I. 2022/553, regs. 1(2), 3(b)"
+    }
+   ],
+   "text": "In Schedule 4 to the Modern Slavery Act 2015 (offences to which defence for slavery or trafficking victims under section 45 of that Act does not apply), after paragraph 35 insert— Serious Crime Act 2015 An offence under section 75A of the Serious Crime Act 2015 (strangulation or suffocation).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2004/28/schedule/10/paragraph/43/enacted/data.xml",
+   "affecting": "Domestic Violence, Crime and Victims Act 2004",
+   "schedule": "10",
+   "paragraph": "43",
+   "effects": [
+    {
+     "act": "ukpga/1997/40",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2009-09-30",
+     "via_schedule": false,
+     "raw": "Words in s. 5 heading inserted (30.9.2009) by Domestic Violence, Crime and Victims Act 2004 (c. 28), s. 60, Sch. 10 para. 43(2); S.I. 2009/2501, art. 2(d)"
+    }
+   ],
+   "text": "Section 5 of the Protection from Harassment Act 1997 (power to make restraining order where defendant convicted of offence under section 2 or 4 of that Act) is amended as follows. In the heading, at the end insert “on conviction”. In subsection (2) omit “further”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/15/schedule/7/paragraph/17/enacted/data.xml",
+   "affecting": "Serious Organised Crime and Police Act 2005",
+   "schedule": "7",
+   "paragraph": "17",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "25"
+     ],
+     "kind": "text_modified",
+     "date": "2006-01-01",
+     "via_schedule": false,
+     "raw": "S. 25(4) repealed (1.1.2006) by Serious Organised Crime and Police Act 2005 (c. 15), ss. 111, 174, 178, Sch. 7 para. 17, Sch. 17; S.I. 2005/3495, art. 2(m)(u)(xvii)"
+    }
+   ],
+   "text": "In section 25 of the Theft Act 1968 (going equipped for stealing etc.), omit subsection (4).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/28/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "28",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16A"
+     ],
+     "kind": "section_inserted",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 16A inserted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 28 (with s. 38(2)); S.I. 2008/2503, art. 3(b)"
+    }
+   ],
+   "text": "After that section there is inserted— Northern Ireland: search warrants for offences under section 1 Where a county court judge is satisfied by information on oath given by a constable that there are reasonable grounds for believing— that an offence under section 1 above has been or is about to be committed in any premises, and that evidence that such an offence has been or is about to be committed is in those premises, he may issue a warrant authorising a constable to enter and search the premises, using such reasonable force as is necessary. The power conferred by subsection (1) above does not extend to authorising a search for material of the kinds mentioned in Article 11(2) of the Police and Criminal Evidence (Northern Ireland) Order 1989 (privileged, excluded and special procedure material). A warrant under this section— may authorise persons to accompany any constable executing the warrant; and remains in force for twenty-eight days from the date of its issue. In exercising a warrant issued under this section a constable may seize an article if he reasonably believes that it is evidence that an offence under section 1 above has been or is about to be committed. In this section “premises” includes land, buildings, movable structures, vehicles, vessels, aircraft and hovercraft. This section extends only to Northern Ireland.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2025/36/schedule/10/paragraph/52/enacted/data.xml",
+   "affecting": "Employment Rights Act 2025",
+   "schedule": "10",
+   "paragraph": "52",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "26"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 26(7) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 52(a) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "26"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 26(7) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 52(b) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    }
+   ],
+   "text": "In section 26 (requirement to provide name and address), in subsection (7)— for “Gangmasters and Labour Abuse Authority” substitute “Secretary of State”; for “the Authority” substitute “the Secretary of State”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/27/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "27",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 16(1A) inserted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 27(2) (with s. 38(2)); S.I. 2008/2503, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 16(2A) inserted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 27(3); S.I. 2008/2503, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 16(3) repealed (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 27(4), Sch. 15 Pt. 4 (with s. 38(4)); S.I. 2008/2503, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 16(3A) inserted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 27(5) (with s. 38(4)); S.I. 2008/2503, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 16(3B) inserted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 27(6); S.I. 2008/2503, art. 2"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "S. 16(10)(11)(12) repealed (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 27(4), Sch. 15 Pt. 4 (with s. 38(2)); S.I. 2008/2503, art. 2"
+    }
+   ],
+   "text": "Section 16 of that Act (application to Northern Ireland) is amended as follows. After subsection (1) there is inserted— In section 1(3)(a)— the reference to England and Wales shall be read as a reference to Northern Ireland; and the reference to 12 months shall be read as a reference to six months. After subsection (2) there is inserted— In section 2(5)(a)— the reference to England and Wales shall be read as a reference to Northern Ireland; and the reference to 12 months shall be read as a reference to six months. Subsection (3) is omitted. Before subsection (4) there is inserted— In section 3(6)(a)— the reference to England and Wales shall be read as a reference to Northern Ireland; and the reference to 12 months shall be read as a reference to six months. After the subsection inserted by sub-paragraph (5) there is inserted— In section 3A(5)(a)— the reference to England and Wales shall be read as a reference to Northern Ireland; and the reference to 12 months shall be read as a reference to six months. Subsections (10), (11) and (12) are omitted.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2020/17/schedule/24/paragraph/294/enacted/data.xml",
+   "affecting": "Sentencing Act 2020",
+   "schedule": "24",
+   "paragraph": "294",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "34"
+     ],
+     "kind": "text_modified",
+     "date": "2020-12-01",
+     "via_schedule": false,
+     "raw": "Words in s. 34(3)(a) substituted (1.12.2020) by Sentencing Act 2020 (c. 17), s. 416(1), Sch. 24 para. 294 (with Sch. 24 para. 447, Sch. 27); S.I. 2020/1236, reg. 2"
+    }
+   ],
+   "text": "In section 34(3)(a) of that Act, for “section 14(1) of the Powers of Criminal Courts (Sentencing) Act 2000” substitute “section 82(2) of the Sentencing Code”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2016/19/schedule/2/paragraph/11/enacted/data.xml",
+   "affecting": "Immigration Act 2016",
+   "schedule": "2",
+   "paragraph": "11",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "19"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 19(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 11(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "19"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 19(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 11(b); S.I. 2016/603, reg. 3(t)"
+    }
+   ],
+   "text": "In section 19(7) (requirement to provide name and address)— for “or an immigration officer” substitute “, an immigration officer or the Gangmasters and Labour Abuse Authority”; for “or the officer” substitute “, the officer or the Authority”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2015/9/schedule/4/paragraph/7/enacted/data.xml",
+   "affecting": "Serious Crime Act 2015",
+   "schedule": "4",
+   "paragraph": "7",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "1"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Word in s. 1(3)(b) substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 7(a); S.I. 2015/820, reg. 2(r)(iii)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "2"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Word in s. 2(5)(b) substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 7(b); S.I. 2015/820, reg. 2(r)(iii)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "3"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Word in s. 3(6)(b) substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 7(c); S.I. 2015/820, reg. 2(r)(iii)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "3A"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Word in s. 3A(5)(b) substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 7(d); S.I. 2015/820, reg. 2(r)(iii)"
+    }
+   ],
+   "text": "In each of the following provisions of the Computer Misuse Act 1990, for “six” substitute “12”— section 1(3)(b); section 2(5)(b); section 3(6)(b); section 3A(5)(b).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/schedule/11/paragraph/4/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "schedule": "11",
+   "paragraph": "4",
+   "effects": [
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "18"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 18(4)(a) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 59, 148, Sch. 11 para. 4; S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "18"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 18(4)(a) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 59, 148, Sch. 11 para. 4; S.I. 2009/1604, art. 2(d)"
+    }
+   ],
+   "text": "In each of the enactments listed in sub-paragraph (3) for “Supreme Court” or “Supreme Court of Judicature” in each place substitute “Senior Courts”. This paragraph does not apply to those words— in the short title or title of any enactment or group of enactments, where they are amended by paragraph 3 or 5 of this Schedule, or (unless otherwise provided) as inserted by any other provision of this Act. The enactments amended are— the Bills of Sale Act 1878 (c. 31), sections 10, 13 and 17 the Sheriffs Act 1887 (c. 55) the Public Trustee Act 1906 (c. 55) the Deeds of Arrangement Act 1914 (c. 47) the Law of Property Act 1922 (c. 16) the Settled Land Act 1925 (c. 18) the Trustee Act 1925 (c. 19) the Law of Property Act 1925 (c. 20) the Universities and College Estates Act 1925 (c. 24) the Registered Designs Act 1949 (c. 88) the Justices of the Peace Act 1949 (c. 101) the Mines and Quarries Act 1954 (c. 70) the Army Act 1955 (3 & 4 Eliz. 2 c. 18), section 75L the Air Force Act 1955 (3 & 4 Eliz. 2 c. 19), section 75L the Naval Discipline Act 1957 (c. 53), section 47M the Public Records Act 1958 (c. 51) the Administration of Justice Act 1965 (c. 2), including any amendment to— the Defence Act 1842 (c. 94) the Lands Clauses Consolidation Act 1845 (c. 18) the Consolidated Fund (Permanent Charges Redemption) Act 1873 (c. 57) the Life Insurance Companies (Payment into Court) Act 1896 (c. 8) the Gas Act 1965 (c. 36) the Compulsory Purchase Act 1965 (c. 56) the Mines (Working Facilities and Support) Act 1966 (c. 4) the Courts Act 1971 (c. 23) the Local Government Act 1972 (c. 70) the House of Commons Disqualification Act 1975 (c. 24) the Northern Ireland Assembly Disqualification Act 1975 (c. 25) the Bail Act 1976 (c. 63) (subject to any repeal contained in the Courts Act 2003 (c. 39)) the Magistrates' Courts Act 1980 (c. 43), section 144(3)(b) and (c) the Mental Health Act 1983 (c. 20) the County Courts Act 1984 (c. 28) the Matrimonial and Family Proceedings Act 1984 (c. 42) the Companies Act 1985 (c. 6) the Public Trustee and Administration of Funds Act 1986 (c. 57) the Criminal Justice Act 1987 (c. 38), section 1(7)(b) the Legal Aid Act 1988 (c. 34) the Copyright, Designs and Patents Act 1988 (c. 48) the Road Traffic Act 1988 (c. 52) the Road Traffic Offenders Act 1988 (c. 53) the Courts and Legal Services Act 1990 (c. 41) the Judicial Pensions and Retirement Act 1993 (c. 8), section 26 and Schedules 1, 5 and 7 the Civil Procedure Act 1997 (c. 12), except paragraph 1 of Schedule 1 the Government of Wales Act 1998 (c. 38) the Human Rights Act 1998 (c. 42), section 18(4)(a) the Greater London Authority Act 1999 (c. 29) the Courts Act 2003 (c. 39), except sections 102(1)(a) and 103(8)",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/schedule/11/paragraph/5/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "schedule": "11",
+   "paragraph": "5",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": false,
+     "raw": "Words in Sch. 3 para. 1(1)(a)(iii) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 11 para. 5; S.I. 2009/1604, art. 2(d)"
+    }
+   ],
+   "text": "For the words in the first column wherever they occur in any enactment substitute the words in the second column— Old reference New reference “solicitor of the Supreme Court of Northern Ireland” “solicitor of the Court of Judicature of Northern Ireland” “solicitors of the Supreme Court of Northern Ireland” “solicitors of the Court of Judicature of Northern Ireland” “solicitor of the Supreme Court of Judicature of Northern Ireland” “solicitor of the Court of Judicature of Northern Ireland” “solicitors of the Supreme Court of Judicature of Northern Ireland” “solicitors of the Court of Judicature of Northern Ireland”",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/48/schedule/14/paragraph/22/enacted/data.xml",
+   "affecting": "Police and Justice Act 2006",
+   "schedule": "14",
+   "paragraph": "22",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "9"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 9(2)(a) substituted (1.10.2008) by Police and Justice Act 2006 (c. 48), ss. 52, 53, Sch. 14 para. 22; S.I. 2008/2503, art. 2"
+    }
+   ],
+   "text": "In section 9 of that Act (British citizenship immaterial), in paragraphs (a) and (d) of subsection (2), for “offence under this Act” there is substituted “offence under section 1, 2 or 3 above”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2006/35/schedule/1/paragraph/4/enacted/data.xml",
+   "affecting": "Fraud Act 2006",
+   "schedule": "1",
+   "paragraph": "4",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "18"
+     ],
+     "kind": "text_modified",
+     "date": "2007-01-15",
+     "via_schedule": false,
+     "raw": "Words in s. 18(1) repealed (15.1.2007) by Fraud Act 2006 (c. 35), ss. 14(1)(3), 15(1), Sch. 1 para. 4, Sch. 3; S.I. 2006/3200, art. 2"
+    }
+   ],
+   "text": "In section 18(1) (liability of company officers for offences by company under section 15, 16 or 17), omit “15, 16 or”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2013/22/schedule/9/paragraph/39/enacted/data.xml",
+   "affecting": "Crime and Courts Act 2013",
+   "schedule": "9",
+   "paragraph": "39",
+   "effects": [
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "3"
+     ],
+     "kind": "text_modified",
+     "date": "2014-04-22",
+     "via_schedule": false,
+     "raw": "Words in s. 3 substituted (22.4.2014) by Crime and Courts Act 2013 (c. 22), s. 61(3), Sch. 9 para. 39(a); S.I. 2014/954, art. 2(c) (with art. 3) (with transitional provisions and savings in S.I. 2014/956, arts. 3-11)"
+    },
+    {
+     "act": "ukpga/1997/40",
+     "sections": [
+      "3"
+     ],
+     "kind": "text_modified",
+     "date": "2014-04-22",
+     "via_schedule": false,
+     "raw": "Words in s. 3(4)(b) substituted (22.4.2014) by Crime and Courts Act 2013 (c. 22), s. 61(3), Sch. 9 para. 39(b); S.I. 2014/954, art. 2(c) (with art. 3) (with transitional provisions and savings in S.I. 2014/956, arts. 3-11)"
+    }
+   ],
+   "text": "In section 3 of the Protection of Harassment Act 1997 (civil remedy)— for “a county”, in each place, substitute “the county”, in subsection (4)(b) for “or district judge of that or any other county” substitute “of that”, and in subsection (5) omit “or district judge” in both places.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2004/20/schedule/14/paragraph/6/enacted/data.xml",
+   "affecting": "Energy Act 2004",
+   "schedule": "14",
+   "paragraph": "6",
+   "effects": [
+    {
+     "act": "ukpga/1989/6",
+     "sections": [
+      "12"
+     ],
+     "kind": "text_modified",
+     "date": "2005-03-01",
+     "via_schedule": false,
+     "raw": "S. 12(4A) inserted (1.3.2005) by Energy Act 2004 (c. 20), s. 198(2), Sch. 14 para. 6; S.I. 2005/442, art. 2(1), Sch. 1"
+    }
+   ],
+   "text": "In section 12 of the Official Secrets Act 1989 (c. 6) (Crown servants etc.), after subsection (4) insert— In this section the reference to a police force includes a reference to the Civil Nuclear Constabulary.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2007/27/schedule/6/paragraph/53/enacted/data.xml",
+   "affecting": "Serious Crime Act 2007",
+   "schedule": "6",
+   "paragraph": "53",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "19"
+     ],
+     "kind": "text_modified",
+     "date": "2008-10-01",
+     "via_schedule": false,
+     "raw": "Words in s. 19 substituted (E.W.) (1.10.2008) by Serious Crime Act 2007 (c. 27), s. 94(1), Sch. 6 para. 53 (with Sch. 13 para. 5); S.I. 2008/2504, art. 2(a)"
+    }
+   ],
+   "text": "In section 19 of the Misuse of Drugs Act 1971 for “such an offence” substitute “an offence under any other provision of this Act”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2022/7/schedule/1/paragraph/12/enacted/data.xml",
+   "affecting": "Public Service Pensions and Judicial Offices Act 2022",
+   "schedule": "1",
+   "paragraph": "12",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2022-03-10",
+     "via_schedule": false,
+     "raw": "Word in Sch. 3 para. 13(1A) substituted (10.3.2022) by Public Service Pensions and Judicial Offices Act 2022 (c. 7), s. 131(1)(4)(a), Sch. 1 para. 12(3) (with Sch. 1 para. 43)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2022-03-10",
+     "via_schedule": false,
+     "raw": "Word in Sch. 3 para. 1(2A) substituted (10.3.2022) by Public Service Pensions and Judicial Offices Act 2022 (c. 7), s. 131(1)(4)(a), Sch. 1 para. 12(2) (with Sch. 1 para. 43)"
+    }
+   ],
+   "text": "Schedule 3 to the Misuse of Drugs Act 1971 (Tribunals, Advisory Bodies and Professional Panels) is amended as follows. In paragraph 1 (membership: tribunals), in sub-paragraph (2A), for the words from “seventy years” to the end substitute “75”. In paragraph 13 (membership: advisory bodies), in sub-paragraph (1A), for the words from “seventy years” to the end substitute “75”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2025/36/schedule/10/paragraph/51/enacted/data.xml",
+   "affecting": "Employment Rights Act 2025",
+   "schedule": "10",
+   "paragraph": "51",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 23(6) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 51(3)(a) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 23(6) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 51(3)(b) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 23(7)(b) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 51(4)(a) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "Words in s. 23(7)(b) substituted (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 51(4)(b) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2026-04-07",
+     "via_schedule": false,
+     "raw": "S. 23(1)(ca) substituted for s. 23(1)(d) (7.4.2026) by Employment Rights Act 2025 (c. 36), s. 159(3), Sch. 10 para. 51(2) (with s. 147, Sch. 11); S.I. 2026/323, reg. 4(1)(55)(a)"
+    }
+   ],
+   "text": "Section 23 (slavery and trafficking risk orders) is amended as follows. In subsection (1), for paragraph (d) substitute— if it appears that an offence under this Part which is a labour market offence has been, is being or may be committed, the Secretary of State. In subsection (6)— for “Gangmasters and Labour Abuse Authority” substitute “Secretary of State”; for “the Authority” substitute “the Secretary of State”. In subsection (7)(b)— for “Gangmasters and Labour Abuse Authority” substitute “Secretary of State”; for “the Authority” substitute “the Secretary of State”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2016/19/schedule/2/paragraph/14/enacted/data.xml",
+   "affecting": "Immigration Act 2016",
+   "schedule": "2",
+   "paragraph": "14",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "26"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 26(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 14(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "26"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 26(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 14(a); S.I. 2016/603, reg. 3(t)"
+    }
+   ],
+   "text": "In section 26(7) (requirement to provide name and address)— for “or an immigration officer” substitute “, an immigration officer or the Gangmasters and Labour Abuse Authority”; for “or the officer” substitute “, the officer or the Authority”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2023/32/schedule/18/paragraph/9/enacted/data.xml",
+   "affecting": "National Security Act 2023",
+   "schedule": "18",
+   "paragraph": "9",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2023-12-20",
+     "via_schedule": false,
+     "raw": "Sch. 4 para. 36C and cross-heading inserted (20.12.2023) by National Security Act 2023 (c. 32), s. 100(1), Sch. 18 para. 9 (with s. 97); S.I. 2023/1272, reg. 2(f)"
+    }
+   ],
+   "text": "In Schedule 4 to the Modern Slavery Act 2015 (offences to which defence in section 45 does not apply), after paragraph 36B insert— National Security Act 2023 An offence under any of the following provisions of the National Security Act 2023— section 1 (obtaining or disclosing protected information); section 2 (obtaining or disclosing trade secrets); section 3 (assisting a foreign intelligence service); section 4 (entering a prohibited place for a purpose prejudicial to the UK); section 12 (sabotage); section 13 (foreign interference: general); section 17 (obtaining material benefits from a foreign intelligence service); section 18 (preparatory conduct).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2020/17/schedule/24/paragraph/293/enacted/data.xml",
+   "affecting": "Sentencing Act 2020",
+   "schedule": "24",
+   "paragraph": "293",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2020-12-01",
+     "via_schedule": false,
+     "raw": "Words in s. 10(3) substituted (1.12.2020) by Sentencing Act 2020 (c. 17), s. 416(1), Sch. 24 para. 293(3)(a) (with Sch. 24 para. 447, Sch. 27); S.I. 2020/1236, reg. 2"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2020-12-01",
+     "via_schedule": false,
+     "raw": "Words in s. 10(1) substituted (1.12.2020) by Sentencing Act 2020 (c. 17), s. 416(1), Sch. 24 para. 293(2) (with Sch. 24 para. 447, Sch. 27); S.I. 2020/1236, reg. 2"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2020-12-01",
+     "via_schedule": false,
+     "raw": "S. 10(3)(d) substituted (1.12.2020) by Sentencing Act 2020 (c. 17), s. 416(1), Sch. 24 para. 293(3)(b) (with Sch. 24 para. 447, Sch. 27); S.I. 2020/1236, reg. 2"
+    }
+   ],
+   "text": "Section 10 of the Modern Slavery Act 2015 is amended as follows. In subsection (1), for “section 130 of the Powers of Criminal Courts (Sentencing) Act 2000” substitute “Chapter 2 of Part 7 of the Sentencing Code”. In subsection (3)— for “Sections 132 to 134 of the Powers of Criminal Courts (Sentencing) Act 2000” substitute “Sections 141, 143 and 144 of the Sentencing Code”; for paragraph (d) substitute— the reference in section 143(5)(b)(iii) to a slavery and trafficking reparation order under section 8 above were to a compensation order under Chapter 2 of Part 7 of the Sentencing Code. ; omit paragraph (e).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2016/19/schedule/2/paragraph/13/enacted/data.xml",
+   "affecting": "Immigration Act 2016",
+   "schedule": "2",
+   "paragraph": "13",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "S. 23(1)(d) and word inserted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(2)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 23(7)(b) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(4)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 23(7)(b) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(4)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 23(6) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(3)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": false,
+     "raw": "Words in s. 23(6) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(3)(b); S.I. 2016/603, reg. 3(t)"
+    }
+   ],
+   "text": "Section 23 (slavery and trafficking risk orders) is amended as follows. In subsection (1)— omit the “or” after paragraph (b); after paragraph (c) insert , or the Gangmasters and Labour Abuse Authority. In subsection (6)— for “or the Director General”, in the first place it occurs, substitute “, the Director General or the Gangmasters and Labour Abuse Authority”; for “or the Director General”, in the second place it occurs, substitute “, the Director General or the Authority”. In subsection (7)(b)— for “or the Director General” substitute “, the Director General or the Gangmasters and Labour Abuse Authority”; for “or Director General” substitute “, the Director General or the Authority”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2002/29/schedule/11/paragraph/5/enacted/data.xml",
+   "affecting": "Proceeds of Crime Act 2002",
+   "schedule": "11",
+   "paragraph": "5",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2003-03-24",
+     "via_schedule": false,
+     "raw": "S. 27(3) inserted (24.3.2003) by Proceeds of Crime Act 2002 (c. 29), s. 458(1), Sch. 11 para. 5(3); S.I. 2003/333, art. 2, Sch."
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2003-03-24",
+     "via_schedule": false,
+     "raw": "Words in s. 27(1) substituted (24.3.2003) by Proceeds of Crime Act 2002 (c. 29), s. 458(1), Sch. 11 para. 5(2); S.I. 2003/333, art. 2, Sch."
+    }
+   ],
+   "text": "Section 27 of the Misuse of Drugs Act 1971 (forfeiture) is amended as follows. In subsection (1) for “a drug trafficking offence, as defined in section 1(3) of the Drug Trafficking Act 1994” substitute “an offence falling within subsection (3) below”. After subsection (3) insert— An offence falls within this subsection if it is an offence which is specified in— paragraph 1 of Schedule 2 to the Proceeds of Crime Act 2002 (drug trafficking offences), or so far as it relates to that paragraph, paragraph 10 of that Schedule.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2026/20/schedule/21/paragraph/43/enacted/data.xml",
+   "affecting": "Crime and Policing Act 2026",
+   "schedule": "21",
+   "paragraph": "43",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2026-06-29",
+     "via_schedule": false,
+     "raw": "Word in s. 10(6) substituted (29.6.2026) by Crime and Policing Act 2026 (c. 20), s. 255(1), Sch. 21 para. 43(a)(i); S.I. 2026/689, reg. 2(1)(z12)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2026-06-29",
+     "via_schedule": false,
+     "raw": "Words in s. 10(6) inserted (29.6.2026) by Crime and Policing Act 2026 (c. 20), s. 255(1), Sch. 21 para. 43(a)(ii); S.I. 2026/689, reg. 2(1)(z12)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2026-06-29",
+     "via_schedule": false,
+     "raw": "Words in s. 10(8) substituted (29.6.2026) by Crime and Policing Act 2026 (c. 20), s. 255(1), Sch. 21 para. 43(b); S.I. 2026/689, reg. 2(1)(z12)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2026-06-29",
+     "via_schedule": false,
+     "raw": "Words in s. 10(9) substituted (29.6.2026) by Crime and Policing Act 2026 (c. 20), s. 255(1), Sch. 21 para. 43(c); S.I. 2026/689, reg. 2(1)(z12)"
+    }
+   ],
+   "text": "In section 10 (supplementary provision about slavery and trafficking reparation orders)— in subsection (6)— for “24” substitute “ 24A ”; after “the court” insert “provisionally discharges or (as the case may be)”; in subsection (8), in the words before paragraph (a), for “31” substitute “ 67E (1) or (2) or 67G (1) ”; in subsection (9), in the words before paragraph (a), for “33” substitute “ 67E (6) or 67G (5) ”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2003/41/schedule/3/paragraph/7/enacted/data.xml",
+   "affecting": "Extradition Act 2003",
+   "schedule": "3",
+   "paragraph": "7",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "15"
+     ],
+     "kind": "section_repealed",
+     "date": "2004-01-01",
+     "via_schedule": false,
+     "raw": "S. 15 repealed (1.1.2004) by Extradition Act 2003 (c. 41), ss. 219, 220, 221, Sch. 3 para. 7, Sch. 4; S.I. 2003/3103, art. 2 (subject to savings in order arts 3-5 as amended by S.I. 2003/3312 and S.I. 2003/3258)"
+    }
+   ],
+   "text": "Section 15 of the Computer Misuse Act 1990 (c. 18) (extradition where Schedule 1 to the Extradition Act 1989 applies) shall cease to have effect.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2015/9/schedule/4/paragraph/8/enacted/data.xml",
+   "affecting": "Serious Crime Act 2015",
+   "schedule": "4",
+   "paragraph": "8",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 3A heading substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 8; S.I. 2015/820, reg. 2(r)(iii)"
+    }
+   ],
+   "text": "In section 3A of that Act (making, supplying or obtaining articles for use in an offence under section 1 or 3), in the heading, for “section 1 or 3” substitute “section 1, 3 or 3ZA”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/9/schedule/6/paragraph/43/enacted/data.xml",
+   "affecting": "Mental Capacity Act 2005",
+   "schedule": "6",
+   "paragraph": "43",
+   "effects": [
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2007-10-01",
+     "via_schedule": false,
+     "raw": "S. 4(5)(f) inserted (1.10.2007) by Mental Capacity Act 2005 (c. 9), ss. 67(1), 68(1)-(3), Sch. 6 para. 43 (with ss. 27, 28, 29, 62); S.I. 2007/1897, art. 2(1)(c)(d)"
+    }
+   ],
+   "text": "In section 4(5) of the Human Rights Act 1998 (c. 42) (courts which may make declarations of incompatibility), after paragraph (e) insert— the Court of Protection, in any matter being dealt with by the President of the Family Division, the Vice-Chancellor or a puisne judge of the High Court.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2015/9/schedule/4/paragraph/11/enacted/data.xml",
+   "affecting": "Serious Crime Act 2015",
+   "schedule": "4",
+   "paragraph": "11",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "9"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 9(2)(a) substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 11(3); S.I. 2015/820, reg. 2(r)(iii)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "9"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 9(1) inserted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 11(2); S.I. 2015/820, reg. 2(r)(iii)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "9"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 9(2)(c) substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), s. 88(1), Sch. 4 para. 11(4); S.I. 2015/820, reg. 2(r)(iii)"
+    }
+   ],
+   "text": "Section 9 of that Act (British citizenship immaterial) is amended as follows. In subsection (1), at the beginning insert “Except as provided by section 5(1A),”. In subsection (2)(a), for “section 1, 2 or 3 above” substitute “this Act”. In subsection (2)(c), for “section 3 above” substitute “this Act”.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2018/5/schedule/12/paragraph/33/enacted/data.xml",
+   "affecting": "Space Industry Act 2018",
+   "schedule": "12",
+   "paragraph": "33",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2021-07-29",
+     "via_schedule": false,
+     "raw": "Sch. 4 para. 36A inserted (29.7.2021) by Space Industry Act 2018 (c. 5), s. 70(1), Sch. 12 para. 33; S.I. 2021/817, reg. 2, Sch. para. 117 (with reg. 3)"
+    }
+   ],
+   "text": "In Schedule 4 to the Modern Slavery Act 2015 (offences to which defence in section 45 does not apply), after paragraph 36 insert— An offence under any of the following provisions of Schedule 4 to the Space Industry Act 2018— paragraph 1 (hijacking of spacecraft) paragraph 2 (destroying, damaging or endangering safety of spacecraft) paragraph 3 (other acts endangering or likely to endanger safety of spacecraft) paragraph 4 (endangering safety at spaceports) paragraph 5 (offences in relation to certain dangerous articles).",
+   "status": "ok"
+  }
+ ]
+}
