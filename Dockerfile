@@ -3,7 +3,7 @@ WORKDIR /app
 COPY pyproject.toml ./
 COPY src ./src
 COPY web ./web
-COPY data/uk/corpus.jsonl.gz data/uk/changes.jsonl.gz ./data/uk/
+COPY data/uk/corpus.jsonl.gz data/uk/changes.jsonl.gz data/uk/timeline_steps.json.gz ./data/uk/
 RUN pip install --no-cache-dir ".[api]" \
     && useradd --system --uid 10001 --no-create-home taadeel
 # Run as an unprivileged user; the app only reads files and makes no outbound calls at run time.

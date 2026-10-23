@@ -81,6 +81,18 @@ def works() -> list[str]:
     return sorted(_load())
 
 
+def example() -> dict | None:
+    """First date that falls in an interval with an unexplained snapshot change (shows the uncertain state)."""
+    from datetime import timedelta
+
+    for w, (versions, steps) in sorted(_load().items()):
+        for k, st in enumerate(steps):
+            d = st.date - timedelta(days=1)
+            if st.unexplained and d > versions[k].valid_from:
+                return {"work": w, "date": d.isoformat()}
+    return None
+
+
 def _articles(texts: dict[str, str], primary, secondary=None) -> list[dict]:
     """Articles of a candidate, each with the provenance of the snapshot its text comes from."""
     prov = {}
