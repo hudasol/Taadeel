@@ -11,6 +11,7 @@ from datetime import date
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.exceptions import RequestValidationError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -36,7 +37,7 @@ def _demo() -> dict[str, list[Expression]]:
 
 
 WORKS: dict[str, list[Expression]] = _demo()
-REAL_WORKS: dict[str, list[Expression]] = {}      # intentionally empty (no permitted source yet)
+REAL_WORKS: dict[str, list[Expression]] = {}      # real UAE works: intentionally empty (no permitted source yet)
 
 
 def _store(real: bool) -> dict[str, list[Expression]]:
@@ -49,13 +50,19 @@ def _wrap(data: dict, synthetic: bool) -> dict:
 
 @app.get("/api/health")
 def health() -> dict:
-    return {"status": "ok", "real_works": len(REAL_WORKS), "synthetic_works": len(WORKS), "disclaimer": DISCLAIMER}
+    counts = search_api.get_store().corpus_counts()
+    return {"status": "ok" if search_api.UK_LOAD_ERROR is None else "degraded",
+            "real_uae_works": len(REAL_WORKS), "real_works": len(REAL_WORKS), "synthetic_works": len(WORKS),
+            "corpus_counts": counts, "uk_load_error": search_api.UK_LOAD_ERROR,
+            "note": "real_works counts UAE legislation only; the UK validation corpus is English UK law, not UAE law.",
+            "disclaimer": DISCLAIMER}
 
 
 @app.get("/api/works")
 def works(real: bool = False) -> dict:
     items = [{"work_id": k, "versions": len(v), "synthetic": v[0].synthetic} for k, v in _store(real).items()]
-    note = "No real legislation is loaded: no source currently permits collection (see docs/DATA_SOURCES.md)." if real and not items else ""
+    note = ("No real UAE legislation is loaded: no source currently permits collection (see docs/DATA_SOURCES.md). "
+            "The UK validation corpus is available through /api/store/works.") if real and not items else ""
     return _wrap({"works": items, "note": note}, synthetic=not real)
 
 
@@ -80,8 +87,9 @@ def api_diff(work: str, a: str, b: str, real: bool = False) -> dict:
     if a not in v or b not in v:
         raise HTTPException(404, "unknown version")
     res = align(v[a], v[b])
-    texts = {p.eid: p.text for e in (v[a], v[b]) for p in e.articles()}
-    changes = [{**asdict(c), "a_text": texts.get(c.a_eid or ""), "b_text": texts.get(c.b_eid or ""),
+    ta = {p.eid: p.text for p in v[a].articles()}    # separate maps: the same eid exists in both versions
+    tb = {p.eid: p.text for p in v[b].articles()}
+    changes = [{**asdict(c), "a_text": ta.get(c.a_eid or ""), "b_text": tb.get(c.b_eid or ""),
                 "source_url": v[b].source_url, "retrieved_at": v[b].retrieved_at} for c in diff(v[a], v[b], res)]
     return _wrap({"work_id": work, "from": a, "to": b, "changes": changes,
                   "unaligned_a": res.unaligned_a, "unaligned_b": res.unaligned_b}, synthetic=v[a].synthetic)
@@ -98,9 +106,37 @@ def api_as_of(work: str, on: date = Query(..., alias="date"), real: bool = False
                   "candidates": r.candidates, "note": r.note, "articles": arts}, synthetic=exprs[0].synthetic)
 
 
+@app.get("/api/timeline/works")
+def timeline_works() -> dict:
+    from . import timeline_service
+    from .uk_corpus import ATTRIBUTION
+
+    return _wrap({"corpus": "uk-validation", "works": timeline_service.works(), "example": timeline_service.example(),
+                  "attribution": ATTRIBUTION,
+                  "note": "Snapshot timeline: English UK legislation used for validation only. It is not UAE law."},
+                 synthetic=False)
+
+
+@app.get("/api/timeline")
+def timeline(work: str, on: date = Query(..., alias="date")) -> dict:
+    """Point in time with snapshot evidence (UK validation corpus only; no UAE snapshots are held)."""
+    from . import timeline_service
+    from .uk_corpus import ATTRIBUTION
+
+    r = timeline_service.query(work, on)
+    if r is None:
+        raise HTTPException(404, "no snapshot timeline for this work (available only for the UK validation corpus)")
+    return _wrap({**r, "corpus": "uk-validation", "attribution": ATTRIBUTION}, synthetic=False)
+
+
 @app.exception_handler(HTTPException)
 async def _http(_, exc: HTTPException):
     return JSONResponse({"error": exc.detail, "disclaimer": DISCLAIMER}, status_code=exc.status_code)
+
+
+@app.exception_handler(RequestValidationError)
+async def _invalid(_, exc: RequestValidationError):
+    return JSONResponse({"error": "invalid request", "detail": exc.errors(), "disclaimer": DISCLAIMER}, status_code=422)
 
 
 _WEB = Path(os.environ.get("TAADEEL_ROOT") or Path(__file__).resolve().parents[2]) / "web"

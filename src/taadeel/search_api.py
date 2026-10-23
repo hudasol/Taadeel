@@ -6,6 +6,9 @@ Mount with ``app.include_router(search_api.router)``. Override the data source w
 """
 from __future__ import annotations
 
+import logging
+import threading
+
 from fastapi import APIRouter, Depends, Query
 from fastapi.responses import JSONResponse
 
@@ -13,6 +16,9 @@ from .store import CORPORA, DISCLAIMER, Store, build_demo_store, resolve_corpora
 
 router = APIRouter()
 _STORE: Store | None = None
+_LOCK = threading.Lock()
+UK_LOAD_ERROR: str | None = None        # surfaced by /api/health; None when the UK corpus loaded or is absent
+log = logging.getLogger("taadeel")
 
 CORPUS_INFO = {
     "uae": {
@@ -41,14 +47,17 @@ CORPUS_INFO = {
 
 def get_store() -> Store:
     """Default store provider (demo store). Replace via set_store() or monkeypatching."""
-    global _STORE
-    if _STORE is None:
-        _STORE = build_demo_store()
-        try:                                   # labelled UK validation corpus, if the derived file is present
-            from .uk_corpus import load_into
-            load_into(_STORE)
-        except Exception:                      # never let the optional corpus stop the app
-            pass
+    global _STORE, UK_LOAD_ERROR
+    with _LOCK:
+        if _STORE is None:
+            store = build_demo_store()
+            try:                               # labelled UK validation corpus, if the derived file is present
+                from .uk_corpus import load_into
+                load_into(store)
+            except Exception as exc:           # the optional corpus must not stop the app, but the failure is reported
+                UK_LOAD_ERROR = f"{type(exc).__name__}: {exc}"
+                log.error("UK validation corpus failed to load: %s", UK_LOAD_ERROR)
+            _STORE = store
     return _STORE
 
 

@@ -1,0 +1,672 @@
+{
+ "acts": [
+  {
+   "act": "ukpga/1990/18",
+   "new_certain_correct": 3,
+   "new_uncertain_truth_in_candidates": 3,
+   "new_uncertain_truth_is_first_candidate": 1,
+   "new_uncertain_truth_missing": 1,
+   "old_correct": 4,
+   "queries": 7,
+   "rows": [
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "1995-02-02",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 1998-09-04 are not explained by any recorded effect of that date; they took effect on an unknown date after 1995-02-03.",
+     "old_correct": false,
+     "query": "1998-09-03",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 2004-01-01 are not explained by any recorded effect of that date; they took effect on an unknown date after 1998-09-04.",
+     "old_correct": false,
+     "query": "2003-12-31",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "uncertain",
+     "note": "9 change(s) visible in the snapshot of 2007-10-01 are not explained by any recorded effect of that date; they took effect on an unknown date after 2004-01-01.",
+     "old_correct": false,
+     "query": "2007-09-30",
+     "truth_candidate_index": null
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2008-09-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 2015-05-03 are not explained by any recorded effect of that date; they took effect on an unknown date after 2008-10-01.",
+     "old_correct": true,
+     "query": "2015-05-02",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2023-02-06",
+     "truth_candidate_index": 0
+    }
+   ],
+   "steps": 7,
+   "steps_with_conflict": 3,
+   "steps_with_unexplained_change": 4
+  },
+  {
+   "act": "ukpga/2015/30",
+   "new_certain_correct": 7,
+   "new_uncertain_truth_in_candidates": 1,
+   "new_uncertain_truth_is_first_candidate": 1,
+   "new_uncertain_truth_missing": 1,
+   "old_correct": 8,
+   "queries": 9,
+   "rows": [
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2016-03-16",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "7 change(s) visible in the snapshot of 2016-07-12 are not explained by any recorded effect of that date; they took effect on an unknown date after 2016-03-17.",
+     "old_correct": true,
+     "query": "2016-07-11",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2016-12-16",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "2 change(s) visible in the snapshot of 2020-12-01 are not explained by any recorded effect of that date; they took effect on an unknown date after 2016-12-17.",
+     "old_correct": false,
+     "query": "2020-11-30",
+     "truth_candidate_index": null
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2022-04-27",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2023-01-29",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2023-02-06",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2026-04-06",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2026-06-28",
+     "truth_candidate_index": 0
+    }
+   ],
+   "steps": 9,
+   "steps_with_conflict": 2,
+   "steps_with_unexplained_change": 2
+  },
+  {
+   "act": "ukpga/1968/60",
+   "new_certain_correct": 10,
+   "new_uncertain_truth_in_candidates": 3,
+   "old_correct": 10,
+   "queries": 13,
+   "rows": [
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 1992-04-01 are not explained by any recorded effect of that date; they took effect on an unknown date after 1991-02-01.",
+     "old_correct": false,
+     "query": "1992-03-31",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "1992-09-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "3 change(s) visible in the snapshot of 1996-12-18 are not explained by any recorded effect of that date; they took effect on an unknown date after 1992-10-01.",
+     "old_correct": false,
+     "query": "1996-12-17",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2000-08-24",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2001-03-25",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2001-09-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 2003-11-12 are not explained by any recorded effect of that date; they took effect on an unknown date after 2001-10-01.",
+     "old_correct": false,
+     "query": "2003-11-11",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2004-02-26",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2004-04-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2005-12-04",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2005-12-31",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2007-01-14",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2013-03-31",
+     "truth_candidate_index": 0
+    }
+   ],
+   "steps": 13,
+   "steps_with_conflict": 2,
+   "steps_with_unexplained_change": 3
+  },
+  {
+   "act": "ukpga/1998/42",
+   "new_certain_correct": 5,
+   "new_certain_wrong": 2,
+   "new_uncertain_truth_in_candidates": 3,
+   "old_correct": 5,
+   "queries": 10,
+   "rows": [
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2001-03-31",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": false,
+     "query": "2003-08-18",
+     "truth_candidate_index": null
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2004-06-21",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 2006-01-12 are not explained by any recorded effect of that date; they took effect on an unknown date after 2004-06-22.",
+     "old_correct": false,
+     "query": "2006-01-11",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2006-04-02",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 2007-10-01 are not explained by any recorded effect of that date; they took effect on an unknown date after 2006-04-03.",
+     "old_correct": false,
+     "query": "2007-09-30",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": false,
+     "query": "2009-09-30",
+     "truth_candidate_index": null
+    },
+    {
+     "new": "uncertain",
+     "note": "3 change(s) visible in the snapshot of 2020-10-21 are not explained by any recorded effect of that date; they took effect on an unknown date after 2009-10-01.",
+     "old_correct": false,
+     "query": "2020-10-20",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2021-06-29",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2026-09-30",
+     "truth_candidate_index": 0
+    }
+   ],
+   "steps": 10,
+   "steps_with_conflict": 1,
+   "steps_with_unexplained_change": 3
+  },
+  {
+   "act": "ukpga/1989/6",
+   "new_certain_correct": 11,
+   "new_certain_wrong": 1,
+   "new_uncertain_truth_in_candidates": 1,
+   "old_correct": 11,
+   "queries": 13,
+   "rows": [
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "1994-12-14",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "1997-03-31",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": false,
+     "query": "1999-05-05",
+     "truth_candidate_index": null
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "1999-12-01",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2000-10-01",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2001-11-03",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2002-09-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2005-02-28",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2006-03-31",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 2010-04-12 are not explained by any recorded effect of that date; they took effect on an unknown date after 2006-04-01.",
+     "old_correct": false,
+     "query": "2010-04-11",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2013-10-06",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2018-06-26",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2023-12-19",
+     "truth_candidate_index": 0
+    }
+   ],
+   "steps": 13,
+   "steps_with_conflict": 0,
+   "steps_with_unexplained_change": 1
+  },
+  {
+   "act": "ukpga/1997/40",
+   "new_certain_correct": 8,
+   "new_uncertain_truth_in_candidates": 4,
+   "new_uncertain_truth_is_first_candidate": 4,
+   "new_uncertain_truth_missing": 1,
+   "old_correct": 12,
+   "queries": 13,
+   "rows": [
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2001-07-31",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2002-09-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2003-06-26",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 2005-07-01 are not explained by any recorded effect of that date; they took effect on an unknown date after 2003-06-27.",
+     "old_correct": true,
+     "query": "2005-06-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "2 change(s) visible in the snapshot of 2009-09-30 are not explained by any recorded effect of that date; they took effect on an unknown date after 2005-07-01.",
+     "old_correct": true,
+     "query": "2009-09-29",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2011-07-06",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "2 change(s) visible in the snapshot of 2011-07-21 are not explained by any recorded effect of that date; they took effect on an unknown date after 2011-07-07.",
+     "old_correct": true,
+     "query": "2011-07-20",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 2012-11-25 are not explained by any recorded effect of that date; they took effect on an unknown date after 2011-07-21.",
+     "old_correct": true,
+     "query": "2012-11-24",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2014-04-21",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "2 change(s) visible in the snapshot of 2020-12-01 are not explained by any recorded effect of that date; they took effect on an unknown date after 2014-04-22.",
+     "old_correct": false,
+     "query": "2020-11-30",
+     "truth_candidate_index": null
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2021-06-28",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2022-04-27",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2023-02-06",
+     "truth_candidate_index": 0
+    }
+   ],
+   "steps": 13,
+   "steps_with_conflict": 0,
+   "steps_with_unexplained_change": 5
+  },
+  {
+   "act": "ukpga/1971/38",
+   "new_certain_correct": 12,
+   "new_uncertain_truth_in_candidates": 3,
+   "new_uncertain_truth_is_first_candidate": 1,
+   "old_correct": 13,
+   "queries": 15,
+   "rows": [
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "1991-06-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "1995-01-08",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "2 change(s) visible in the snapshot of 1995-02-03 are not explained by any recorded effect of that date; they took effect on an unknown date after 1995-01-09.",
+     "old_correct": true,
+     "query": "1995-02-02",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "1 change(s) visible in the snapshot of 1996-08-25 are not explained by any recorded effect of that date; they took effect on an unknown date after 1995-02-03.",
+     "old_correct": false,
+     "query": "1996-08-24",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2003-02-23",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2003-03-23",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2004-07-21",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2005-12-31",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2007-12-02",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2008-09-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2009-11-11",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2011-11-14",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2012-10-30",
+     "truth_candidate_index": 0
+    },
+    {
+     "new": "uncertain",
+     "note": "2 change(s) visible in the snapshot of 2020-12-01 are not explained by any recorded effect of that date; they took effect on an unknown date after 2012-10-31.",
+     "old_correct": false,
+     "query": "2020-11-30",
+     "truth_candidate_index": 1
+    },
+    {
+     "new": "certain",
+     "note": "",
+     "old_correct": true,
+     "query": "2022-06-27",
+     "truth_candidate_index": 0
+    }
+   ],
+   "steps": 15,
+   "steps_with_conflict": 1,
+   "steps_with_unexplained_change": 3
+  }
+ ],
+ "effects_retrieved": "current XML of each Act, 2026-10-16",
+ "scope": "English UK legislation (OGL v3.0), England and Wales view; not UAE law",
+ "snapshots": "data/uk/corpus.jsonl.gz (2026-10-12)",
+ "total": {
+  "new_certain_correct": 56,
+  "new_certain_wrong": 3,
+  "new_uncertain_truth_in_candidates": 18,
+  "new_uncertain_truth_is_first_candidate": 7,
+  "new_uncertain_truth_missing": 3,
+  "old_correct": 63,
+  "queries": 80,
+  "steps": 80,
+  "steps_with_conflict": 9,
+  "steps_with_unexplained_change": 21
+ }
+}

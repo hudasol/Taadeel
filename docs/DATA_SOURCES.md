@@ -44,9 +44,10 @@ Terms read from pages retrieved 2026-10-12 (the WebFetch tool returns summaries;
 | Scope taken | UK Public General Acts only (`ukpga`), England and Wales view, body sections only (schedules excluded). Devolved material is excluded because its notices were not verified. | `docs/VALIDATION_UK.md` |
 | Fair use | Maximum 1,500 requests per 5 minutes per user, anonymous user agents refused, avoid one off bulk crawls, follow the crawl delay. | https://www.legislation.gov.uk/fair-use-policy |
 | robots.txt | `Crawl-delay: 5`; disallows `*/data.pdf`, `*/data.docx`, `/defralex`. Taadeel fetches only `data.xml`. | https://www.legislation.gov.uk/robots.txt |
-| Our rate | One request per 6 seconds (above the crawl delay), identifying User-Agent with repository URL, content hashed, resumable, every fetch logged in `data/uk/manifest.jsonl`. 176 successful fetches plus 3 recorded HTTP 404 (point in time before the Act existed). Amending section sample fetched under the same rules. | `sources.toml`, `src/taadeel/uk_fetch.py` |
+| Our rate | One request per 6 seconds (above the crawl delay), identifying User-Agent with repository URL, content hashed, resumable, every fetch logged in `data/uk/manifest.jsonl`. Every fetch, including HTTP 404 responses for dates before an Act existed, is listed in the manifest. Amending section sample fetched under the same rules. | `sources.toml`, `src/taadeel/uk_fetch.py` |
 | Data caveats stated by the site | Revised text is an editorial construction and not the authoritative original; effects data is somewhat out of date and not guaranteed complete; base date 1 February 1991. | https://www.legislation.gov.uk/developer/limitations ; /help |
 | Blocks and errors | `/terms-and-conditions` and `/fair-use` returned errors; not worked around. | research record |
+| Second pull, 2026-10-16 | Current XML of the 7 validated Acts (7 requests) and up to 150 further amending Act sections (`data.xml` only) for the larger English amendment test. Same rules: one request at a time, 6 s apart, identifying user agent, robots.txt read first, hashes recorded in `data/uk/manifest.jsonl`, stop on any 403, 429 or block. Selection rule declared in `docs/DECISIONS.md` item 6 before fetching. The licence and fair use pages were not re fetched; the 2026-10-12 reading is relied on. | `src/taadeel/uk_amending2.py` |
 | UNVERIFIED | `/changes/affecting` endpoint content; Akoma Ntoso output (`data.akn`, the documentation page is a placeholder); a machine endpoint listing version dates; devolved legislation notices. None of these is used. | |
 
 Committed derived data: `data/uk/corpus.jsonl.gz` holds section text of dated snapshots with source URL, retrieval time and content hash, under the OGL with the attribution above. Raw XML is not committed.
@@ -56,9 +57,17 @@ Committed derived data: `data/uk/corpus.jsonl.gz` holds section text of dated sn
 | Candidate | Result | Decision |
 |---|---|---|
 | Arabic Wikisource | Hosting contributions under CC BY-SA 4.0; the copyright status of an underlying official text depends on its country (UNVERIFIED for any specific page). The API answered HTTP 429 during research. | **Not used.** No real Arabic text is committed. Normalization stays tested on labelled synthetic Arabic. Short excerpts with oldid and attribution remain a possible future fixture after a per page status check. |
+| Arabic Wikisource, re-check 2026-10-16 | robots.txt read first (HTTP 200): `/w/` and `/api/` are disallowed for all agents, so the API, search and raw wikitext were not used; only plain `/wiki/` pages were read, 6 s apart, identifying user agent, 4 requests in total (robots.txt, two category pages, one law page). The category of UAE laws lists one page: Federal Law No. 7 of 2002 on copyright and neighbouring rights, page id 56374, oldid 137670. The page has no explicit licence template; the footer states CC BY-SA 4.0 for texts plus the Wikimedia terms of use. Article 3 of that law excludes official documents such as texts of laws from protection, but whether that law is still in force was not verified from a retrieved source. | **Not treated as clearly reusable. No wording committed.** The parser was run on a local copy and only counts are committed (`results/arabic_wikisource_probe.json`, script `src/taadeel/wikisource_probe.py`, reproducible from the oldid). |
 | Arabic Wikipedia | CC BY-SA 4.0 for the site; not legal text. | Not used. |
 | WIPO Lex, UN, OHCHR, treaties.un.org, tanzil.net | Terms pages failed to load, were not permitted by the fetch tool, or state personal use only or no redistribution. | Not used. |
 | lawsociety.ly | `/about/terms-of-use/` returned HTTP 403; footer says all rights reserved. | **Blocked, recorded, not worked around.** Not used. |
 | uaelegislation.gov.ae | robots.txt returned HTTP 403 to `curl` on 2026-10-12. | Blocked, recorded. See the permission request. |
 
 The Arabic amendment pattern lexicon (`src/taadeel/amend_ar.py`) uses phrasings seen in the retrieved sources (listed with URLs in its comments). It is tested on invented samples only and is **unvalidated on real UAE text**.
+
+## Akoma Ntoso schema (export check only, 2026-10-16)
+
+| Item | Finding | Decision |
+|---|---|---|
+| Source | https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/schemas/akomantoso30.xsd and `xml.xsd` in the same folder; robots.txt allows all (all lines commented). Two requests, 6 s apart, identifying user agent. | Fetched once for validation. |
+| Licence | The schema header states it is provided by OASIS under CC BY 4.0 (Copyright OASIS Open 2018). | Not committed (the file header also names individual contributors and their institution, which this repository does not reproduce). sha256 recorded in `src/taadeel/akn_export.py`: akomantoso30.xsd `6f61fe84cbb6f8cb0e8418cd67b74a63da9990e6573b5a3491f623184f45c4fd`, xml.xsd `61960fb3131e38022caad5360e2f33a3382578ab3c80cd58bd74320ede61b20c`. |

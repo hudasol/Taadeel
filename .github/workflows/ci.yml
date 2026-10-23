@@ -16,3 +16,18 @@ jobs:
       - run: pytest -q
       - name: Validation harness (synthetic only)
         run: python -m taadeel.validate table 10
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the image
+        run: docker build -t taadeel .
+      - name: Run it without network access and check health
+        run: |
+          docker run -d --name taadeel-ci --network none taadeel
+          for i in $(seq 1 30); do
+            if docker exec taadeel-ci python -c "import urllib.request,json; print(json.load(urllib.request.urlopen('http://127.0.0.1:8000/api/health'))['status'])"; then break; fi
+            sleep 2
+          done
+          docker exec taadeel-ci python -c "import urllib.request,json; j=json.load(urllib.request.urlopen('http://127.0.0.1:8000/api/health')); assert j['status']=='ok', j; print(j['corpus_counts'])"
+          test "$(docker exec taadeel-ci id -u)" = "10001"

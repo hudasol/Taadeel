@@ -1,0 +1,77 @@
+{
+ "schema": "OASIS Akoma Ntoso 1.0 akomantoso30.xsd (CC BY 4.0)",
+ "schema_sha256": {
+  "akomantoso30.xsd": "6f61fe84cbb6f8cb0e8418cd67b74a63da9990e6573b5a3491f623184f45c4fd",
+  "xml.xsd": "61960fb3131e38022caad5360e2f33a3382578ab3c80cd58bd74320ede61b20c"
+ },
+ "negative_controls": [
+  {
+   "control": "identification without FRBRWork",
+   "rejected": true
+  },
+  {
+   "control": "article text outside content",
+   "rejected": true
+  },
+  {
+   "control": "unknown element in body",
+   "rejected": true
+  }
+ ],
+ "negative_controls_rejected": 3,
+ "claim": "AKN compatible export (structure validated); not AKN compliant",
+ "valid": 10,
+ "total": 10,
+ "samples": [
+  {
+   "sample": "synthetic demo, version a",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "synthetic demo, version b (bis article)",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "synthetic structured text (parts, chapters, clauses)",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "UK ukpga/1990/18 @ 1991-02-01 (English, OGL v3.0)",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "UK ukpga/2015/30 @ 2016-03-16 (English, OGL v3.0)",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "UK ukpga/1968/60 @ 1991-02-01 (English, OGL v3.0)",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "UK ukpga/1998/42 @ 2001-03-31 (English, OGL v3.0)",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "UK ukpga/1989/6 @ 1991-02-01 (English, OGL v3.0)",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "UK ukpga/1997/40 @ 2001-07-31 (English, OGL v3.0)",
+   "valid": true,
+   "errors": []
+  },
+  {
+   "sample": "UK ukpga/1971/38 @ 1991-02-01 (English, OGL v3.0)",
+   "valid": true,
+   "errors": []
+  }
+ ]
+}

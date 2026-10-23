@@ -1,45 +1,48 @@
 # Taadeel: tracking amendments in UAE federal legislation
 
-Status 2026-10-11. **Not legal advice.** Synthetic evidence only; real-world accuracy is unmeasured.
+Status 2026-10-11, with status lines updated 2026-10-16. **Not legal advice.** Synthetic and UK English evidence only; real world accuracy on UAE legislation is unmeasured.
 
-## One-page summary
+Superseded for numbers by `docs/VALIDATION_UK.md` and `docs/HELDOUT_RESULTS.md` (generated).
 
-**Problem.** UAE federal laws are amended often. The official portal gives per-law metadata (issue, effective and gazette dates, amendment count) but, as far as this research could determine, no article-level diff or documented machine-readable amendment feed. Answering "what did this law say on date X, and what changed since?" is manual.
+## One page summary
 
-**What exists.** A tested engine: Arabic normalization, structure parser (part/chapter/article/clause, «مكرر» handling), confidence-scored alignment with an unaligned bucket, article- and word-level diffs with five change classes, a point-in-time model that flags uncertain effective dates, permission-gated ingestion, a read-only API, an RTL-first bilingual UI, a dataset exporter with data card, and a validation harness.
+**Problem.** UAE federal laws are amended often. The official portal gives per law metadata (issue, effective and gazette dates, amendment count) but, as far as this research could determine, no article level diff or documented machine readable amendment feed. Answering "what did this law say on date X, and what changed since?" is manual.
 
-**What does not exist yet.** Real data (no source currently permits text collection), HTML/PDF extraction, amendment-by-reference parsing, search, deployment, a real gold set.
+**What exists (as of 2026-10-16).** A tested engine: Arabic normalisation, structure parser (part/chapter/article/clause, «مكرر» handling), confidence scored alignment with an unaligned bucket (v1, hash locked), article and word level diffs with five change classes, a point in time model that flags uncertain effective dates, a PDF extractor (tested on synthetic PDFs only), SQLite storage with FTS5 and Parquet export, a search API, a FastAPI API, an RTL bilingual web page, a Dockerfile and `render.yaml` (a live demo runs on the Render free tier from the branch `feat/validation-and-amendments`), an English amendment pattern module (measured on a small UK sample), an Arabic amendment lexicon (unvalidated, invented samples only), a UK legislation.gov.uk adapter with validation, permission gated ingestion and a validation harness.
 
-**Headline numbers (synthetic only).** Alignment accuracy ranges from 0.877 to 1.000 depending on scenario; near-duplicate and heavily rewritten articles are the weak spot (see table below). These do not predict accuracy on real statutes.
+**What does not exist yet.** Any real UAE law (no permission was obtained; the portal returned HTTP 403 on robots.txt, which was recorded and not worked around), any real Arabic validation, Akoma Ntoso lifecycle and modification metadata (a compatible export was added later, `docs/AKN_EXPORT.md`), and a gold set of real UAE laws.
+
+**Numbers.** This report holds no hand typed result figures. Generated results are in `docs/HELDOUT_RESULTS.md`, `docs/VALIDATION_UK.md` and `results/dev_synthetic.json`. Synthetic results do not predict accuracy on real statutes.
 
 ## Related work
 
-legislation.gov.uk (point-in-time, effects linking changes to amending Acts), EUR-Lex consolidated versions, Akoma Ntoso/LegalDocML (work/expression model, stable identifiers), commercial redlining tools. Public Arabic legal-NLP work found is mostly retrieval/QA/classification; no open article-level alignment benchmark for Arabic statutes was found (scan not exhaustive). Details: `RESEARCH.md`.
+legislation.gov.uk (point in time, effects linking changes to amending Acts), EUR-Lex consolidated versions, Akoma Ntoso/LegalDocML (work/expression model, stable identifiers), commercial redlining tools. Public Arabic legal NLP work found is mostly retrieval/QA/classification; no open article level alignment benchmark for Arabic statutes was found (scan not exhaustive). Details: `RESEARCH.md`.
 
 ## Method
 
-Akoma Ntoso-inspired model (work, expression, provision, amendment event, alignment, change). Alignment is monotonic dynamic programming over a blend of normalized text similarity (0.85), relative position (0.10) and number equality (0.05); pairs below 0.35 are not forced; pairs below 0.60 or with a rival candidate within 0.05 are `low` confidence. Diff classes: `clarified` only when normalized text is identical; any word or numeral change is `replaced`. Temporal logic never guesses: a version with an uncertain effective date yields `uncertain` plus candidates. Normalization is index-only; display text is untouched.
+Akoma Ntoso inspired model (work, expression, provision, amendment event, alignment, change). Alignment is monotonic dynamic programming over a blend of normalised text similarity, relative position and number equality; weak pairs are not forced, and pairs with low similarity or a close rival candidate are marked `low` confidence. The exact weights and thresholds are in `src/taadeel/align.py` and were tuned on synthetic development seeds only. Diff classes: `clarified` only when normalised text is identical; any word or numeral change is `replaced`. Temporal logic never guesses: a version with an uncertain effective date yields `uncertain` plus candidates. Normalisation is index only; display text is untouched.
 
 ## Validation
 
-See `VALIDATION.md` for the full table and caveats. Summary (synthetic, seeds 0–29):
+See `VALIDATION.md` for status and caveats. Numbers live only in generated files:
 
-| scenario | align acc. | replaced P / R | repealed P / R | inserted P / R |
-|---|---|---|---|---|
-| easy | 1.000 | 1.000 / 1.000 | 1.000 / 1.000 | 1.000 / 1.000 |
-| templated near-duplicates | 0.981 | 0.751 / 0.987 | 0.968 / 0.667 | 1.000 / 0.689 |
-| templated, 70% words edited | 0.918 | 0.511 / 0.593 | 0.604 / 0.644 | 0.417 / 0.444 |
-| templated, many inserts/repeals | 0.877 | 0.446 / 0.896 | 0.989 / 0.375 | 1.000 / 0.379 |
+* `docs/HELDOUT_RESULTS.md` (generated): held out synthetic results.
+* `docs/VALIDATION_UK.md` (generated): UK English validation.
+* `results/dev_synthetic.json`: synthetic development results.
 
-The easy scenario is a sanity check, not evidence. The ambiguity margin was added after seeing results, so the table is not a clean held-out estimate.
+The earlier hand typed table in this section (2026-10-11) was removed because it duplicated result files. The ambiguity margin was added after seeing results on development seeds, so development numbers are not a clean held out estimate.
 
 ## Limitations
 
-1. No real legislation loaded; licensing gate documented in `DATA_SOURCES.md`.
-2. Plain-text parser only; no HTML/PDF extraction.
-3. No amendment-by-reference parsing, so amendment events cannot yet be derived from amending instruments.
-4. Monotonic alignment cannot represent long-distance moves.
+1. No real UAE legislation loaded; licensing gate documented in `DATA_SOURCES.md`.
+2. The PDF extractor has been tested on synthetic PDFs only; no real UAE PDF or HTML has been processed.
+3. The English amendment pattern module was measured on a small UK sample; the Arabic amendment lexicon is unvalidated and rests on invented samples, so amendment events cannot yet be derived reliably from real Arabic amending instruments.
+4. Monotonic alignment cannot represent long distance moves.
 5. Alignment is O(n·m) and untested at real law sizes.
-6. Synthetic text has no cross-references or legal drafting structure.
-7. Point-in-time logic is unit-tested, not evaluated.
-8. Not deployed; code is local until GitHub write access is restored.
+6. Synthetic text has no cross references or legal drafting structure.
+7. Point in time logic was unit tested only at the time of this report; it was later evaluated on UK data (`docs/VALIDATION_UK.md`).
+8. The live demo is a free tier deployment of a feature branch, with synthetic and UK validation data only.
+
+## History
+
+* 2026-10-11 status (superseded): HTML and PDF extraction, amendment parsing, search, deployment and the GitHub push were listed as missing. See the "What exists" paragraph above for the current state.
