@@ -111,7 +111,8 @@ def timeline_works() -> dict:
     from . import timeline_service
     from .uk_corpus import ATTRIBUTION
 
-    return _wrap({"corpus": "uk-validation", "works": timeline_service.works(), "attribution": ATTRIBUTION,
+    return _wrap({"corpus": "uk-validation", "works": timeline_service.works(), "example": timeline_service.example(),
+                  "attribution": ATTRIBUTION,
                   "note": "Snapshot timeline: English UK legislation used for validation only. It is not UAE law."},
                  synthetic=False)
 

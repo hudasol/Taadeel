@@ -83,3 +83,12 @@ def test_api_lists_works_and_rejects_unknown_work():
     j = c.get("/api/timeline/works").json()
     assert j["works"] and all(w.startswith("uk/") for w in j["works"])
     assert c.get("/api/timeline?work=synthetic/law/1&date=2021-01-01").status_code == 404
+
+
+@pytest.mark.skipif(not STEPS_PRESENT, reason="data/uk/timeline_steps.json.gz not built")
+def test_service_reproduces_every_measured_state():
+    res = json.loads((ROOT / "results" / "uk_timeline_v2.json").read_text(encoding="utf-8"))
+    rows = [(f"uk/{a['act']}", r) for a in res["acts"] for r in a["rows"]]
+    assert rows and all(ts.query(w, date.fromisoformat(r["query"]))["certainty"] == r["new"] for w, r in rows)
+    ex = ts.example()
+    assert ts.query(ex["work"], date.fromisoformat(ex["date"]))["certainty"] == "uncertain"
