@@ -145,6 +145,16 @@ main,header,section{overflow-wrap:anywhere}
   <section aria-labelledby="h-diff"><h2 id="h-diff"><span lang="ar">التغييرات (مقارنة جنبًا إلى جنب)</span> / <span lang="en" dir="ltr">Changes (side-by-side redline)</span></h2>
     <div id="diff-label"></div>
     <div id="diff" aria-live="polite" aria-busy="false"></div></section>
+  <section aria-labelledby="h-tl"><h2 id="h-tl"><span lang="ar">النص بتاريخ مع أدلة اللقطات</span> / <span lang="en" dir="ltr">Point in time with snapshot evidence</span></h2>
+    <div id="tl-label"></div>
+    <p class="hint"><span lang="ar">متاح لمجموعة التحقق البريطانية فقط. إذا ظهر في لقطة تغيير لا يفسّره أي أثر مسجل، تُعرض النسختان المحتملتان دون اختيار إحداهما.</span><br><span lang="en" dir="ltr">Available for the UK validation corpus only. When a snapshot shows a change that no recorded effect explains, both possible texts are shown and neither is chosen.</span></p>
+    <div class="row">
+      <label for="tl-work"><span lang="ar">القانون</span> / <span lang="en" dir="ltr">Act</span></label>
+      <select id="tl-work" aria-label="القانون / Act"></select>
+      <label for="tl-date"><span lang="ar">التاريخ</span> / <span lang="en" dir="ltr">Date</span></label>
+      <input id="tl-date" type="date" aria-label="التاريخ / Date">
+    </div>
+    <div id="tl" class="card" aria-live="polite" aria-busy="false"></div></section>
 </main>
 <script>
 "use strict";
@@ -358,6 +368,55 @@ async function search(ev){
     box.innerHTML=errHtml(e);
   }finally{if(my===tokS)busy(box,false)}
 }
+/* point in time with snapshot evidence (UK validation corpus only) */
+let tokT=0;
+const basisMap={recorded_effect:bi("أثر مسجل","recorded effect"),snapshot_difference:bi("فرق بين لقطتين","snapshot difference")};
+function tlArticles(list,only){
+  const arts=(Array.isArray(list)?list:[]).filter(a=>!only||only.has(a.eid));
+  return arts.slice(0,8).map(a=>`<p><b><bdi dir="ltr">${esc(a.eid)}</bdi></b> <span lang="en" dir="ltr">${esc(a.text)}</span>${srcLine(a.source_url,a.retrieved_at)}</p>`).join("")+
+    (arts.length>8?`<p class="hint">${bi("عرض 8 من","Showing 8 of")} ${esc(arts.length)}</p>`:"");
+}
+async function tl(){
+  const w=$("#tl-work").value,d=$("#tl-date").value,box=$("#tl"),my=++tokT;
+  if(!w){box.innerHTML=emptyHtml("لا توجد قوانين متاحة","No Acts available");return}
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(d)){box.innerHTML=emptyHtml("اختر تاريخًا صالحًا","Choose a valid date");return}
+  busy(box,true);box.innerHTML=`<div class="loading">${LOADING}</div>`;
+  try{
+    const r=await j(`/api/timeline?work=${encodeURIComponent(w)}&date=${encodeURIComponent(d)}`);
+    if(my!==tokT)return;
+    const ev=r.evidence||{},cands=Array.isArray(r.candidates)?r.candidates:[];
+    let h=`<p><b>${certMap[r.certainty]||esc(r.certainty)}</b> ${enNote(r.note)}</p>`;
+    h+=`<div class="hint">${bi("الطريقة","Method")}: ${enNote(ev.method)}`;
+    if(ev.version_basis)h+=`<br>${bi("أساس النسخة","Version basis")}: ${enNote(ev.version_basis)}`;
+    if(Array.isArray(ev.unexplained_changes)&&ev.unexplained_changes.length)
+      h+=`<br>${bi("تغييرات غير مفسّرة في لقطة","Unexplained changes in the snapshot of")} <bdi dir="ltr">${esc(ev.next_snapshot)}</bdi>: `+
+        ev.unexplained_changes.map(c=>`<bdi dir="ltr">${esc(c.kind)} ${esc(c.before||"")}${c.after&&c.after!==c.before?" → "+esc(c.after):""}</bdi>`).join(", ");
+    if(Array.isArray(ev.conflicts)&&ev.conflicts.length)
+      h+=`<br>${bi("أثر مسجل لا تظهره اللقطة","Recorded effect not visible in the snapshot")}: <bdi dir="ltr">${ev.conflicts.map(esc).join(", ")}</bdi>`;
+    h+=`</div>`;
+    if(!cands.length){h+=emptyHtml("غير نافذ في هذا التاريخ","Not in force on this date");box.innerHTML=h;return}
+    const changed=new Set((ev.unexplained_changes||[]).flatMap(c=>[c.before,c.after]).filter(Boolean));
+    h+=cands.map((c,i)=>`<details${i===0?" open":""}><summary>${bi("نسخة محتملة","Candidate")} ${i+1}: ${basisMap[c.basis]||esc(c.basis)} ${enNote(c.label)}</summary>`+
+      (cands.length>1?`<p class="hint">${bi("المواد التي تختلف بين النسختين فقط","Only the sections that differ between the candidates")}</p>`+tlArticles(c.articles,changed):tlArticles(c.articles,null))+
+      `</details>`).join("");
+    box.innerHTML=h;
+  }catch(e){
+    if(my!==tokT)return;
+    box.innerHTML=errHtml(e);
+  }finally{if(my===tokT)busy(box,false)}
+}
+async function tlInit(){
+  $("#tl-label").innerHTML=labelBlock(false,true);
+  try{
+    const r=await j("/api/timeline/works"),ws=Array.isArray(r.works)?r.works:[];
+    $("#tl-work").innerHTML=ws.map(w=>`<option value="${esc(w)}">${esc(w)}</option>`).join("");
+    if(r.example){$("#tl-work").value=r.example.work;$("#tl-date").value=r.example.date}
+    tl();
+  }catch(e){$("#tl").innerHTML=errHtml(e)}
+}
+$("#tl-work").addEventListener("change",tl);
+$("#tl-date").addEventListener("change",tl);
+tlInit();
 $("#sform").addEventListener("submit",search);
 $("#corpus").addEventListener("change",()=>{noteFor();if($("#q").value.trim())search()});
 noteFor();
