@@ -28,3 +28,11 @@ Reversible decisions taken during unattended work, with the reason. Irreversible
     * Hyphenated compounds remain in older files that were not otherwise edited (for example `docs/EXTRACTION_PDF.md`, `docs/PERMISSION_REQUEST.md`); the permission draft is the owner's text to send and was not restyled.
 16. **Older commit messages (found by the final check).** Fifteen commits made before this session (from `46695f7` to `9f194c2`) carry co-author trailers and session links in their messages. Removing them requires rewriting published history, which the standing rules forbid, so they were left unchanged. Only the owner can decide whether a rewrite is worth breaking existing clones and the open pull requests.
 17. **Final independent check (M8).** A separate reviewer verified every measured number in the README and generated documents against `results/`, confirmed all locked hashes, and listed eight wording defects; all eight were corrected in the generated templates or the affected documents.
+
+## 2026-10-23, final push
+
+18. **Snapshot timeline served (supersedes item 12).** `timeline_service.py` serves the M3 method through `/api/timeline` and a page section for the UK validation corpus. `timeline_v2.py` is not edited, because its hash is quoted in `docs/PREDICTIONS_TIMELINE.md`. Alignment is slow, so the steps are computed once offline into `data/uk/timeline_steps.json.gz` (derived from the committed corpus and the recorded effects); a test checks that the served state equals the measured state for all 80 queries in `results/uk_timeline_v2.json`. The synthetic demo keeps the effects based as of view, because it has no snapshots.
+19. **Merging not approved.** The instruction carried `MERGE_APPROVED: no`, so nothing was merged and the deploy branch was not changed. The steps for the owner are in `docs/NEXT_STEPS.md`.
+20. **Tag retry.** `git push origin heldout-lock-1` failed because this clone has no such tag. It was not recreated, for the reason in item 2.
+21. **Concurrent commits.** Another session pushed documentation commits to the branch during this work. The one local, unpublished commit was rebased onto them; no published commit was rewritten and nothing was force pushed.
+
