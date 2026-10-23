@@ -40,7 +40,7 @@ Scope is stated on each line. None of it concerns UAE law.
 * Uncertain with candidates: a change occurred at a date the recorded effects do not give, or an effect conflicts with the snapshots. The page shows the candidate texts and does not choose.
 * Not in force: the provision was not in force on the date asked.
 
-The web page currently uses the effects based method for these states. The snapshot aware method measured above runs offline (`src/taadeel/timeline_v2.py`) and is not yet wired into the page.
+The as of view of the synthetic demo uses the effects based method. For the UK validation corpus, the page section "Point in time with snapshot evidence" (API `/api/timeline`) uses the snapshot aware method measured above and shows the evidence behind each state; it needs periodic snapshots, so it cannot run on UAE law until permitted snapshots exist.
 
 ## Governance and the permission path
 
