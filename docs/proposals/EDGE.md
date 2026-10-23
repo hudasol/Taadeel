@@ -23,7 +23,7 @@ A tool that tracks changes to legislation may be read as authoritative whether o
 Scope is stated on each line. None of it concerns UAE law.
 
 * **Export validity, synthetic and UK exports.** 10 of 10 exported documents validate against the schema, and 3 of 3 deliberately broken negative controls are rejected. This checks structure only, not meaning.
-* **Failure surfaced instead of hidden, UK English.** Where recorded effects omit a change date, the point in time answer is marked uncertain. Of 80 day before queries, the effects only method served the wrong text on 17. The snapshot aware method answered certain and wrong on 3, certain and correct on 56, and uncertain on 21. In 18 of the uncertain answers the true text was among the candidates. This method runs offline and is not yet wired into the web page.
+* **Failure surfaced instead of hidden, UK English.** Where recorded effects omit a change date, the point in time answer is marked uncertain. Of 80 day before queries, the effects only method served the wrong text on 17. The snapshot aware method answered certain and wrong on 3, certain and correct on 56, and uncertain on 21. In 18 of the uncertain answers the true text was among the candidates. The method is served by `/api/timeline` for the UK validation corpus from precomputed steps, so a request runs no alignment and no network call.
 * **Invisible character handling, synthetic Arabic.** A set of 37 invented Arabic strings includes invisible format characters. The locked v1 normaliser passes 25; the v2 pre clean passes 37, by construction because it was written after seeing the cases. It is not yet wired into the parser or the store.
 
 ## Threat model and failure modes

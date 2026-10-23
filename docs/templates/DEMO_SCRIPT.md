@@ -17,7 +17,7 @@ Live site: https://taadeel.onrender.com. The free tier may take up to a minute t
 **2:20 to 2:50, evidence slide.**
 
 * Held out synthetic, v1: {v1_heldout_hits} of {v1_heldout_total} point predictions within tolerance, a calibration count. Alignment v2 on new seeds: {v2_verdict}
-* UK English: {uk_oneday_correct} of {uk_oneday_shared} sections aligned in one day windows (easy cases). Point in time on the day before a change: {uk_pit_prior_correct} of {uk_pit_prior_total} with effects only. With snapshot evidence (measured offline, not yet in the page): {tl_certain_correct} certain and correct, {tl_certain_wrong} certain and wrong, {tl_uncertain} uncertain of {tl_queries}, and the true text was among the candidates in {tl_uncertain_hit} of those.
+* UK English: {uk_oneday_correct} of {uk_oneday_shared} sections aligned in one day windows (easy cases). Point in time on the day before a change: {uk_pit_prior_correct} of {uk_pit_prior_total} with effects only. With snapshot evidence (shown in the page section "Point in time with snapshot evidence" for the UK corpus): {tl_certain_correct} certain and correct, {tl_certain_wrong} certain and wrong, {tl_uncertain} uncertain of {tl_queries}, and the true text was among the candidates in {tl_uncertain_hit} of those.
 * Synthetic Arabic stress set: v1 passes {ar_v1_ok} of {ar_cases}, v2 passes {ar_v2_ok}, by construction.
 
 **2:50 to 3:00, limits.** "Nothing is validated on UAE law or on real Arabic legal text. UK numbers say nothing about UAE law. Schedules are excluded. Hand checks were done by the author, not a lawyer. The held out and timeline evaluations were pre registered and run once. Next: permission, a real Arabic gold set, and a reviewer."
