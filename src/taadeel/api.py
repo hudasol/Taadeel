@@ -106,6 +106,28 @@ def api_as_of(work: str, on: date = Query(..., alias="date"), real: bool = False
                   "candidates": r.candidates, "note": r.note, "articles": arts}, synthetic=exprs[0].synthetic)
 
 
+@app.get("/api/timeline/works")
+def timeline_works() -> dict:
+    from . import timeline_service
+    from .uk_corpus import ATTRIBUTION
+
+    return _wrap({"corpus": "uk-validation", "works": timeline_service.works(), "attribution": ATTRIBUTION,
+                  "note": "Snapshot timeline: English UK legislation used for validation only. It is not UAE law."},
+                 synthetic=False)
+
+
+@app.get("/api/timeline")
+def timeline(work: str, on: date = Query(..., alias="date")) -> dict:
+    """Point in time with snapshot evidence (UK validation corpus only; no UAE snapshots are held)."""
+    from . import timeline_service
+    from .uk_corpus import ATTRIBUTION
+
+    r = timeline_service.query(work, on)
+    if r is None:
+        raise HTTPException(404, "no snapshot timeline for this work (available only for the UK validation corpus)")
+    return _wrap({**r, "corpus": "uk-validation", "attribution": ATTRIBUTION}, synthetic=False)
+
+
 @app.exception_handler(HTTPException)
 async def _http(_, exc: HTTPException):
     return JSONResponse({"error": exc.detail, "disclaimer": DISCLAIMER}, status_code=exc.status_code)
