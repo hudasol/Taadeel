@@ -61,4 +61,4 @@ taadeel baselines                        # baselines against the engine, writes 
 
 ## License
 
-Code: MIT (proposed; owner to confirm). Legislation text remains the property of its publishers.
+Code and documentation: [Apache License 2.0](LICENSE) (see [`NOTICE`](NOTICE)). The UK sample data under `data/uk/` stays under the Open Government Licence v3.0. Legislation text remains the property of its publishers.
