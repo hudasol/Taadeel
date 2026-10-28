@@ -1,0 +1,14 @@
+Taadeel
+Copyright 2026 Huda Mueen
+
+This product includes software developed by Huda Mueen (https://github.com/hudasol/Taadeel).
+
+Third party data shipped in this repository
+-------------------------------------------
+data/uk/ contains section text derived from UK legislation published on legislation.gov.uk.
+Contains public sector information licensed under the Open Government Licence v3.0
+(https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+That data is not covered by the Apache License of this project; it stays under the Open Government Licence.
+It is used to validate the engine and is not UAE law.
+
+No UAE legislation text is included. Legislation text remains the property of its publishers.
