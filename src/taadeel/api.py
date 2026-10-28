@@ -14,8 +14,11 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
 
+from . import __version__
 from .align import align
+from .compare import CompareError, compare_texts
 from .diff import diff
 from .model import Expression
 from .synthetic import make_pair
@@ -24,7 +27,7 @@ from .temporal import Version, as_of
 DISCLAIMER = ("Research and navigation tool, not legal advice. The official Arabic text published by the "
               "competent UAE authority prevails.")
 
-app = FastAPI(title="Taadeel API", version="0.2.0", description=DISCLAIMER)
+app = FastAPI(title="Taadeel API", version=__version__, description=DISCLAIMER)
 from . import search_api  # noqa: E402
 
 app.include_router(search_api.router)
@@ -104,6 +107,22 @@ def api_as_of(work: str, on: date = Query(..., alias="date"), real: bool = False
              "source_url": chosen.source_url, "retrieved_at": chosen.retrieved_at} for p in chosen.articles()] if chosen else []
     return _wrap({"work_id": work, "as_of": on, "version_id": r.version_id, "certainty": r.certainty,
                   "candidates": r.candidates, "note": r.note, "articles": arts}, synthetic=exprs[0].synthetic)
+
+
+class CompareRequest(BaseModel):
+    old: str = Field(..., min_length=1, max_length=2_000_000)
+    new: str = Field(..., min_length=1, max_length=2_000_000)
+    lang: str | None = Field(None, pattern="^(ar|en)$")
+
+
+@app.post("/api/compare")
+def api_compare(req: CompareRequest) -> dict:
+    """Article level diff of two texts supplied by the caller. Nothing is stored or fetched."""
+    try:
+        res = compare_texts(req.old, req.new, req.lang)
+    except CompareError as exc:
+        raise HTTPException(422, str(exc)) from exc
+    return _wrap({"user_supplied": True, **res}, synthetic=False)
 
 
 @app.get("/api/timeline/works")
