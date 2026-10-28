@@ -13,6 +13,9 @@ All notable changes are listed here. Measured results are not repeated in this f
 - Snapshot based timeline for point in time answers, with an explicit uncertain state.
 - Akoma Ntoso compatible export validated against the OASIS schema.
 - Alignment v2 (pre registered; version 1 remains the default).
+- `taadeel` command line (`diff`, `serve`, `baselines`, `report`), `POST /api/compare`, and a page section for comparing two texts the reader supplies, in Arabic or English.
+- Baselines (match by number, greedy text matching, newest snapshot) scored on the same data as the engine: [`docs/BASELINES.md`](docs/BASELINES.md).
+- Limitations and plan: [`docs/ROADMAP.md`](docs/ROADMAP.md). Package metadata, a linter and coverage in CI.
 - Proposal briefs for TII/ATRC, EDGE and ADEO, an evaluation card and a permission request draft in English and Arabic.
 
 ### Changed
@@ -20,6 +23,7 @@ All notable changes are listed here. Measured results are not repeated in this f
 - Container runs as a non root user and is built and health checked in CI.
 
 ### Fixed
+- Arabic search missed a term typed without the definite article.
 - Diff view showed new text in the Before column for articles that kept their identifier.
 - Subsection effects were read as whole section effects in the UK effects reader.
 - Northern Ireland only duplicate sections are dropped from the England and Wales view.

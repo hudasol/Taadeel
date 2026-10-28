@@ -100,6 +100,15 @@ def build() -> tuple[str, str]:
         more.append(f"* Arabic: synthetic stress set only ({F['ar_cases']} cases; locked normaliser {F['ar_v1_ok']} pass). No real UAE Arabic text is validated. [`docs/VALIDATION_ARABIC.md`](docs/VALIDATION_ARABIC.md)")
     if "akn_valid" in F:
         more.append(f"* Akoma Ntoso compatible export: {F['akn_valid']} of {F['akn_total']} samples validate against the OASIS schema (compatible, not compliant). [`docs/AKN_EXPORT.md`](docs/AKN_EXPORT.md)")
+    bp = R / "baselines.json"
+    if bp.exists():
+        b = json.loads(bp.read_text())
+        u = b["uk"]
+        more.append(f"* Baselines (same data, same scoring): matching by section number alone scores {pct(u['by_number']['one_day']['alignment_accuracy'])} on the UK one day windows, "
+                    f"so that result is not evidence for the engine; with renumbering added to real text it scores {pct(u['by_number']['renumbering_variant']['alignment_accuracy'])} "
+                    f"against {pct(u['engine_v1']['renumbering_variant']['alignment_accuracy'])} for engine v1. A text only matcher is as accurate as engine v1 in most synthetic scenarios "
+                    f"but forces matches on repealed articles (repealed recall {pct(b['synthetic']['greedy_text']['templated near-duplicates, small edits']['classes']['repealed']['recall'])} "
+                    f"against {pct(b['synthetic']['engine_v1']['templated near-duplicates, small edits']['classes']['repealed']['recall'])}, templated small edits). [`docs/BASELINES.md`](docs/BASELINES.md)")
     block = "\n".join([START, "", head, "", *more, *([""] if more else []),
                        "Details: [`docs/VALIDATION_UK.md`](docs/VALIDATION_UK.md), [`docs/HELDOUT_RESULTS.md`](docs/HELDOUT_RESULTS.md). "
                        "Real UK numbers validate English UK legislation only. They say nothing about UAE law.", "", END])
