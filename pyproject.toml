@@ -11,6 +11,8 @@ dependencies = []
 
 [project.optional-dependencies]
 api = ["fastapi>=0.110", "uvicorn>=0.29"]
+extract = ["pypdf>=4", "lxml>=5", "fpdf2>=2.8", "arabic-reshaper>=3", "python-bidi>=0.5"]
+store = ["pyarrow>=15"]
 dev = ["pytest>=8", "httpx>=0.27"]
 
 [tool.setuptools.packages.find]

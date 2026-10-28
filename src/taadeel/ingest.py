@@ -39,6 +39,7 @@ class Response:
     status: int
     body: bytes
     headers: dict[str, str]
+    final_url: str = ""
 
 
 Fetcher = Callable[[str, dict[str, str]], Response]
@@ -54,6 +55,7 @@ class Snapshot:
     path: str
     robots_allowed: bool
     user_agent: str
+    final_url: str = ""
 
 
 def load_sources(path: str | Path) -> dict:
@@ -66,10 +68,10 @@ def default_fetcher(url: str, headers: dict[str, str]) -> Response:  # pragma: n
 
     req = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return Response(r.status, r.read(), dict(r.headers))
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return Response(r.status, r.read(), dict(r.headers), r.geturl())
     except urllib.error.HTTPError as e:
-        return Response(e.code, e.read() or b"", dict(e.headers or {}))
+        return Response(e.code, e.read() or b"", dict(e.headers or {}), url)
 
 
 class Ingestor:
@@ -81,6 +83,7 @@ class Ingestor:
         self.fetcher, self.sleep, self.clock = fetcher, sleep, clock
         self._last: dict[str, float] = {}
         self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self._crawl_delay: dict[str, float] = {}
         self.index_path = self.store / "index.jsonl"
 
     # -- gating ---------------------------------------------------------
@@ -93,6 +96,9 @@ class Ingestor:
             raise NotPermitted(f"{host}: mode is {src.get('mode')!r}, not 'permitted' (see docs/DATA_SOURCES.md)")
         if not src.get("permission_evidence"):
             raise NotPermitted(f"{host}: permitted without permission_evidence")
+        for suf in src.get("deny_suffixes", []):
+            if urlparse(url).path.endswith(suf):
+                raise NotPermitted(f"{url}: suffix {suf} is excluded for this source")
         return host, src
 
     def _robots_ok(self, host: str, url: str) -> bool:
@@ -109,6 +115,9 @@ class Ingestor:
             except Exception:
                 rp = None
             self._robots[host] = rp
+            cd = rp.crawl_delay(USER_AGENT) if rp else None
+            if cd:
+                self._crawl_delay[host] = float(cd)
         rp = self._robots[host]
         return bool(rp and rp.can_fetch(USER_AGENT, url))
 
@@ -137,7 +146,7 @@ class Ingestor:
             return prev
         if not self._robots_ok(host, url):
             raise NotPermitted(f"{url}: disallowed or unreadable robots.txt")
-        self._wait(host, float(src.get("min_delay_seconds", 10)))
+        self._wait(host, max(float(src.get("min_delay_seconds", 10)), self._crawl_delay.get(host, 0.0)))
         r = self.fetcher(url, {"User-Agent": USER_AGENT, "Accept-Language": "ar,en;q=0.5"})
         now = datetime.now(timezone.utc).isoformat(timespec="seconds")
         digest = hashlib.sha256(r.body).hexdigest()
@@ -147,7 +156,8 @@ class Ingestor:
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_bytes(r.body)
             path = str(p)
-        snap = Snapshot(url, now, r.status, digest, r.headers.get("Content-Type", ""), path, True, USER_AGENT)
+        snap = Snapshot(url, now, r.status, digest, r.headers.get("Content-Type", ""), path, True, USER_AGENT,
+                        r.final_url or url)
         with open(self.index_path, "a", encoding="utf-8") as f:
             f.write(json.dumps(asdict(snap), ensure_ascii=False) + "\n")
         if r.status in (403, 429, 503):

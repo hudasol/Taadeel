@@ -2,7 +2,7 @@
 
 Each round is a structured self-critique from a named perspective. These were performed by the author-agent, not by the named organisations; they reflect what such a reviewer would plausibly flag, not any real review.
 
-## Round 1 — ADEO engineer (policy-team usability, clarity, sovereignty)
+## Round 1: ADEO engineer (policy-team usability, clarity, sovereignty)
 
 **Critique**
 * A policy analyst cannot find a law: there is no search (M8 requires it).
@@ -14,7 +14,7 @@ Each round is a structured self-critique from a named perspective. These were pe
 **Fixed**: every provision in the API and UI carries source URL and retrieval date; synthetic/real separation is explicit in UI.
 **Deliberately not fixed**: search and full article list (need real data to be meaningful; tracked in NEXT_STEPS). Hosting region left to owner because sovereignty requirements depend on the deployment target; stated as a manual step.
 
-## Round 2 — EDGE engineer (robustness, deployability)
+## Round 2: EDGE engineer (robustness, deployability)
 
 **Critique**
 * No Dockerfile or health check.
@@ -26,7 +26,7 @@ Each round is a structured self-critique from a named perspective. These were pe
 **Fixed**: `Dockerfile`, `render.yaml`, `/api/health`.
 **Deliberately not fixed**: alignment performance (no real-size benchmark yet; premature to optimise; candidate-pruning via n-gram index noted in NEXT_STEPS). Transient-error backoff left out because ingestion is disabled for all real hosts.
 
-## Round 3 — TII engineer (Arabic NLP rigor, validation depth, reproducibility)
+## Round 3: TII engineer (Arabic NLP rigor, validation depth, reproducibility)
 
 **Critique**
 * Normalization folded ئ→ي by default, which merges distinct words (e.g. شاطئ/شاطي) and can create false alignment.
@@ -40,7 +40,7 @@ Each round is a structured self-critique from a named perspective. These were pe
 **Fixed**: hamza-on-yaa fold is now opt-in with a test; harder templated scenarios added; tuning disclosed in `VALIDATION.md`.
 **Deliberately not fixed**: amendment-by-reference parser and HTML/PDF extraction. Both need real amending-instrument text to develop honestly; writing patterns from memory would risk encoding invented drafting conventions. Listed first in NEXT_STEPS.
 
-## Round 4 — ATRC engineer (claims versus evidence)
+## Round 4: ATRC engineer (claims versus evidence)
 
 **Critique**
 * The README opened with a present-tense claim that Taadeel "produces" diffs and timelines, while only synthetic data exists.
@@ -52,7 +52,7 @@ Each round is a structured self-critique from a named perspective. These were pe
 **Fixed**: README now states goal vs current state; `VALIDATION.md` leads with the synthetic-only warning.
 **Deliberately not fixed**: no real-data accuracy figure is given because none exists; that is the correct state, not a gap to paper over.
 
-## Round 5 — Final senior pass (security, secrets, dependencies, coverage, README accuracy)
+## Round 5: Final senior pass (security, secrets, dependencies, coverage, README accuracy)
 
 **Critique**
 * No secrets in the repo (checked by inspection; `.env` is gitignored). A repository secret scan was not run because GitHub access is read-only.

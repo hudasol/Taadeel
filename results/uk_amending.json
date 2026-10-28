@@ -1,0 +1,51 @@
+{
+ "scope": "English UK Acts, OGL v3.0; not UAE law",
+ "fetched": 48,
+ "readable": 48,
+ "instruction_bearing": 20,
+ "split_rule": "sha1(url) parity: even=dev, odd=test",
+ "dev": {
+  "original_patterns": {
+   "sections": 9,
+   "sections_with_parsed_instruction": 1,
+   "recorded_effects": 27,
+   "effects_found": 0,
+   "recall": 0.0,
+   "parsed_instructions": 1,
+   "instructions_matching_a_recorded_effect": 0,
+   "precision_lower_bound": 0.0
+  },
+  "extended_patterns": {
+   "sections": 9,
+   "sections_with_parsed_instruction": 7,
+   "recorded_effects": 27,
+   "effects_found": 19,
+   "recall": 0.7037,
+   "parsed_instructions": 12,
+   "instructions_matching_a_recorded_effect": 11,
+   "precision_lower_bound": 0.9167
+  }
+ },
+ "test": {
+  "original_patterns": {
+   "sections": 11,
+   "sections_with_parsed_instruction": 2,
+   "recorded_effects": 35,
+   "effects_found": 6,
+   "recall": 0.1714,
+   "parsed_instructions": 2,
+   "instructions_matching_a_recorded_effect": 2,
+   "precision_lower_bound": 1.0
+  },
+  "extended_patterns": {
+   "sections": 11,
+   "sections_with_parsed_instruction": 4,
+   "recorded_effects": 35,
+   "effects_found": 18,
+   "recall": 0.5143,
+   "parsed_instructions": 14,
+   "instructions_matching_a_recorded_effect": 13,
+   "precision_lower_bound": 0.9286
+  }
+ }
+}

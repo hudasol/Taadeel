@@ -1,0 +1,615 @@
+{
+  "data": "SYNTHETIC held-out seeds (locked before run)",
+  "directional": {
+    "D1": {
+      "detail": "min=0.000",
+      "ok": false
+    },
+    "D2": {
+      "detail": [
+        1.0,
+        0.974,
+        0.963,
+        0.908,
+        0.892
+      ],
+      "ok": true
+    },
+    "D3": {
+      "detail": {
+        "easy (random text, small edits)": 0.0,
+        "templated near-duplicates, small edits": 0.0,
+        "templated, 40% of words edited": 0.0,
+        "templated, 70% of words edited": 0.003,
+        "templated, many inserts/repeals": 0.0
+      },
+      "ok": true
+    },
+    "D4": {
+      "detail": {
+        "templated near-duplicates, small edits": 0.71,
+        "templated, 40% of words edited": 0.723,
+        "templated, 70% of words edited": 0.703,
+        "templated, many inserts/repeals": 0.379
+      },
+      "ok": true
+    },
+    "D5": {
+      "detail": 0.381,
+      "ok": true
+    },
+    "D6": {
+      "detail": "held mean=0.947 dev mean=0.948",
+      "ok": true
+    }
+  },
+  "engine_sha256": {
+    "align.py": "10a35fd51c6c72192c9e8b6b6b43d7f1f17f45824794010a6eb0de297a48c7f3",
+    "diff.py": "ce0a662f1591a095dc405d2427658941f050840167f0372117d0a497916bfaaf",
+    "model.py": "1c21b4907e6e9baa83e0909a2b8faae465d93e016dc6ff7c82dd882d819fa993",
+    "normalize.py": "894d063a8a95869a173b8197968bc10f136bfd6a9e2f79c9df64befae89ed0d0",
+    "parse.py": "1862e5fafd57ebf6fd22c3ef41804157c2ab465dd8a44df047437393819e4584",
+    "synthetic.py": "b0ba489af7ff21399d8abe6b0c6e382dec361dbf402b9306924fac937fa61b12",
+    "temporal.py": "c3c42bf612a728689d4b6430db457e6c2f4c1af5536b5e659414440aaac1af16"
+  },
+  "hits": 55,
+  "results": {
+    "easy (random text, small edits)": {
+      "alignment_accuracy": 1.0,
+      "data": "SYNTHETIC (engine correctness only, not real-world accuracy)",
+      "documents": 100,
+      "forced_matches_on_repealed": 0,
+      "forced_matches_on_repealed_incl_low": 0,
+      "low_confidence_pair_share": 0.0,
+      "per_class": {
+        "clarified": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 73
+        },
+        "inserted": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 300
+        },
+        "renumbered": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 2129
+        },
+        "repealed": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 300
+        },
+        "replaced": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 500
+        }
+      },
+      "repealed_total": 300
+    },
+    "templated near-duplicates, small edits": {
+      "alignment_accuracy": 0.9740540540540541,
+      "data": "SYNTHETIC (engine correctness only, not real-world accuracy)",
+      "documents": 100,
+      "forced_matches_on_repealed": 0,
+      "forced_matches_on_repealed_incl_low": 87,
+      "low_confidence_pair_share": 0.08265117507261685,
+      "per_class": {
+        "clarified": {
+          "precision": 1.0,
+          "recall": 0.9855072463768116,
+          "support": 69
+        },
+        "inserted": {
+          "precision": 0.9859154929577465,
+          "recall": 0.7,
+          "support": 300
+        },
+        "renumbered": {
+          "precision": 1.0,
+          "recall": 0.971912832929782,
+          "support": 2065
+        },
+        "repealed": {
+          "precision": 1.0,
+          "recall": 0.71,
+          "support": 300
+        },
+        "replaced": {
+          "precision": 0.7252252252252253,
+          "recall": 0.966,
+          "support": 500
+        }
+      },
+      "repealed_total": 300
+    },
+    "templated, 40% of words edited": {
+      "alignment_accuracy": 0.962972972972973,
+      "data": "SYNTHETIC (engine correctness only, not real-world accuracy)",
+      "documents": 100,
+      "forced_matches_on_repealed": 0,
+      "forced_matches_on_repealed_incl_low": 83,
+      "low_confidence_pair_share": 0.17340734866508062,
+      "per_class": {
+        "clarified": {
+          "precision": 1.0,
+          "recall": 0.9855072463768116,
+          "support": 69
+        },
+        "inserted": {
+          "precision": 0.7511520737327189,
+          "recall": 0.5433333333333333,
+          "support": 300
+        },
+        "renumbered": {
+          "precision": 1.0,
+          "recall": 0.9743341404358353,
+          "support": 2065
+        },
+        "repealed": {
+          "precision": 1.0,
+          "recall": 0.7233333333333334,
+          "support": 300
+        },
+        "replaced": {
+          "precision": 0.6646341463414634,
+          "recall": 0.872,
+          "support": 500
+        }
+      },
+      "repealed_total": 300
+    },
+    "templated, 70% of words edited": {
+      "alignment_accuracy": 0.9083783783783784,
+      "data": "SYNTHETIC (engine correctness only, not real-world accuracy)",
+      "documents": 100,
+      "forced_matches_on_repealed": 1,
+      "forced_matches_on_repealed_incl_low": 89,
+      "low_confidence_pair_share": 0.1655359565807327,
+      "per_class": {
+        "clarified": {
+          "precision": 1.0,
+          "recall": 0.9855072463768116,
+          "support": 69
+        },
+        "inserted": {
+          "precision": 0.38095238095238093,
+          "recall": 0.4,
+          "support": 300
+        },
+        "renumbered": {
+          "precision": 1.0,
+          "recall": 0.9472154963680387,
+          "support": 2065
+        },
+        "repealed": {
+          "precision": 0.6698412698412698,
+          "recall": 0.7033333333333334,
+          "support": 300
+        },
+        "replaced": {
+          "precision": 0.469721767594108,
+          "recall": 0.574,
+          "support": 500
+        }
+      },
+      "repealed_total": 300
+    },
+    "templated, many inserts/repeals": {
+      "alignment_accuracy": 0.8915625,
+      "data": "SYNTHETIC (engine correctness only, not real-world accuracy)",
+      "documents": 100,
+      "forced_matches_on_repealed": 0,
+      "forced_matches_on_repealed_incl_low": 497,
+      "low_confidence_pair_share": 0.2893524790029802,
+      "per_class": {
+        "clarified": {
+          "precision": 1.0,
+          "recall": 0.9090909090909091,
+          "support": 22
+        },
+        "inserted": {
+          "precision": 0.9741100323624595,
+          "recall": 0.37625,
+          "support": 800
+        },
+        "renumbered": {
+          "precision": 1.0,
+          "recall": 0.8880037488284911,
+          "support": 2134
+        },
+        "repealed": {
+          "precision": 0.9805825242718447,
+          "recall": 0.37875,
+          "support": 800
+        },
+        "replaced": {
+          "precision": 0.4565499351491569,
+          "recall": 0.88,
+          "support": 800
+        }
+      },
+      "repealed_total": 800
+    }
+  },
+  "score": {
+    "easy (random text, small edits)": {
+      "align_acc": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "clarified.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "clarified.R": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "forced_rate": {
+        "actual": 0.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 0.0
+      },
+      "inserted.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "inserted.R": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "renumbered.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "renumbered.R": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "repealed.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "repealed.R": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "replaced.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "replaced.R": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      }
+    },
+    "templated near-duplicates, small edits": {
+      "align_acc": {
+        "actual": 0.9740540540540541,
+        "delta": -0.007027027027026955,
+        "hit": true,
+        "pred": 0.981081081081081
+      },
+      "clarified.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "clarified.R": {
+        "actual": 0.9855072463768116,
+        "delta": -0.01449275362318836,
+        "hit": true,
+        "pred": 1.0
+      },
+      "forced_rate": {
+        "actual": 0.0,
+        "delta": -0.011111111111111112,
+        "hit": true,
+        "pred": 0.011111111111111112
+      },
+      "inserted.P": {
+        "actual": 0.9859154929577465,
+        "delta": -0.014084507042253502,
+        "hit": true,
+        "pred": 1.0
+      },
+      "inserted.R": {
+        "actual": 0.7,
+        "delta": 0.011111111111111072,
+        "hit": true,
+        "pred": 0.6888888888888889
+      },
+      "renumbered.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "renumbered.R": {
+        "actual": 0.971912832929782,
+        "delta": -0.008449704834568417,
+        "hit": true,
+        "pred": 0.9803625377643505
+      },
+      "repealed.P": {
+        "actual": 1.0,
+        "delta": 0.032258064516129004,
+        "hit": true,
+        "pred": 0.967741935483871
+      },
+      "repealed.R": {
+        "actual": 0.71,
+        "delta": 0.043333333333333335,
+        "hit": true,
+        "pred": 0.6666666666666666
+      },
+      "replaced.P": {
+        "actual": 0.7252252252252253,
+        "delta": -0.0260438103077697,
+        "hit": true,
+        "pred": 0.751269035532995
+      },
+      "replaced.R": {
+        "actual": 0.966,
+        "delta": -0.020666666666666722,
+        "hit": true,
+        "pred": 0.9866666666666667
+      }
+    },
+    "templated, 40% of words edited": {
+      "align_acc": {
+        "actual": 0.962972972972973,
+        "delta": -9.009009009008917e-05,
+        "hit": true,
+        "pred": 0.9630630630630631
+      },
+      "clarified.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "clarified.R": {
+        "actual": 0.9855072463768116,
+        "delta": -0.01449275362318836,
+        "hit": true,
+        "pred": 1.0
+      },
+      "forced_rate": {
+        "actual": 0.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 0.0
+      },
+      "inserted.P": {
+        "actual": 0.7511520737327189,
+        "delta": 0.029840598322882772,
+        "hit": true,
+        "pred": 0.7213114754098361
+      },
+      "inserted.R": {
+        "actual": 0.5433333333333333,
+        "delta": 0.05444444444444446,
+        "hit": false,
+        "pred": 0.4888888888888889
+      },
+      "renumbered.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "renumbered.R": {
+        "actual": 0.9743341404358353,
+        "delta": -0.0030072492922613714,
+        "hit": true,
+        "pred": 0.9773413897280967
+      },
+      "repealed.P": {
+        "actual": 1.0,
+        "delta": 0.032786885245901676,
+        "hit": true,
+        "pred": 0.9672131147540983
+      },
+      "repealed.R": {
+        "actual": 0.7233333333333334,
+        "delta": 0.06777777777777783,
+        "hit": false,
+        "pred": 0.6555555555555556
+      },
+      "replaced.P": {
+        "actual": 0.6646341463414634,
+        "delta": 0.014634146341463428,
+        "hit": true,
+        "pred": 0.65
+      },
+      "replaced.R": {
+        "actual": 0.872,
+        "delta": 0.005333333333333301,
+        "hit": true,
+        "pred": 0.8666666666666667
+      }
+    },
+    "templated, 70% of words edited": {
+      "align_acc": {
+        "actual": 0.9083783783783784,
+        "delta": -0.009639639639639541,
+        "hit": true,
+        "pred": 0.918018018018018
+      },
+      "clarified.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "clarified.R": {
+        "actual": 0.9855072463768116,
+        "delta": -0.01449275362318836,
+        "hit": true,
+        "pred": 1.0
+      },
+      "forced_rate": {
+        "actual": 0.0033333333333333335,
+        "delta": 0.0033333333333333335,
+        "hit": true,
+        "pred": 0.0
+      },
+      "inserted.P": {
+        "actual": 0.38095238095238093,
+        "delta": -0.035714285714285754,
+        "hit": true,
+        "pred": 0.4166666666666667
+      },
+      "inserted.R": {
+        "actual": 0.4,
+        "delta": -0.0444444444444444,
+        "hit": true,
+        "pred": 0.4444444444444444
+      },
+      "renumbered.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "renumbered.R": {
+        "actual": 0.9472154963680387,
+        "delta": -0.0135095791606622,
+        "hit": true,
+        "pred": 0.9607250755287009
+      },
+      "repealed.P": {
+        "actual": 0.6698412698412698,
+        "delta": 0.06567460317460316,
+        "hit": false,
+        "pred": 0.6041666666666666
+      },
+      "repealed.R": {
+        "actual": 0.7033333333333334,
+        "delta": 0.05888888888888888,
+        "hit": false,
+        "pred": 0.6444444444444445
+      },
+      "replaced.P": {
+        "actual": 0.469721767594108,
+        "delta": -0.04177248527945521,
+        "hit": true,
+        "pred": 0.5114942528735632
+      },
+      "replaced.R": {
+        "actual": 0.574,
+        "delta": -0.019333333333333425,
+        "hit": true,
+        "pred": 0.5933333333333334
+      }
+    },
+    "templated, many inserts/repeals": {
+      "align_acc": {
+        "actual": 0.8915625,
+        "delta": 0.01447916666666671,
+        "hit": true,
+        "pred": 0.8770833333333333
+      },
+      "clarified.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "clarified.R": {
+        "actual": 0.9090909090909091,
+        "delta": -0.09090909090909094,
+        "hit": false,
+        "pred": 1.0
+      },
+      "forced_rate": {
+        "actual": 0.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 0.0
+      },
+      "inserted.P": {
+        "actual": 0.9741100323624595,
+        "delta": -0.02588996763754048,
+        "hit": true,
+        "pred": 1.0
+      },
+      "inserted.R": {
+        "actual": 0.37625,
+        "delta": -0.0029166666666666785,
+        "hit": true,
+        "pred": 0.37916666666666665
+      },
+      "renumbered.P": {
+        "actual": 1.0,
+        "delta": 0.0,
+        "hit": true,
+        "pred": 1.0
+      },
+      "renumbered.R": {
+        "actual": 0.8880037488284911,
+        "delta": 0.027609211650949317,
+        "hit": true,
+        "pred": 0.8603945371775418
+      },
+      "repealed.P": {
+        "actual": 0.9805825242718447,
+        "delta": -0.008428464739144381,
+        "hit": true,
+        "pred": 0.989010989010989
+      },
+      "repealed.R": {
+        "actual": 0.37875,
+        "delta": 0.0037499999999999756,
+        "hit": true,
+        "pred": 0.375
+      },
+      "replaced.P": {
+        "actual": 0.4565499351491569,
+        "delta": 0.010491843862849848,
+        "hit": true,
+        "pred": 0.4460580912863071
+      },
+      "replaced.R": {
+        "actual": 0.88,
+        "delta": -0.015833333333333366,
+        "hit": true,
+        "pred": 0.8958333333333334
+      }
+    }
+  },
+  "seeds": [
+    910000,
+    910100
+  ],
+  "total": 60
+}

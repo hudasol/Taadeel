@@ -1,0 +1,118 @@
+{
+  "directional": {
+    "D1": "easy scenario: every defined precision/recall/alignment metric >= 0.999",
+    "D2": "alignment accuracy is non-increasing across the five scenarios in listed order",
+    "D3": "high-confidence forced matches on repealed articles are <= 3% of repealed articles in every scenario",
+    "D4": "repealed recall < 0.75 in every templated scenario",
+    "D5": "inserted precision < 0.50 in the 70%-edited scenario",
+    "D6": "mean alignment accuracy over the five scenarios is not higher than the dev mean + 0.01"
+  },
+  "engine_sha256": {
+    "align.py": "10a35fd51c6c72192c9e8b6b6b43d7f1f17f45824794010a6eb0de297a48c7f3",
+    "diff.py": "ce0a662f1591a095dc405d2427658941f050840167f0372117d0a497916bfaaf",
+    "model.py": "1c21b4907e6e9baa83e0909a2b8faae465d93e016dc6ff7c82dd882d819fa993",
+    "normalize.py": "894d063a8a95869a173b8197968bc10f136bfd6a9e2f79c9df64befae89ed0d0",
+    "parse.py": "1862e5fafd57ebf6fd22c3ef41804157c2ab465dd8a44df047437393819e4584",
+    "synthetic.py": "b0ba489af7ff21399d8abe6b0c6e382dec361dbf402b9306924fac937fa61b12",
+    "temporal.py": "c3c42bf612a728689d4b6430db457e6c2f4c1af5536b5e659414440aaac1af16"
+  },
+  "heldout_seeds": [
+    910000,
+    910100
+  ],
+  "note": "Synthetic data only. Written before any held-out seed was run.",
+  "predictions": {
+    "easy (random text, small edits)": {
+      "align_acc": 1.0,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 1.0,
+      "inserted.R": 1.0,
+      "renumbered.P": 1.0,
+      "renumbered.R": 1.0,
+      "repealed.P": 1.0,
+      "repealed.R": 1.0,
+      "replaced.P": 1.0,
+      "replaced.R": 1.0
+    },
+    "templated near-duplicates, small edits": {
+      "align_acc": 0.981081081081081,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.011111111111111112,
+      "inserted.P": 1.0,
+      "inserted.R": 0.6888888888888889,
+      "renumbered.P": 1.0,
+      "renumbered.R": 0.9803625377643505,
+      "repealed.P": 0.967741935483871,
+      "repealed.R": 0.6666666666666666,
+      "replaced.P": 0.751269035532995,
+      "replaced.R": 0.9866666666666667
+    },
+    "templated, 40% of words edited": {
+      "align_acc": 0.9630630630630631,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 0.7213114754098361,
+      "inserted.R": 0.4888888888888889,
+      "renumbered.P": 1.0,
+      "renumbered.R": 0.9773413897280967,
+      "repealed.P": 0.9672131147540983,
+      "repealed.R": 0.6555555555555556,
+      "replaced.P": 0.65,
+      "replaced.R": 0.8666666666666667
+    },
+    "templated, 70% of words edited": {
+      "align_acc": 0.918018018018018,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 0.4166666666666667,
+      "inserted.R": 0.4444444444444444,
+      "renumbered.P": 1.0,
+      "renumbered.R": 0.9607250755287009,
+      "repealed.P": 0.6041666666666666,
+      "repealed.R": 0.6444444444444445,
+      "replaced.P": 0.5114942528735632,
+      "replaced.R": 0.5933333333333334
+    },
+    "templated, many inserts/repeals": {
+      "align_acc": 0.8770833333333333,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 1.0,
+      "inserted.R": 0.37916666666666665,
+      "renumbered.P": 1.0,
+      "renumbered.R": 0.8603945371775418,
+      "repealed.P": 0.989010989010989,
+      "repealed.R": 0.375,
+      "replaced.P": 0.4460580912863071,
+      "replaced.R": 0.8958333333333334
+    }
+  },
+  "protocol": "Point prediction = dev (seeds 0-29) value; hit iff |actual - predicted| <= tolerance. A None prediction is a hit only if the actual is also None.",
+  "scenarios": {
+    "easy (random text, small edits)": {},
+    "templated near-duplicates, small edits": {
+      "templated": true
+    },
+    "templated, 40% of words edited": {
+      "edit_frac": 0.4,
+      "templated": true
+    },
+    "templated, 70% of words edited": {
+      "edit_frac": 0.7,
+      "templated": true
+    },
+    "templated, many inserts/repeals": {
+      "n_insert": 8,
+      "n_repeal": 8,
+      "n_replace": 8,
+      "templated": true
+    }
+  },
+  "tolerance": 0.05
+}
