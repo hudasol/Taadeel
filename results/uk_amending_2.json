@@ -1,0 +1,310 @@
+{
+ "scope": "English UK Acts, OGL v3.0; not UAE law",
+ "amend_en_sha256": "5134d21f7fbf1cbb68cce4c9fae1737016c864cea828f783ec185ab45fcaf052",
+ "split_rule": "sha1(url) parity: even=dev, odd=test",
+ "sections": {
+  "candidates_total": 11,
+  "fetched": 11,
+  "readable": 11,
+  "instruction_bearing": 2,
+  "dev": {
+   "extended_patterns": {
+    "sections": 1,
+    "sections_with_parsed_instruction": 0,
+    "recorded_effects": 2,
+    "effects_found": 0,
+    "recall": 0.0,
+    "parsed_instructions": 0,
+    "instructions_matching_a_recorded_effect": 0,
+    "precision_lower_bound": null
+   },
+   "original_patterns": {
+    "sections": 1,
+    "sections_with_parsed_instruction": 0,
+    "recorded_effects": 2,
+    "effects_found": 0,
+    "recall": 0.0,
+    "parsed_instructions": 0,
+    "instructions_matching_a_recorded_effect": 0,
+    "precision_lower_bound": null
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 1,
+    "sections_with_parsed_instruction": 0,
+    "recorded_effects": 0,
+    "effects_found": 0,
+    "recall": null,
+    "parsed_instructions": 0,
+    "instructions_matching_a_recorded_effect": 0,
+    "precision_lower_bound": null
+   }
+  },
+  "test": {
+   "extended_patterns": {
+    "sections": 1,
+    "sections_with_parsed_instruction": 1,
+    "recorded_effects": 6,
+    "effects_found": 6,
+    "recall": 1.0,
+    "parsed_instructions": 2,
+    "instructions_matching_a_recorded_effect": 2,
+    "precision_lower_bound": 1.0
+   },
+   "original_patterns": {
+    "sections": 1,
+    "sections_with_parsed_instruction": 0,
+    "recorded_effects": 6,
+    "effects_found": 0,
+    "recall": 0.0,
+    "parsed_instructions": 0,
+    "instructions_matching_a_recorded_effect": 0,
+    "precision_lower_bound": null
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 1,
+    "sections_with_parsed_instruction": 1,
+    "recorded_effects": 6,
+    "effects_found": 6,
+    "recall": 1.0,
+    "parsed_instructions": 2,
+    "instructions_matching_a_recorded_effect": 2,
+    "precision_lower_bound": 1.0
+   }
+  },
+  "all": {
+   "extended_patterns": {
+    "sections": 2,
+    "sections_with_parsed_instruction": 1,
+    "recorded_effects": 8,
+    "effects_found": 6,
+    "recall": 0.75,
+    "parsed_instructions": 2,
+    "instructions_matching_a_recorded_effect": 2,
+    "precision_lower_bound": 1.0
+   },
+   "original_patterns": {
+    "sections": 2,
+    "sections_with_parsed_instruction": 0,
+    "recorded_effects": 8,
+    "effects_found": 0,
+    "recall": 0.0,
+    "parsed_instructions": 0,
+    "instructions_matching_a_recorded_effect": 0,
+    "precision_lower_bound": null
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 2,
+    "sections_with_parsed_instruction": 1,
+    "recorded_effects": 6,
+    "effects_found": 6,
+    "recall": 1.0,
+    "parsed_instructions": 2,
+    "instructions_matching_a_recorded_effect": 2,
+    "precision_lower_bound": 1.0
+   }
+  }
+ },
+ "schedule_paragraphs": {
+  "candidates_total": 99,
+  "fetched": 99,
+  "readable": 99,
+  "instruction_bearing": 93,
+  "dev": {
+   "extended_patterns": {
+    "sections": 46,
+    "sections_with_parsed_instruction": 22,
+    "recorded_effects": 101,
+    "effects_found": 32,
+    "recall": 0.3168,
+    "parsed_instructions": 24,
+    "instructions_matching_a_recorded_effect": 22,
+    "precision_lower_bound": 0.9167
+   },
+   "original_patterns": {
+    "sections": 46,
+    "sections_with_parsed_instruction": 1,
+    "recorded_effects": 101,
+    "effects_found": 1,
+    "recall": 0.0099,
+    "parsed_instructions": 1,
+    "instructions_matching_a_recorded_effect": 1,
+    "precision_lower_bound": 1.0
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 46,
+    "sections_with_parsed_instruction": 22,
+    "recorded_effects": 101,
+    "effects_found": 32,
+    "recall": 0.3168,
+    "parsed_instructions": 24,
+    "instructions_matching_a_recorded_effect": 22,
+    "precision_lower_bound": 0.9167
+   }
+  },
+  "test": {
+   "extended_patterns": {
+    "sections": 47,
+    "sections_with_parsed_instruction": 32,
+    "recorded_effects": 89,
+    "effects_found": 43,
+    "recall": 0.4831,
+    "parsed_instructions": 38,
+    "instructions_matching_a_recorded_effect": 32,
+    "precision_lower_bound": 0.8421
+   },
+   "original_patterns": {
+    "sections": 47,
+    "sections_with_parsed_instruction": 4,
+    "recorded_effects": 89,
+    "effects_found": 4,
+    "recall": 0.0449,
+    "parsed_instructions": 4,
+    "instructions_matching_a_recorded_effect": 4,
+    "precision_lower_bound": 1.0
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 47,
+    "sections_with_parsed_instruction": 32,
+    "recorded_effects": 89,
+    "effects_found": 43,
+    "recall": 0.4831,
+    "parsed_instructions": 38,
+    "instructions_matching_a_recorded_effect": 32,
+    "precision_lower_bound": 0.8421
+   }
+  },
+  "all": {
+   "extended_patterns": {
+    "sections": 93,
+    "sections_with_parsed_instruction": 54,
+    "recorded_effects": 190,
+    "effects_found": 75,
+    "recall": 0.3947,
+    "parsed_instructions": 62,
+    "instructions_matching_a_recorded_effect": 54,
+    "precision_lower_bound": 0.871
+   },
+   "original_patterns": {
+    "sections": 93,
+    "sections_with_parsed_instruction": 5,
+    "recorded_effects": 190,
+    "effects_found": 5,
+    "recall": 0.0263,
+    "parsed_instructions": 5,
+    "instructions_matching_a_recorded_effect": 5,
+    "precision_lower_bound": 1.0
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 93,
+    "sections_with_parsed_instruction": 54,
+    "recorded_effects": 190,
+    "effects_found": 75,
+    "recall": 0.3947,
+    "parsed_instructions": 62,
+    "instructions_matching_a_recorded_effect": 54,
+    "precision_lower_bound": 0.871
+   }
+  }
+ },
+ "combined": {
+  "fetched": 110,
+  "readable": 110,
+  "instruction_bearing": 95,
+  "dev": {
+   "extended_patterns": {
+    "sections": 47,
+    "sections_with_parsed_instruction": 22,
+    "recorded_effects": 103,
+    "effects_found": 32,
+    "recall": 0.3107,
+    "parsed_instructions": 24,
+    "instructions_matching_a_recorded_effect": 22,
+    "precision_lower_bound": 0.9167
+   },
+   "original_patterns": {
+    "sections": 47,
+    "sections_with_parsed_instruction": 1,
+    "recorded_effects": 103,
+    "effects_found": 1,
+    "recall": 0.0097,
+    "parsed_instructions": 1,
+    "instructions_matching_a_recorded_effect": 1,
+    "precision_lower_bound": 1.0
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 47,
+    "sections_with_parsed_instruction": 22,
+    "recorded_effects": 101,
+    "effects_found": 32,
+    "recall": 0.3168,
+    "parsed_instructions": 24,
+    "instructions_matching_a_recorded_effect": 22,
+    "precision_lower_bound": 0.9167
+   }
+  },
+  "test": {
+   "extended_patterns": {
+    "sections": 48,
+    "sections_with_parsed_instruction": 33,
+    "recorded_effects": 95,
+    "effects_found": 49,
+    "recall": 0.5158,
+    "parsed_instructions": 40,
+    "instructions_matching_a_recorded_effect": 34,
+    "precision_lower_bound": 0.85
+   },
+   "original_patterns": {
+    "sections": 48,
+    "sections_with_parsed_instruction": 4,
+    "recorded_effects": 95,
+    "effects_found": 4,
+    "recall": 0.0421,
+    "parsed_instructions": 4,
+    "instructions_matching_a_recorded_effect": 4,
+    "precision_lower_bound": 1.0
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 48,
+    "sections_with_parsed_instruction": 33,
+    "recorded_effects": 95,
+    "effects_found": 49,
+    "recall": 0.5158,
+    "parsed_instructions": 40,
+    "instructions_matching_a_recorded_effect": 34,
+    "precision_lower_bound": 0.85
+   }
+  },
+  "all": {
+   "extended_patterns": {
+    "sections": 95,
+    "sections_with_parsed_instruction": 55,
+    "recorded_effects": 198,
+    "effects_found": 81,
+    "recall": 0.4091,
+    "parsed_instructions": 64,
+    "instructions_matching_a_recorded_effect": 56,
+    "precision_lower_bound": 0.875
+   },
+   "original_patterns": {
+    "sections": 95,
+    "sections_with_parsed_instruction": 5,
+    "recorded_effects": 198,
+    "effects_found": 5,
+    "recall": 0.0253,
+    "parsed_instructions": 5,
+    "instructions_matching_a_recorded_effect": 5,
+    "precision_lower_bound": 1.0
+   },
+   "extended_patterns_direct_effects_only": {
+    "sections": 95,
+    "sections_with_parsed_instruction": 55,
+    "recorded_effects": 196,
+    "effects_found": 81,
+    "recall": 0.4133,
+    "parsed_instructions": 64,
+    "instructions_matching_a_recorded_effect": 56,
+    "precision_lower_bound": 0.875
+   }
+  }
+ }
+}

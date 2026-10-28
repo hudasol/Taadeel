@@ -1,0 +1,6 @@
+# Keep LF in the working tree on every OS so the sha256 locks on engine files
+# (results/heldout_synthetic.json, results/predictions.json) reproduce on Windows too.
+* text=auto eol=lf
+*.gz binary
+*.png binary
+*.pdf binary

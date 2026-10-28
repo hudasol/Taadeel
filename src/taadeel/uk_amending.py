@@ -9,8 +9,6 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-import sys
-from pathlib import Path
 
 from . import clml
 from .uk_fetch import ROOT, fetch, make_ingestor, url_current
@@ -32,7 +30,6 @@ def candidates() -> list[dict]:
                 continue
             if not re.search(r"\(c\. \d+\)", e.raw) or " Sch." in e.raw.split(" by ", 1)[-1].split(";")[0] and False:
                 continue
-            m = re.search(r"\(c\. (\d+)\)", e.raw)
             # Public General Acts of the UK only: title ends with Act YYYY and chapter is Arabic numeral
             if not (e.affecting_title or "").endswith(f"Act {e.affecting_year}"):
                 continue

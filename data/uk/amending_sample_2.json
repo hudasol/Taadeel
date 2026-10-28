@@ -1,0 +1,794 @@
+{
+ "candidates_total": 11,
+ "n_new": 150,
+ "rows": [
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2009/26/section/111/enacted/data.xml",
+   "affecting": "Policing and Crime Act 2009",
+   "section": "111",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2009-11-12",
+     "via_schedule": true,
+     "raw": "S. 23(5) repealed (12.11.2009) by Policing and Crime Act 2009 (c. 26), ss. 111(3), 116(5)(c), Sch. 8 Pt. 12"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2009-11-12",
+     "via_schedule": true,
+     "raw": "Words in s. 23(3) repealed (12.11.2009) by Policing and Crime Act 2009 (c. 26), ss. 111(2), 116(5)(c), Sch. 8 Pt. 12"
+    }
+   ],
+   "text": "Section 23 of the Misuse of Drugs Act 1971 (c. 38) (powers to search and obtain evidence) is amended as follows. In subsection (3) omit “acting for the police area in which the premises are situated”. Omit subsection (5).",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2016/19/section/94/enacted/data.xml",
+   "affecting": "Immigration Act 2016",
+   "section": "94",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 20(9) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 12(3)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "S. 20(2)(g) inserted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 12(2); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 15(8)(b) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(4)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "20"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 20(9) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 12(3)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "26"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 26(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 14(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "19"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 19(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 11(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 15(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(3)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "S. 27(2)(g) inserted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 15(2); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 27(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 15(3)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "S. 23(1)(d) and word inserted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(2)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "19"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 19(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 11(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 23(7)(b) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(4)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "27"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 27(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 15(3)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 23(7)(b) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(4)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 15(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(3)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "26"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 26(7) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 14(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 15(8)(b) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(4)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "15"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "S. 15(1)(d) and word inserted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 10(2)(b); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 23(6) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(3)(a); S.I. 2016/603, reg. 3(t)"
+    },
+    {
+     "act": "ukpga/2015/30",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2016-07-12",
+     "via_schedule": true,
+     "raw": "Words in s. 23(6) substituted (12.7.2016) by Immigration Act 2016 (c. 19), s. 94(1), Sch. 2 para. 13(3)(b); S.I. 2016/603, reg. 3(t)"
+    }
+   ],
+   "text": "Subject to subsections (3) to (5) this Act comes into force on such day as the Secretary of State appoints by regulations. Regulations under subsection (1) may appoint different days for different purposes or areas. Subsections (3) to (5) of section 61 come into force on the day on which this Act is passed. Section 85 comes into force at the end of the period of two months beginning with the day on which this Act is passed. This Part comes into force on the day on which this Act is passed.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2018/5/section/70/enacted/data.xml",
+   "affecting": "Space Industry Act 2018",
+   "section": "70",
+   "effects": [
+    {
+     "act": "ukpga/2015/30",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2021-07-29",
+     "via_schedule": true,
+     "raw": "Sch. 4 para. 36A inserted (29.7.2021) by Space Industry Act 2018 (c. 5), s. 70(1), Sch. 12 para. 33; S.I. 2021/817, reg. 2, Sch. para. 117 (with reg. 3)"
+    }
+   ],
+   "text": "This Act, apart from sections 68 to 72 (which come into force on the day on which this Act is passed), comes into force on whatever day or days the Secretary of State appoints by regulations. Regulations under this section— may appoint different days for different purposes; may make transitional, transitory or saving provision.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2022/35/section/51/enacted/data.xml",
+   "affecting": "Judicial Review and Courts Act 2022",
+   "section": "51",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "29"
+     ],
+     "kind": "text_modified",
+     "date": "2022-06-28",
+     "via_schedule": true,
+     "raw": "S. 29(A1)(A2) inserted (28.6.2022) by Judicial Review and Courts Act 2022 (c. 35), s. 51(3), Sch. 1 para. 2"
+    }
+   ],
+   "text": "The following provisions of this Act come into force on the day on which this Act is passed— section 11; section 13 (3) ; paragraphs 12 to 14 of Schedule 2 , and section 18 so far as relating to those paragraphs; this Part. If paragraph 24(2) of Schedule 22 to the Sentencing Act 2020 (as it was enacted) has been brought in force in relation to either-way offences before the passing of this Act, the following provisions come into force on the day after the day on which this Act is passed— section 13 (except subsection (3)); paragraphs 16 to 21 of Schedule 2, and section 18 so far as relating to those paragraphs. The following provisions of this Act come into force at the end of the period of two months beginning with the day on which this Act is passed— section 15; section 16 (and Schedule 1 ); Chapter 4 of Part 2 , except section 44; section 48. Except as provided above, this Act comes into force on such day as the Lord Chancellor may by regulations appoint. Different days may be appointed for different purposes. The Lord Chancellor may by regulations make transitional, transitory or saving provision in connection with the coming into force of any provision of this Act. The coming into force of paragraph 21 (b) of Schedule 2 results in the provision it inserts becoming subject to section 417(1) of the Sentencing Act 2020 (power to commence Schedule 22 to that Act). The power in section 419(1) of the Sentencing Act 2020 (power to state effect of commencement provisions) applies in relation to any amendment or repeal made by or under this Act of that Act as it applies in relation to an amendment or repeal made by Schedule 22 to that Act.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/1992/11/section/1/enacted/data.xml",
+   "affecting": "Aggravated Vehicle-Taking Act 1992",
+   "section": "1",
+   "effects": [
+    {
+     "act": "ukpga/1968/60",
+     "sections": [
+      "12A"
+     ],
+     "kind": "section_inserted",
+     "date": "1992-04-01",
+     "via_schedule": false,
+     "raw": "S. 12A inserted (1.4.1992) by Aggravated Vehicle-Taking Act 1992 (c. 11), s. 1(1)(3); S.I. 1992/764, art.2"
+    }
+   ],
+   "text": "After section 12 of the Theft Act 1968 (taking conveyances without authority) there shall be inserted the following section— Aggravated vehicle-taking Subject to subsection (3) below, a person is guilty of aggravated taking of a vehicle if— he commits an offence under section 12(1) above (in this section referred to as a “basic offence”) in relation to a mechanically propelled vehicle; and it is proved that, at any time after the vehicle was unlawfully taken (whether by him or another) and before it was recovered, the vehicle was driven, or injury or damage was caused, in one or more of the circumstances set out in paragraphs (a) to (d) of subsection (2) below. The circumstances referred to in subsection (1)(b) above are— that the vehicle was driven dangerously on a road or other public place; that, owing to the driving of the vehicle, an accident occurred by which injury was caused to any person; that, owing to the driving of the vehicle, an accident occurred by which damage was caused to any property, other than the vehicle; that damage was caused to the vehicle. A person is not guilty of an offence under this section if he proves that, as regards any such proven driving, injury or damage as is referred to in subsection (1)(b) above, either— the driving, accident or damage referred to in subsection (2) above occurred before he committed the basic offence; or he was neither in nor on nor in the immediate vicinity of the vehicle when that driving, accident or damage occurred. A person guilty of an offence under this section shall be liable on conviction on indictment to imprisonment for a term not exceeding two years or, if it is proved that, in circumstances falling within subsection (2)(b) above, the accident caused the death of the person concerned, five years. If a person who is charged with an offence under this section is found not guilty of that offence but it is proved that he committed a basic offence, he may be convicted of the basic offence. If by virtue of subsection (5) above a person is convicted of a basic offence before the Crown Court, that court shall have the same powers and duties as a magistrates' court would have had on convicting him of such an offence. For the purposes of this section a vehicle is driven dangerously if— it is driven in a way which falls far below what would be expected of a competent and careful driver; and it would be obvious to a competent and careful driver that driving the vehicle in that way would be dangerous. For the purposes of this section a vehicle is recovered when it is restored to its owner or to other lawful possession or custody; and in this subsection “owner” has the same meaning as in section 12 above. The provisions of subsection (4) of section 12A of the Theft Act 1968 are without prejudice to the operation of— section 30 of the Powers of Criminal Courts Act 1973 (under which a Crown Court has a general power to fine an offender convicted on indictment); and section 17 of, and Schedule 1 to, the Magistrates' Courts Act 1980 (under which, with certain exceptions not material to section 12A, offences under the Theft Act 1968 are triable either way). Nothing in section 12A of the Theft Act 1968 applies to— an offence under section 12(1) of that Act which was committed before this section comes into force; or any driving, injury or damage which occurred before this section comes into force.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2007/15/section/148/enacted/data.xml",
+   "affecting": "Tribunals, Courts and Enforcement Act 2007",
+   "section": "148",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2008-07-21",
+     "via_schedule": true,
+     "raw": "Word in Sch. 3 para. 1(1)(a)(ii) substituted (21.7.2008) by Tribunals, Courts and Enforcement Act 2007 (c. 15), s. 148, Sch. 10 para. 10(3); S.I. 2008/1653, art. 2(d) (with arts. 3, 4)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2008-07-21",
+     "via_schedule": true,
+     "raw": "Sch. 3 para. 1(1)(a)(i) substituted (21.7.2008) by Tribunals, Courts and Enforcement Act 2007 (c. 15), s. 148, Sch. 10 para. 10(2); S.I. 2008/1653, art. 2(d) (with arts. 3 4)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2008-07-21",
+     "via_schedule": true,
+     "raw": "Word in Sch. 3 para. 1(1)(a)(iii) substituted (21.7.2008) by Tribunals, Courts and Enforcement Act 2007 (c. 15), s. 148, Sch. 10 para. 10(3); S.I. 2008/1653, art. 2(d) (with arts. 3, 4)"
+    }
+   ],
+   "text": "Section 60 comes into force at the end of the period of two months beginning with the day on which this Act is passed. The provisions of Chapter 3 of Part 5 come into force in accordance with provision made by the Lord Chancellor or the Secretary of State by order. The provisions of Part 6 come into force, except as provided by subsection (4), in accordance with provision made by the Secretary of State by order. The provisions of Part 6 come into force, in so far as they extend to Scotland, in accordance with provision made by the Scottish Ministers by order. The remaining provisions of this Act, except sections 53, 55, 56, 57, 145, 147, 149, this section and Schedule 11, come into force in accordance with provision made by the Lord Chancellor by order. An order under this section may make different provision for different purposes. The power to make an order under this section is exercisable by statutory instrument.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2015/9/section/44/enacted/data.xml",
+   "affecting": "Serious Crime Act 2015",
+   "section": "44",
+   "effects": [
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 10 substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), ss. 44(2)(a), 88(1); S.I. 2015/820, reg. 2(d)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 10 substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), ss. 44(2)(d), 88(1); S.I. 2015/820, reg. 2(d)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 10 substituted (3.5.2015) by Serious Crime Act 2015 (c. 9), ss. 44(2)(e), 88(1); S.I. 2015/820, reg. 2(d)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 10(a) inserted (3.5.2015) by Serious Crime Act 2015 (c. 9), ss. 44(2)(b), 88(1); S.I. 2015/820, reg. 2(d)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "Words in s. 10(b) inserted (3.5.2015) by Serious Crime Act 2015 (c. 9), ss. 44(2)(c), 88(1); S.I. 2015/820, reg. 2(d)"
+    },
+    {
+     "act": "ukpga/1990/18",
+     "sections": [
+      "16"
+     ],
+     "kind": "text_modified",
+     "date": "2015-05-03",
+     "via_schedule": false,
+     "raw": "S. 16(9A) inserted (3.5.2015) by Serious Crime Act 2015 (c. 9), ss. 44(3), 88(1); S.I. 2015/820, reg. 2(d)"
+    }
+   ],
+   "text": "The Computer Misuse Act 1990 is amended as follows. In section 10 (saving for certain law enforcement powers)— for “Section 1(1) above has” substitute “Sections 1 to 3A have”; in paragraph (a), after “seizure” insert “or of any other enactment by virtue of which the conduct in question is authorised or required”; in paragraph (b), after “seizure” insert “or of any other enactment or rule of law by virtue of which the conduct in question is authorised or required”; for “the said section 1(1)” substitute “any of those sections”; for “In this section “enforcement officer” means” substitute— In this section— “enactment” means any enactment, whenever passed or made, contained in— an Act of Parliament; an Act of the Scottish Parliament; a Measure or Act of the National Assembly for Wales; an instrument made under any such Act or Measure; any other subordinate legislation (within the meaning of the Interpretation Act 1978); “enforcement officer” means . In section 16 (application to Northern Ireland), after subsection (9) insert— In section 10 the definition of “enactment” shall be read as including a reference to an enactment, whenever passed or made, contained in Northern Ireland legislation or in an instrument made under such legislation.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2011/13/section/157/enacted/data.xml",
+   "affecting": "Police Reform and Social Responsibility Act 2011",
+   "section": "157",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "9A"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 9A(4)(b) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 9(b); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "25"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 25(3A) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 17(3); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "25"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 25(2A)(2B) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 17(2); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "7"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 7(10) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 7; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 13(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 12(2)(a); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "9A"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 9A(4)(c) and words inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 9(c); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "37"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 37(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 19; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "2"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 2(1)(c) and preceding word inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 2(b); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "38"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 38(1) substituted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 20; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "11"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 11(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 11; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 13(1A) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 12(3); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 23(3)(a) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 15(3); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "7A"
+     ],
+     "kind": "section_inserted",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 7A inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 8; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "30"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 30 inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 18; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "23A"
+     ],
+     "kind": "section_inserted",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 23A inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 16; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "22"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 22(2) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 14(b); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "2"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 2(1)(a) substituted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 2(a); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "23"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 23(2) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 15(2); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "5"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 5(2A) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 6; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "10"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 10(3) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 10; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "13"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 13(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 12(2)(b); S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "3"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 3(2)(a) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 4; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "18"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "S. 18(5)(6) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 13; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Words in s. 4(1) inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 5; S.I. 2011/2515, art. 3(g)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [
+      "2A",
+      "2B"
+     ],
+     "kind": "section_inserted",
+     "date": "2011-11-15",
+     "via_schedule": true,
+     "raw": "Ss. 2A, 2B inserted (15.11.2011) by Police Reform and Social Responsibility Act 2011 (c. 13), s. 157(1), Sch. 17 para. 3; S.I. 2011/2515, art. 3(g)"
+    }
+   ],
+   "text": "The provisions of this Act come into force on such day as the Secretary of State may by order appoint. Subsection (1) is subject to subsections (3) and (4) . The following provisions come into force on the day on which this Act is passed— section 58 (power to make provision about elections); section 153 (restrictions on issue of arrest warrants in private prosecutions); sections 154 to 158 (final). Section 150 (2) , so far as relating to byelaws made by local authorities in Wales, comes into force on such day as the Welsh Ministers may by order appoint. Section 154 (1) and (5)(b) applies to an order of the Welsh Ministers under subsection (4) as it applies to an order of the Secretary of State under this Act.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/section/40/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "section": "40",
+   "effects": [
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": true,
+     "raw": "S. 4(5)(a) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 40, 148, Sch. 9 para. 66(2); S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "5"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": true,
+     "raw": "Words in s. 5(4) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 40, 148, Sch. 9 para. 66(3); S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "5"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": true,
+     "raw": "Words in s. 5(5) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 40, 148, Sch. 9 para. 66(3); S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "6"
+     ],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": true,
+     "raw": "S. 6(4) repealed (1.10.2009) by Constitutional Reform Act 2005 (c. 4), ss. 40, 146, 148, Sch. 9 para. 66(4), Sch. 18 Pt. 5; S.I. 2009/1604, art. 2(d)(f)"
+    }
+   ],
+   "text": "The Supreme Court is a superior court of record. An appeal lies to the Court from any order or judgment of the Court of Appeal in England and Wales in civil proceedings. An appeal lies to the Court from any order or judgment of a court in Scotland if an appeal lay from that court to the House of Lords at or immediately before the commencement of this section. Schedule 9— transfers other jurisdiction from the House of Lords to the Court, transfers devolution jurisdiction from the Judicial Committee of the Privy Council to the Court, and makes other amendments relating to jurisdiction. The Court has power to determine any question necessary to be determined for the purposes of doing justice in an appeal to it under any enactment. An appeal under subsection (2) lies only with the permission of the Court of Appeal or the Supreme Court; but this is subject to provision under any other enactment restricting such an appeal.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/9/section/67/enacted/data.xml",
+   "affecting": "Mental Capacity Act 2005",
+   "section": "67",
+   "effects": [
+    {
+     "act": "ukpga/1998/42",
+     "sections": [
+      "4"
+     ],
+     "kind": "text_modified",
+     "date": "2007-10-01",
+     "via_schedule": true,
+     "raw": "S. 4(5)(f) inserted (1.10.2007) by Mental Capacity Act 2005 (c. 9), ss. 67(1), 68(1)-(3), Sch. 6 para. 43 (with ss. 27, 28, 29, 62); S.I. 2007/1897, art. 2(1)(c)(d)"
+    }
+   ],
+   "text": "Schedule 6 contains minor and consequential amendments. Schedule 7 contains repeals. The Lord Chancellor may by order make supplementary, incidental, consequential, transitional or saving provision for the purposes of, in consequence of, or for giving full effect to a provision of this Act. An order under subsection (3) may, in particular— provide for a provision of this Act which comes into force before another provision of this Act has come into force to have effect, until the other provision has come into force, with specified modifications; amend, repeal or revoke an enactment, other than one contained in an Act or Measure passed in a Session after the one in which this Act is passed. The amendments that may be made under subsection (4)(b) are in addition to those made by or under any other provision of this Act. An order under subsection (3) which amends or repeals a provision of an Act or Measure may not be made unless a draft has been laid before and approved by resolution of each House of Parliament.",
+   "status": "ok"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2005/4/section/148/enacted/data.xml",
+   "affecting": "Constitutional Reform Act 2005",
+   "section": "148",
+   "effects": [
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": true,
+     "raw": "Words in Sch. 3 para. 1(1)(a)(iii) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 11 para. 5; S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2009-10-01",
+     "via_schedule": true,
+     "raw": "Words in Sch. 3 para. 5(2) substituted (1.10.2009) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 11 para. 1(2); S.I. 2009/1604, art. 2(d)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": true,
+     "raw": "Words in Sch. 3 para. 21 inserted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(3)(c); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": true,
+     "raw": "Words in Sch. 3 para. 21 substituted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(2)(a); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": true,
+     "raw": "Words in Sch. 3 para. 21 substituted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(3)(b); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": true,
+     "raw": "Words in Sch. 3 para. 21 substituted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(2)(b); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    },
+    {
+     "act": "ukpga/1971/38",
+     "sections": [],
+     "kind": "text_modified",
+     "date": "2006-04-03",
+     "via_schedule": true,
+     "raw": "Words in Sch. 3 para. 21 substituted (3.4.2006) by Constitutional Reform Act 2005 (c. 4), s. 148(1), Sch. 4 para. 74(3)(a); S.I. 2006/1014, art. 2(a), Sch. 1 para. 11(e)"
+    }
+   ],
+   "text": "This Act, except the following provisions, comes into force in accordance with provision to be made by the Lord Chancellor by order. The provisions excepted from subsection (1) are— section 4; sections 18 to 22; sections 140 to 144; section 147; this section; section 149; Schedules 6 and 7. Section 4 comes into force in accordance with provision to be made by the Secretary of State by order. An order by which section 23(1) comes into force at any time may not be made unless the Lord Chancellor is satisfied that the Supreme Court will at that time be provided with accommodation in accordance with written plans that he has approved. The Lord Chancellor may approve plans only if, having consulted the Lords of Appeal in Ordinary holding office at the time of the approval, he is satisfied that accommodation in accordance with the plans will be appropriate for the purposes of the Court. An order under this section may make different provision for different purposes.",
+   "status": "ok"
+  }
+ ]
+}

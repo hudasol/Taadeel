@@ -13,6 +13,28 @@ jobs:
           python-version: "3.13"
           cache: pip
       - run: pip install -e ".[api,dev,extract,store]"
-      - run: pytest -q
+      - name: Lint
+        run: ruff check src tests
+      - name: Tests with coverage
+        run: pytest -q --cov=taadeel --cov-report=term-missing:skip-covered
+      - name: Command line smoke test
+        run: |
+          printf 'Section 1 A\nOne.\n' > /tmp/a.txt; printf 'Section 1 A\nTwo.\n' > /tmp/b.txt
+          taadeel diff /tmp/a.txt /tmp/b.txt
       - name: Validation harness (synthetic only)
         run: python -m taadeel.validate table 10
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the image
+        run: docker build -t taadeel .
+      - name: Run it without network access and check health
+        run: |
+          docker run -d --name taadeel-ci --network none taadeel
+          for i in $(seq 1 30); do
+            if docker exec taadeel-ci python -c "import urllib.request,json; print(json.load(urllib.request.urlopen('http://127.0.0.1:8000/api/health'))['status'])"; then break; fi
+            sleep 2
+          done
+          docker exec taadeel-ci python -c "import urllib.request,json; j=json.load(urllib.request.urlopen('http://127.0.0.1:8000/api/health')); assert j['status']=='ok', j; print(j['corpus_counts'])"
+          test "$(docker exec taadeel-ci id -u)" = "10001"

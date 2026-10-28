@@ -26,7 +26,7 @@ L = "{" + NS + "}"
 
 INLINE = {"Addition", "Substitution", "Repeal", "Emphasis", "Abbreviation", "Citation", "CitationSubRef",
           "Term", "Definition", "InlineAmendment", "Underline", "Superior", "Inferior", "Strong", "Span",
-          "Acronym", "Character", "Expanded", "Uppercase", "SmallCaps", "Proviso", "Addition", "Importance"}
+          "Acronym", "Character", "Expanded", "Uppercase", "SmallCaps", "Proviso", "Importance"}
 SKIP_TAGS = {"CommentaryRef", "Pnumber"}
 
 
@@ -143,7 +143,6 @@ class Effect:
 def classify_kind(head: str) -> str:
     m = _WHOLE.match(head)
     if m:
-        v = m.group(m.lastindex if m.lastindex else 1)
         verb = _VERB.search(head).group(1)
         return {"inserted": "section_inserted", "repealed": "section_repealed", "omitted": "section_repealed",
                 "substituted": "section_substituted"}[verb]

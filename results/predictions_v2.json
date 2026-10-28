@@ -1,0 +1,137 @@
+{
+  "directional": {
+    "U1": "UK one day windows: v2 aligns every shared section correctly, with no false matches",
+    "U2": "UK long gap pairs (first to latest snapshot, 7 Acts): v2 correct >= v1 correct and v2 false matches <= v1 false matches",
+    "U3": "UK renumbering variant (real text, synthetic renumbering, same seed as v1): v2 accuracy >= 0.99",
+    "V1": "v2 alignment accuracy >= v1 alignment accuracy in every scenario (same held out documents)",
+    "V2": "v2 repealed recall >= v1 repealed recall + 0.10 in each of the four templated scenarios",
+    "V3": "v2 inserted recall >= v1 inserted recall + 0.10 in the 40% and 70% edited scenarios",
+    "V4": "v2 clarified recall >= 0.95 in the many inserts/repeals scenario (v1 held out: 0.909)",
+    "V5": "v2 high confidence forced matches on repealed articles <= 3% of repealed articles in every scenario",
+    "V6": "easy scenario: every defined v2 precision, recall and alignment accuracy >= 0.999 (forced rate excluded)",
+    "V7": "v2 replaced precision >= v1 replaced precision in every templated scenario"
+  },
+  "heldout_seeds": [
+    920000,
+    920100
+  ],
+  "note": "Synthetic seeds 920000-920099 and v2 on UK text were not run before this file was written.",
+  "params": {
+    "ambiguity_margin": 0.05,
+    "anchor_margin": 0.1,
+    "anchor_min": 0.8,
+    "high_margin": 0.15,
+    "tau": 0.4,
+    "w_excess": 0.0,
+    "w_num": 0.3,
+    "w_prior": 0.0,
+    "w_sim": 0.5
+  },
+  "predictions": {
+    "easy (random text, small edits)": {
+      "align_acc": 1.0,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 1.0,
+      "inserted.R": 1.0,
+      "renumbered.P": 1.0,
+      "renumbered.R": 1.0,
+      "repealed.P": 1.0,
+      "repealed.R": 1.0,
+      "replaced.P": 1.0,
+      "replaced.R": 1.0
+    },
+    "templated near-duplicates, small edits": {
+      "align_acc": 0.9981981981981982,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 0.9878048780487805,
+      "inserted.R": 0.9,
+      "renumbered.P": 1.0,
+      "renumbered.R": 1.0,
+      "repealed.P": 1.0,
+      "repealed.R": 0.9111111111111111,
+      "replaced.P": 0.9367088607594937,
+      "replaced.R": 0.9866666666666667
+    },
+    "templated, 40% of words edited": {
+      "align_acc": 0.9846846846846847,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 0.8048780487804879,
+      "inserted.R": 0.7333333333333333,
+      "renumbered.P": 1.0,
+      "renumbered.R": 1.0,
+      "repealed.P": 1.0,
+      "repealed.R": 0.9111111111111111,
+      "replaced.P": 0.8417721518987342,
+      "replaced.R": 0.8866666666666667
+    },
+    "templated, 70% of words edited": {
+      "align_acc": 0.9828828828828828,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 0.7738095238095238,
+      "inserted.R": 0.7222222222222222,
+      "renumbered.P": 1.0,
+      "renumbered.R": 1.0,
+      "repealed.P": 0.9761904761904762,
+      "repealed.R": 0.9111111111111111,
+      "replaced.P": 0.8397435897435898,
+      "replaced.R": 0.8733333333333333
+    },
+    "templated, many inserts/repeals": {
+      "align_acc": 0.9739583333333334,
+      "clarified.P": 1.0,
+      "clarified.R": 1.0,
+      "forced_rate": 0.0,
+      "inserted.P": 0.9230769230769231,
+      "inserted.R": 0.65,
+      "renumbered.P": 1.0,
+      "renumbered.R": 1.0,
+      "repealed.P": 1.0,
+      "repealed.R": 0.7041666666666667,
+      "replaced.P": 0.6913183279742765,
+      "replaced.R": 0.8958333333333334
+    }
+  },
+  "protocol": "Point prediction = v2 dev (seeds 0-29) value; hit iff |actual - predicted| <= tolerance. A None prediction is a hit only if the actual is also None.",
+  "scenarios": {
+    "easy (random text, small edits)": {},
+    "templated near-duplicates, small edits": {
+      "templated": true
+    },
+    "templated, 40% of words edited": {
+      "edit_frac": 0.4,
+      "templated": true
+    },
+    "templated, 70% of words edited": {
+      "edit_frac": 0.7,
+      "templated": true
+    },
+    "templated, many inserts/repeals": {
+      "n_insert": 8,
+      "n_repeal": 8,
+      "n_replace": 8,
+      "templated": true
+    }
+  },
+  "sha256": {
+    "align.py": "10a35fd51c6c72192c9e8b6b6b43d7f1f17f45824794010a6eb0de297a48c7f3",
+    "align_v2.py": "c72e70754fe55d606caea398537b32dcc2dc3b76045d6060d8f5a3c6f7215835",
+    "diff.py": "ce0a662f1591a095dc405d2427658941f050840167f0372117d0a497916bfaaf",
+    "eval_v2.py": "1ac2d2b2597d55eb28dbc5a2a60a224a5e15022f5a72efe89552c2c34370990c",
+    "heldout_v2.py": "2d75b907e09e07b6e4027735d1028a0b77c3a91687daa4ff5b1dd2cdfc33d322",
+    "model.py": "1c21b4907e6e9baa83e0909a2b8faae465d93e016dc6ff7c82dd882d819fa993",
+    "normalize.py": "894d063a8a95869a173b8197968bc10f136bfd6a9e2f79c9df64befae89ed0d0",
+    "parse.py": "1862e5fafd57ebf6fd22c3ef41804157c2ab465dd8a44df047437393819e4584",
+    "synthetic.py": "b0ba489af7ff21399d8abe6b0c6e382dec361dbf402b9306924fac937fa61b12",
+    "temporal.py": "c3c42bf612a728689d4b6430db457e6c2f4c1af5536b5e659414440aaac1af16",
+    "tune_v2.py": "8ff8c3f2e5c163e9095027fe4a633cc22647d8dbcd5b16197a090f6cf75a7f21"
+  },
+  "tolerance": 0.05
+}

@@ -16,14 +16,16 @@ import json
 import re
 import sqlite3
 import threading
+from collections.abc import Iterable
 from dataclasses import asdict, is_dataclass
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 from .model import Expression, Provision, validate_expression
 from .normalize import normalize
-from .temporal import PointInTime, Version, as_of as _as_of
+from .temporal import PointInTime, Version
+from .temporal import as_of as _as_of
 
 SCHEMA_VERSION = 1
 DISCLAIMER = ("Research and navigation tool, not legal advice. The official Arabic text published by the "
@@ -147,11 +149,24 @@ def _fts_query(tokens: list[str], prefix: bool) -> str:
     return " AND ".join('"' + t.replace('"', '""') + '"' + ("*" if prefix else "") for t in tokens)
 
 
+def _fts_query_article(tokens: list[str]) -> str:
+    """Third attempt for Arabic: a term also matches with or without the definite article (ال) as a prefix."""
+    parts = []
+    for t in tokens:
+        alts = {t}
+        if t.startswith("ال") and len(t) > 4:
+            alts.add(t[2:])
+        elif "\u0600" <= t[:1] <= "\u06ff":
+            alts.add("ال" + t)
+        parts.append("(" + " OR ".join('"' + a.replace('"', '""') + '"*' for a in sorted(alts)) + ")")
+    return " AND ".join(parts)
+
+
 def _highlights(text: str, tokens: list[str]) -> list[tuple[int, int]]:
     out = []
     for m in _TOKEN.finditer(text):
         w = normalize(m.group())
-        if any(w == t or w.startswith(t) for t in tokens):
+        if any(w == t or w.startswith(t) or w.startswith("ال" + t) or (t.startswith("ال") and w.startswith(t[2:])) for t in tokens):
             out.append((m.start(), m.end()))
     return out
 
@@ -374,7 +389,8 @@ class Store:
     def search(self, query: str, corpus: str = "uae", limit: int = 20, lang: str | None = None) -> list[dict]:
         """FTS5 search over normalized text. Results carry the ORIGINAL text, source_url and retrieved_at.
 
-        All query terms must match (AND). If nothing matches exactly, terms are retried as prefixes.
+        All query terms must match (AND). If nothing matches exactly, terms are retried as prefixes, then with or
+        without the Arabic definite article.
         """
         tokens = query_tokens(query)
         if not tokens:
@@ -389,8 +405,8 @@ class Store:
                f" AND length(p.source_url) > 0 AND length(p.retrieved_at) > 0"
                + (" AND w.language = ?" if lang else "") + " ORDER BY rank, p.work_id, p.expression_id, p.rowid LIMIT ?")
         rows: list[sqlite3.Row] = []
-        for prefix in (False, True):
-            args: list[Any] = [_fts_query(tokens, prefix), *cs]
+        for fts in (_fts_query(tokens, False), _fts_query(tokens, True), _fts_query_article(tokens)):
+            args: list[Any] = [fts, *cs]
             if lang:
                 args.append(lang)
             args.append(limit)
@@ -458,7 +474,7 @@ class Store:
             counts = self.corpus_counts()
         manifest = {
             "schema_version": SCHEMA_VERSION,
-            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
             "generator": f"taadeel.store (pyarrow {pa.__version__})",
             "corpora_exported": list(cs),
             "files": files,

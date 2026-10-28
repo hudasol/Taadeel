@@ -10,9 +10,8 @@ from __future__ import annotations
 
 import gzip
 import json
-from pathlib import Path
-
 import os
+from pathlib import Path
 
 from .labels import suffix_value
 

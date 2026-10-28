@@ -12,7 +12,8 @@ Status: DRAFT, not sent. The sender completes the placeholders in square bracket
 **Attention:** The team responsible for the UAE Legislation portal (uaelegislation.gov.ae)
 
 **From:** Huda Mueen, developer of Taadeel
-**Contact email:** [Contact email]
+**Contact email:** hudamueen2407@gmail.com
+**Contact phone:** [+971 5_ _______]
 **Project repository:** https://github.com/hudasol/Taadeel
 
 **Subject:** Request for permission and guidance on automated read access, redisplay and comparison of legislation text from uaelegislation.gov.ae for a research and navigation tool
@@ -48,7 +49,7 @@ I respectfully request the following.
 
 If permission is granted, Taadeel will observe the following.
 
-- **Identifying user agent.** Requests will carry a user agent that names the project, its repository and a contact email ([Contact email]), so that your team can reach me.
+- **Identifying user agent.** Requests will carry a user agent that names the project, its repository and a contact email (hudamueen2407@gmail.com), so that your team can reach me.
 - **Crawl delay.** A fixed delay between requests (proposed above as at least five seconds), with backoff on any error or slow response.
 - **robots.txt respected.** The robots.txt file and any crawl directives you publish will be read and followed.
 - **No workarounds if blocked.** If access is blocked or refused, Taadeel will stop. It will not rotate addresses, disguise its identity, solve challenges or use any other means to avoid a block.
@@ -57,14 +58,14 @@ If permission is granted, Taadeel will observe the following.
 
 ### 5. Closing
 
-I would be grateful for a written reply, including any conditions, by email to [Contact email]. I am happy to provide further details of the project, to demonstrate the tool on synthetic data, or to adjust the proposal to your requirements. Thank you for your time and consideration.
+I would be grateful for a written reply, including any conditions, by email to hudamueen2407@gmail.com. I am happy to provide further details of the project, to demonstrate the tool on synthetic data, or to adjust the proposal to your requirements. Thank you for your time and consideration.
 
 Yours faithfully,
 
 Huda Mueen
 Developer of Taadeel
 https://github.com/hudasol/Taadeel
-[Contact email]
+hudamueen2407@gmail.com
 
 ---
 
@@ -78,7 +79,8 @@ https://github.com/hudasol/Taadeel
 **عناية:** الفريق المسؤول عن بوابة التشريعات في دولة الإمارات (uaelegislation.gov.ae)
 
 **من:** هدى معين، مطورة منصة «تعديل» (Taadeel)
-**البريد الإلكتروني للتواصل:** [Contact email]
+**البريد الإلكتروني للتواصل:** hudamueen2407@gmail.com
+**الهاتف:** [+971 5_ _______]
 **مستودع المشروع:** https://github.com/hudasol/Taadeel
 
 **الموضوع:** طلب إذن وإرشاد بشأن الوصول الآلي للقراءة وإعادة العرض والمقارنة لنصوص التشريعات المنشورة على uaelegislation.gov.ae لأغراض أداة بحثية للتصفح والاسترشاد
@@ -116,7 +118,7 @@ https://github.com/hudasol/Taadeel
 
 في حال منح الإذن، ستلتزم «تعديل» بما يأتي.
 
-- **معرّف مستخدم يحدد الهوية.** ستتضمن الطلبات معرّف مستخدم (user agent) يذكر اسم المشروع ومستودعه وبريداً إلكترونياً للتواصل ([Contact email]) ليتمكن فريقكم من الوصول إلي.
+- **معرّف مستخدم يحدد الهوية.** ستتضمن الطلبات معرّف مستخدم (user agent) يذكر اسم المشروع ومستودعه وبريداً إلكترونياً للتواصل (hudamueen2407@gmail.com) ليتمكن فريقكم من الوصول إلي.
 - **مهلة بين الطلبات.** مهلة ثابتة بين الطلبات (اقترحت أعلاه خمس ثوانٍ على الأقل) مع تخفيف المعدل عند أي خطأ أو بطء في الاستجابة.
 - **احترام ملف robots.txt.** سيجري قراءة ملف robots.txt وأي توجيهات للزحف تنشرونها والالتزام بها.
 - **لا التفاف عند الحظر.** إذا حُظر الوصول أو رُفض فستتوقف «تعديل». ولن تغيّر العناوين ولن تخفي هويتها ولن تحل اختبارات التحقق ولن تستخدم أي وسيلة أخرى لتجنب الحظر.
@@ -125,11 +127,11 @@ https://github.com/hudasol/Taadeel
 
 ### 5. الخاتمة
 
-أكون ممتنة لو وصلني رد خطي، يتضمن أي شروط، على البريد الإلكتروني [Contact email]. ويسعدني تقديم مزيد من التفاصيل عن المشروع، أو عرض الأداة على بيانات اصطناعية، أو تعديل المقترح بما يتوافق مع متطلباتكم. أشكركم على وقتكم واهتمامكم.
+أكون ممتنة لو وصلني رد خطي، يتضمن أي شروط، على البريد الإلكتروني hudamueen2407@gmail.com. ويسعدني تقديم مزيد من التفاصيل عن المشروع، أو عرض الأداة على بيانات اصطناعية، أو تعديل المقترح بما يتوافق مع متطلباتكم. أشكركم على وقتكم واهتمامكم.
 
 وتفضلوا بقبول فائق الاحترام،
 
 هدى معين
 مطورة «تعديل»
 https://github.com/hudasol/Taadeel
-[Contact email]
+hudamueen2407@gmail.com

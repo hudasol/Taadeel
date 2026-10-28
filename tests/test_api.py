@@ -34,3 +34,26 @@ def test_diff_has_provenance_and_kinds():
 
 def test_unknown_work_404():
     assert c.get("/api/diff?work=nope&a=a&b=b").status_code == 404
+
+
+def test_health_reports_corpora_and_load_state():
+    j = c.get("/api/health").json()
+    assert j["real_uae_works"] == 0 and j["disclaimer"] == DISCLAIMER
+    assert set(j["corpus_counts"]) >= {"uae", "uk-validation", "synthetic"}
+    assert "uk_load_error" in j and j["status"] in ("ok", "degraded")
+
+
+def test_validation_error_keeps_the_disclaimer():
+    r = c.get("/api/as-of?work=synthetic/law/1&date=")
+    assert r.status_code == 422 and r.json()["disclaimer"] == DISCLAIMER
+
+
+def test_index_page_served_with_notice():
+    r = c.get("/")
+    assert r.status_code == 200 and "legal advice" in r.text.lower()
+
+
+def test_diff_before_and_after_texts_come_from_their_own_versions():
+    j = c.get("/api/diff?work=synthetic/law/1&a=a&b=b").json()
+    rep = [x for x in j["changes"] if x["kind"] in ("replaced", "clarified")]
+    assert rep and all(x["a_text"] != x["b_text"] for x in rep)
