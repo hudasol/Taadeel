@@ -1,16 +1,16 @@
 # Next steps
 
-Updated 2026-10-23. Measured results are in the generated documents (`README.md` results block, `docs/VALIDATION_UK.md`, `docs/HELDOUT_V2_RESULTS.md`, `docs/VALIDATION_ARABIC.md`, `docs/AKN_EXPORT.md`); this page lists actions only.
+Updated 2026-10-29. Measured results are in the generated documents (`README.md` results block, `docs/VALIDATION_UK.md`, `docs/HELDOUT_V2_RESULTS.md`, `docs/VALIDATION_ARABIC.md`, `docs/AKN_EXPORT.md`); this page lists actions only.
 
 ## Owner actions (cannot be done by the code)
 
 | # | Action | Why |
 |---|---|---|
 | 1 | Send the permission request in `docs/PERMISSION_REQUEST.md` and record any reply in `sources.toml` (`permission_evidence`) and `docs/PERMISSION_TRACKING.csv` | Every UAE result depends on it; nothing has been sent |
-| 2 | Review and merge PR #1, then retarget PR #2 to `main` and merge it. Then repoint the live site: Render dashboard, service `taadeel` (srv-db63lsdckfvc73c116mg), Settings, Build and Deploy, Branch, Edit, choose `main`, Save Changes; then Manual Deploy, Deploy latest commit; then open https://taadeel.onrender.com/api/health and check that `corpus_counts` is present | The live site still serves the PR #1 branch; merging was not approved in this session |
-| 3 | Push the tag `heldout-lock-1` from the clone that holds it (`git push origin heldout-lock-1`), or confirm its commit (likely `1c02bdc`) and create it here. A retry on 2026-10-23 failed because this clone has no such tag | The tag is still local only |
-| 4 | Set the repository About text and topics; confirm the licence (MIT is proposed, no LICENSE file yet) | Reviewers look for these first |
-| 5 | Decide on a project contact address for the crawler user agent instead of a personal address | Privacy |
+| 2 | In the Render dashboard, service `taadeel` (srv-db63lsdckfvc73c116mg), Settings, Build and Deploy, Branch: choose `main`, Save Changes | PRs 1 and 2 are merged. The service still tracks the old branch `feat/validation-and-amendments`, which was fast forwarded to `main` so the live site matches. Repointing removes that dependency. GitHub does not trigger Render deploys here, so use Manual Deploy after a push |
+| 3 | Push the tags from a clone that can: `git push origin heldout-lock-1` (the lock commit `1c02bdc`, already in `main`), then `git tag -a v0.3.0 a88602a -m "Taadeel 0.3.0" && git push origin v0.3.0` | The tool environment used for the last session cannot push tags |
+| 4 | Set the repository About text and topics (settings writes are blocked in the tool environment) | Reviewers look for these first |
+| 5 | Done: licence is Apache 2.0 (`LICENSE`, `NOTICE`); the crawler user agent and the permission request use the project owner's email | |
 | 6 | Decide whether the Wikisource page (oldid 137670) may be used as a short attributed fixture, after checking the current UAE copyright law from an official source | Its reuse status is not clear, so no wording was committed |
 
 ## Engineering, in order

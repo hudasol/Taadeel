@@ -15,8 +15,8 @@ This page lists what the project cannot do yet, why, and what is being done abou
 | 7 | Amendment by reference recall is low in English | Patterns cover the common forms only | Open: needs a new development half, see `docs/NEXT_STEPS.md` |
 | 8 | Schedules, devolved material and prospective changes are excluded from the UK corpus | Scope chosen for a clean ground truth | Documented, not planned |
 | 9 | UK ground truth is editorial, hand checks were done by the author | No legal reviewer | Open: needs a reviewer |
-| 10 | The live site serves an older branch | Render is pointed at the first pull request branch | Owner action: merge, then repoint |
-| 11 | No licence file | The owner has not confirmed one | Owner action |
+| 10 | The live site served an older branch | Render tracked the first pull request branch | Fixed: both PRs merged, branch fast forwarded to `main`, deployed. Remaining: repoint Render to `main` in the dashboard |
+| 11 | No licence file | Not yet chosen | Fixed: Apache License 2.0, with a `NOTICE` that keeps the UK sample data under the Open Government Licence |
 
 ## What the baselines are for
 

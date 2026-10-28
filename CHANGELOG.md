@@ -2,9 +2,10 @@
 
 All notable changes are listed here. Measured results are not repeated in this file; they are generated from `results/` into [`docs/VALIDATION_UK.md`](docs/VALIDATION_UK.md) and [`docs/HELDOUT_RESULTS.md`](docs/HELDOUT_RESULTS.md).
 
-## Unreleased (pull requests 1 and 2, not yet merged)
+## 0.3.0 (2026-10-29, pull requests 1 and 2)
 
 ### Added
+- Apache License 2.0 and a `NOTICE` file.
 - Held out synthetic measurement with hash locked engine files and predictions committed before the run.
 - Permission gated, robots aware, rate limited and resumable adapter for legislation.gov.uk (Open Government Licence v3.0), with a recorded fetch manifest.
 - CLML parser, UK validation set, point in time evaluation and a renumbering variant.
