@@ -16,6 +16,7 @@
 * English amendment patterns on a second, larger UK sample (frozen, run once): recall 40.9% (81 of 198 recorded effects), precision lower bound 87.5%.
 * Arabic: synthetic stress set only (37 cases; locked normaliser 25 pass). No real UAE Arabic text is validated. [`docs/VALIDATION_ARABIC.md`](docs/VALIDATION_ARABIC.md)
 * Akoma Ntoso compatible export: 10 of 10 samples validate against the OASIS schema (compatible, not compliant). [`docs/AKN_EXPORT.md`](docs/AKN_EXPORT.md)
+* Baselines (same data, same scoring): matching by section number alone scores 100.0% on the UK one day windows, so that result is not evidence for the engine; with renumbering added to real text it scores 59.8% against 100.0% for engine v1. A text only matcher is as accurate as engine v1 in most synthetic scenarios but forces matches on repealed articles (repealed recall 2.3% against 71.0%, templated small edits). [`docs/BASELINES.md`](docs/BASELINES.md)
 
 Details: [`docs/VALIDATION_UK.md`](docs/VALIDATION_UK.md), [`docs/HELDOUT_RESULTS.md`](docs/HELDOUT_RESULTS.md). Real UK numbers validate English UK legislation only. They say nothing about UAE law.
 
@@ -23,7 +24,7 @@ Details: [`docs/VALIDATION_UK.md`](docs/VALIDATION_UK.md), [`docs/HELDOUT_RESULT
 
 ## Status
 
-Built and tested: engine, held out protocol, UK adapter and validation, amendment by reference patterns (English measured on a small sample, Arabic unvalidated and tested on invented samples only), PDF extractor (synthetic PDFs), storage, search, API and web page. Open: any real UAE data (needs written permission, see [`docs/PERMISSION_REQUEST.md`](docs/PERMISSION_REQUEST.md)), real Arabic validation, Akoma Ntoso lifecycle and modification metadata (a compatible export exists). Milestones: [`plan.md`](plan.md). Research and design: [`docs/RESEARCH.md`](docs/RESEARCH.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
+Built and tested: engine, held out protocol, UK adapter and validation, amendment by reference patterns (English measured on a small sample, Arabic unvalidated and tested on invented samples only), PDF extractor (synthetic PDFs), storage, search, API and web page. Open: any real UAE data (needs written permission, see [`docs/PERMISSION_REQUEST.md`](docs/PERMISSION_REQUEST.md)), real Arabic validation, Akoma Ntoso lifecycle and modification metadata (a compatible export exists). What is missing and why: [`docs/ROADMAP.md`](docs/ROADMAP.md). Milestones: [`plan.md`](plan.md). Research and design: [`docs/RESEARCH.md`](docs/RESEARCH.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
 
 ## Data source stance
 
@@ -44,7 +45,8 @@ Python 3.12 or newer.
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[api,dev,extract,store]"
 pytest
-uvicorn taadeel.api:app --port 8000      # web page at http://localhost:8000, API under /api
+taadeel serve                            # web page at http://localhost:8000, API under /api
+taadeel diff old.txt new.txt             # article level diff of two plain text versions (Arabic or English headings)
 ```
 
 The synthetic PDF tests need the DejaVu Sans font; they are skipped with a reason when it is absent (set `TAADEEL_PDF_FONT` to its path). Offline container: `docker build -t taadeel . && docker run -p 8000:8000 taadeel` (no external calls at run time).
@@ -54,6 +56,7 @@ Regenerate the evidence (each command writes only its own result files; held out
 ```bash
 python -m taadeel.report                 # README results block and docs/VALIDATION_UK.md from results/
 python -m taadeel.validate table 10      # synthetic harness, quick look
+taadeel baselines                        # baselines against the engine, writes results/baselines.json and docs/BASELINES.md (slow)
 ```
 
 ## License
