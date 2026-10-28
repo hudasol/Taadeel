@@ -16,10 +16,8 @@ from __future__ import annotations
 
 import json
 import random
-import sys
 from collections import Counter, defaultdict
 from datetime import date, timedelta
-from pathlib import Path
 
 from . import clml
 from .align import align
@@ -28,7 +26,7 @@ from .ingest import Ingestor
 from .labels import suffix_value
 from .model import Expression, Provision
 from .temporal import Version, as_of
-from .uk_fetch import BASE_DATE, ROOT, STORE, make_ingestor, plan_snapshots, snapshot_dates, url_at, url_current
+from .uk_fetch import ROOT, make_ingestor, plan_snapshots, snapshot_dates, url_at, url_current
 
 ACTS = ["ukpga/1990/18", "ukpga/2015/30", "ukpga/1968/60", "ukpga/1998/42",
         "ukpga/1989/6", "ukpga/1997/40", "ukpga/1971/38"]
@@ -198,7 +196,7 @@ def eval_act(corp: Corpus, act: str) -> dict:
                 engine_vs_eff["tp"] += 1
             else:
                 engine_vs_eff["fn"] += 1
-        for eid, v in pmap.items():
+        for eid in pmap:
             if eid not in exp:
                 engine_vs_eff["fp"] += 1
         eff_rows.append((str(d), len(exp), len(tmap)))

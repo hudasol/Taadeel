@@ -17,10 +17,10 @@ import json
 import time
 import tomllib
 import urllib.robotparser
+from collections.abc import Callable
 from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Callable
 from urllib.parse import urlparse
 
 USER_AGENT = "TaadeelBot/0.1 (+https://github.com/hudasol/Taadeel; research; contact: hudamueen2407@gmail.com)"
@@ -148,7 +148,7 @@ class Ingestor:
             raise NotPermitted(f"{url}: disallowed or unreadable robots.txt")
         self._wait(host, max(float(src.get("min_delay_seconds", 10)), self._crawl_delay.get(host, 0.0)))
         r = self.fetcher(url, {"User-Agent": USER_AGENT, "Accept-Language": "ar,en;q=0.5"})
-        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        now = datetime.now(UTC).isoformat(timespec="seconds")
         digest = hashlib.sha256(r.body).hexdigest()
         path = ""
         if r.status == 200:
