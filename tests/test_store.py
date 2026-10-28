@@ -213,3 +213,13 @@ def test_export_real_only_excludes_synthetic(tmp_path):
     assert m["contains_synthetic"] is False and "synthetic" not in m["corpus_counts"]
     for name in ("works", "provisions", "changes", "amendment_events"):
         assert all(r["corpus"] != "synthetic" for r in pq.read_table(tmp_path / f"{name}.parquet").to_pylist())
+
+
+def test_arabic_search_matches_with_or_without_the_definite_article():
+    from taadeel.store import build_demo_store
+
+    s = build_demo_store()
+    with_article = s.search("الترخيص", corpus="synthetic")
+    assert with_article
+    assert {r["eid"] for r in s.search("ترخيص", corpus="synthetic")} == {r["eid"] for r in with_article}
+    assert s.search("الغرامة", corpus="synthetic") and s.search("غرامة", corpus="synthetic")
