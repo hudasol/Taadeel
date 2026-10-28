@@ -143,7 +143,7 @@ def parse(text: str) -> list[Amendment]:
             kept.append(f)
             last_end = f[1]
     out: list[Amendment] = []
-    for i, (s, e, pid, m, op, conf) in enumerate(kept):
+    for i, (_s, e, pid, m, op, conf) in enumerate(kept):
         nxt = kept[i + 1][0] if i + 1 < len(kept) else len(t)
         recs = _from_match(pid, m, op, conf, t)
         for r in recs:

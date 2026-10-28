@@ -12,7 +12,6 @@ from __future__ import annotations
 import difflib
 import json
 import random
-from datetime import date, timedelta
 
 from . import uk_validate as V
 from .uk_fetch import ROOT, plan_snapshots

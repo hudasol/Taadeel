@@ -16,14 +16,16 @@ import json
 import re
 import sqlite3
 import threading
+from collections.abc import Iterable
 from dataclasses import asdict, is_dataclass
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 from .model import Expression, Provision, validate_expression
 from .normalize import normalize
-from .temporal import PointInTime, Version, as_of as _as_of
+from .temporal import PointInTime, Version
+from .temporal import as_of as _as_of
 
 SCHEMA_VERSION = 1
 DISCLAIMER = ("Research and navigation tool, not legal advice. The official Arabic text published by the "
@@ -458,7 +460,7 @@ class Store:
             counts = self.corpus_counts()
         manifest = {
             "schema_version": SCHEMA_VERSION,
-            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
             "generator": f"taadeel.store (pyarrow {pa.__version__})",
             "corpora_exported": list(cs),
             "files": files,

@@ -89,7 +89,7 @@ def test_api_mounts_search_and_uk_corpus_endpoints():
 
     from taadeel import search_api
     from taadeel.api import app
-    from taadeel.store import Store, build_demo_store
+    from taadeel.store import build_demo_store
 
     search_api.set_store(build_demo_store())
     try:

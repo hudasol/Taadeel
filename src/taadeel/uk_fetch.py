@@ -112,7 +112,8 @@ def snapshot_dates(act: str, ing: Ingestor | None = None) -> list[str]:
 
 def plan_snapshots(act: str, ing: Ingestor | None = None) -> list[str]:
     """Snapshot dates to fetch: base, every effect date, and the day before each (boundary checks)."""
-    from datetime import date as _d, timedelta
+    from datetime import date as _d
+    from datetime import timedelta
 
     out = {BASE_DATE}
     for ds in snapshot_dates(act, ing):

@@ -41,8 +41,8 @@ def build() -> tuple[str, str]:
          "Ground truth is editorial (legislation.gov.uk revised versions and effects), not a legal original, and the hand check was done by the project author's tooling, not by a lawyer or any independent reviewer.", "",
          "## Headline", "", head, "",
          "## Alignment and diff classification (one day windows)", "",
-         f"Pairs: the snapshot on the day before each recorded effect date against the snapshot on that date. Truth: same section id means same section; text differs means replaced. "
-         f"The engine does not use section ids for matching (it does see the section number and suffix, worth 5% of the pair score).", "",
+         "Pairs: the snapshot on the day before each recorded effect date against the snapshot on that date. Truth: same section id means same section; text differs means replaced. "
+         "The engine does not use section ids for matching (it does see the section number and suffix, worth 5% of the pair score).", "",
          f"Alignment: {al['correct']} correct of {al['shared_sections']} shared sections ({pct(al['accuracy'])}); wrong {al['wrong']}; unmatched {al['unmatched']}; false matches {al['false_matches']}; low confidence pairs {al['low_confidence_pairs']}.", "",
          "| class | TP | FP | FN | precision | recall |", "|---|---|---|---|---|---|"]
     for c, d in cl.items():
