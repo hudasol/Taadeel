@@ -1,0 +1,1124 @@
+{
+ "methods": {
+  "by_number": "same number and suffix, no text",
+  "engine_v1": "locked default engine",
+  "engine_v2": "pre registered v2, not the default",
+  "greedy_text": "best text match, one to one, no order or numbers"
+ },
+ "point_in_time": {
+  "effect_dates.on_date": {
+   "accuracy": 1.0,
+   "correct": 80,
+   "queries": 80
+  },
+  "effect_dates.prior_day": {
+   "accuracy": 0.7875,
+   "correct": 63,
+   "queries": 80
+  },
+  "latest.on_date": {
+   "accuracy": 0.0875,
+   "correct": 7,
+   "queries": 80
+  },
+  "latest.prior_day": {
+   "accuracy": 0.0,
+   "correct": 0,
+   "queries": 80
+  }
+ },
+ "scope": "Baselines scored with the same ground truth as the engine. Synthetic: the seeds of the locked held out run, labelled synthetic. UK: committed corpus (English, OGL v3.0), not UAE law.",
+ "synthetic": {
+  "by_number": {
+   "easy (random text, small edits)": {
+    "alignment_accuracy": 0.3327,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 73
+     },
+     "inserted": {
+      "fn": 195,
+      "fp": 180,
+      "precision": 0.3684,
+      "recall": 0.35,
+      "tp": 105
+     },
+     "renumbered": {
+      "fn": 2129,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "repealed": {
+      "fn": 199,
+      "fp": 184,
+      "precision": 0.3544,
+      "recall": 0.3367,
+      "tp": 101
+     },
+     "replaced": {
+      "fn": 340,
+      "fp": 2484,
+      "precision": 0.0605,
+      "recall": 0.32,
+      "tp": 160
+     }
+    },
+    "documents": 100
+   },
+   "templated near-duplicates, small edits": {
+    "alignment_accuracy": 0.3589,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 194,
+      "fp": 176,
+      "precision": 0.3759,
+      "recall": 0.3533,
+      "tp": 106
+     },
+     "renumbered": {
+      "fn": 2065,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "repealed": {
+      "fn": 182,
+      "fp": 164,
+      "precision": 0.4184,
+      "recall": 0.3933,
+      "tp": 118
+     },
+     "replaced": {
+      "fn": 307,
+      "fp": 2390,
+      "precision": 0.0747,
+      "recall": 0.386,
+      "tp": 193
+     }
+    },
+    "documents": 100
+   },
+   "templated, 40% of words edited": {
+    "alignment_accuracy": 0.3589,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 194,
+      "fp": 176,
+      "precision": 0.3759,
+      "recall": 0.3533,
+      "tp": 106
+     },
+     "renumbered": {
+      "fn": 2065,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "repealed": {
+      "fn": 182,
+      "fp": 164,
+      "precision": 0.4184,
+      "recall": 0.3933,
+      "tp": 118
+     },
+     "replaced": {
+      "fn": 307,
+      "fp": 2390,
+      "precision": 0.0747,
+      "recall": 0.386,
+      "tp": 193
+     }
+    },
+    "documents": 100
+   },
+   "templated, 70% of words edited": {
+    "alignment_accuracy": 0.3589,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 194,
+      "fp": 176,
+      "precision": 0.3759,
+      "recall": 0.3533,
+      "tp": 106
+     },
+     "renumbered": {
+      "fn": 2065,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "repealed": {
+      "fn": 182,
+      "fp": 164,
+      "precision": 0.4184,
+      "recall": 0.3933,
+      "tp": 118
+     },
+     "replaced": {
+      "fn": 307,
+      "fp": 2390,
+      "precision": 0.0747,
+      "recall": 0.386,
+      "tp": 193
+     }
+    },
+    "documents": 100
+   },
+   "templated, many inserts/repeals": {
+    "alignment_accuracy": 0.1144,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 22
+     },
+     "inserted": {
+      "fn": 611,
+      "fp": 498,
+      "precision": 0.2751,
+      "recall": 0.2362,
+      "tp": 189
+     },
+     "renumbered": {
+      "fn": 2134,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "repealed": {
+      "fn": 617,
+      "fp": 504,
+      "precision": 0.2664,
+      "recall": 0.2288,
+      "tp": 183
+     },
+     "replaced": {
+      "fn": 700,
+      "fp": 2947,
+      "precision": 0.0328,
+      "recall": 0.125,
+      "tp": 100
+     }
+    },
+    "documents": 100
+   }
+  },
+  "engine_v1": {
+   "easy (random text, small edits)": {
+    "alignment_accuracy": 1.0,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 73
+     },
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 300
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2129
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 300
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 500
+     }
+    },
+    "documents": 100
+   },
+   "templated near-duplicates, small edits": {
+    "alignment_accuracy": 0.9741,
+    "classes": {
+     "clarified": {
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9855,
+      "tp": 68
+     },
+     "inserted": {
+      "fn": 90,
+      "fp": 3,
+      "precision": 0.9859,
+      "recall": 0.7,
+      "tp": 210
+     },
+     "renumbered": {
+      "fn": 58,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9719,
+      "tp": 2007
+     },
+     "repealed": {
+      "fn": 87,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.71,
+      "tp": 213
+     },
+     "replaced": {
+      "fn": 17,
+      "fp": 183,
+      "precision": 0.7252,
+      "recall": 0.966,
+      "tp": 483
+     }
+    },
+    "documents": 100
+   },
+   "templated, 40% of words edited": {
+    "alignment_accuracy": 0.963,
+    "classes": {
+     "clarified": {
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9855,
+      "tp": 68
+     },
+     "inserted": {
+      "fn": 137,
+      "fp": 54,
+      "precision": 0.7512,
+      "recall": 0.5433,
+      "tp": 163
+     },
+     "renumbered": {
+      "fn": 53,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9743,
+      "tp": 2012
+     },
+     "repealed": {
+      "fn": 83,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.7233,
+      "tp": 217
+     },
+     "replaced": {
+      "fn": 64,
+      "fp": 220,
+      "precision": 0.6646,
+      "recall": 0.872,
+      "tp": 436
+     }
+    },
+    "documents": 100
+   },
+   "templated, 70% of words edited": {
+    "alignment_accuracy": 0.9084,
+    "classes": {
+     "clarified": {
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9855,
+      "tp": 68
+     },
+     "inserted": {
+      "fn": 180,
+      "fp": 195,
+      "precision": 0.381,
+      "recall": 0.4,
+      "tp": 120
+     },
+     "renumbered": {
+      "fn": 109,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9472,
+      "tp": 1956
+     },
+     "repealed": {
+      "fn": 89,
+      "fp": 104,
+      "precision": 0.6698,
+      "recall": 0.7033,
+      "tp": 211
+     },
+     "replaced": {
+      "fn": 213,
+      "fp": 324,
+      "precision": 0.4697,
+      "recall": 0.574,
+      "tp": 287
+     }
+    },
+    "documents": 100
+   },
+   "templated, many inserts/repeals": {
+    "alignment_accuracy": 0.8916,
+    "classes": {
+     "clarified": {
+      "fn": 2,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9091,
+      "tp": 20
+     },
+     "inserted": {
+      "fn": 499,
+      "fp": 8,
+      "precision": 0.9741,
+      "recall": 0.3762,
+      "tp": 301
+     },
+     "renumbered": {
+      "fn": 239,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.888,
+      "tp": 1895
+     },
+     "repealed": {
+      "fn": 497,
+      "fp": 6,
+      "precision": 0.9806,
+      "recall": 0.3787,
+      "tp": 303
+     },
+     "replaced": {
+      "fn": 96,
+      "fp": 838,
+      "precision": 0.4565,
+      "recall": 0.88,
+      "tp": 704
+     }
+    },
+    "documents": 100
+   }
+  },
+  "engine_v2": {
+   "easy (random text, small edits)": {
+    "alignment_accuracy": 0.9997,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 73
+     },
+     "inserted": {
+      "fn": 4,
+      "fp": 1,
+      "precision": 0.9966,
+      "recall": 0.9867,
+      "tp": 296
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2129
+     },
+     "repealed": {
+      "fn": 3,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.99,
+      "tp": 297
+     },
+     "replaced": {
+      "fn": 1,
+      "fp": 4,
+      "precision": 0.992,
+      "recall": 0.998,
+      "tp": 499
+     }
+    },
+    "documents": 100
+   },
+   "templated near-duplicates, small edits": {
+    "alignment_accuracy": 0.9984,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 30,
+      "fp": 4,
+      "precision": 0.9854,
+      "recall": 0.9,
+      "tp": 270
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2065
+     },
+     "repealed": {
+      "fn": 26,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9133,
+      "tp": 274
+     },
+     "replaced": {
+      "fn": 6,
+      "fp": 32,
+      "precision": 0.9392,
+      "recall": 0.988,
+      "tp": 494
+     }
+    },
+    "documents": 100
+   },
+   "templated, 40% of words edited": {
+    "alignment_accuracy": 0.9884,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 67,
+      "fp": 41,
+      "precision": 0.8504,
+      "recall": 0.7767,
+      "tp": 233
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2065
+     },
+     "repealed": {
+      "fn": 26,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9133,
+      "tp": 274
+     },
+     "replaced": {
+      "fn": 43,
+      "fp": 69,
+      "precision": 0.8688,
+      "recall": 0.914,
+      "tp": 457
+     }
+    },
+    "documents": 100
+   },
+   "templated, 70% of words edited": {
+    "alignment_accuracy": 0.9876,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 68,
+      "fp": 44,
+      "precision": 0.8406,
+      "recall": 0.7733,
+      "tp": 232
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2065
+     },
+     "repealed": {
+      "fn": 25,
+      "fp": 1,
+      "precision": 0.9964,
+      "recall": 0.9167,
+      "tp": 275
+     },
+     "replaced": {
+      "fn": 46,
+      "fp": 70,
+      "precision": 0.8664,
+      "recall": 0.908,
+      "tp": 454
+     }
+    },
+    "documents": 100
+   },
+   "templated, many inserts/repeals": {
+    "alignment_accuracy": 0.9794,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 22
+     },
+     "inserted": {
+      "fn": 285,
+      "fp": 28,
+      "precision": 0.9484,
+      "recall": 0.6438,
+      "tp": 515
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2134
+     },
+     "repealed": {
+      "fn": 257,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.6787,
+      "tp": 543
+     },
+     "replaced": {
+      "fn": 66,
+      "fp": 323,
+      "precision": 0.6944,
+      "recall": 0.9175,
+      "tp": 734
+     }
+    },
+    "documents": 100
+   }
+  },
+  "greedy_text": {
+   "easy (random text, small edits)": {
+    "alignment_accuracy": 1.0,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 73
+     },
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 300
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2129
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 300
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 500
+     }
+    },
+    "documents": 100
+   },
+   "templated near-duplicates, small edits": {
+    "alignment_accuracy": 0.9984,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 296,
+      "fp": 3,
+      "precision": 0.5714,
+      "recall": 0.0133,
+      "tp": 4
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2065
+     },
+     "repealed": {
+      "fn": 293,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.0233,
+      "tp": 7
+     },
+     "replaced": {
+      "fn": 6,
+      "fp": 299,
+      "precision": 0.623,
+      "recall": 0.988,
+      "tp": 494
+     }
+    },
+    "documents": 100
+   },
+   "templated, 40% of words edited": {
+    "alignment_accuracy": 0.8735,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 300,
+      "fp": 467,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2065
+     },
+     "repealed": {
+      "fn": 122,
+      "fp": 289,
+      "precision": 0.3812,
+      "recall": 0.5933,
+      "tp": 178
+     },
+     "replaced": {
+      "fn": 468,
+      "fp": 301,
+      "precision": 0.0961,
+      "recall": 0.064,
+      "tp": 32
+     }
+    },
+    "documents": 100
+   },
+   "templated, 70% of words edited": {
+    "alignment_accuracy": 0.8649,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 69
+     },
+     "inserted": {
+      "fn": 300,
+      "fp": 500,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2065
+     },
+     "repealed": {
+      "fn": 105,
+      "fp": 305,
+      "precision": 0.39,
+      "recall": 0.65,
+      "tp": 195
+     },
+     "replaced": {
+      "fn": 500,
+      "fp": 300,
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0
+     }
+    },
+    "documents": 100
+   },
+   "templated, many inserts/repeals": {
+    "alignment_accuracy": 0.9928,
+    "classes": {
+     "clarified": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 22
+     },
+     "inserted": {
+      "fn": 784,
+      "fp": 15,
+      "precision": 0.5161,
+      "recall": 0.02,
+      "tp": 16
+     },
+     "renumbered": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 2134
+     },
+     "repealed": {
+      "fn": 769,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.0387,
+      "tp": 31
+     },
+     "replaced": {
+      "fn": 23,
+      "fp": 792,
+      "precision": 0.4952,
+      "recall": 0.9712,
+      "tp": 777
+     }
+    },
+    "documents": 100
+   }
+  }
+ },
+ "tuned": false,
+ "uk": {
+  "by_number": {
+   "long_gap": {
+    "alignment_accuracy": 1.0,
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 12
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 98
+     }
+    },
+    "correct": 198,
+    "pairs": 7,
+    "shared_sections": 198
+   },
+   "one_day": {
+    "alignment_accuracy": 1.0,
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 18
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 14
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 188
+     }
+    },
+    "correct": 2425,
+    "pairs": 80,
+    "shared_sections": 2425
+   },
+   "renumbering_variant": {
+    "alignment_accuracy": 0.5981,
+    "correct": 637,
+    "sections": 1065
+   }
+  },
+  "engine_v1": {
+   "long_gap": {
+    "alignment_accuracy": 1.0,
+    "classes": {
+     "inserted": {
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9333,
+      "tp": 14
+     },
+     "repealed": {
+      "fn": 1,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9167,
+      "tp": 11
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.9899,
+      "recall": 1.0,
+      "tp": 98
+     }
+    },
+    "correct": 198,
+    "pairs": 7,
+    "shared_sections": 198
+   },
+   "one_day": {
+    "alignment_accuracy": 1.0,
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 18
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 14
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 188
+     }
+    },
+    "correct": 2425,
+    "pairs": 80,
+    "shared_sections": 2425
+   },
+   "renumbering_variant": {
+    "alignment_accuracy": 1.0,
+    "correct": 1065,
+    "sections": 1065
+   }
+  },
+  "engine_v2": {
+   "long_gap": {
+    "alignment_accuracy": 1.0,
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 12
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 98
+     }
+    },
+    "correct": 198,
+    "pairs": 7,
+    "shared_sections": 198
+   },
+   "one_day": {
+    "alignment_accuracy": 1.0,
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 18
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 14
+     },
+     "replaced": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 188
+     }
+    },
+    "correct": 2425,
+    "pairs": 80,
+    "shared_sections": 2425
+   },
+   "renumbering_variant": {
+    "alignment_accuracy": 1.0,
+    "correct": 1065,
+    "sections": 1065
+   }
+  },
+  "greedy_text": {
+   "long_gap": {
+    "alignment_accuracy": 0.9545,
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 9,
+      "precision": 0.625,
+      "recall": 1.0,
+      "tp": 15
+     },
+     "repealed": {
+      "fn": 0,
+      "fp": 9,
+      "precision": 0.5714,
+      "recall": 1.0,
+      "tp": 12
+     },
+     "replaced": {
+      "fn": 9,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9082,
+      "tp": 89
+     }
+    },
+    "correct": 189,
+    "pairs": 7,
+    "shared_sections": 198
+   },
+   "one_day": {
+    "alignment_accuracy": 0.9975,
+    "classes": {
+     "inserted": {
+      "fn": 0,
+      "fp": 5,
+      "precision": 0.7826,
+      "recall": 1.0,
+      "tp": 18
+     },
+     "repealed": {
+      "fn": 1,
+      "fp": 6,
+      "precision": 0.6842,
+      "recall": 0.9286,
+      "tp": 13
+     },
+     "replaced": {
+      "fn": 6,
+      "fp": 1,
+      "precision": 0.9945,
+      "recall": 0.9681,
+      "tp": 182
+     }
+    },
+    "correct": 2419,
+    "pairs": 80,
+    "shared_sections": 2425
+   },
+   "renumbering_variant": {
+    "alignment_accuracy": 1.0,
+    "correct": 1065,
+    "sections": 1065
+   }
+  }
+ }
+}
