@@ -94,6 +94,7 @@ details summary{cursor:pointer;color:var(--acc)}
 .err{border:2px solid var(--err-bd);background:var(--err-bg);color:var(--err-fg);font-weight:600}
 .empty{border:2px dotted var(--ctl);background:var(--surface);color:var(--fg)}
 .loading{color:var(--mut);padding:8px 0}
+textarea{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--ctl);border-radius:6px;padding:8px 10px;width:100%;resize:vertical}
 /* phone widths: long bilingual option labels must not widen the page */
 select,input,label{max-width:100%;box-sizing:border-box}
 select{text-overflow:ellipsis}
@@ -155,6 +156,19 @@ main,header,section{overflow-wrap:anywhere}
       <input id="tl-date" type="date" aria-label="التاريخ / Date">
     </div>
     <div id="tl" class="card" aria-live="polite" aria-busy="false"></div></section>
+  <section aria-labelledby="h-cmp"><h2 id="h-cmp"><span lang="ar">قارن نصّين من عندك</span> / <span lang="en" dir="ltr">Compare two texts of your own</span></h2>
+    <p class="hint"><span lang="ar">يعمل النص الذي تلصقه داخل المتصفح والخادم فقط ولا يُحفظ.</span> / <span lang="en" dir="ltr">The text you paste is sent to this server for the comparison and is not stored.</span></p>
+    <form id="cform">
+      <div class="cols">
+        <div><label for="cold">النص القديم / Older text</label><br><textarea id="cold" rows="8" dir="auto" spellcheck="false"></textarea></div>
+        <div><label for="cnew">النص الجديد / Newer text</label><br><textarea id="cnew" rows="8" dir="auto" spellcheck="false"></textarea></div>
+      </div>
+      <div class="row"><button type="submit">قارن / Compare</button>
+        <span class="hint"><span lang="ar">العناوين المدعومة: «المادة 5» أو Article 5 أو Section 5A.</span> / <span lang="en" dir="ltr">Headings read: «المادة 5», Article 5, Section 5A, or "5. Title".</span></span></div>
+    </form>
+    <div id="cstatus" role="status" aria-live="polite"></div>
+    <div id="cresults" aria-live="polite" aria-busy="false"></div>
+  </section>
 </main>
 <script>
 "use strict";
@@ -263,6 +277,16 @@ async function asof(){
   }finally{if(my===tokA)busy(box,false)}
 }
 
+/* one redline card per change; the caller decides how provenance is shown */
+function changeCards(ch,prov){
+  return ch.map(c=>{
+    const words=(c.words||[]).map(w=>w.op==="equal"?esc(w.a):w.op==="replace"?`<del>${esc(w.a)}</del> <ins>${esc(w.b)}</ins>`:w.op==="delete"?`<del>${esc(w.a)}</del>`:`<ins>${esc(w.b)}</ins>`).join(" ");
+    return `<article class="card"><div class="kind"><span lang="ar">${esc(kindAr[c.kind]||"")}</span> · <span lang="en" dir="ltr">${esc(c.kind)}</span>${c.confidence==="low"?" · "+bi("ثقة منخفضة","low confidence"):""}</div>`+
+     `<div class="cols"><div><div class="colh">${bi("قبل","Before")}</div><div dir="auto">${c.a_text?esc(c.a_text):NA}</div></div>`+
+     `<div><div class="colh">${bi("بعد","After")}</div><div dir="auto">${c.b_text?esc(c.b_text):NA}</div></div></div>`+
+     (words?`<p dir="auto">${words}</p>`:"")+prov(c)+`</article>`}).join("");
+}
+
 async function diffs(){
   if(!work)return;
   const my=++tokD,real=$("#mode").value==="real",box=$("#diff");
@@ -278,12 +302,7 @@ async function diffs(){
     $("#diff-label").innerHTML=labelBlock(!!d.synthetic,false);
     const ch=Array.isArray(d.changes)?d.changes:[];
     if(!ch.length){box.innerHTML=emptyHtml("لا توجد تغييرات","No changes");return}
-    box.innerHTML=`<p class="hint">${bi("من","From")} <bdi dir="ltr">${esc(d.from)}</bdi> ${bi("إلى","to")} <bdi dir="ltr">${esc(d.to)}</bdi></p>`+ch.map(c=>{
-      const words=(c.words||[]).map(w=>w.op==="equal"?esc(w.a):w.op==="replace"?`<del>${esc(w.a)}</del> <ins>${esc(w.b)}</ins>`:w.op==="delete"?`<del>${esc(w.a)}</del>`:`<ins>${esc(w.b)}</ins>`).join(" ");
-      return `<article class="card"><div class="kind"><span lang="ar">${esc(kindAr[c.kind]||"")}</span> · <span lang="en" dir="ltr">${esc(c.kind)}</span>${c.confidence==="low"?" · "+bi("ثقة منخفضة","low confidence"):""}</div>`+
-       `<div class="cols"><div><div class="colh">${bi("قبل","Before")}</div><div dir="auto">${c.a_text?esc(c.a_text):NA}</div></div>`+
-       `<div><div class="colh">${bi("بعد","After")}</div><div dir="auto">${c.b_text?esc(c.b_text):NA}</div></div></div>`+
-       (words?`<p dir="auto">${words}</p>`:"")+srcLine(c.source_url,c.retrieved_at)+`</article>`}).join("");
+    box.innerHTML=`<p class="hint">${bi("من","From")} <bdi dir="ltr">${esc(d.from)}</bdi> ${bi("إلى","to")} <bdi dir="ltr">${esc(d.to)}</bdi></p>`+changeCards(ch,c=>srcLine(c.source_url,c.retrieved_at));
   }catch(e){
     if(my!==tokD)return;
     box.innerHTML=errHtml(e);
@@ -419,6 +438,24 @@ $("#tl-date").addEventListener("change",tl);
 tlInit();
 $("#sform").addEventListener("submit",search);
 $("#corpus").addEventListener("change",()=>{noteFor();if($("#q").value.trim())search()});
+async function compare(ev){
+  ev.preventDefault();
+  const o=$("#cold").value,n=$("#cnew").value,box=$("#cresults"),st=$("#cstatus");
+  if(!o.trim()||!n.trim()){st.innerHTML=bi("الصق النصّين أولًا","Paste both texts first");box.innerHTML="";return}
+  busy(box,true);st.innerHTML=LOADING;box.innerHTML="";
+  try{
+    const r=await fetch("/api/compare",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({old:o,new:n})});
+    let body=null;try{body=await r.json()}catch(e){}
+    if(!r.ok){const d=body&&(body.error||body.detail);throw new Error((typeof d==="string"&&d)?d:"HTTP "+r.status)}
+    const ch=Array.isArray(body.changes)?body.changes:[];
+    st.innerHTML=`${esc(body.articles_old)} → ${esc(body.articles_new)} ${bi("مادة","articles")} · ${esc(ch.length)} ${bi("تغيير","change(s)")} · ${esc(body.low_confidence)} ${bi("ثقة منخفضة","low confidence")}`;
+    box.innerHTML=ch.length?changeCards(ch,()=>`<div class="src">${bi("المصدر: نص قدّمه المستخدم","Source: text supplied by you")}</div>`):emptyHtml("لا توجد تغييرات","No changes");
+  }catch(e){
+    st.innerHTML=bi("تعذرت المقارنة","Comparison failed");
+    box.innerHTML=errHtml(e);
+  }finally{busy(box,false)}
+}
+$("#cform").addEventListener("submit",compare);
 noteFor();
 corpora();
 load();
