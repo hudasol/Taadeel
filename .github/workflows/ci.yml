@@ -13,7 +13,14 @@ jobs:
           python-version: "3.13"
           cache: pip
       - run: pip install -e ".[api,dev,extract,store]"
-      - run: pytest -q
+      - name: Lint
+        run: ruff check src tests
+      - name: Tests with coverage
+        run: pytest -q --cov=taadeel --cov-report=term-missing:skip-covered
+      - name: Command line smoke test
+        run: |
+          printf 'Section 1 A\nOne.\n' > /tmp/a.txt; printf 'Section 1 A\nTwo.\n' > /tmp/b.txt
+          taadeel diff /tmp/a.txt /tmp/b.txt
       - name: Validation harness (synthetic only)
         run: python -m taadeel.validate table 10
   docker:
