@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>تعديل · Taadeel</title>
+<title>Taadeel · تعديل</title>
 <style>
 /*
  Theme: sakura / pearl / pastel pink. System fonts only, no external requests.
@@ -99,72 +99,74 @@ textarea{font:inherit;color:var(--fg);background:var(--surface);border:1px solid
 select,input,label{max-width:100%;box-sizing:border-box}
 select{text-overflow:ellipsis}
 main,header,section{overflow-wrap:anywhere}
+/* the page is left to right; Arabic phrases and Arabic law text keep their own direction */
+[lang="ar"]{unicode-bidi:isolate}
 </style>
 </head>
 <body>
-<a class="skip" href="#main"><span lang="ar">انتقل إلى المحتوى الرئيسي</span> / <span lang="en" dir="ltr">Skip to main content</span></a>
+<a class="skip" href="#main"><span lang="en" dir="ltr">Skip to main content</span> / <span lang="ar" dir="rtl">انتقل إلى المحتوى الرئيسي</span></a>
 <header>
   <div class="banner" role="note">
-    <span lang="ar">أداة بحث وتصفّح وليست استشارة قانونية. النص العربي الرسمي الصادر عن الجهة المختصة هو المرجع.</span><br>
-    <span lang="en" dir="ltr">Research and navigation tool, not legal advice. The official Arabic text published by the competent UAE authority prevails.</span>
+    <span lang="en" dir="ltr">Research and navigation tool, not legal advice. The official Arabic text published by the competent UAE authority prevails.</span><br>
+    <span lang="ar" dir="rtl">أداة بحث وتصفّح وليست استشارة قانونية. النص العربي الرسمي الصادر عن الجهة المختصة هو المرجع.</span>
   </div>
-  <h1><span lang="ar">تعديل</span> · <span lang="en" dir="ltr">Taadeel</span></h1>
+  <h1><span lang="en" dir="ltr">Taadeel</span> · <span lang="ar" dir="rtl">تعديل</span></h1>
   <div class="row">
-    <span id="badge" role="status" aria-live="polite"><span class="b b-load"><span lang="ar">جارٍ التحميل</span> / <span lang="en" dir="ltr">Loading</span></span></span>
-    <label>العرض / View
+    <span id="badge" role="status" aria-live="polite"><span class="b b-load"><span lang="en" dir="ltr">Loading</span> / <span lang="ar" dir="rtl">جارٍ التحميل</span></span></span>
+    <label>View / العرض
       <select id="mode">
-        <option value="syn">بيانات اصطناعية، ليس تشريعاً / Synthetic demo, not legislation</option>
-        <option value="real">بيانات حقيقية / Real data</option>
+        <option value="syn">Synthetic demo, not legislation / بيانات اصطناعية، ليس تشريعاً</option>
+        <option value="real">Real data / بيانات حقيقية</option>
       </select>
     </label>
   </div>
 </header>
 <main id="main" tabindex="-1">
-  <section aria-labelledby="h-search"><h2 id="h-search"><span lang="ar">بحث في النصوص</span> / <span lang="en" dir="ltr">Search</span></h2>
+  <section aria-labelledby="h-search"><h2 id="h-search"><span lang="en" dir="ltr">Search</span> / <span lang="ar" dir="rtl">بحث في النصوص</span></h2>
     <form id="sform" role="search" class="row">
-      <label for="q">كلمات البحث / Query</label>
-      <input id="q" type="search" dir="auto" autocomplete="off" placeholder="مثال: الترخيص / e.g. licence">
-      <label for="corpus">المجموعة / Corpus</label>
+      <label for="q">Query / كلمات البحث</label>
+      <input id="q" type="search" dir="auto" autocomplete="off" placeholder="e.g. licence / مثال: الترخيص">
+      <label for="corpus">Corpus / المجموعة</label>
       <select id="corpus" aria-describedby="corpus-note">
-        <option value="uae">التشريعات الإماراتية / UAE legislation</option>
-        <option value="uk-validation">مجموعة التحقق البريطانية / UK validation corpus (English, not UAE law)</option>
-        <option value="synthetic">اصطناعي، ليس تشريعاً / SYNTHETIC, not legislation</option>
+        <option value="uae">UAE legislation / التشريعات الإماراتية</option>
+        <option value="uk-validation">UK validation corpus (English, not UAE law) / مجموعة التحقق البريطانية</option>
+        <option value="synthetic">SYNTHETIC, not legislation / اصطناعي، ليس تشريعاً</option>
       </select>
-      <button type="submit">بحث / Search</button>
+      <button type="submit">Search / بحث</button>
     </form>
     <div id="corpus-note" class="src"></div>
     <div id="sstatus" role="status" aria-live="polite"></div>
     <div id="sresults" aria-live="polite" aria-busy="false"></div>
   </section>
-  <section aria-labelledby="h-asof"><h2 id="h-asof"><span lang="ar">ماذا كان النص بتاريخ؟</span> / <span lang="en" dir="ltr">As-of view</span></h2>
+  <section aria-labelledby="h-asof"><h2 id="h-asof"><span lang="en" dir="ltr">As-of view</span> / <span lang="ar" dir="rtl">ماذا كان النص بتاريخ؟</span></h2>
     <div id="asof-label"></div>
-    <div class="row"><label for="date">التاريخ / Date</label>
+    <div class="row"><label for="date">Date / التاريخ</label>
       <input id="date" type="date" value="2021-01-01">
-      <input id="slider" type="range" min="2019" max="2026" step="0.0833" value="2021" aria-label="الخط الزمني للتاريخ / Date timeline">
+      <input id="slider" type="range" min="2019" max="2026" step="0.0833" value="2021" aria-label="Date timeline / الخط الزمني للتاريخ">
     </div>
     <div id="asof" class="card" aria-live="polite" aria-busy="false"></div></section>
-  <section aria-labelledby="h-diff"><h2 id="h-diff"><span lang="ar">التغييرات (مقارنة جنبًا إلى جنب)</span> / <span lang="en" dir="ltr">Changes (side-by-side redline)</span></h2>
+  <section aria-labelledby="h-diff"><h2 id="h-diff"><span lang="en" dir="ltr">Changes (side-by-side redline)</span> / <span lang="ar" dir="rtl">التغييرات (مقارنة جنبًا إلى جنب)</span></h2>
     <div id="diff-label"></div>
     <div id="diff" aria-live="polite" aria-busy="false"></div></section>
-  <section aria-labelledby="h-tl"><h2 id="h-tl"><span lang="ar">النص بتاريخ مع أدلة اللقطات</span> / <span lang="en" dir="ltr">Point in time with snapshot evidence</span></h2>
+  <section aria-labelledby="h-tl"><h2 id="h-tl"><span lang="en" dir="ltr">Point in time with snapshot evidence</span> / <span lang="ar" dir="rtl">النص بتاريخ مع أدلة اللقطات</span></h2>
     <div id="tl-label"></div>
-    <p class="hint"><span lang="ar">متاح لمجموعة التحقق البريطانية فقط. إذا ظهر في لقطة تغيير لا يفسّره أي أثر مسجل، تُعرض النسختان المحتملتان دون اختيار إحداهما.</span><br><span lang="en" dir="ltr">Available for the UK validation corpus only. When a snapshot shows a change that no recorded effect explains, both possible texts are shown and neither is chosen.</span></p>
+    <p class="hint"><span lang="en" dir="ltr">Available for the UK validation corpus only. When a snapshot shows a change that no recorded effect explains, both possible texts are shown and neither is chosen.</span><br><span lang="ar" dir="rtl">متاح لمجموعة التحقق البريطانية فقط. إذا ظهر في لقطة تغيير لا يفسّره أي أثر مسجل، تُعرض النسختان المحتملتان دون اختيار إحداهما.</span></p>
     <div class="row">
-      <label for="tl-work"><span lang="ar">القانون</span> / <span lang="en" dir="ltr">Act</span></label>
-      <select id="tl-work" aria-label="القانون / Act"></select>
-      <label for="tl-date"><span lang="ar">التاريخ</span> / <span lang="en" dir="ltr">Date</span></label>
-      <input id="tl-date" type="date" aria-label="التاريخ / Date">
+      <label for="tl-work"><span lang="en" dir="ltr">Act</span> / <span lang="ar" dir="rtl">القانون</span></label>
+      <select id="tl-work" aria-label="Act / القانون"></select>
+      <label for="tl-date"><span lang="en" dir="ltr">Date</span> / <span lang="ar" dir="rtl">التاريخ</span></label>
+      <input id="tl-date" type="date" aria-label="Date / التاريخ">
     </div>
     <div id="tl" class="card" aria-live="polite" aria-busy="false"></div></section>
-  <section aria-labelledby="h-cmp"><h2 id="h-cmp"><span lang="ar">قارن نصّين من عندك</span> / <span lang="en" dir="ltr">Compare two texts of your own</span></h2>
-    <p class="hint"><span lang="ar">يعمل النص الذي تلصقه داخل المتصفح والخادم فقط ولا يُحفظ.</span> / <span lang="en" dir="ltr">The text you paste is sent to this server for the comparison and is not stored.</span></p>
+  <section aria-labelledby="h-cmp"><h2 id="h-cmp"><span lang="en" dir="ltr">Compare two texts of your own</span> / <span lang="ar" dir="rtl">قارن نصّين من عندك</span></h2>
+    <p class="hint"><span lang="en" dir="ltr">The text you paste is sent to this server for the comparison and is not stored.</span> / <span lang="ar" dir="rtl">يعمل النص الذي تلصقه داخل المتصفح والخادم فقط ولا يُحفظ.</span></p>
     <form id="cform">
       <div class="cols">
-        <div><label for="cold">النص القديم / Older text</label><br><textarea id="cold" rows="8" dir="auto" spellcheck="false"></textarea></div>
-        <div><label for="cnew">النص الجديد / Newer text</label><br><textarea id="cnew" rows="8" dir="auto" spellcheck="false"></textarea></div>
+        <div><label for="cold">Older text / النص القديم</label><br><textarea id="cold" rows="8" dir="auto" spellcheck="false"></textarea></div>
+        <div><label for="cnew">Newer text / النص الجديد</label><br><textarea id="cnew" rows="8" dir="auto" spellcheck="false"></textarea></div>
       </div>
-      <div class="row"><button type="submit">قارن / Compare</button>
-        <span class="hint"><span lang="ar">العناوين المدعومة: «المادة 5» أو Article 5 أو Section 5A.</span> / <span lang="en" dir="ltr">Headings read: «المادة 5», Article 5, Section 5A, or "5. Title".</span></span></div>
+      <div class="row"><button type="submit">Compare / قارن</button>
+        <span class="hint"><span lang="en" dir="ltr">Headings read: «المادة 5», Article 5, Section 5A, or "5. Title".</span> / <span lang="ar" dir="rtl">العناوين المدعومة: «المادة 5» أو Article 5 أو Section 5A.</span></span></div>
     </form>
     <div id="cstatus" role="status" aria-live="polite"></div>
     <div id="cresults" aria-live="polite" aria-busy="false"></div>
@@ -175,8 +177,8 @@ main,header,section{overflow-wrap:anywhere}
 const $=s=>document.querySelector(s);
 /* The one escape helper: every dynamic value inserted into HTML goes through esc(). */
 const esc=t=>String(t==null?"":t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-/* bi() takes TRUSTED constant strings only (Arabic first, English second). */
-const bi=(ar,en)=>`<span lang="ar">${ar}</span> / <span lang="en" dir="ltr">${en}</span>`;
+/* bi(ar,en) takes TRUSTED constant strings only. English is shown first, Arabic second. */
+const bi=(ar,en)=>`<span lang="en" dir="ltr">${en}</span> / <span lang="ar" dir="rtl">${ar}</span>`;
 const LOADING=bi("جارٍ التحميل","Loading");
 const NA=bi("غير متوفر","n/a");
 const OGL=bi("تحتوي على معلومات من القطاع العام مرخّصة بموجب رخصة الحكومة المفتوحة الإصدار 3.0.","Contains public sector information licensed under the Open Government Licence v3.0.");
@@ -281,7 +283,7 @@ async function asof(){
 function changeCards(ch,prov){
   return ch.map(c=>{
     const words=(c.words||[]).map(w=>w.op==="equal"?esc(w.a):w.op==="replace"?`<del>${esc(w.a)}</del> <ins>${esc(w.b)}</ins>`:w.op==="delete"?`<del>${esc(w.a)}</del>`:`<ins>${esc(w.b)}</ins>`).join(" ");
-    return `<article class="card"><div class="kind"><span lang="ar">${esc(kindAr[c.kind]||"")}</span> · <span lang="en" dir="ltr">${esc(c.kind)}</span>${c.confidence==="low"?" · "+bi("ثقة منخفضة","low confidence"):""}</div>`+
+    return `<article class="card"><div class="kind"><span lang="en" dir="ltr">${esc(c.kind)}</span> · <span lang="ar" dir="rtl">${esc(kindAr[c.kind]||"")}</span>${c.confidence==="low"?" · "+bi("ثقة منخفضة","low confidence"):""}</div>`+
      `<div class="cols"><div><div class="colh">${bi("قبل","Before")}</div><div dir="auto">${c.a_text?esc(c.a_text):NA}</div></div>`+
      `<div><div class="colh">${bi("بعد","After")}</div><div dir="auto">${c.b_text?esc(c.b_text):NA}</div></div></div>`+
      (words?`<p dir="auto">${words}</p>`:"")+prov(c)+`</article>`}).join("");
@@ -336,7 +338,7 @@ async function corpora(){
     (c.corpora||[]).forEach(x=>{
       const o=[...sel.options].find(o=>o.value===x.corpus);
       const n=x.counts&&x.counts.provisions!=null?` (${x.counts.provisions})`:"";
-      if(o)o.textContent=`${x.label_ar} / ${x.label_en}${n}`;
+      if(o)o.textContent=`${x.label_en} / ${x.label_ar}${n}`;
     });
     CI=Object.fromEntries((c.corpora||[]).map(x=>[x.corpus,x]));
   }catch(e){
